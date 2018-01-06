@@ -43,6 +43,7 @@
 #include <wx/listctrl.h>
 #include <wx/gdicmn.h>
 #include <wx/dnd.h>
+#include <wx/gbsizer.h>
 
 #include "jsonreader.h"
 ///////////////////////////////////////////////////////////////////////////
@@ -84,6 +85,7 @@ class ColdFinger;
 class LogbookTimer;
 class myBitmapButton;
 class wxJSONReader;
+class FastAccessDialog;
 
 class LogbookDialog : public wxDialog
 {
@@ -139,6 +141,7 @@ public:
     wxStaticLine* m_staticline411;
     wxBitmapButton* m_bpButtonShowHideStatusGlobal;
     wxBitmapButton* m_bpButtonHelpGlobal;
+    wxToggleButton* m_bpButtonFastAccessDialog;
     wxStaticLine* m_staticline401;
     wxNotebook* m_notebook8;
     wxPanel* m_panel6;
@@ -479,6 +482,7 @@ public:
     void OnNotebookPageChangedLoggrids( wxNotebookEvent& event );
     void OnButtomClickStatusbarGlobal( wxCommandEvent& event );
     void OnClickButtonHelpGlobal( wxCommandEvent& event );
+    void OnClickButtonFastAccessDialog( wxCommandEvent& event );
     void OnChoiceGlobal( wxCommandEvent& event );
     void OnChoiceCrew( wxCommandEvent& event );
     void OnChoiceBoat( wxCommandEvent& event );
@@ -716,6 +720,7 @@ public:
     wxString			layoutHTML;
     wxString			layoutODT;
     LogbookTimer*		logbookTimerWindow;
+    FastAccessDialog*		m_fastAccessDialog;
     wxTimer*            timer;
     wxTimer*			GPSTimer;
     wxTimer*			SailsTimer;
@@ -1194,5 +1199,39 @@ public:
     int state;
 };
 #endif
+
+//////////////////////////////////////////////////////////////////////////////
+/// Class FastAccessDialog
+///////////////////////////////////////////////////////////////////////////////
+class FastAccessDialog : public wxDialog
+{
+	private:
+
+	protected:
+		wxToggleButton* m_toggleBtn5;
+		wxToggleButton* m_toggleBtn6;
+		wxToggleButton* m_toggleBtn7;
+		wxButton* m_button60;
+		wxToggleButton* m_toggleBtn8;
+		wxToggleButton* m_toggleBtn9;
+		wxButton* m_button61;
+
+		// Virtual event handlers, overide them in your derived class
+		virtual void FastAccessDialogOnInitDialog( wxInitDialogEvent& event ) { event.Skip(); }
+		virtual void m_toggleBtn5OnToggleButton( wxCommandEvent& event ) { event.Skip(); }
+		virtual void m_toggleBtn6OnToggleButton( wxCommandEvent& event ) { event.Skip(); }
+		virtual void m_toggleBtn7OnToggleButton( wxCommandEvent& event ) { event.Skip(); }
+		virtual void m_button60OnButtonClick( wxCommandEvent& event ) { event.Skip(); }
+		virtual void m_toggleBtn8OnToggleButton( wxCommandEvent& event ) { event.Skip(); }
+		virtual void m_toggleBtn9OnToggleButton( wxCommandEvent& event ) { event.Skip(); }
+		virtual void m_button61OnButtonClick( wxCommandEvent& event ) { event.Skip(); }
+
+
+	public:
+
+		FastAccessDialog( wxWindow* parent, wxWindowID id = wxID_ANY, const wxString& title = wxEmptyString, const wxPoint& pos = wxDefaultPosition, const wxSize& size = wxDefaultSize, long style = wxDEFAULT_DIALOG_STYLE );
+		~FastAccessDialog();
+
+};
 
 #endif

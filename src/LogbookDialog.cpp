@@ -213,6 +213,9 @@ LogbookDialog::LogbookDialog( logbookkonni_pi * d, wxTimer* t, LogbookTimer* lt,
 
     bSizer6->Add( m_bpButtonHelpGlobal, 0, wxALIGN_CENTER_VERTICAL|wxRIGHT, 5 );
 
+    m_bpButtonFastAccessDialog = new wxToggleButton(m_panel2, wxID_ANY, _( "FAD"));
+    bSizer6->Add(m_bpButtonFastAccessDialog, 0, wxALIGN_CENTER_VERTICAL|wxRIGHT, 5);
+
     bSizer361->Add( bSizer6, 0, 0, 0 );
 
     m_staticline401 = new wxStaticLine( m_panel2, wxID_ANY, wxDefaultPosition, wxDefaultSize, wxLI_HORIZONTAL );
@@ -2118,6 +2121,7 @@ LogbookDialog::LogbookDialog( logbookkonni_pi * d, wxTimer* t, LogbookTimer* lt,
     m_notebook8->Connect( wxEVT_COMMAND_NOTEBOOK_PAGE_CHANGED, wxNotebookEventHandler( LogbookDialog::OnNotebookPageChangedLoggrids ), NULL, this );
     m_bpButtonShowHideStatusGlobal->Connect( wxEVT_COMMAND_BUTTON_CLICKED, wxCommandEventHandler( LogbookDialog::OnButtomClickStatusbarGlobal ), NULL, this );
     m_bpButtonHelpGlobal->Connect( wxEVT_COMMAND_BUTTON_CLICKED, wxCommandEventHandler( LogbookDialog::OnClickButtonHelpGlobal ), NULL, this );
+    m_bpButtonFastAccessDialog->Connect( wxEVT_COMMAND_TOGGLEBUTTON_CLICKED, wxCommandEventHandler( LogbookDialog::OnClickButtonFastAccessDialog ), NULL, this );
 
     m_gridCrew->Connect( wxEVT_GRID_EDITOR_SHOWN, wxGridEventHandler( LogbookDialog::OnGridEditorShownCrew ), NULL, this );
 
@@ -2363,6 +2367,7 @@ LogbookDialog::~LogbookDialog()
     m_notebook8->Disconnect( wxEVT_COMMAND_NOTEBOOK_PAGE_CHANGED, wxNotebookEventHandler( LogbookDialog::OnNotebookPageChangedLoggrids ), NULL, this );
     m_bpButtonShowHideStatusGlobal->Disconnect( wxEVT_COMMAND_BUTTON_CLICKED, wxCommandEventHandler( LogbookDialog::OnButtomClickStatusbarGlobal ), NULL, this );
     m_bpButtonHelpGlobal->Disconnect( wxEVT_COMMAND_BUTTON_CLICKED, wxCommandEventHandler( LogbookDialog::OnClickButtonHelpGlobal ), NULL, this );
+    m_bpButtonFastAccessDialog->Disconnect( wxEVT_COMMAND_TOGGLEBUTTON_CLICKED, wxCommandEventHandler( LogbookDialog::OnClickButtonFastAccessDialog ), NULL, this );
     this->Disconnect( wxID_ANY, wxEVT_COMMAND_MENU_SELECTED, wxCommandEventHandler( LogbookDialog::OnMenuSelectionFlipWatches ) );
     logbookChoice->Disconnect( wxEVT_COMMAND_CHOICE_SELECTED, wxCommandEventHandler( LogbookDialog::OnChoiceGlobal ), NULL, this );
     crewChoice->Disconnect( wxEVT_COMMAND_CHOICE_SELECTED, wxCommandEventHandler( LogbookDialog::OnChoiceCrew ), NULL, this );
@@ -2689,6 +2694,18 @@ void LogbookDialog::OnButtomClickStatusbarGlobal( wxCommandEvent& event )
 void LogbookDialog::OnClickButtonHelpGlobal( wxCommandEvent& event )
 {
     startBrowser( help_locn+_T( "Help.html" ) );
+}
+
+void LogbookDialog::OnClickButtonFastAccessDialog( wxCommandEvent& event ) {
+
+    if(NULL == m_fastAccessDialog)  {
+        m_fastAccessDialog = new FastAccessDialog(this, wxID_ANY, _( "Log Event" ));
+    }
+
+    if(m_bpButtonFastAccessDialog->GetValue())
+        m_fastAccessDialog->Show();
+    else
+        m_fastAccessDialog->Show(false);
 }
 
 void LogbookDialog::OnChoiceGlobal( wxCommandEvent& event )
@@ -9715,4 +9732,71 @@ void PositionDlg::OnOKButtonClick( wxCommandEvent& event )
         retstr.Replace( _T( "." ),dlg->decimalPoint );
         EndModal( wxID_OK );
     }
+}
+
+FastAccessDialog::FastAccessDialog( wxWindow* parent, wxWindowID id, const wxString& title, const wxPoint& pos, const wxSize& size, long style ) : wxDialog( parent, id, title, pos, size, style )
+{
+	//this->SetSizeHints( wxSize( 282,400 ), wxSize( 282,400 ) );
+
+	wxGridBagSizer* gbSizer1;
+	gbSizer1 = new wxGridBagSizer( 0, 0 );
+	gbSizer1->SetFlexibleDirection( wxBOTH );
+	gbSizer1->SetNonFlexibleGrowMode( wxFLEX_GROWMODE_SPECIFIED );
+
+	wxBoxSizer* bSizer50;
+	bSizer50 = new wxBoxSizer( wxVERTICAL );
+
+	//bSizer50->SetMinSize( wxSize( 280,-1 ) );
+	m_toggleBtn5 = new wxToggleButton( this, wxID_ANY, _("Sails"), wxDefaultPosition, wxDefaultSize, 0 );
+	bSizer50->Add( m_toggleBtn5, 0, wxALL|wxEXPAND, 5 );
+
+	m_toggleBtn6 = new wxToggleButton( this, wxID_ANY, _("Motor"), wxDefaultPosition, wxDefaultSize, 0 );
+	bSizer50->Add( m_toggleBtn6, 0, wxALL|wxEXPAND, 5 );
+
+	m_toggleBtn7 = new wxToggleButton( this, wxID_ANY, _("Angelegt"), wxDefaultPosition, wxDefaultSize, 0 );
+	bSizer50->Add( m_toggleBtn7, 0, wxALL|wxEXPAND, 5 );
+
+	m_button60 = new wxButton( this, wxID_ANY, _("Wachwechsel"), wxDefaultPosition, wxDefaultSize, 0 );
+	bSizer50->Add( m_button60, 0, wxALL|wxEXPAND, 5 );
+
+	m_toggleBtn8 = new wxToggleButton( this, wxID_ANY, _("Lifeline/Westen"), wxDefaultPosition, wxDefaultSize, 0 );
+	bSizer50->Add( m_toggleBtn8, 0, wxALL|wxEXPAND, 5 );
+
+	m_toggleBtn9 = new wxToggleButton( this, wxID_ANY, _("Strecktau"), wxDefaultPosition, wxDefaultSize, 0 );
+	bSizer50->Add( m_toggleBtn9, 0, wxALL|wxEXPAND, 5 );
+
+	m_button61 = new wxButton( this, wxID_ANY, _("MOB"), wxDefaultPosition, wxDefaultSize, 0 );
+	bSizer50->Add( m_button61, 0, wxALL|wxEXPAND, 5 );
+
+	gbSizer1->Add( bSizer50, wxGBPosition( 0, 0 ), wxGBSpan( 1, 1 ), wxEXPAND, 5 );
+
+
+	this->SetSizer( gbSizer1 );
+	this->Layout();
+	gbSizer1->Fit( this );
+
+	this->Centre( wxBOTH );
+
+	// Connect Events
+	this->Connect( wxEVT_INIT_DIALOG, wxInitDialogEventHandler( FastAccessDialog::FastAccessDialogOnInitDialog ) );
+	m_toggleBtn5->Connect( wxEVT_COMMAND_TOGGLEBUTTON_CLICKED, wxCommandEventHandler( FastAccessDialog::m_toggleBtn5OnToggleButton ), NULL, this );
+	m_toggleBtn6->Connect( wxEVT_COMMAND_TOGGLEBUTTON_CLICKED, wxCommandEventHandler( FastAccessDialog::m_toggleBtn6OnToggleButton ), NULL, this );
+	m_toggleBtn7->Connect( wxEVT_COMMAND_TOGGLEBUTTON_CLICKED, wxCommandEventHandler( FastAccessDialog::m_toggleBtn7OnToggleButton ), NULL, this );
+	m_button60->Connect( wxEVT_COMMAND_BUTTON_CLICKED, wxCommandEventHandler( FastAccessDialog::m_button60OnButtonClick ), NULL, this );
+	m_toggleBtn8->Connect( wxEVT_COMMAND_TOGGLEBUTTON_CLICKED, wxCommandEventHandler( FastAccessDialog::m_toggleBtn8OnToggleButton ), NULL, this );
+	m_toggleBtn9->Connect( wxEVT_COMMAND_TOGGLEBUTTON_CLICKED, wxCommandEventHandler( FastAccessDialog::m_toggleBtn9OnToggleButton ), NULL, this );
+	m_button61->Connect( wxEVT_COMMAND_BUTTON_CLICKED, wxCommandEventHandler( FastAccessDialog::m_button61OnButtonClick ), NULL, this );
+}
+
+FastAccessDialog::~FastAccessDialog()
+{
+	// Disconnect Events
+	this->Disconnect( wxEVT_INIT_DIALOG, wxInitDialogEventHandler( FastAccessDialog::FastAccessDialogOnInitDialog ) );
+	m_toggleBtn5->Disconnect( wxEVT_COMMAND_TOGGLEBUTTON_CLICKED, wxCommandEventHandler( FastAccessDialog::m_toggleBtn5OnToggleButton ), NULL, this );
+	m_toggleBtn6->Disconnect( wxEVT_COMMAND_TOGGLEBUTTON_CLICKED, wxCommandEventHandler( FastAccessDialog::m_toggleBtn6OnToggleButton ), NULL, this );
+	m_toggleBtn7->Disconnect( wxEVT_COMMAND_TOGGLEBUTTON_CLICKED, wxCommandEventHandler( FastAccessDialog::m_toggleBtn7OnToggleButton ), NULL, this );
+	m_button60->Disconnect( wxEVT_COMMAND_BUTTON_CLICKED, wxCommandEventHandler( FastAccessDialog::m_button60OnButtonClick ), NULL, this );
+	m_toggleBtn8->Disconnect( wxEVT_COMMAND_TOGGLEBUTTON_CLICKED, wxCommandEventHandler( FastAccessDialog::m_toggleBtn8OnToggleButton ), NULL, this );
+	m_toggleBtn9->Disconnect( wxEVT_COMMAND_TOGGLEBUTTON_CLICKED, wxCommandEventHandler( FastAccessDialog::m_toggleBtn9OnToggleButton ), NULL, this );
+	m_button61->Disconnect( wxEVT_COMMAND_BUTTON_CLICKED, wxCommandEventHandler( FastAccessDialog::m_button61OnButtonClick ), NULL, this );
 }
