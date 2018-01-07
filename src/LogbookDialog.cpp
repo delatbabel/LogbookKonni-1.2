@@ -9751,7 +9751,7 @@ FastAccessDialog::FastAccessDialog( wxWindow* parent, wxWindowID id, const wxStr
 	m_toggleBtn6 = new wxToggleButton( this, wxID_ANY, _("Motor"), wxDefaultPosition, wxDefaultSize, 0 );
 	gSizer1->Add( m_toggleBtn6, 0, wxEXPAND, 5 );
 
-	m_toggleBtn7 = new wxToggleButton( this, wxID_ANY, _("Angelegt"), wxDefaultPosition, wxDefaultSize, 0 );
+	m_toggleBtn7 = new wxToggleButton( this, wxID_ANY, _("Dock"), wxDefaultPosition, wxDefaultSize, 0 );
 	gSizer1->Add( m_toggleBtn7, 0, wxEXPAND, 5 );
 
 	m_button60 = new wxButton( this, wxID_ANY, _("Wachwechsel"), wxDefaultPosition, wxDefaultSize, 0 );
@@ -9801,38 +9801,45 @@ FastAccessDialog::~FastAccessDialog()
 }
 
 void FastAccessDialog::m_toggleBtn7OnToggleButton( wxCommandEvent& event ) {
-    wxDialog* dialog = new wxDialog(this, wxID_ANY, _("Wo?"));//, wxDefaultPosition, wxDefaultSize, wxCAPTION | wxCLOSE_BOX | wxRESIZE_BORDER);
 
-    dialog->SetSizeHints( wxDefaultSize, wxDefaultSize );
+	if(m_toggleBtn7->GetValue()) {
+		// show the dialog on how we are docked
+		wxDialog* dialog = new wxDialog(this, wxID_ANY, _("Wo?"));//, wxDefaultPosition, wxDefaultSize, wxCAPTION | wxCLOSE_BOX | wxRESIZE_BORDER);
 
-	wxBoxSizer* bSizer54;
-	bSizer54 = new wxBoxSizer( wxVERTICAL );
+		dialog->SetSizeHints( wxDefaultSize, wxDefaultSize );
 
-	wxGridSizer* gSizer2;
-	gSizer2 = new wxGridSizer( 0, 2, 0, 0 );
+		wxBoxSizer* bSizer54;
+		bSizer54 = new wxBoxSizer( wxVERTICAL );
 
-	wxButton* m_button62 = new wxButton( dialog, wxID_ANY, _("Anchor"), wxDefaultPosition, wxDefaultSize, 0 );
-	gSizer2->Add( m_button62, 0, wxALL|wxEXPAND, 5 );
+		wxGridSizer* gSizer2;
+		gSizer2 = new wxGridSizer( 0, 2, 0, 0 );
 
-	wxButton* m_button63 = new wxButton( dialog, wxID_ANY, _("Boye"), wxDefaultPosition, wxDefaultSize, 0 );
-	gSizer2->Add( m_button63, 0, wxALL|wxEXPAND, 5 );
+		wxButton* m_button62 = new wxButton( dialog, wxID_ANY, _("Anchor"), wxDefaultPosition, wxDefaultSize, 0 );
+		gSizer2->Add( m_button62, 0, wxALL|wxEXPAND, 5 );
 
-	wxButton* m_button64 = new wxButton( dialog, wxID_ANY, _("Dock"), wxDefaultPosition, wxDefaultSize, 0 );
-	gSizer2->Add( m_button64, 0, wxALL|wxEXPAND, 5 );
+		wxButton* m_button63 = new wxButton( dialog, wxID_ANY, _("Buoy"), wxDefaultPosition, wxDefaultSize, 0 );
+		gSizer2->Add( m_button63, 0, wxALL|wxEXPAND, 5 );
 
-	wxButton* m_button65 = new wxButton( dialog, wxID_ANY, _("Cancel"), wxDefaultPosition, wxDefaultSize, 0 );
-	gSizer2->Add( m_button65, 0, wxALL|wxEXPAND, 5 );
+		wxButton* m_button64 = new wxButton( dialog, wxID_ANY, _("Pier"), wxDefaultPosition, wxDefaultSize, 0 );
+		gSizer2->Add( m_button64, 0, wxALL|wxEXPAND, 5 );
+
+		wxButton* m_button65 = new wxButton( dialog, wxID_ANY, _("Cancel"), wxDefaultPosition, wxDefaultSize, 0 );
+		gSizer2->Add( m_button65, 0, wxALL|wxEXPAND, 5 );
 
 
-	bSizer54->Add( gSizer2, 1, wxEXPAND, 5 );
+		bSizer54->Add( gSizer2, 1, wxEXPAND, 5 );
 
 
-	dialog->SetSizer( bSizer54 );
-	dialog->Layout();
+		dialog->SetSizer( bSizer54 );
+		dialog->Layout();
 
-	dialog->Centre( wxBOTH );
-    dialog->ShowModal();
+		dialog->Centre( wxBOTH );
+		dialog->ShowModal();
 
-    // TODO: cleanup
-    event.Skip();
+		//TODO: cleanup! or do we even need to? it is done nowhere else in this plugin?
+		delete dialog;
+	} else {
+		// create log entry saying we are at sea again
+	}
+
 }
