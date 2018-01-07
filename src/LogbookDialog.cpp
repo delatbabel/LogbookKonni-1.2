@@ -9799,3 +9799,40 @@ FastAccessDialog::~FastAccessDialog()
 	m_toggleBtn8->Disconnect( wxEVT_COMMAND_TOGGLEBUTTON_CLICKED, wxCommandEventHandler( FastAccessDialog::m_toggleBtn8OnToggleButton ), NULL, this );
 	m_toggleBtn9->Disconnect( wxEVT_COMMAND_TOGGLEBUTTON_CLICKED, wxCommandEventHandler( FastAccessDialog::m_toggleBtn9OnToggleButton ), NULL, this );
 }
+
+void FastAccessDialog::m_toggleBtn7OnToggleButton( wxCommandEvent& event ) {
+    wxDialog* dialog = new wxDialog(this, wxID_ANY, _("Wo?"));//, wxDefaultPosition, wxDefaultSize, wxCAPTION | wxCLOSE_BOX | wxRESIZE_BORDER);
+
+    dialog->SetSizeHints( wxDefaultSize, wxDefaultSize );
+
+	wxBoxSizer* bSizer54;
+	bSizer54 = new wxBoxSizer( wxVERTICAL );
+
+	wxGridSizer* gSizer2;
+	gSizer2 = new wxGridSizer( 0, 2, 0, 0 );
+
+	wxButton* m_button62 = new wxButton( dialog, wxID_ANY, _("Anchor"), wxDefaultPosition, wxDefaultSize, 0 );
+	gSizer2->Add( m_button62, 0, wxALL|wxEXPAND, 5 );
+
+	wxButton* m_button63 = new wxButton( dialog, wxID_ANY, _("Boye"), wxDefaultPosition, wxDefaultSize, 0 );
+	gSizer2->Add( m_button63, 0, wxALL|wxEXPAND, 5 );
+
+	wxButton* m_button64 = new wxButton( dialog, wxID_ANY, _("Dock"), wxDefaultPosition, wxDefaultSize, 0 );
+	gSizer2->Add( m_button64, 0, wxALL|wxEXPAND, 5 );
+
+	wxButton* m_button65 = new wxButton( dialog, wxID_ANY, _("Cancel"), wxDefaultPosition, wxDefaultSize, 0 );
+	gSizer2->Add( m_button65, 0, wxALL|wxEXPAND, 5 );
+
+
+	bSizer54->Add( gSizer2, 1, wxEXPAND, 5 );
+
+
+	dialog->SetSizer( bSizer54 );
+	dialog->Layout();
+
+	dialog->Centre( wxBOTH );
+    dialog->ShowModal();
+
+    // TODO: cleanup
+    event.Skip();
+}

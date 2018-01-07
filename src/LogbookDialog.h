@@ -1220,7 +1220,7 @@ class FastAccessDialog : public wxDialog
 		virtual void FastAccessDialogOnInitDialog( wxInitDialogEvent& event ) { event.Skip(); }
 		virtual void m_toggleBtn5OnToggleButton( wxCommandEvent& event ) { event.Skip(); }
 		virtual void m_toggleBtn6OnToggleButton( wxCommandEvent& event ) { event.Skip(); }
-		virtual void m_toggleBtn7OnToggleButton( wxCommandEvent& event ) { event.Skip(); }
+		void m_toggleBtn7OnToggleButton( wxCommandEvent& event );
 		virtual void m_button60OnButtonClick( wxCommandEvent& event ) { event.Skip(); }
 		virtual void m_toggleBtn8OnToggleButton( wxCommandEvent& event ) { event.Skip(); }
 		virtual void m_toggleBtn9OnToggleButton( wxCommandEvent& event ) { event.Skip(); }
