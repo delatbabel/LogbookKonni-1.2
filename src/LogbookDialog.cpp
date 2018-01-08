@@ -2697,9 +2697,10 @@ void LogbookDialog::OnClickButtonHelpGlobal( wxCommandEvent& event )
     startBrowser( help_locn+_T( "Help.html" ) );
 }
 
-void sailsCallback(wxAnyButton *btn, Logbook* logbook) {
+void sailsCallback(wxAnyButton *btn, LogbookDialog* logbookDialog) {
 	if(btn->IsKindOf(wxCLASSINFO(wxToggleButton))) {
 		wxToggleButton* button = static_cast<wxToggleButton*>(btn);
+		Logbook* logbook = logbookDialog->logbook;
 
 		if(button->GetValue()) {
 			// we just set sail
@@ -2716,8 +2717,18 @@ void sailsCallback(wxAnyButton *btn, Logbook* logbook) {
 	}
 }
 
-void callback2(wxAnyButton *button, Logbook* logbook) {
-	button->SetLabelText("changed as well");
+void engineCallback(wxAnyButton *btn, LogbookDialog* logbook) {
+	if(btn->IsKindOf(wxCLASSINFO(wxToggleButton))) {
+		wxToggleButton* button = static_cast<wxToggleButton*>(btn);
+
+		if(button->GetValue()) {
+			// we just started the engine
+			logbook->startEngine1( true, true, true );
+		} else {
+			// we just stopped the engine
+			logbook->stopEngine1( true, true );
+		}
+	}
 }
 
 void LogbookDialog::OnClickButtonFastAccessDialog( wxCommandEvent& event ) {
@@ -2725,7 +2736,7 @@ void LogbookDialog::OnClickButtonFastAccessDialog( wxCommandEvent& event ) {
     if(NULL == m_fastAccessDialog)  {
         m_fastAccessDialog = new FastAccessDialog(this, wxID_ANY, _( "Log Event" ), wxDefaultPosition, wxSize(250, 700), wxCAPTION | wxSTAY_ON_TOP | wxRESIZE_BORDER );
         m_fastAccessDialog->AddButton(_("Sails"), true, sailsCallback);
-        m_fastAccessDialog->AddButton(_("added as well"), false, callback2);
+        m_fastAccessDialog->AddButton(_("Engine"), true, engineCallback);
     }
 
     if(m_bpButtonFastAccessDialog->GetValue())
@@ -9808,14 +9819,14 @@ FastAccessDialog::~FastAccessDialog()
 class Transfer : public wxObject {
 public:
 	wxAnyButton* button;
-	void (*callback)(wxAnyButton* button, Logbook* logbook);
-	Logbook* logbook;
+	void (*callback)(wxAnyButton* button, LogbookDialog* logbookDialog);
+	LogbookDialog* logbookDialog;
 };
 
 void FastAccessDialog::buttonCallbackHub( wxCommandEvent& event ) {
 
 	Transfer* data = static_cast<Transfer*>(event.GetEventUserData());
-	data->callback(data->button, data->logbook);
+	data->callback(data->button, data->logbookDialog);
 
 //	if(m_toggleBtn7->GetValue()) {
 //		// show the dialog on how we are docked
@@ -9861,10 +9872,10 @@ void FastAccessDialog::buttonCallbackHub( wxCommandEvent& event ) {
 
 }
 
-void FastAccessDialog::AddButton(const wxString& title, bool toggleButton, void (*callback)(wxAnyButton* button, Logbook* logbook)) {
+void FastAccessDialog::AddButton(const wxString& title, bool toggleButton, void (*callback)(wxAnyButton* button, LogbookDialog* logbookDialog)) {
 	Transfer* data = new Transfer();
 	data->callback = callback;
-	data->logbook = this->logbookDialog->logbook;
+	data->logbookDialog = this->logbookDialog;
 
 	if(toggleButton)
 	{
