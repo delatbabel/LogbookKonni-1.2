@@ -1212,7 +1212,7 @@ class FastAccessDialog : public wxDialog
 
 		// Virtual event handlers, overide them in your derived class
 		virtual void FastAccessDialogOnInitDialog( wxInitDialogEvent& event ) { event.Skip(); }
-		void m_toggleBtn7OnToggleButton( wxCommandEvent& event );
+		void buttonCallbackHub( wxCommandEvent& event );
 
 
 	public:
@@ -1220,7 +1220,7 @@ class FastAccessDialog : public wxDialog
 		FastAccessDialog( wxWindow* parent, wxWindowID id = wxID_ANY, const wxString& title = wxEmptyString, const wxPoint& pos = wxDefaultPosition, const wxSize& size = wxDefaultSize, long style = wxDEFAULT_DIALOG_STYLE );
 		~FastAccessDialog();
 
-		void AddButton(const wxString& title, bool toggleButton, void* callback);
+		void AddButton(const wxString& title, bool toggleButton, void (*callback)(wxAnyButton* button));
 
 };
 

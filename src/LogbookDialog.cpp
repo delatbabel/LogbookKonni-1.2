@@ -2697,11 +2697,20 @@ void LogbookDialog::OnClickButtonHelpGlobal( wxCommandEvent& event )
     startBrowser( help_locn+_T( "Help.html" ) );
 }
 
+void callback(wxAnyButton *button) {
+	button->SetLabelText("changed");
+}
+
+void callback2(wxAnyButton *button) {
+	button->SetLabelText("changed as well");
+}
+
 void LogbookDialog::OnClickButtonFastAccessDialog( wxCommandEvent& event ) {
 
     if(NULL == m_fastAccessDialog)  {
         m_fastAccessDialog = new FastAccessDialog(this, wxID_ANY, _( "Log Event" ), wxDefaultPosition, wxSize(250, 700), wxCAPTION | wxSTAY_ON_TOP | wxRESIZE_BORDER );
-        m_fastAccessDialog->AddButton(_("dynamically added"), 1, NULL);
+        m_fastAccessDialog->AddButton(_("dynamically added"), true, callback);
+        m_fastAccessDialog->AddButton(_("added as well"), false, callback2);
     }
 
     if(m_bpButtonFastAccessDialog->GetValue())
@@ -9773,18 +9782,22 @@ FastAccessDialog::~FastAccessDialog()
 		wxWindow* button = sizeritem->GetWindow();
 
 		if(button->IsKindOf(wxCLASSINFO(wxToggleButton)))
-			button->Disconnect(wxEVT_COMMAND_TOGGLEBUTTON_CLICKED, wxCommandEventHandler( FastAccessDialog::m_toggleBtn7OnToggleButton ), NULL, this );
+			button->Disconnect(wxEVT_COMMAND_TOGGLEBUTTON_CLICKED, wxCommandEventHandler( FastAccessDialog::buttonCallbackHub ), NULL, this );
 		else
-			button->Disconnect(wxEVT_COMMAND_BUTTON_CLICKED, wxCommandEventHandler( FastAccessDialog::m_toggleBtn7OnToggleButton ), NULL, this );
-
-//	button->GetConnectWidget();
-//	button->GetDynamicEventTable();
+			button->Disconnect(wxEVT_COMMAND_BUTTON_CLICKED, wxCommandEventHandler( FastAccessDialog::buttonCallbackHub ), NULL, this );
 	}
-
-
 }
 
-void FastAccessDialog::m_toggleBtn7OnToggleButton( wxCommandEvent& event ) {
+class Transfer : public wxObject {
+public:
+	wxAnyButton* button;
+	void (*callback)(wxAnyButton* dialog);
+};
+
+void FastAccessDialog::buttonCallbackHub( wxCommandEvent& event ) {
+
+	Transfer* data = static_cast<Transfer*>(event.GetEventUserData());
+	data->callback(data->button);
 
 //	if(m_toggleBtn7->GetValue()) {
 //		// show the dialog on how we are docked
@@ -9830,26 +9843,22 @@ void FastAccessDialog::m_toggleBtn7OnToggleButton( wxCommandEvent& event ) {
 
 }
 
-void DemoCallback() {
-	printf("demoCallback");
-}
-
-void FastAccessDialog::AddButton(const wxString& title, bool toggleButton,
-		void* callback) {
-	wxAnyButton* button(0);
+void FastAccessDialog::AddButton(const wxString& title, bool toggleButton, void (*callback)(wxAnyButton* button)) {
+	Transfer* data = new Transfer();
+	data->callback = callback;
 
 	if(toggleButton)
 	{
-		button = new wxToggleButton(this, wxID_ANY, title);
-		button->Connect(wxEVT_COMMAND_TOGGLEBUTTON_CLICKED, wxCommandEventHandler( FastAccessDialog::m_toggleBtn7OnToggleButton ), NULL, this);
+		data->button = new wxToggleButton(this, wxID_ANY, title);
+		data->button->Connect(wxEVT_COMMAND_TOGGLEBUTTON_CLICKED, wxCommandEventHandler( FastAccessDialog::buttonCallbackHub ), data, this);
 	}
 	else
 	{
-		button = new wxButton(this, wxID_ANY, title);
-		button->Connect(wxEVT_COMMAND_BUTTON_CLICKED, wxCommandEventHandler( FastAccessDialog::m_toggleBtn7OnToggleButton ), NULL, this);
+		data->button = new wxButton(this, wxID_ANY, title);
+		data->button->Connect(wxEVT_COMMAND_BUTTON_CLICKED, wxCommandEventHandler( FastAccessDialog::buttonCallbackHub ), data, this);
 	}
 
-	container->Add( button, 0, wxALL|wxEXPAND, 5);
+	container->Add( data->button, 0, wxALL|wxEXPAND, 5);
 
 	this->Layout();
 }
