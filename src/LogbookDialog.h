@@ -1207,6 +1207,7 @@ class FastAccessDialog : public wxDialog
 {
 	private:
 		wxGridSizer* container;
+		LogbookDialog* logbookDialog;
 
 	protected:
 
@@ -1220,7 +1221,7 @@ class FastAccessDialog : public wxDialog
 		FastAccessDialog( wxWindow* parent, wxWindowID id = wxID_ANY, const wxString& title = wxEmptyString, const wxPoint& pos = wxDefaultPosition, const wxSize& size = wxDefaultSize, long style = wxDEFAULT_DIALOG_STYLE );
 		~FastAccessDialog();
 
-		void AddButton(const wxString& title, bool toggleButton, void (*callback)(wxAnyButton* button));
+		void AddButton(const wxString& title, bool toggleButton, void (*callback)(wxAnyButton* button, Logbook* logbook));
 
 };
 
