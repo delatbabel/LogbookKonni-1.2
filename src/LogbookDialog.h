@@ -720,7 +720,7 @@ public:
     wxString			layoutHTML;
     wxString			layoutODT;
     LogbookTimer*		logbookTimerWindow;
-    FastAccessDialog*		m_fastAccessDialog;
+    FastAccessDialog*		m_fastAccessDialog = 0;
     wxTimer*            timer;
     wxTimer*			GPSTimer;
     wxTimer*			SailsTimer;
