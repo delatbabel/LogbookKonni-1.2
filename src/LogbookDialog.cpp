@@ -50,6 +50,7 @@
 #include <wx/platinfo.h>
 #include <wx/timer.h>
 #include <wx/arrimpl.cpp>
+#include <wx/anybutton.h>
 #if wxCHECK_VERSION(2,9,0)
 #ifdef __WXOSX__
 #include <wx/uiaction.h>
@@ -2700,6 +2701,7 @@ void LogbookDialog::OnClickButtonFastAccessDialog( wxCommandEvent& event ) {
 
     if(NULL == m_fastAccessDialog)  {
         m_fastAccessDialog = new FastAccessDialog(this, wxID_ANY, _( "Log Event" ), wxDefaultPosition, wxSize(250, 700), wxCAPTION | wxSTAY_ON_TOP | wxRESIZE_BORDER );
+        m_fastAccessDialog->AddButton(_("dynamically added"), 1, NULL);
     }
 
     if(m_bpButtonFastAccessDialog->GetValue())
@@ -9742,32 +9744,9 @@ FastAccessDialog::FastAccessDialog( wxWindow* parent, wxWindowID id, const wxStr
 	wxBoxSizer* bSizer53;
 	bSizer53 = new wxBoxSizer( wxVERTICAL );
 
-	wxGridSizer* gSizer1;
-	gSizer1 = new wxGridSizer( 0, 1, 4, 0 );
+	container = new wxGridSizer( 0, 1, 4, 0 );
 
-	m_toggleBtn5 = new wxToggleButton( this, wxID_ANY, _("Sails"), wxDefaultPosition, wxDefaultSize, 0 );
-	gSizer1->Add( m_toggleBtn5, 0, wxEXPAND, 5 );
-
-	m_toggleBtn6 = new wxToggleButton( this, wxID_ANY, _("Motor"), wxDefaultPosition, wxDefaultSize, 0 );
-	gSizer1->Add( m_toggleBtn6, 0, wxEXPAND, 5 );
-
-	m_toggleBtn7 = new wxToggleButton( this, wxID_ANY, _("Dock"), wxDefaultPosition, wxDefaultSize, 0 );
-	gSizer1->Add( m_toggleBtn7, 0, wxEXPAND, 5 );
-
-	m_button60 = new wxButton( this, wxID_ANY, _("Wachwechsel"), wxDefaultPosition, wxDefaultSize, 0 );
-	gSizer1->Add( m_button60, 0, wxEXPAND, 5 );
-
-	m_toggleBtn8 = new wxToggleButton( this, wxID_ANY, _("Lifeline/Westen"), wxDefaultPosition, wxDefaultSize, 0 );
-	gSizer1->Add( m_toggleBtn8, 0, wxEXPAND, 5 );
-
-	m_toggleBtn9 = new wxToggleButton( this, wxID_ANY, _("Strecktau"), wxDefaultPosition, wxDefaultSize, 0 );
-	gSizer1->Add( m_toggleBtn9, 0, wxEXPAND, 5 );
-
-	m_button61 = new wxButton( this, wxID_ANY, _("MOB"), wxDefaultPosition, wxDefaultSize, 0 );
-	gSizer1->Add( m_button61, 0, wxEXPAND, 5 );
-
-
-	bSizer53->Add( gSizer1, 1, wxEXPAND, 5 );
+	bSizer53->Add( container, 1, wxEXPAND, 5 );
 
 
 	bSizer50->Add( bSizer53, 5, wxALL|wxEXPAND, 5 );
@@ -9780,66 +9759,97 @@ FastAccessDialog::FastAccessDialog( wxWindow* parent, wxWindowID id, const wxStr
 
 	// Connect Events
 	this->Connect( wxEVT_INIT_DIALOG, wxInitDialogEventHandler( FastAccessDialog::FastAccessDialogOnInitDialog ) );
-	m_toggleBtn5->Connect( wxEVT_COMMAND_TOGGLEBUTTON_CLICKED, wxCommandEventHandler( FastAccessDialog::m_toggleBtn5OnToggleButton ), NULL, this );
-	m_toggleBtn6->Connect( wxEVT_COMMAND_TOGGLEBUTTON_CLICKED, wxCommandEventHandler( FastAccessDialog::m_toggleBtn6OnToggleButton ), NULL, this );
-	m_toggleBtn7->Connect( wxEVT_COMMAND_TOGGLEBUTTON_CLICKED, wxCommandEventHandler( FastAccessDialog::m_toggleBtn7OnToggleButton ), NULL, this );
-	m_button60->Connect( wxEVT_COMMAND_BUTTON_CLICKED, wxCommandEventHandler( FastAccessDialog::m_button60OnButtonClick ), NULL, this );
-	m_toggleBtn8->Connect( wxEVT_COMMAND_TOGGLEBUTTON_CLICKED, wxCommandEventHandler( FastAccessDialog::m_toggleBtn8OnToggleButton ), NULL, this );
-	m_toggleBtn9->Connect( wxEVT_COMMAND_TOGGLEBUTTON_CLICKED, wxCommandEventHandler( FastAccessDialog::m_toggleBtn9OnToggleButton ), NULL, this );
 }
 
 FastAccessDialog::~FastAccessDialog()
 {
 	// Disconnect Events
 	this->Disconnect( wxEVT_INIT_DIALOG, wxInitDialogEventHandler( FastAccessDialog::FastAccessDialogOnInitDialog ) );
-	m_toggleBtn5->Disconnect( wxEVT_COMMAND_TOGGLEBUTTON_CLICKED, wxCommandEventHandler( FastAccessDialog::m_toggleBtn5OnToggleButton ), NULL, this );
-	m_toggleBtn6->Disconnect( wxEVT_COMMAND_TOGGLEBUTTON_CLICKED, wxCommandEventHandler( FastAccessDialog::m_toggleBtn6OnToggleButton ), NULL, this );
-	m_toggleBtn7->Disconnect( wxEVT_COMMAND_TOGGLEBUTTON_CLICKED, wxCommandEventHandler( FastAccessDialog::m_toggleBtn7OnToggleButton ), NULL, this );
-	m_button60->Disconnect( wxEVT_COMMAND_BUTTON_CLICKED, wxCommandEventHandler( FastAccessDialog::m_button60OnButtonClick ), NULL, this );
-	m_toggleBtn8->Disconnect( wxEVT_COMMAND_TOGGLEBUTTON_CLICKED, wxCommandEventHandler( FastAccessDialog::m_toggleBtn8OnToggleButton ), NULL, this );
-	m_toggleBtn9->Disconnect( wxEVT_COMMAND_TOGGLEBUTTON_CLICKED, wxCommandEventHandler( FastAccessDialog::m_toggleBtn9OnToggleButton ), NULL, this );
+	wxSizerItemList list = container->GetChildren();
+
+	for(size_t i = 0; i < list.GetCount(); i++) {
+		wxSizerItem* sizeritem = list.Item(i)->GetData();
+
+		wxWindow* button = sizeritem->GetWindow();
+
+		if(button->IsKindOf(wxCLASSINFO(wxToggleButton)))
+			button->Disconnect(wxEVT_COMMAND_TOGGLEBUTTON_CLICKED, wxCommandEventHandler( FastAccessDialog::m_toggleBtn7OnToggleButton ), NULL, this );
+		else
+			button->Disconnect(wxEVT_COMMAND_BUTTON_CLICKED, wxCommandEventHandler( FastAccessDialog::m_toggleBtn7OnToggleButton ), NULL, this );
+
+//	button->GetConnectWidget();
+//	button->GetDynamicEventTable();
+	}
+
+
 }
 
 void FastAccessDialog::m_toggleBtn7OnToggleButton( wxCommandEvent& event ) {
 
-	if(m_toggleBtn7->GetValue()) {
-		// show the dialog on how we are docked
-		wxDialog* dialog = new wxDialog(this, wxID_ANY, _("Wo?"));//, wxDefaultPosition, wxDefaultSize, wxCAPTION | wxCLOSE_BOX | wxRESIZE_BORDER);
+//	if(m_toggleBtn7->GetValue()) {
+//		// show the dialog on how we are docked
+//		wxDialog* dialog = new wxDialog(this, wxID_ANY, _("Wo?"));//, wxDefaultPosition, wxDefaultSize, wxCAPTION | wxCLOSE_BOX | wxRESIZE_BORDER);
+//
+//		dialog->SetSizeHints( wxDefaultSize, wxDefaultSize );
+//
+//		wxBoxSizer* bSizer54;
+//		bSizer54 = new wxBoxSizer( wxVERTICAL );
+//
+//		wxGridSizer* gSizer2;
+//		gSizer2 = new wxGridSizer( 0, 2, 0, 0 );
+//
+//		wxButton* m_button62 = new wxButton( dialog, wxID_ANY, _("Anchor"), wxDefaultPosition, wxDefaultSize, 0 );
+//		gSizer2->Add( m_button62, 0, wxALL|wxEXPAND, 5 );
+//
+//		wxButton* m_button63 = new wxButton( dialog, wxID_ANY, _("Buoy"), wxDefaultPosition, wxDefaultSize, 0 );
+//		gSizer2->Add( m_button63, 0, wxALL|wxEXPAND, 5 );
+//
+//		wxButton* m_button64 = new wxButton( dialog, wxID_ANY, _("Pier"), wxDefaultPosition, wxDefaultSize, 0 );
+//		gSizer2->Add( m_button64, 0, wxALL|wxEXPAND, 5 );
+//
+//		wxButton* m_button65 = new wxButton( dialog, wxID_ANY, _("Cancel"), wxDefaultPosition, wxDefaultSize, 0 );
+//		gSizer2->Add( m_button65, 0, wxALL|wxEXPAND, 5 );
+//
+//
+//		bSizer54->Add( gSizer2, 1, wxEXPAND, 5 );
+//
+//
+//		dialog->SetSizer( bSizer54 );
+//		dialog->Layout();
+//
+//		dialog->Centre( wxBOTH );
+//		dialog->ShowModal();
+//
+//		//TODO: cleanup! or do we even need to? it is done nowhere else in this plugin?
+//		delete dialog;
+//	} else {
+//		// create log entry saying we are at sea again
+//	}
 
-		dialog->SetSizeHints( wxDefaultSize, wxDefaultSize );
-
-		wxBoxSizer* bSizer54;
-		bSizer54 = new wxBoxSizer( wxVERTICAL );
-
-		wxGridSizer* gSizer2;
-		gSizer2 = new wxGridSizer( 0, 2, 0, 0 );
-
-		wxButton* m_button62 = new wxButton( dialog, wxID_ANY, _("Anchor"), wxDefaultPosition, wxDefaultSize, 0 );
-		gSizer2->Add( m_button62, 0, wxALL|wxEXPAND, 5 );
-
-		wxButton* m_button63 = new wxButton( dialog, wxID_ANY, _("Buoy"), wxDefaultPosition, wxDefaultSize, 0 );
-		gSizer2->Add( m_button63, 0, wxALL|wxEXPAND, 5 );
-
-		wxButton* m_button64 = new wxButton( dialog, wxID_ANY, _("Pier"), wxDefaultPosition, wxDefaultSize, 0 );
-		gSizer2->Add( m_button64, 0, wxALL|wxEXPAND, 5 );
-
-		wxButton* m_button65 = new wxButton( dialog, wxID_ANY, _("Cancel"), wxDefaultPosition, wxDefaultSize, 0 );
-		gSizer2->Add( m_button65, 0, wxALL|wxEXPAND, 5 );
 
 
-		bSizer54->Add( gSizer2, 1, wxEXPAND, 5 );
+}
 
+void DemoCallback() {
+	printf("demoCallback");
+}
 
-		dialog->SetSizer( bSizer54 );
-		dialog->Layout();
+void FastAccessDialog::AddButton(const wxString& title, bool toggleButton,
+		void* callback) {
+	wxAnyButton* button(0);
 
-		dialog->Centre( wxBOTH );
-		dialog->ShowModal();
-
-		//TODO: cleanup! or do we even need to? it is done nowhere else in this plugin?
-		delete dialog;
-	} else {
-		// create log entry saying we are at sea again
+	if(toggleButton)
+	{
+		button = new wxToggleButton(this, wxID_ANY, title);
+		button->Connect(wxEVT_COMMAND_TOGGLEBUTTON_CLICKED, wxCommandEventHandler( FastAccessDialog::m_toggleBtn7OnToggleButton ), NULL, this);
+	}
+	else
+	{
+		button = new wxButton(this, wxID_ANY, title);
+		button->Connect(wxEVT_COMMAND_BUTTON_CLICKED, wxCommandEventHandler( FastAccessDialog::m_toggleBtn7OnToggleButton ), NULL, this);
 	}
 
+	container->Add( button, 0, wxALL|wxEXPAND, 5);
+
+	this->Layout();
 }
