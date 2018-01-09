@@ -48,12 +48,62 @@ void engineCallback(wxAnyButton *btn, LogbookDialog* logbook) {
 	}
 }
 
+void dockingCallback(wxAnyButton *btn, const wxString& how, Logbook* logbook) {
+	logbook->customLogText += wxString::Format(_T( "%s" ), how);
+	logbook->appendRow(true, false);
+}
+
+void pierCallback(wxAnyButton *btn, LogbookDialog* logbookDialog) {
+	Logbook* logbook = logbookDialog->logbook;
+	dockingCallback(btn, _("docked at pier"), logbook);
+}
+
+void buoyCallback(wxAnyButton *btn, LogbookDialog* logbookDialog) {
+	Logbook* logbook = logbookDialog->logbook;
+	dockingCallback(btn, _("landed at buoy"), logbook);
+}
+
+void anchorCallback(wxAnyButton *btn, LogbookDialog* logbookDialog) {
+	Logbook* logbook = logbookDialog->logbook;
+	dockingCallback(btn, _("dropped anchor"), logbook);
+}
+
+void dockCallback(wxAnyButton *btn, LogbookDialog* logbookDialog) {
+	if(btn->IsKindOf(wxCLASSINFO(wxToggleButton))) {
+		wxToggleButton* button = static_cast<wxToggleButton*>(btn);
+
+		if(button->GetValue()) {
+			// show the dialog on how we are docked
+			FastAccessDialog* dialog = new FastAccessDialog(btn, wxID_ANY, _("How?"), wxDefaultPosition, wxDefaultSize, wxCAPTION | wxCLOSE_BOX | wxRESIZE_BORDER);
+			dialog->AddButton(_("Pier"), false, pierCallback);
+			dialog->AddButton(_("Buoy"), false, buoyCallback);
+			dialog->AddButton(_("Anchor"), false, anchorCallback);
+
+	//		wxButton* m_button65 = new wxButton( dialog, wxID_ANY, _("Cancel"), wxDefaultPosition, wxDefaultSize, 0 );
+	//		gSizer2->Add( m_button65, 0, wxALL|wxEXPAND, 5 );
+
+			dialog->Layout();
+
+			dialog->Centre( wxBOTH );
+			dialog->ShowModal();
+
+			delete dialog;
+		} else {
+			// create log entry saying we are at sea again
+			// we are on our way again
+			logbookDialog->logbook->customLogText = _("at sea again");
+			logbookDialog->logbook->appendRow(true, false);
+		}
+	}
+}
+
 void LogbookDialog::OnClickButtonFastAccessDialog( wxCommandEvent& event ) {
 
 	if(NULL == m_fastAccessDialog) {
         m_fastAccessDialog = new FastAccessDialog(this, wxID_ANY, _( "Log Event" ), wxDefaultPosition, wxSize(250, 700), wxCAPTION | wxSTAY_ON_TOP | wxRESIZE_BORDER );
         m_fastAccessDialog->AddButton(_("Sails"), true, sailsCallback);
         m_fastAccessDialog->AddButton(_("Engine"), true, engineCallback);
+        m_fastAccessDialog->AddButton(_("Dock"), true, dockCallback);
 	}
 
     if(m_bpButtonFastAccessDialog->GetValue())  {
@@ -65,7 +115,8 @@ void LogbookDialog::OnClickButtonFastAccessDialog( wxCommandEvent& event ) {
 
 FastAccessDialog::FastAccessDialog( wxWindow* parent, wxWindowID id, const wxString& title, const wxPoint& pos, const wxSize& size, long style ) : wxDialog( parent, id, title, pos, size, style )
 {
-	this->logbookDialog = static_cast<LogbookDialog*>(parent);
+	if(NULL == this->logbookDialog)
+		logbookDialog = static_cast<LogbookDialog*>(parent);
 
 	wxBoxSizer* bSizer50;
 	bSizer50 = new wxBoxSizer( wxVERTICAL );

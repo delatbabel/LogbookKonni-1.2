@@ -19,7 +19,7 @@ class FastAccessDialog : public wxDialog
 {
 	private:
 		wxGridSizer* container;
-		LogbookDialog* logbookDialog;
+		static LogbookDialog* logbookDialog;
 
 	protected:
 
@@ -36,5 +36,6 @@ class FastAccessDialog : public wxDialog
 		void AddButton(const wxString& title, bool toggleButton, void (*callback)(wxAnyButton* button, LogbookDialog* logbookDialog));
 
 };
+LogbookDialog* FastAccessDialog::logbookDialog = 0;
 
 #endif

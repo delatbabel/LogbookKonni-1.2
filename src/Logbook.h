@@ -162,6 +162,7 @@ public:
     bool		sailsMessage;
     int		sailsState;
     int		oldSailsState;
+    wxString	customLogText = _T("");
 
 public:
     Logbook( LogbookDialog* parent, wxString data, wxString layout, wxString layoutODT );
