@@ -39,6 +39,8 @@ SET(SRC_LOGBOOKKONNI
 		src/Logbook.cpp
 		src/LogbookDialog.h
 		src/LogbookDialog.cpp
+		src/FastAccessDialog.h
+		src/FastAccessDialog.cpp
 		src/LogbookOptions.h
 		src/LogbookOptions.cpp
  		src/LogbookHTML.h
