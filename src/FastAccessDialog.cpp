@@ -75,9 +75,9 @@ void dockCallback(wxAnyButton *btn, LogbookDialog* logbookDialog) {
 		if(button->GetValue()) {
 			// show the dialog on how we are docked
 			FastAccessDialog* dialog = new FastAccessDialog(btn, wxID_ANY, _("How?"), wxDefaultPosition, wxDefaultSize, wxCAPTION | wxCLOSE_BOX | wxRESIZE_BORDER);
-			dialog->AddButton(_("Pier"), false, pierCallback);
-			dialog->AddButton(_("Buoy"), false, buoyCallback);
-			dialog->AddButton(_("Anchor"), false, anchorCallback);
+			dialog->AddButton(_("Pier"), false, pierCallback, true);
+			dialog->AddButton(_("Buoy"), false, buoyCallback, true);
+			dialog->AddButton(_("Anchor"), false, anchorCallback, true);
 
 	//		wxButton* m_button65 = new wxButton( dialog, wxID_ANY, _("Cancel"), wxDefaultPosition, wxDefaultSize, 0 );
 	//		gSizer2->Add( m_button65, 0, wxALL|wxEXPAND, 5 );
@@ -164,6 +164,7 @@ public:
 	wxAnyButton* button;
 	void (*callback)(wxAnyButton* button, LogbookDialog* logbookDialog);
 	LogbookDialog* logbookDialog;
+	bool closeAfterCallback;
 };
 
 void FastAccessDialog::buttonCallbackHub( wxCommandEvent& event ) {
@@ -171,12 +172,19 @@ void FastAccessDialog::buttonCallbackHub( wxCommandEvent& event ) {
 	Transfer* data = static_cast<Transfer*>(event.GetEventUserData());
 	data->callback(data->button, data->logbookDialog);
 
+	if(data->closeAfterCallback) {
+		if(this->IsModal())
+			this->EndModal(0);
+		else
+			this->Close();
+	}
 }
 
-void FastAccessDialog::AddButton(const wxString& title, bool toggleButton, void (*callback)(wxAnyButton* button, LogbookDialog* logbookDialog)) {
+void FastAccessDialog::AddButton(const wxString& title, bool toggleButton, void (*callback)(wxAnyButton* button, LogbookDialog* logbookDialog), bool closeAfterCallback) {
 	Transfer* data = new Transfer();
 	data->callback = callback;
 	data->logbookDialog = this->logbookDialog;
+	data->closeAfterCallback = closeAfterCallback;
 
 	if(toggleButton)
 	{
