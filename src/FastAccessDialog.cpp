@@ -129,6 +129,19 @@ void watchCallback(wxAnyButton *btn, LogbookDialog* logbookDialog) {
 	delete dialog;
 }
 
+void mobCallback(wxAnyButton *btn, LogbookDialog* logbookDialog) {
+	if(btn->IsKindOf(wxCLASSINFO(wxToggleButton))) {
+		wxToggleButton* button = static_cast<wxToggleButton*>(btn);
+		if(button->GetValue()) {
+			logbookDialog->logbook->MOBIsActive = true;
+		} else {
+			logbookDialog->logbook->MOBIsActive = false;
+			setCustomLogText(_("MOB ended"), logbookDialog->logbook);
+		}
+		logbookDialog->logbook->appendRow(true, false);
+	}
+}
+
 void LogbookDialog::OnClickButtonFastAccessDialog( wxCommandEvent& event ) {
 
 	if(NULL == m_fastAccessDialog) {
@@ -137,6 +150,7 @@ void LogbookDialog::OnClickButtonFastAccessDialog( wxCommandEvent& event ) {
         m_fastAccessDialog->AddButton(_("Engine"), true, engineCallback);
         m_fastAccessDialog->AddButton(_("Dock"), true, dockCallback);
         m_fastAccessDialog->AddButton(_("Watch"), false, watchCallback);
+        m_fastAccessDialog->AddButton(_("MOB"), true, mobCallback);
 	}
 
     if(m_bpButtonFastAccessDialog->GetValue())  {
