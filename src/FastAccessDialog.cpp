@@ -11,6 +11,7 @@
 #include "LogbookDialog.h"
 #include "Logbook.h"
 #include "FastAccessDialog.h"
+#include "CrewList.h"
 
 
 
@@ -106,6 +107,28 @@ void dockCallback(wxAnyButton *btn, LogbookDialog* logbookDialog) {
 	}
 }
 
+void watchChangeCallback(wxAnyButton *btn, LogbookDialog* logbookDialog) {
+	Logbook* logbook = logbookDialog->logbook;
+	ActualWatch::member = btn->GetLabel();
+	setCustomLogText(_("change of watch"), logbook);
+	logbook->appendRow(true, false);
+}
+
+
+void watchCallback(wxAnyButton *btn, LogbookDialog* logbookDialog) {
+	FastAccessDialog* dialog = new FastAccessDialog(btn, wxID_ANY, _("Who's next?"), wxDefaultPosition, wxSize(250, 400), wxCAPTION | wxCLOSE_BOX | wxRESIZE_BORDER);
+    for ( unsigned int i = 0; i < ActualWatch::menuMembers.Count(); i++ )
+    {
+		dialog->AddButton(ActualWatch::menuMembers[i], false, watchChangeCallback, true);
+
+    }
+	dialog->AddCancelButton(_("Cancel"), btn, cancelCallback);
+
+	dialog->ShowModal();
+
+	delete dialog;
+}
+
 void LogbookDialog::OnClickButtonFastAccessDialog( wxCommandEvent& event ) {
 
 	if(NULL == m_fastAccessDialog) {
@@ -113,6 +136,7 @@ void LogbookDialog::OnClickButtonFastAccessDialog( wxCommandEvent& event ) {
         m_fastAccessDialog->AddButton(_("Sails"), true, sailsCallback);
         m_fastAccessDialog->AddButton(_("Engine"), true, engineCallback);
         m_fastAccessDialog->AddButton(_("Dock"), true, dockCallback);
+        m_fastAccessDialog->AddButton(_("Watch"), false, watchCallback);
 	}
 
     if(m_bpButtonFastAccessDialog->GetValue())  {
@@ -211,15 +235,15 @@ void FastAccessDialog::AddButton(const wxString& title, bool toggleButton, void 
 	this->Layout();
 }
 
-void FastAccessDialog::AddCancelButton(const wxString& title, wxToggleButton* caller, void (*callback)(wxAnyButton* button, LogbookDialog* logbookDialog)) {
+void FastAccessDialog::AddCancelButton(const wxString& title, wxAnyButton* caller, void (*callback)(wxAnyButton* button, LogbookDialog* logbookDialog)) {
 	Transfer* data = new Transfer();
 	data->callback = callback;
 	data->logbookDialog = this->logbookDialog;
 	data->closeAfterCallback = true;
 	data->button = caller;
 
-	wxToggleButton* button = new wxToggleButton(this, wxID_ANY, title);
-	button->Connect(wxEVT_COMMAND_TOGGLEBUTTON_CLICKED, wxCommandEventHandler( FastAccessDialog::buttonCallbackHub ), data, this);
+	wxButton* button = new wxButton(this, wxID_ANY, title);
+	button->Connect(wxEVT_COMMAND_BUTTON_CLICKED, wxCommandEventHandler( FastAccessDialog::buttonCallbackHub ), data, this);
 
 
 	container->Add( button, 0, wxALL|wxEXPAND, 5);
