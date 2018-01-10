@@ -8,6 +8,7 @@
 #include <wx/gbsizer.h>
 #include <wx/tglbtn.h>
 #include <wx/grid.h>
+#include <wx/textdlg.h>
 
 #include "LogbookDialog.h"
 #include "Logbook.h"
@@ -234,6 +235,15 @@ void undoCallback(wxAnyButton *btn, LogbookDialog* logbookDialog) {
 	logbookDialog->logbook->deleteRow( lastRow );
 }
 
+void customCallback(wxAnyButton *btn, LogbookDialog* logbookDialog) {
+	wxTextEntryDialog* dialog = new wxTextEntryDialog(btn, _("Enter Log Message"));
+	if(wxID_OK == dialog->ShowModal()) {
+		setCustomLogText(dialog->GetValue(), logbookDialog->logbook);
+		logbookDialog->logbook->appendRow(true, false);
+	}
+	delete dialog;
+}
+
 void LogbookDialog::OnClickButtonFastAccessDialog( wxCommandEvent& event ) {
 
 	if(NULL == m_fastAccessDialog) {
@@ -244,6 +254,7 @@ void LogbookDialog::OnClickButtonFastAccessDialog( wxCommandEvent& event ) {
         m_fastAccessDialog->AddButton(_("Watch"), false, watchCallback);
         m_fastAccessDialog->AddButton(_("heavy weather") + _T("..."), true, heavyWeatherControlsCallback);
         m_fastAccessDialog->AddButton(_("MOB"), true, mobCallback);
+        m_fastAccessDialog->AddButton(_("Custom"), false, customCallback);
         m_fastAccessDialog->AddButton(_("undo last entry"), false, undoCallback);
 	}
 
