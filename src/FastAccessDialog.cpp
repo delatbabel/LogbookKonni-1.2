@@ -116,7 +116,7 @@ void watchChangeCallback(wxAnyButton *btn, LogbookDialog* logbookDialog) {
 
 
 void watchCallback(wxAnyButton *btn, LogbookDialog* logbookDialog) {
-	FastAccessDialog* dialog = new FastAccessDialog(btn, wxID_ANY, _("Who's next?"), wxDefaultPosition, wxSize(250, 400), wxCAPTION | wxCLOSE_BOX | wxRESIZE_BORDER);
+	FastAccessDialog* dialog = new FastAccessDialog(btn, wxID_ANY, _("Who's next?"), wxDefaultPosition, wxSize(250, 400), wxCAPTION | wxRESIZE_BORDER);
     for ( unsigned int i = 0; i < ActualWatch::menuMembers.Count(); i++ )
     {
 		dialog->AddButton(ActualWatch::menuMembers[i], false, watchChangeCallback, true);
@@ -127,6 +127,67 @@ void watchCallback(wxAnyButton *btn, LogbookDialog* logbookDialog) {
 	dialog->ShowModal();
 
 	delete dialog;
+}
+
+void reefCallback(wxAnyButton *btn, LogbookDialog* logbookDialog) {
+	if(btn->IsKindOf(wxCLASSINFO(wxToggleButton))) {
+		wxToggleButton* button = static_cast<wxToggleButton*>(btn);
+
+		if(button->GetValue()) {
+			setCustomLogText(_("Reef in"), logbookDialog->logbook);
+		} else {
+			setCustomLogText(_("Reef out"), logbookDialog->logbook);
+		}
+		logbookDialog->logbook->appendRow(true, false);
+	}
+}
+
+void jacklineCallback(wxAnyButton *btn, LogbookDialog* logbookDialog) {
+	if(btn->IsKindOf(wxCLASSINFO(wxToggleButton))) {
+		wxToggleButton* button = static_cast<wxToggleButton*>(btn);
+
+		if(button->GetValue()) {
+			setCustomLogText(_("Jackline strung"), logbookDialog->logbook);
+		} else {
+			setCustomLogText(_("Jackline retrieved"), logbookDialog->logbook);
+		}
+		logbookDialog->logbook->appendRow(true, false);
+	}
+}
+
+void lifebeltCallback(wxAnyButton *btn, LogbookDialog* logbookDialog) {
+	if(btn->IsKindOf(wxCLASSINFO(wxToggleButton))) {
+		wxToggleButton* button = static_cast<wxToggleButton*>(btn);
+
+		if(button->GetValue()) {
+			setCustomLogText(_("Lifebelts/wests on"), logbookDialog->logbook);
+		} else {
+			setCustomLogText(_("Lifebelts/wests off"), logbookDialog->logbook);
+		}
+		logbookDialog->logbook->appendRow(true, false);
+	}
+}
+
+void heavyWeatherControlsCallback(wxAnyButton *btn, LogbookDialog* logbookDialog) {
+	if(btn->IsKindOf(wxCLASSINFO(wxToggleButton))) {
+		wxToggleButton* button = static_cast<wxToggleButton*>(btn);
+
+		if(button->GetValue()) {
+			// show the dialog on how we are docked
+			FastAccessDialog* dialog = new FastAccessDialog(btn, wxID_ANY, _("heavy weather"), wxDefaultPosition, wxSize(250, 400), wxCAPTION | wxRESIZE_BORDER);
+			dialog->AddButton(_("reef"), true, reefCallback);
+			dialog->AddButton(_("jackline"), true, jacklineCallback);
+			dialog->AddButton(_("lifebelts/wests"), true, lifebeltCallback);
+
+			dialog->Show();
+
+			FastAccessDialog::heavyweatherpanel = dialog;
+
+		} else {
+			FastAccessDialog::heavyweatherpanel->Close();
+			delete FastAccessDialog::heavyweatherpanel;
+		}
+	}
 }
 
 void mobCallback(wxAnyButton *btn, LogbookDialog* logbookDialog) {
@@ -150,6 +211,7 @@ void LogbookDialog::OnClickButtonFastAccessDialog( wxCommandEvent& event ) {
         m_fastAccessDialog->AddButton(_("Engine"), true, engineCallback);
         m_fastAccessDialog->AddButton(_("Dock"), true, dockCallback);
         m_fastAccessDialog->AddButton(_("Watch"), false, watchCallback);
+        m_fastAccessDialog->AddButton(_("heavy weather") + _T("..."), true, heavyWeatherControlsCallback);
         m_fastAccessDialog->AddButton(_("MOB"), true, mobCallback);
 	}
 

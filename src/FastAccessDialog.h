@@ -30,6 +30,7 @@ class FastAccessDialog : public wxDialog
 
 
 	public:
+		static FastAccessDialog* heavyweatherpanel;
 
 		FastAccessDialog( wxWindow* parent, wxWindowID id = wxID_ANY, const wxString& title = wxEmptyString, const wxPoint& pos = wxDefaultPosition, const wxSize& size = wxDefaultSize, long style = wxDEFAULT_DIALOG_STYLE );
 		~FastAccessDialog();
@@ -39,5 +40,6 @@ class FastAccessDialog : public wxDialog
 
 };
 LogbookDialog* FastAccessDialog::logbookDialog = 0;
+FastAccessDialog* FastAccessDialog::heavyweatherpanel = 0;
 
 #endif
