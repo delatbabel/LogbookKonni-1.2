@@ -229,6 +229,11 @@ void mobCallback(wxAnyButton *btn, LogbookDialog* logbookDialog) {
 	}
 }
 
+void undoCallback(wxAnyButton *btn, LogbookDialog* logbookDialog) {
+	int lastRow = logbookDialog->logGrids[0]->GetNumberRows() - 1;
+	logbookDialog->logbook->deleteRow( lastRow );
+}
+
 void LogbookDialog::OnClickButtonFastAccessDialog( wxCommandEvent& event ) {
 
 	if(NULL == m_fastAccessDialog) {
@@ -239,6 +244,7 @@ void LogbookDialog::OnClickButtonFastAccessDialog( wxCommandEvent& event ) {
         m_fastAccessDialog->AddButton(_("Watch"), false, watchCallback);
         m_fastAccessDialog->AddButton(_("heavy weather") + _T("..."), true, heavyWeatherControlsCallback);
         m_fastAccessDialog->AddButton(_("MOB"), true, mobCallback);
+        m_fastAccessDialog->AddButton(_("undo last entry"), false, undoCallback);
 	}
 
     if(m_bpButtonFastAccessDialog->GetValue())  {
@@ -269,8 +275,6 @@ FastAccessDialog::FastAccessDialog( wxWindow* parent, wxWindowID id, const wxStr
 
 	this->SetSizer( bSizer50 );
 	this->Layout();
-
-	this->Centre( wxBOTH );
 
 	// Connect Events
 	this->Connect( wxEVT_INIT_DIALOG, wxInitDialogEventHandler( FastAccessDialog::FastAccessDialogOnInitDialog ) );
