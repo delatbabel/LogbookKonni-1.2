@@ -48,24 +48,29 @@ void engineCallback(wxAnyButton *btn, LogbookDialog* logbook) {
 	}
 }
 
-void dockingCallback(wxAnyButton *btn, const wxString& how, Logbook* logbook) {
-	logbook->customLogText += wxString::Format(_T( "%s" ), how);
-	logbook->appendRow(true, false);
+void setCustomLogText(const wxString& text, Logbook* logbook) {
+	if(_T("") != logbook->customLogText)
+		logbook->customLogText += wxString::Format(_T( "\n%s" ), text);
+	else
+		logbook->customLogText += wxString::Format(_T( "%s" ), text);
 }
 
 void pierCallback(wxAnyButton *btn, LogbookDialog* logbookDialog) {
 	Logbook* logbook = logbookDialog->logbook;
-	dockingCallback(btn, _("docked at pier"), logbook);
+	setCustomLogText(_("docked at pier"), logbook);
+	logbook->appendRow(true, false);
 }
 
 void buoyCallback(wxAnyButton *btn, LogbookDialog* logbookDialog) {
 	Logbook* logbook = logbookDialog->logbook;
-	dockingCallback(btn, _("landed at buoy"), logbook);
+	setCustomLogText(_("landed at buoy"), logbook);
+	logbook->appendRow(true, false);
 }
 
 void anchorCallback(wxAnyButton *btn, LogbookDialog* logbookDialog) {
 	Logbook* logbook = logbookDialog->logbook;
-	dockingCallback(btn, _("dropped anchor"), logbook);
+	setCustomLogText(_("dropped anchor"), logbook);
+	logbook->appendRow(true, false);
 }
 
 void cancelCallback(wxAnyButton *btn, LogbookDialog* logbookDialog) {
