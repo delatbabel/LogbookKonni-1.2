@@ -9,6 +9,7 @@
 
 #include <wx/string.h>
 #include <wx/button.h>
+#include <wx/tglbtn.h>
 #include <wx/dialog.h>
 #include <wx/gbsizer.h>
 
@@ -34,6 +35,7 @@ class FastAccessDialog : public wxDialog
 		~FastAccessDialog();
 
 		void AddButton(const wxString& title, bool toggleButton, void (*callback)(wxAnyButton* button, LogbookDialog* logbookDialog), bool closeAfterCallback = false);
+		void AddCancelButton(const wxString& title, wxToggleButton* button, void (*callback)(wxAnyButton* button, LogbookDialog* logbookDialog));
 
 };
 LogbookDialog* FastAccessDialog::logbookDialog = 0;

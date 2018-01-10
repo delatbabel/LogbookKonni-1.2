@@ -68,23 +68,27 @@ void anchorCallback(wxAnyButton *btn, LogbookDialog* logbookDialog) {
 	dockingCallback(btn, _("dropped anchor"), logbook);
 }
 
+void cancelCallback(wxAnyButton *btn, LogbookDialog* logbookDialog) {
+	if(btn->IsKindOf(wxCLASSINFO(wxToggleButton))) {
+		wxToggleButton* button = static_cast<wxToggleButton*>(btn);
+
+		bool tmp = button->GetValue();
+		button->SetValue(!tmp);
+	}
+}
+
 void dockCallback(wxAnyButton *btn, LogbookDialog* logbookDialog) {
 	if(btn->IsKindOf(wxCLASSINFO(wxToggleButton))) {
 		wxToggleButton* button = static_cast<wxToggleButton*>(btn);
 
 		if(button->GetValue()) {
 			// show the dialog on how we are docked
-			FastAccessDialog* dialog = new FastAccessDialog(btn, wxID_ANY, _("How?"), wxDefaultPosition, wxDefaultSize, wxCAPTION | wxCLOSE_BOX | wxRESIZE_BORDER);
+			FastAccessDialog* dialog = new FastAccessDialog(btn, wxID_ANY, _("How?"), wxDefaultPosition, wxSize(250, 400), wxCAPTION | wxCLOSE_BOX | wxRESIZE_BORDER);
 			dialog->AddButton(_("Pier"), false, pierCallback, true);
 			dialog->AddButton(_("Buoy"), false, buoyCallback, true);
 			dialog->AddButton(_("Anchor"), false, anchorCallback, true);
+			dialog->AddCancelButton(_("Cancel"), button, cancelCallback);
 
-	//		wxButton* m_button65 = new wxButton( dialog, wxID_ANY, _("Cancel"), wxDefaultPosition, wxDefaultSize, 0 );
-	//		gSizer2->Add( m_button65, 0, wxALL|wxEXPAND, 5 );
-
-			dialog->Layout();
-
-			dialog->Centre( wxBOTH );
 			dialog->ShowModal();
 
 			delete dialog;
@@ -198,6 +202,22 @@ void FastAccessDialog::AddButton(const wxString& title, bool toggleButton, void 
 	}
 
 	container->Add( data->button, 0, wxALL|wxEXPAND, 5);
+
+	this->Layout();
+}
+
+void FastAccessDialog::AddCancelButton(const wxString& title, wxToggleButton* caller, void (*callback)(wxAnyButton* button, LogbookDialog* logbookDialog)) {
+	Transfer* data = new Transfer();
+	data->callback = callback;
+	data->logbookDialog = this->logbookDialog;
+	data->closeAfterCallback = true;
+	data->button = caller;
+
+	wxToggleButton* button = new wxToggleButton(this, wxID_ANY, title);
+	button->Connect(wxEVT_COMMAND_TOGGLEBUTTON_CLICKED, wxCommandEventHandler( FastAccessDialog::buttonCallbackHub ), data, this);
+
+
+	container->Add( button, 0, wxALL|wxEXPAND, 5);
 
 	this->Layout();
 }
