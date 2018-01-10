@@ -201,7 +201,7 @@ void heavyWeatherControlsCallback(wxAnyButton *btn, LogbookDialog* logbookDialog
 
 		if(button->GetValue()) {
 			// show the dialog on how we are docked
-			FastAccessDialog* dialog = new FastAccessDialog(btn, wxID_ANY, _("heavy weather"), wxDefaultPosition, wxSize(250, 400), wxCAPTION | wxRESIZE_BORDER);
+			FastAccessDialog* dialog = new FastAccessDialog(btn, wxID_ANY, _("heavy weather"), btn->ClientToScreen(btn->GetClientSize() + wxPoint(20, 0)), wxSize(250, 400), wxCAPTION | wxRESIZE_BORDER);
 			dialog->AddButton(_("reef"), true, reefCallback);
 			dialog->AddButton(_("jackline"), true, jacklineCallback);
 			dialog->AddButton(_("lifebelts/wests"), true, lifebeltCallback);
@@ -246,7 +246,7 @@ void customCallback(wxAnyButton *btn, LogbookDialog* logbookDialog) {
 
 void LogbookDialog::OnClickButtonFastAccessDialog( wxCommandEvent& event ) {
 	if(NULL == m_fastAccessDialog) {
-        m_fastAccessDialog = new FastAccessDialog(this, wxID_ANY, _( "Log Event" ), ClientToScreen(wxPoint(10,10)), wxSize(250, 700), wxCAPTION | wxSTAY_ON_TOP | wxRESIZE_BORDER );
+        m_fastAccessDialog = new FastAccessDialog(this, wxID_ANY, _( "Log Event" ), GetParent()->ClientToScreen(wxPoint(10,10)), wxSize(250, 700), wxCAPTION | wxSTAY_ON_TOP | wxRESIZE_BORDER );
         m_fastAccessDialog->AddButton(_("Sails"), true, sailsCallback);
         m_fastAccessDialog->AddButton(_("Engine"), true, engineCallback);
         m_fastAccessDialog->AddButton(_("Dock"), true, dockCallback);
