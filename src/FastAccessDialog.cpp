@@ -245,9 +245,8 @@ void customCallback(wxAnyButton *btn, LogbookDialog* logbookDialog) {
 }
 
 void LogbookDialog::OnClickButtonFastAccessDialog( wxCommandEvent& event ) {
-
 	if(NULL == m_fastAccessDialog) {
-        m_fastAccessDialog = new FastAccessDialog(this, wxID_ANY, _( "Log Event" ), wxDefaultPosition, wxSize(250, 700), wxCAPTION | wxSTAY_ON_TOP | wxRESIZE_BORDER );
+        m_fastAccessDialog = new FastAccessDialog(this, wxID_ANY, _( "Log Event" ), ClientToScreen(wxPoint(10,10)), wxSize(250, 700), wxCAPTION | wxSTAY_ON_TOP | wxRESIZE_BORDER );
         m_fastAccessDialog->AddButton(_("Sails"), true, sailsCallback);
         m_fastAccessDialog->AddButton(_("Engine"), true, engineCallback);
         m_fastAccessDialog->AddButton(_("Dock"), true, dockCallback);
