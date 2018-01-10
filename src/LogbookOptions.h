@@ -221,6 +221,7 @@ public:
     wxCheckBox* m_checkBoxStatusBar;
     wxCheckBox* m_checkBoxWindspeeds;
     wxCheckBox* m_checkBoxOverview;
+    wxChoice* m_choiceCrewNames;
 
     wxDateTime textCtrlDate;
 

@@ -881,16 +881,6 @@ LogbookDialog::LogbookDialog( logbookkonni_pi * d, wxTimer* t, LogbookTimer* lt,
     m_staticline36 = new wxStaticLine( m_panel21, wxID_ANY, wxDefaultPosition, wxDefaultSize, wxLI_HORIZONTAL|wxLI_VERTICAL );
     bSizer3->Add( m_staticline36, 0, wxEXPAND | wxALL, 5 );
 
-    m_staticText1171 = new wxStaticText( m_panel21, wxID_ANY, _( "Copy to watch" ), wxDefaultPosition, wxDefaultSize, 0 );
-    m_staticText1171->Wrap( -1 );
-    bSizer3->Add( m_staticText1171, 0, wxALL|wxALIGN_CENTER_VERTICAL, 5 );
-
-    wxString m_choiceCrewNamesChoices[] = { _( "Name in full" ), _( "Firstname only" ), _( "Lastname only" ) };
-    int m_choiceCrewNamesNChoices = sizeof( m_choiceCrewNamesChoices ) / sizeof( wxString );
-    m_choiceCrewNames = new wxChoice( m_panel21, wxID_ANY, wxDefaultPosition, wxDefaultSize, m_choiceCrewNamesNChoices, m_choiceCrewNamesChoices, 0 );
-    m_choiceCrewNames->SetSelection( 0 );
-    bSizer3->Add( m_choiceCrewNames, 0, wxALL|wxALIGN_CENTER_VERTICAL, 5 );
-
     bSizer38->Add( bSizer3, 0, wxEXPAND, 5 );
 
     m_staticline2 = new wxStaticLine( m_panel21, wxID_ANY, wxDefaultPosition, wxDefaultSize, wxLI_HORIZONTAL|wxLI_VERTICAL );

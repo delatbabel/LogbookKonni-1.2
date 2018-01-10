@@ -294,7 +294,7 @@ LogbookOptions::LogbookOptions( wxWindow* parent, Options* opt, logbookkonni_pi*
 
     fgSizer29->Add( 0, 0, 1, wxEXPAND, 5 );
 
-    m_staticText741 = new wxStaticText( m_panel15, wxID_ANY, _( "     Winddirection set to:" ), wxDefaultPosition, wxDefaultSize, 0 );
+    m_staticText741 = new wxStaticText( m_panel15, wxID_ANY, _( "Winddirection set to:" ), wxDefaultPosition, wxDefaultSize, 0 );
     m_staticText741->Wrap( -1 );
     fgSizer29->Add( m_staticText741, 0, wxALL|wxALIGN_CENTER_VERTICAL, 5 );
 
@@ -305,6 +305,20 @@ LogbookOptions::LogbookOptions( wxWindow* parent, Options* opt, logbookkonni_pi*
     m_choiceWindTo->SetToolTip( _( "default = Relative to Boat\nHeading = Actual wind direction" ) );
 
     fgSizer29->Add( m_choiceWindTo, 0, wxRIGHT, 5 );
+
+    // start "newline" for crew naming choice
+    fgSizer29->Add( 0, 0, 1, wxEXPAND, 5 );
+    fgSizer29->Add( 0, 0, 1, wxEXPAND, 5 );
+
+    wxStaticText* m_staticText1171 = new wxStaticText( m_panel15, wxID_ANY, _( "Crew Naming Style: " ), wxDefaultPosition, wxDefaultSize, 0 );
+    m_staticText1171->Wrap( -1 );
+    fgSizer29->Add( m_staticText1171, 0, wxALL|wxALIGN_CENTER_VERTICAL, 5 );
+
+    wxString m_choiceCrewNamesChoices[] = { _( "Name in full" ), _( "Firstname only" ), _( "Lastname only" ) };
+    int m_choiceCrewNamesNChoices = sizeof( m_choiceCrewNamesChoices ) / sizeof( wxString );
+    m_choiceCrewNames = new wxChoice( m_panel15, wxID_ANY, wxDefaultPosition, wxDefaultSize, m_choiceCrewNamesNChoices, m_choiceCrewNamesChoices, 0 );
+    m_choiceCrewNames->SetSelection( 0 );
+    fgSizer29->Add( m_choiceCrewNames, 0, wxRIGHT, 5 );
 
     fgSizer10->Add( fgSizer29, 1, 0, 0 );
 
@@ -2168,6 +2182,8 @@ void LogbookOptions::setValues()
     m_checkBoxWindspeeds->SetValue( opt->windspeeds );
     m_checkBoxOverview->SetValue( opt->overviewlines );
 
+    m_choiceCrewNames->SetSelection( opt->crewNamingStyle );
+
     m_checkBoxKMLRoute->SetValue( ( opt->kmlRoute )?true:false );
     m_checkBoxKMLTrack->SetValue( ( opt->kmlTrack )?true:false );
     m_textCtrlKMLLineWidt->SetValue( opt->kmlLineWidth );
@@ -2339,6 +2355,8 @@ void LogbookOptions::getValues()
     opt->bEng2RPMIsChecked= m_checkBoxEng2RPM->GetValue();
     opt->bGenRPMIsChecked= m_checkBoxGenRPM->GetValue();
     opt->NMEAUseERRPM = m_checkBoxNMEAUseRPM->GetValue();
+
+    opt->crewNamingStyle = m_choiceCrewNames->GetSelection();
 
     //int row = 0;
 	wxString tempstr;

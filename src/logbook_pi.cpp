@@ -976,6 +976,8 @@ void logbookkonni_pi::SaveConfig()
         pConf->Write ( _T ( "ShowHeading" ), opt->showHeading );
         pConf->Write ( _T ( "ShowWindHeading" ), opt->showWindHeading );
 
+        pConf->Write ( _T ( "crewNamingStyle" ), opt->crewNamingStyle );
+
         pConf->Write ( _T ( "NavHTML" ), opt->navHTML );
         pConf->Write ( _T ( "CrewHTML" ), opt->crewHTML );
         pConf->Write ( _T ( "BoatHTML" ), opt->boatHTML );
@@ -1197,6 +1199,8 @@ void logbookkonni_pi::LoadConfig()
         pConf->Read ( _T ( "ShowWindDir" ), &opt->showWindDir );
         pConf->Read ( _T ( "ShowHeading" ), &opt->showHeading );
         pConf->Read ( _T ( "ShowWindHeading" ), &opt->showWindHeading );
+
+        pConf->Read ( _T ( "crewNamingStyle" ), &opt->crewNamingStyle );
 
         pConf->Read( _T ( "NavHTML" ), &opt->navHTML,1 );
         pConf->Read ( _T ( "CrewHTML" ), &opt->crewHTML,1 );

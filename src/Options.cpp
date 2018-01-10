@@ -199,6 +199,8 @@ or change this text in Toolbox/Plugins/Logbook\n\nShift+Enter appends a new line
 
     overviewAll = 0;
 
+    crewNamingStyle = 0;
+
     navGridLayoutChoice = 0;
     crewGridLayoutChoice = 0;
     boatGridLayoutChoice = 0;

@@ -171,6 +171,7 @@ public:
     int		showWindDir;
     int		showWindHeading;
     int		showHeading;
+    int		crewNamingStyle;
 
     bool 		navHTML;
     bool		crewHTML;

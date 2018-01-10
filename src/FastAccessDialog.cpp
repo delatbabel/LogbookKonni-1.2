@@ -7,11 +7,14 @@
 #include <wx/dialog.h>
 #include <wx/gbsizer.h>
 #include <wx/tglbtn.h>
+#include <wx/grid.h>
 
 #include "LogbookDialog.h"
 #include "Logbook.h"
 #include "FastAccessDialog.h"
 #include "CrewList.h"
+#include "Options.h"
+#include "logbook_pi.h"
 
 
 
@@ -111,17 +114,40 @@ void watchChangeCallback(wxAnyButton *btn, LogbookDialog* logbookDialog) {
 	Logbook* logbook = logbookDialog->logbook;
 	ActualWatch::member = btn->GetLabel();
 	setCustomLogText(_("change of watch"), logbook);
+	ActualWatch::active = true;
 	logbook->appendRow(true, false);
 }
 
 
 void watchCallback(wxAnyButton *btn, LogbookDialog* logbookDialog) {
 	FastAccessDialog* dialog = new FastAccessDialog(btn, wxID_ANY, _("Who's next?"), wxDefaultPosition, wxSize(250, 400), wxCAPTION | wxRESIZE_BORDER);
+	bool clear = false;
+    if(0 == ActualWatch::menuMembers.Count()) {
+		CrewList* crewList = logbookDialog->crewList;
+        for ( int row = 0; row < crewList->gridCrew->GetNumberRows(); row++ )
+        {
+            if ( crewList->gridCrew->GetCellValue( row, CrewList::ONBOARD ) != _T( "" ) )
+            {
+                int sel = logbookDialog->logbookPlugIn->opt->crewNamingStyle;
+
+                switch ( sel )
+                {
+                case 0: crewList->checkMemberIsInMenu( crewList->gridCrew->GetCellValue( row, CrewList::FIRSTNAME )+_T( " " )+crewList->gridCrew->GetCellValue( row, CrewList::NAME ) ); break;
+                case 1: crewList->checkMemberIsInMenu( crewList->gridCrew->GetCellValue( row, CrewList::FIRSTNAME ) ); break;
+                case 2: crewList->checkMemberIsInMenu( crewList->gridCrew->GetCellValue( row, CrewList::NAME ) ); break;
+                }
+            }
+        }
+        clear = true;
+    }
     for ( unsigned int i = 0; i < ActualWatch::menuMembers.Count(); i++ )
     {
 		dialog->AddButton(ActualWatch::menuMembers[i], false, watchChangeCallback, true);
 
     }
+	if(clear)
+		ActualWatch::menuMembers.Clear();
+
 	dialog->AddCancelButton(_("Cancel"), btn, cancelCallback);
 
 	dialog->ShowModal();

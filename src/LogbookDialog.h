@@ -189,7 +189,6 @@ public:
     wxChoice* crewChoice;
     wxButton* crewView;
     wxStaticLine* m_staticline36;
-    wxStaticText* m_staticText1171;
     wxStaticLine* m_staticline2;
     wxSplitterWindow* m_splitterWatch;
     wxPanel* m_panel211;
@@ -587,7 +586,6 @@ public:
     wxButton* m_buttonEditLayoutCrew;
     wxRadioButton* m_radioBtnHTMLCrew;
     wxRadioButton* m_radioBtnODTCrew;
-    wxChoice* m_choiceCrewNames;
     wxTextCtrl* m_textCtrlWakeTrip;
     wxTextCtrl* m_textCtrlWakeDay;
     wxChoice* m_choiceWakeDisplay;
