@@ -141,7 +141,7 @@ void watchChangeCancelCallback(wxAnyButton *btn, LogbookDialog* logbookDialog) {
 }
 
 void watchCallback(wxAnyButton *btn, LogbookDialog* logbookDialog) {
-	FastAccessDialog* dialog = new FastAccessDialog(btn, wxID_ANY, _("Who's next?"), wxDefaultPosition, wxSize(250, 400), wxCAPTION | wxRESIZE_BORDER);
+	FastAccessDialog* dialog = new FastAccessDialog(btn, wxID_ANY, _("Who's next?"), wxDefaultPosition, wxDefaultSize, wxCAPTION | wxRESIZE_BORDER);
 	bool clear = false;
     if(0 == ActualWatch::menuMembers.Count()) {
 		CrewList* crewList = logbookDialog->crewList;
@@ -165,6 +165,11 @@ void watchCallback(wxAnyButton *btn, LogbookDialog* logbookDialog) {
     {
 		dialog->AddButton(ActualWatch::menuMembers[i], true, watchChangeCancelCallback, false);
     }
+
+	wxSize currentbuttonsize = btn->GetSize();
+	currentbuttonsize.IncBy(0, (currentbuttonsize.GetHeight() + 10) * (ActualWatch::menuMembers.Count() + 2));
+	dialog->SetSize(currentbuttonsize);
+
 	if(clear)
 		ActualWatch::menuMembers.Clear();
 
