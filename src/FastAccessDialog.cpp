@@ -111,14 +111,34 @@ void dockCallback(wxAnyButton *btn, LogbookDialog* logbookDialog) {
 	}
 }
 
-void watchChangeCallback(wxAnyButton *btn, LogbookDialog* logbookDialog) {
+void watchChangeOkCallback(wxAnyButton *btn, LogbookDialog* logbookDialog) {
 	Logbook* logbook = logbookDialog->logbook;
-	ActualWatch::member = btn->GetLabel();
+	wxString result = _T("");
+
+	wxWindowList wxbuttons = btn->GetParent()->GetChildren();
+
+    for ( wxWindowList::iterator btn = wxbuttons.begin(); btn != wxbuttons.end(); ++btn ) {
+		if((*btn)->IsKindOf(wxCLASSINFO(wxToggleButton))) {
+			wxToggleButton* button = static_cast<wxToggleButton*>((*btn));
+			if(button->GetValue()) {
+				if(_T("") != result) {
+					result += _T("\n");
+				}
+				result += button->GetLabelText();
+			}
+		}
+	}
+
 	setCustomLogText(_("change of watch"), logbook);
 	ActualWatch::active = true;
+	ActualWatch::member = result;
 	logbook->appendRow(true, false);
 }
 
+
+void watchChangeCancelCallback(wxAnyButton *btn, LogbookDialog* logbookDialog) {
+	// we do not do nothing here, just passing through so that the dialog can close
+}
 
 void watchCallback(wxAnyButton *btn, LogbookDialog* logbookDialog) {
 	FastAccessDialog* dialog = new FastAccessDialog(btn, wxID_ANY, _("Who's next?"), wxDefaultPosition, wxSize(250, 400), wxCAPTION | wxRESIZE_BORDER);
@@ -143,13 +163,13 @@ void watchCallback(wxAnyButton *btn, LogbookDialog* logbookDialog) {
     }
     for ( unsigned int i = 0; i < ActualWatch::menuMembers.Count(); i++ )
     {
-		dialog->AddButton(ActualWatch::menuMembers[i], false, watchChangeCallback, true);
-
+		dialog->AddButton(ActualWatch::menuMembers[i], true, watchChangeCancelCallback, false);
     }
 	if(clear)
 		ActualWatch::menuMembers.Clear();
 
-	dialog->AddCancelButton(_("Cancel"), btn, cancelCallback);
+	dialog->AddButton(_("OK"), false, watchChangeOkCallback, true);
+	dialog->AddCancelButton(_("Cancel"), btn, watchChangeCancelCallback);
 
 	dialog->ShowModal();
 
