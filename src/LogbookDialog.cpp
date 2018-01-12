@@ -215,6 +215,7 @@ LogbookDialog::LogbookDialog( logbookkonni_pi * d, wxTimer* t, LogbookTimer* lt,
     bSizer6->Add( m_bpButtonHelpGlobal, 0, wxALIGN_CENTER_VERTICAL|wxRIGHT, 5 );
 
     m_bpButtonFastAccessDialog = new wxToggleButton(m_panel2, wxID_ANY, _( "FAD"));
+    m_choiceWindTo->SetToolTip( _( "Show/Hide Fast Access Dialog" ) );
     bSizer6->Add(m_bpButtonFastAccessDialog, 0, wxALIGN_CENTER_VERTICAL|wxRIGHT, 5);
 
     bSizer361->Add( bSizer6, 0, 0, 0 );
