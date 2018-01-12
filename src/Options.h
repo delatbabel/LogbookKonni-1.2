@@ -155,7 +155,6 @@ public:
     bool        generatorRunning;
     bool	bRPMCheck;
     bool	NMEAUseERRPM;
-    bool	NMEAUseWIMDA;
 
     // Sails
     wxArrayString	abrSails;
@@ -163,6 +162,7 @@ public:
     bool			bSailIsChecked[14];
     int				rowGap;
     int				colGap;
+    int             numberSails;
 
     //wxChoice
     int		showDepth;
@@ -171,6 +171,7 @@ public:
     int		showWindDir;
     int		showWindHeading;
     int		showHeading;
+    int		crewNamingStyle;
 
     bool 		navHTML;
     bool		crewHTML;

@@ -107,6 +107,7 @@
 #include "vhw.hpp"
 #include "vwr.hpp"
 #include "vwt.hpp"
+#include "xdr.hpp"
 #include "zda.hpp"
 /*
 #include "ROT.hpp"
@@ -124,7 +125,6 @@
 #include "VTG.hpp"
 #include "WCV.hpp"
 #include "WNC.hpp"
-#include "XDR.hpp"
 #include "XTE.hpp"
 #include "XTR.hpp"
 #include "ZDA.hpp"
@@ -234,8 +234,8 @@ public:
           WNC Wnc;
     */
     WPL Wpl;
+    XDR Xdr;
     /*
-          XDR Xdr;
           XTE Xte;
           XTR Xtr;
     */

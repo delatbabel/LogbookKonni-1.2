@@ -39,6 +39,8 @@ SET(SRC_LOGBOOKKONNI
 		src/Logbook.cpp
 		src/LogbookDialog.h
 		src/LogbookDialog.cpp
+		src/FastAccessDialog.h
+		src/FastAccessDialog.cpp
 		src/LogbookOptions.h
 		src/LogbookOptions.cpp
  		src/LogbookHTML.h
@@ -123,6 +125,8 @@ SET(SRC_LNMEA0183
 		src/nmea0183/vwr.hpp
 		src/nmea0183/vwt.cpp
 		src/nmea0183/vwt.hpp
+		src/nmea0183/xdr.cpp
+		src/nmea0183/xdr.hpp
 		src/nmea0183/zda.cpp
 		src/nmea0183/zda.hpp
 		src/nmea0183/rsa.hpp

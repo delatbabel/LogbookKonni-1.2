@@ -536,7 +536,48 @@ void Logbook::SetSentence( wxString &sentence )
                 }
             }
         }
+        else if (m_NMEA0183.LastSentenceIDReceived == _T("XDR")) { //Transducer measurement
+             /* XDR Transducer types
+              * AngularDisplacementTransducer = 'A',
+              * TemperatureTransducer = 'C',
+              * LinearDisplacementTransducer = 'D',
+              * FrequencyTransducer = 'F',
+              * HumidityTransducer = 'H',
+              * ForceTransducer = 'N',
+              * PressureTransducer = 'P',
+              * FlowRateTransducer = 'R',
+              * TachometerTransducer = 'T',
+              * VolumeTransducer = 'V'
+             */
 
+            if (m_NMEA0183.Parse()) { 
+                double xdrdata;
+                for (int i = 0; i<m_NMEA0183.Xdr.TransducerCnt; i++) {
+	        		wimdaSentence = true;
+        			dtWimda = wxDateTime::Now();
+
+                    xdrdata = m_NMEA0183.Xdr.TransducerInfo[i].MeasurementData;
+                    // XDR Airtemp
+                    if (m_NMEA0183.Xdr.TransducerInfo[i].TransducerType == _T("C")) {
+        				if ( opt->temperature == _T( "F" ) )
+    				        xdrdata = ( ( xdrdata * 9 ) / 5 ) + 32;
+        				sTemperatureAir = wxString::Format( _T( "%2.2f%s %s" ),xdrdata,opt->Deg.c_str(),opt->temperature.c_str() );
+                    }
+                    // XDR Pressure
+                    if (m_NMEA0183.Xdr.TransducerInfo[i].TransducerType == _T("P")) {
+                        if (m_NMEA0183.Xdr.TransducerInfo[i].UnitOfMeasurement == _T("B")) {
+                            xdrdata *= 1000;
+						}
+						sPressure = wxString::Format( _T( "%4.1f %s" ),xdrdata,opt->baro.c_str() );
+                    }
+                    // XDR Humidity
+                    if (m_NMEA0183.Xdr.TransducerInfo[i].TransducerType == _T("H")) {
+            			sHumidity = wxString::Format( _T( "%3.1f " ),xdrdata );
+                    }
+
+                }
+            }
+        }
 
     }
 
@@ -551,7 +592,7 @@ void Logbook::SetSentence( wxString &sentence )
     wxStringTokenizer tkz( sentence,_T( "," ) );
     wxString sentenceInd = tkz.GetNextToken();
 
-    if ( sentenceInd == _T( "$WIMDA" ) && opt->NMEAUseWIMDA )
+    if ( sentenceInd.Right( 3 ) == _T( "MDA" ) )
     {
         wimdaSentence = true;
         dtWimda = wxDateTime::Now();
@@ -575,9 +616,8 @@ void Logbook::SetSentence( wxString &sentence )
         tkz.GetNextToken();
         tkz.GetNextToken();
         tkz.GetNextToken();
-        tkz.GetNextToken().ToDouble( &h );
-        if ( h > 0 )
-            sHumidity = wxString::Format( _T( "%3.1f %" ),h );
+        if (tkz.GetNextToken().ToDouble( &h ))
+            sHumidity = wxString::Format( _T( "%3.1f " ),h );
         else
             sHumidity = wxEmptyString;
     }
@@ -1616,10 +1656,23 @@ void Logbook::appendRow( bool showlastline, bool autoline )
         dialog->logGrids[0]->SetCellValue( lastRow,RTIME,mCorrectedDateTime.Format( opt->stimeformat ) );
     }
 
-    if ( MOBIsActive )
-        dialog->logGrids[0]->SetCellValue( lastRow,REMARKS,_( "*** MAN OVERBOARD ***\n" ) );
+    if ( sLogText != _T( "" ) )
+        sLogText += wxString::Format( _T( "\n%s" ), customLogText );
     else
-        dialog->logGrids[0]->SetCellValue( lastRow,REMARKS,sLogText );
+        sLogText += wxString::Format( _T( "%s" ), customLogText );
+
+    // reset custom log text after it has been used
+    customLogText = _T("");
+
+    if ( MOBIsActive )
+    {
+    	if(sLogText != _T(""))
+    		sLogText += wxString::Format( _T( "\n%s" ), _( "*** MAN OVERBOARD ***" ));
+    	else
+    		sLogText += _( "*** MAN OVERBOARD ***" );
+    }
+
+	dialog->logGrids[0]->SetCellValue( lastRow,REMARKS,sLogText );
 
     if ( routeIsActive )
     {
@@ -1804,7 +1857,7 @@ void Logbook::appendRow( bool showlastline, bool autoline )
 
     wxString sails = wxEmptyString;
     unsigned int n = 0;
-    for ( unsigned i = 0; i < 14; i++ )
+    for ( int i = 0; i < opt->numberSails; i++ )
     {
         if ( dialog->checkboxSails[i]->IsChecked() )
         {

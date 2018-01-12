@@ -221,6 +221,7 @@ public:
     wxCheckBox* m_checkBoxStatusBar;
     wxCheckBox* m_checkBoxWindspeeds;
     wxCheckBox* m_checkBoxOverview;
+    wxChoice* m_choiceCrewNames;
 
     wxDateTime textCtrlDate;
 
@@ -320,7 +321,6 @@ public:
     wxChoice* m_choiceKMLRouteLineColo;
     wxChoice* m_choiceKMLTrackLineColor;
     wxCheckBox* m_checkBoxNMEAUseRPM;
-    wxCheckBox* m_checkBoxNMEAUseWIMDA;
     wxPanel* m_panelSails;
     wxPanel* m_panelSailNames;
     wxGrid* m_gridSailNames;

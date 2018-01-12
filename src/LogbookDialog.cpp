@@ -50,6 +50,7 @@
 #include <wx/platinfo.h>
 #include <wx/timer.h>
 #include <wx/arrimpl.cpp>
+#include <wx/anybutton.h>
 #if wxCHECK_VERSION(2,9,0)
 #ifdef __WXOSX__
 #include <wx/uiaction.h>
@@ -163,7 +164,9 @@ LogbookDialog::LogbookDialog( logbookkonni_pi * d, wxTimer* t, LogbookTimer* lt,
 
     bSizer45->Add( bSizer49, 0, wxRIGHT|wxLEFT|wxBOTTOM, 5 );
 
-    fgSizerSails = new wxFlexGridSizer( 3, 5, 0, 0 );
+    cntsails = logbookPlugIn->opt->numberSails;
+    sc = cntsails / 3 + 1;
+    fgSizerSails = new wxFlexGridSizer( 3, sc, 0, 0 );
     fgSizerSails->SetFlexibleDirection( wxBOTH );
     fgSizerSails->SetNonFlexibleGrowMode( wxFLEX_GROWMODE_NONE );
 
@@ -210,6 +213,10 @@ LogbookDialog::LogbookDialog( logbookkonni_pi * d, wxTimer* t, LogbookTimer* lt,
     m_bpButtonHelpGlobal->SetToolTip( _( "Help" ) );
 
     bSizer6->Add( m_bpButtonHelpGlobal, 0, wxALIGN_CENTER_VERTICAL|wxRIGHT, 5 );
+
+    m_bpButtonFastAccessDialog = new wxToggleButton(m_panel2, wxID_ANY, _( "FAD"));
+    m_bpButtonFastAccessDialog->SetToolTip( _( "Show/Hide Fast Access Dialog" ) );
+    bSizer6->Add(m_bpButtonFastAccessDialog, 0, wxALIGN_CENTER_VERTICAL|wxRIGHT, 5);
 
     bSizer361->Add( bSizer6, 0, 0, 0 );
 
@@ -378,7 +385,7 @@ LogbookDialog::LogbookDialog( logbookkonni_pi * d, wxTimer* t, LogbookTimer* lt,
     m_gridGlobal->SetColSize( 13, 248 );
     m_gridGlobal->EnableDragColMove( false );
     m_gridGlobal->EnableDragColSize( true );
-    m_gridGlobal->SetColLabelSize( 30 );
+    m_gridGlobal->SetColLabelSize( 40 );
     m_gridGlobal->SetColLabelValue( 0, _( "Route" ) );
     m_gridGlobal->SetColLabelValue( 1, _( "Date" ) );
     m_gridGlobal->SetColLabelValue( 2, _( "Time" ) );
@@ -479,7 +486,7 @@ LogbookDialog::LogbookDialog( logbookkonni_pi * d, wxTimer* t, LogbookTimer* lt,
     m_gridWeather->SetColSize( 14, 80 );
     m_gridWeather->EnableDragColMove( false );
     m_gridWeather->EnableDragColSize( true );
-    m_gridWeather->SetColLabelSize( 30 );
+    m_gridWeather->SetColLabelSize( 40 );
     m_gridWeather->SetColLabelValue( 0, _( "Barometer" ) );
     m_gridWeather->SetColLabelValue( 1, _( "Hygrometer" ) );
     m_gridWeather->SetColLabelValue( 2, _( "Air" ) );
@@ -562,7 +569,7 @@ LogbookDialog::LogbookDialog( logbookkonni_pi * d, wxTimer* t, LogbookTimer* lt,
     m_gridMotorSails->SetColSize( 23, 219 );
     m_gridMotorSails->EnableDragColMove( false );
     m_gridMotorSails->EnableDragColSize( true );
-    m_gridMotorSails->SetColLabelSize( 30 );
+    m_gridMotorSails->SetColLabelSize( 40 );
     m_gridMotorSails->SetColLabelValue( 0, _( "Engine #1" ) );
     m_gridMotorSails->SetColLabelValue( 1, _( "#1 Total" ) );
     m_gridMotorSails->SetColLabelValue( 2, _T( "#1 " ) );
@@ -750,7 +757,7 @@ LogbookDialog::LogbookDialog( logbookkonni_pi * d, wxTimer* t, LogbookTimer* lt,
     m_gridOverview->SetColSize( 32, 80 );
     m_gridOverview->EnableDragColMove( false );
     m_gridOverview->EnableDragColSize( true );
-    m_gridOverview->SetColLabelSize( 30 );
+    m_gridOverview->SetColLabelSize( 40 );
     m_gridOverview->SetColLabelValue( 0, _( "Logbook" ) );
     m_gridOverview->SetColLabelValue( 1, _( "Route" ) );
     m_gridOverview->SetColLabelValue( 2, _( "Start" ) );
@@ -875,16 +882,6 @@ LogbookDialog::LogbookDialog( logbookkonni_pi * d, wxTimer* t, LogbookTimer* lt,
     m_staticline36 = new wxStaticLine( m_panel21, wxID_ANY, wxDefaultPosition, wxDefaultSize, wxLI_HORIZONTAL|wxLI_VERTICAL );
     bSizer3->Add( m_staticline36, 0, wxEXPAND | wxALL, 5 );
 
-    m_staticText1171 = new wxStaticText( m_panel21, wxID_ANY, _( "Copy to watch" ), wxDefaultPosition, wxDefaultSize, 0 );
-    m_staticText1171->Wrap( -1 );
-    bSizer3->Add( m_staticText1171, 0, wxALL|wxALIGN_CENTER_VERTICAL, 5 );
-
-    wxString m_choiceCrewNamesChoices[] = { _( "Name in full" ), _( "Firstname only" ), _( "Lastname only" ) };
-    int m_choiceCrewNamesNChoices = sizeof( m_choiceCrewNamesChoices ) / sizeof( wxString );
-    m_choiceCrewNames = new wxChoice( m_panel21, wxID_ANY, wxDefaultPosition, wxDefaultSize, m_choiceCrewNamesNChoices, m_choiceCrewNamesChoices, 0 );
-    m_choiceCrewNames->SetSelection( 0 );
-    bSizer3->Add( m_choiceCrewNames, 0, wxALL|wxALIGN_CENTER_VERTICAL, 5 );
-
     bSizer38->Add( bSizer3, 0, wxEXPAND, 5 );
 
     m_staticline2 = new wxStaticLine( m_panel21, wxID_ANY, wxDefaultPosition, wxDefaultSize, wxLI_HORIZONTAL|wxLI_VERTICAL );
@@ -924,7 +921,7 @@ LogbookDialog::LogbookDialog( logbookkonni_pi * d, wxTimer* t, LogbookTimer* lt,
     m_gridCrew->SetColSize( 14, 243 );
     m_gridCrew->EnableDragColMove( false );
     m_gridCrew->EnableDragColSize( true );
-    m_gridCrew->SetColLabelSize( 30 );
+    m_gridCrew->SetColLabelSize( 40 );
     m_gridCrew->SetColLabelValue( 0, _( "Onboard" ) );
     m_gridCrew->SetColLabelValue( 1, _( "Name" ) );
     m_gridCrew->SetColLabelValue( 2, _( "Birthname" ) );
@@ -1096,7 +1093,7 @@ LogbookDialog::LogbookDialog( logbookkonni_pi * d, wxTimer* t, LogbookTimer* lt,
     m_gridCrewWake->AutoSizeColumns();
     m_gridCrewWake->EnableDragColMove( false );
     m_gridCrewWake->EnableDragColSize( true );
-    m_gridCrewWake->SetColLabelSize( 30 );
+    m_gridCrewWake->SetColLabelSize( 40 );
     m_gridCrewWake->SetColLabelValue( 0, _( "1. Watch" ) );
     m_gridCrewWake->SetColLabelAlignment( wxALIGN_CENTRE, wxALIGN_CENTRE );
 
@@ -1582,7 +1579,7 @@ LogbookDialog::LogbookDialog( logbookkonni_pi * d, wxTimer* t, LogbookTimer* lt,
     m_gridEquipment->SetColSize( 3, 297 );
     m_gridEquipment->EnableDragColMove( false );
     m_gridEquipment->EnableDragColSize( true );
-    m_gridEquipment->SetColLabelSize( 30 );
+    m_gridEquipment->SetColLabelSize( 40 );
     m_gridEquipment->SetColLabelValue( 0, _( "Type" ) );
     m_gridEquipment->SetColLabelValue( 1, _( "Description" ) );
     m_gridEquipment->SetColLabelValue( 2, _( "Serial-Nr." ) );
@@ -1707,7 +1704,7 @@ LogbookDialog::LogbookDialog( logbookkonni_pi * d, wxTimer* t, LogbookTimer* lt,
     m_gridMaintanence->SetColSize( 5, 80 );
     m_gridMaintanence->EnableDragColMove( false );
     m_gridMaintanence->EnableDragColSize( true );
-    m_gridMaintanence->SetColLabelSize( 30 );
+    m_gridMaintanence->SetColLabelSize( 40 );
     m_gridMaintanence->SetColLabelValue( 0, _( "Priority" ) );
     m_gridMaintanence->SetColLabelValue( 1, _( "Service TODO" ) );
     m_gridMaintanence->SetColLabelValue( 2, _( "If" ) );
@@ -1829,7 +1826,7 @@ LogbookDialog::LogbookDialog( logbookkonni_pi * d, wxTimer* t, LogbookTimer* lt,
     m_gridMaintanenceRepairs->SetColSize( 1, 400 );
     m_gridMaintanenceRepairs->EnableDragColMove( false );
     m_gridMaintanenceRepairs->EnableDragColSize( true );
-    m_gridMaintanenceRepairs->SetColLabelSize( 30 );
+    m_gridMaintanenceRepairs->SetColLabelSize( 40 );
     m_gridMaintanenceRepairs->SetColLabelValue( 0, _( "Priority" ) );
     m_gridMaintanenceRepairs->SetColLabelValue( 1, _( "RepairsTODO" ) );
     m_gridMaintanenceRepairs->SetColLabelAlignment( wxALIGN_CENTRE, wxALIGN_CENTRE );
@@ -1950,7 +1947,7 @@ LogbookDialog::LogbookDialog( logbookkonni_pi * d, wxTimer* t, LogbookTimer* lt,
     m_gridMaintenanceBuyParts->SetColSize( 5, 255 );
     m_gridMaintenanceBuyParts->EnableDragColMove( false );
     m_gridMaintenanceBuyParts->EnableDragColSize( true );
-    m_gridMaintenanceBuyParts->SetColLabelSize( 30 );
+    m_gridMaintenanceBuyParts->SetColLabelSize( 40 );
     m_gridMaintenanceBuyParts->SetColLabelValue( 0, _( "Priority" ) );
     m_gridMaintenanceBuyParts->SetColLabelValue( 1, _( "Category" ) );
     m_gridMaintenanceBuyParts->SetColLabelValue( 2, _( "Title" ) );
@@ -2116,6 +2113,7 @@ LogbookDialog::LogbookDialog( logbookkonni_pi * d, wxTimer* t, LogbookTimer* lt,
     m_notebook8->Connect( wxEVT_COMMAND_NOTEBOOK_PAGE_CHANGED, wxNotebookEventHandler( LogbookDialog::OnNotebookPageChangedLoggrids ), NULL, this );
     m_bpButtonShowHideStatusGlobal->Connect( wxEVT_COMMAND_BUTTON_CLICKED, wxCommandEventHandler( LogbookDialog::OnButtomClickStatusbarGlobal ), NULL, this );
     m_bpButtonHelpGlobal->Connect( wxEVT_COMMAND_BUTTON_CLICKED, wxCommandEventHandler( LogbookDialog::OnClickButtonHelpGlobal ), NULL, this );
+    m_bpButtonFastAccessDialog->Connect( wxEVT_COMMAND_TOGGLEBUTTON_CLICKED, wxCommandEventHandler( LogbookDialog::OnClickButtonFastAccessDialog ), NULL, this );
 
     m_gridCrew->Connect( wxEVT_GRID_EDITOR_SHOWN, wxGridEventHandler( LogbookDialog::OnGridEditorShownCrew ), NULL, this );
 
@@ -2361,6 +2359,7 @@ LogbookDialog::~LogbookDialog()
     m_notebook8->Disconnect( wxEVT_COMMAND_NOTEBOOK_PAGE_CHANGED, wxNotebookEventHandler( LogbookDialog::OnNotebookPageChangedLoggrids ), NULL, this );
     m_bpButtonShowHideStatusGlobal->Disconnect( wxEVT_COMMAND_BUTTON_CLICKED, wxCommandEventHandler( LogbookDialog::OnButtomClickStatusbarGlobal ), NULL, this );
     m_bpButtonHelpGlobal->Disconnect( wxEVT_COMMAND_BUTTON_CLICKED, wxCommandEventHandler( LogbookDialog::OnClickButtonHelpGlobal ), NULL, this );
+    m_bpButtonFastAccessDialog->Disconnect( wxEVT_COMMAND_TOGGLEBUTTON_CLICKED, wxCommandEventHandler( LogbookDialog::OnClickButtonFastAccessDialog ), NULL, this );
     this->Disconnect( wxID_ANY, wxEVT_COMMAND_MENU_SELECTED, wxCommandEventHandler( LogbookDialog::OnMenuSelectionFlipWatches ) );
     logbookChoice->Disconnect( wxEVT_COMMAND_CHOICE_SELECTED, wxCommandEventHandler( LogbookDialog::OnChoiceGlobal ), NULL, this );
     crewChoice->Disconnect( wxEVT_COMMAND_CHOICE_SELECTED, wxCommandEventHandler( LogbookDialog::OnChoiceCrew ), NULL, this );
@@ -2475,7 +2474,7 @@ LogbookDialog::~LogbookDialog()
     m_textCtrlStatusCourseDeg->Disconnect( wxEVT_COMMAND_TEXT_ENTER, wxCommandEventHandler( LogbookDialog::OnTextEnterStatusCourseDeg ), NULL, this );
     m_textCtrlStatusCourseMin->Disconnect( wxEVT_COMMAND_TEXT_ENTER, wxCommandEventHandler( LogbookDialog::OnTextEnterStatusMinutes ), NULL, this );
 
-    for ( int i = 0; i < 14; i++ )
+    for ( int i = 0; i < logbookPlugIn->opt->numberSails; i++ )
         checkboxSails[i]->Disconnect( wxEVT_COMMAND_CHECKBOX_CLICKED, wxCommandEventHandler( LogbookDialog::OnCheckboxSails ), NULL, this );
 
 
@@ -2635,7 +2634,7 @@ void LogbookDialog::OnButtonClickResetSails( wxCommandEvent& event )
 
 void LogbookDialog::resetSails()
 {
-    for ( int i = 0; i < 14; i++ )
+    for ( int i = 0; i < logbookPlugIn->opt->numberSails; i++ )
     {
         checkboxSails[i]->SetValue( false );
         logbookPlugIn->opt->bSailIsChecked[i] = false;
@@ -2688,6 +2687,7 @@ void LogbookDialog::OnClickButtonHelpGlobal( wxCommandEvent& event )
 {
     startBrowser( help_locn+_T( "Help.html" ) );
 }
+
 
 void LogbookDialog::OnChoiceGlobal( wxCommandEvent& event )
 {
@@ -3891,7 +3891,7 @@ Backup Logbook(*.txt)|*.txt" );
 
 void LogbookDialog::setCheckboxSails()
 {
-    for ( unsigned int i = 0; i < 14; i++ )
+    for ( int i = 0; i < logbookPlugIn->opt->numberSails; i++ )
     {
         checkboxSails[i] = new wxCheckBox( m_panelEngine, wxID_ANY,logbookPlugIn->opt->abrSails.Item( i ) , wxDefaultPosition, wxDefaultSize, 0 );
         checkboxSails[i]->SetValue( logbookPlugIn->opt->bSailIsChecked[i] );
@@ -3901,7 +3901,7 @@ void LogbookDialog::setCheckboxSails()
     }
     m_buttonSailsReset = new wxButton( m_panelEngine, wxID_ANY, _( "none" ), wxDefaultPosition, wxDefaultSize, 0 );
     m_buttonSailsReset->SetToolTip( _( "Reset" ) );
-    m_buttonSailsReset->SetMinSize( wxSize( 40,15 ) );
+    m_buttonSailsReset->SetMinSize( wxSize( 50,25 ) );
     m_buttonSailsReset->Connect( wxEVT_COMMAND_BUTTON_CLICKED, wxCommandEventHandler( LogbookDialog::OnButtonClickResetSails ), NULL, this );
     fgSizerSails->Add( m_buttonSailsReset, 0, 0, 5 );
 }
@@ -3918,8 +3918,8 @@ void LogbookDialog::OnCheckboxSails( wxCommandEvent& event )
     if ( SailsTimer->IsRunning() )
         SailsTimer->Stop();
 
-    unsigned int i = 0;
-    for ( ; i < 14; i++ )
+    int i = 0;
+    for ( ; i < logbookPlugIn->opt->numberSails; i++ )
         if ( checkboxSails[i] == ( ( wxCheckBox* )event.GetEventObject() ) )
             break;
 
@@ -3939,7 +3939,7 @@ void LogbookDialog::stateSails()
     int i = 0;
     bool change = false;
 
-    for ( ; i < 14; i++ )
+    for ( ; i < logbookPlugIn->opt->numberSails; i++ )
     {
         if ( logbookPlugIn->opt->bSailIsChecked[i] && checkboxSails[i]->IsChecked() )
         {
@@ -3956,7 +3956,7 @@ void LogbookDialog::stateSails()
         return;
     }
 
-    for ( i = 0; i < 14; i++ )
+    for ( i = 0; i < logbookPlugIn->opt->numberSails; i++ )
     {
         if ( ( !logbookPlugIn->opt->bSailIsChecked[i] && checkboxSails[i]->IsChecked() )
                 || ( logbookPlugIn->opt->bSailIsChecked[i] && !checkboxSails[i]->IsChecked() ) )
@@ -3980,7 +3980,7 @@ void LogbookDialog::stateSails()
 
 void LogbookDialog::setCheckboxLabels()
 {
-    for ( unsigned int i = 0; i < 14 ; i++ )
+    for ( int i = 0; i < logbookPlugIn->opt->numberSails ; i++ )
     {
         checkboxSails[i]->SetLabel( logbookPlugIn->opt->abrSails.Item( i ) );
         checkboxSails[i]->SetToolTip( logbookPlugIn->opt->sailsName.Item( i ) );
@@ -5031,7 +5031,7 @@ void LogbookDialog::getIniValues()
 
     opt->dCourseChangeDegrees = wxAtof( opt->courseChangeDegrees );
 
-    if ( ( opt->navGridLayoutChoice == -1 ) || ( opt->NavColWidth.GetCount() == 0 ) ) return;
+    if ( ( opt->NavColWidth.GetCount() == 0 ) ) return;
 
     for ( int i = 0; i < LOGGRIDS; i++ )
     {
@@ -7482,7 +7482,7 @@ SelectLogbook::SelectLogbook( wxWindow* parent, wxString path, wxWindowID id, co
     m_grid13->SetColSize( 3, 380 );
     m_grid13->EnableDragColMove( false );
     m_grid13->EnableDragColSize( true );
-    m_grid13->SetColLabelSize( 30 );
+    m_grid13->SetColLabelSize( 40 );
     m_grid13->SetColLabelValue( 0, _( "Logbook" ) );
     m_grid13->SetColLabelValue( 1, _( "First/Last Entry" ) );
     m_grid13->SetColLabelValue( 2, _( "Description" ) );
@@ -8793,7 +8793,7 @@ TimerInterval::TimerInterval( wxWindow* parent, Options* opt,  wxWindowID id, co
     // Columns
     m_gridFull->EnableDragColMove( false );
     m_gridFull->EnableDragColSize( true );
-    m_gridFull->SetColLabelSize( 30 );
+    m_gridFull->SetColLabelSize( 40 );
     m_gridFull->SetColLabelValue( 0, _( "+ Minutes" ) );
     m_gridFull->SetColLabelAlignment( wxALIGN_CENTRE, wxALIGN_CENTRE );
 
@@ -8855,7 +8855,7 @@ TimerInterval::TimerInterval( wxWindow* parent, Options* opt,  wxWindowID id, co
     m_gridIndividual->SetColSize( 1, 53 );
     m_gridIndividual->EnableDragColMove( false );
     m_gridIndividual->EnableDragColSize( true );
-    m_gridIndividual->SetColLabelSize( 30 );
+    m_gridIndividual->SetColLabelSize( 40 );
     m_gridIndividual->SetColLabelValue( 0, _( "Hour" ) );
     m_gridIndividual->SetColLabelValue( 1, _( "Minutes" ) );
     m_gridIndividual->SetColLabelAlignment( wxALIGN_CENTRE, wxALIGN_CENTRE );

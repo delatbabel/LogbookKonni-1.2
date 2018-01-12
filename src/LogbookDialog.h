@@ -43,6 +43,7 @@
 #include <wx/listctrl.h>
 #include <wx/gdicmn.h>
 #include <wx/dnd.h>
+#include <wx/gbsizer.h>
 
 #include "jsonreader.h"
 ///////////////////////////////////////////////////////////////////////////
@@ -84,6 +85,7 @@ class ColdFinger;
 class LogbookTimer;
 class myBitmapButton;
 class wxJSONReader;
+class FastAccessDialog;
 
 class LogbookDialog : public wxDialog
 {
@@ -139,6 +141,7 @@ public:
     wxStaticLine* m_staticline411;
     wxBitmapButton* m_bpButtonShowHideStatusGlobal;
     wxBitmapButton* m_bpButtonHelpGlobal;
+    wxToggleButton* m_bpButtonFastAccessDialog;
     wxStaticLine* m_staticline401;
     wxNotebook* m_notebook8;
     wxPanel* m_panel6;
@@ -186,7 +189,6 @@ public:
     wxChoice* crewChoice;
     wxButton* crewView;
     wxStaticLine* m_staticline36;
-    wxStaticText* m_staticText1171;
     wxStaticLine* m_staticline2;
     wxSplitterWindow* m_splitterWatch;
     wxPanel* m_panel211;
@@ -479,6 +481,7 @@ public:
     void OnNotebookPageChangedLoggrids( wxNotebookEvent& event );
     void OnButtomClickStatusbarGlobal( wxCommandEvent& event );
     void OnClickButtonHelpGlobal( wxCommandEvent& event );
+    void OnClickButtonFastAccessDialog( wxCommandEvent& event );
     void OnChoiceGlobal( wxCommandEvent& event );
     void OnChoiceCrew( wxCommandEvent& event );
     void OnChoiceBoat( wxCommandEvent& event );
@@ -583,7 +586,6 @@ public:
     wxButton* m_buttonEditLayoutCrew;
     wxRadioButton* m_radioBtnHTMLCrew;
     wxRadioButton* m_radioBtnODTCrew;
-    wxChoice* m_choiceCrewNames;
     wxTextCtrl* m_textCtrlWakeTrip;
     wxTextCtrl* m_textCtrlWakeDay;
     wxChoice* m_choiceWakeDisplay;
@@ -716,6 +718,7 @@ public:
     wxString			layoutHTML;
     wxString			layoutODT;
     LogbookTimer*		logbookTimerWindow;
+    FastAccessDialog*		m_fastAccessDialog = 0;
     wxTimer*            timer;
     wxTimer*			GPSTimer;
     wxTimer*			SailsTimer;
@@ -732,6 +735,9 @@ public:
 
     int					selGridRow;
     int					selGridCol;
+    
+    int                 sc;
+    int                 cntsails;
 
     wxGrid				*logGrids[LOGGRIDS];
     int					numPages;

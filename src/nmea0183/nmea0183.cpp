@@ -123,8 +123,8 @@ NMEA0183L::NMEA0183L()
        response_table.Append( (RESPONSE *) &Wnc );
     */
     response_table.Append( ( RESPONSE * ) &Wpl );
+    response_table.Append( ( RESPONSE * ) &Xdr );
     /*
-       response_table.Append( (RESPONSE *) &Xdr );
        response_table.Append( (RESPONSE *) &Xte );
        response_table.Append( (RESPONSE *) &Xtr );
     */
