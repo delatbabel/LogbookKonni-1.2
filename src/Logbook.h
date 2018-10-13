@@ -53,6 +53,7 @@ private:
     wxDateTime	dtWimda;
     wxString	sPressure;
     wxString	sHumidity;
+    wxString    sVolume;
     wxString	sWindA;
     wxString	sWindT;
     wxDateTime	dtWindA;
@@ -91,6 +92,7 @@ private:
     double		minwindT;
     double		avgwindT;
     double		maxwindT;
+    double      dVolume;
     wxString	swindspeedsA;
     wxString	swindspeedsT;
 

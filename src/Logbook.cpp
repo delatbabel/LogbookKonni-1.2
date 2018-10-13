@@ -111,6 +111,8 @@ Logbook::Logbook( LogbookDialog* parent, wxString data, wxString layout, wxStrin
     sRPM2Shaft = wxEmptyString;
     sRPM2Source = wxEmptyString;
     rpmSentence = false;
+    sVolume = wxEmptyString;
+    dVolume = 0;
 }
 
 Logbook::~Logbook( void )
@@ -231,11 +233,14 @@ void Logbook::SetSentence( wxString &sentence )
         {
             if ( m_NMEA0183.Parse() )
             {
-                SetGPSStatus( true );
-                setPositionString( m_NMEA0183.Gll.Position.Latitude.Latitude,
-                                   m_NMEA0183.Gll.Position.Latitude.Northing,
-                                   m_NMEA0183.Gll.Position.Longitude.Longitude,
-                                   m_NMEA0183.Gll.Position.Longitude.Easting );
+				if ( m_NMEA0183.Gll.IsDataValid == NTrue )
+                {
+                	SetGPSStatus( true );
+                	setPositionString( m_NMEA0183.Gll.Position.Latitude.Latitude,
+                                   	m_NMEA0183.Gll.Position.Latitude.Northing,
+                                   	m_NMEA0183.Gll.Position.Longitude.Longitude,
+                                   	m_NMEA0183.Gll.Position.Longitude.Easting );
+				}
             }
         }
         else if ( m_NMEA0183.LastSentenceIDReceived == _T( "ZDA" ) )
@@ -294,13 +299,16 @@ void Logbook::SetSentence( wxString &sentence )
             {
                 if ( m_NMEA0183.Parse() )
                 {
-                    if ( m_NMEA0183.Rmb.IsArrivalCircleEntered == NTrue )
+					if ( m_NMEA0183.Rmb.IsDataValid == NTrue )
                     {
-                        if ( m_NMEA0183.Rmb.From != lastWayPoint )
-                        {
-                            checkWayPoint( m_NMEA0183.Rmb );
-                        }
-                    }
+                    	if ( m_NMEA0183.Rmb.IsArrivalCircleEntered == NTrue )
+                    	{
+                        	if ( m_NMEA0183.Rmb.From != lastWayPoint )
+                        	{
+                            	checkWayPoint( m_NMEA0183.Rmb );
+                        	}
+                    	}
+					}
                 }
             }
         }
@@ -308,32 +316,33 @@ void Logbook::SetSentence( wxString &sentence )
         {
             if ( m_NMEA0183.Parse() )
             {
-                SetGPSStatus( true );
-                setPositionString( m_NMEA0183.Rmc.Position.Latitude.Latitude,
-                                   m_NMEA0183.Rmc.Position.Latitude.Northing,
-                                   m_NMEA0183.Rmc.Position.Longitude.Longitude,
-                                   m_NMEA0183.Rmc.Position.Longitude.Easting );
+				if ( m_NMEA0183.Rmc.IsDataValid == NTrue )
+                {
+                	SetGPSStatus( true );
+                	setPositionString( m_NMEA0183.Rmc.Position.Latitude.Latitude,
+                                   	m_NMEA0183.Rmc.Position.Latitude.Northing,
+                                   	m_NMEA0183.Rmc.Position.Longitude.Longitude,
+                                   	m_NMEA0183.Rmc.Position.Longitude.Easting );
+                	if ( m_NMEA0183.Rmc.SpeedOverGroundKnots != 999.0 )
+                    	sSOG = wxString::Format( _T( "%5.2f %s" ), m_NMEA0183.Rmc.SpeedOverGroundKnots,opt->speed.c_str() );
+                	if ( m_NMEA0183.Rmc.TrackMadeGoodDegreesTrue != 999.0 )
+                    	sCOG = wxString::Format( _T( "%5.2f%s" ), m_NMEA0183.Rmc.TrackMadeGoodDegreesTrue, opt->Deg.c_str() );
+                	if ( m_NMEA0183.Rmc.TrackMadeGoodDegreesTrue != 999.0 )
+                    	dCOG = m_NMEA0183.Rmc.TrackMadeGoodDegreesTrue;
 
+                	long day,month,year;
+                	m_NMEA0183.Rmc.Date.SubString( 0,1 ).ToLong( &day );
+                	m_NMEA0183.Rmc.Date.SubString( 2,3 ).ToLong( &month );
+                	m_NMEA0183.Rmc.Date.SubString( 4,5 ).ToLong( &year );
+                	dt.Set( ( ( int )day ),( wxDateTime::Month )( month-1 ),( ( int )year+2000 ) );
+                	//dt.ParseTime((const char)dt.ParseFormat(m_NMEA0183.Rmc.UTCTime,_T("%H%M%S")));
+                	dt.ParseFormat( m_NMEA0183.Rmc.UTCTime,_T( "%H%M%S" ) );
 
-                if ( m_NMEA0183.Rmc.SpeedOverGroundKnots != 999.0 )
-                    sSOG = wxString::Format( _T( "%5.2f %s" ), m_NMEA0183.Rmc.SpeedOverGroundKnots,opt->speed.c_str() );
-                if ( m_NMEA0183.Rmc.TrackMadeGoodDegreesTrue != 999.0 )
-                    sCOG = wxString::Format( _T( "%5.2f%s" ), m_NMEA0183.Rmc.TrackMadeGoodDegreesTrue, opt->Deg.c_str() );
-                if ( m_NMEA0183.Rmc.TrackMadeGoodDegreesTrue != 999.0 )
-                    dCOG = m_NMEA0183.Rmc.TrackMadeGoodDegreesTrue;
+                	setDateTimeString( dt );
 
-                long day,month,year;
-                m_NMEA0183.Rmc.Date.SubString( 0,1 ).ToLong( &day );
-                m_NMEA0183.Rmc.Date.SubString( 2,3 ).ToLong( &month );
-                m_NMEA0183.Rmc.Date.SubString( 4,5 ).ToLong( &year );
-                dt.Set( ( ( int )day ),( wxDateTime::Month )( month-1 ),( ( int )year+2000 ) );
-                //dt.ParseTime((const char)dt.ParseFormat(m_NMEA0183.Rmc.UTCTime,_T("%H%M%S")));
-                dt.ParseFormat( m_NMEA0183.Rmc.UTCTime,_T( "%H%M%S" ) );
-
-                setDateTimeString( dt );
-
-                if ( !dialog->logbookPlugIn->eventsEnabled && opt->courseChange )
-                    checkCourseChanged();
+                	if ( !dialog->logbookPlugIn->eventsEnabled && opt->courseChange )
+                    	checkCourseChanged();
+				}
             }
         }
         else if ( m_NMEA0183.LastSentenceIDReceived == _T( "VHW" ) )
@@ -350,15 +359,37 @@ void Logbook::SetSentence( wxString &sentence )
             if ( m_NMEA0183.Parse() )
             {
                 double dWind = 0;
-
-                wxString temp = _T( "" );
-                if ( m_NMEA0183.Mwv.WindSpeedUnits == 'N' )
-                    temp = opt->windkts;
-                else if ( m_NMEA0183.Mwv.WindSpeedUnits == 'M' )
-                    temp = opt->windmeter;
-                else if ( m_NMEA0183.Mwv.WindSpeedUnits == 'K' )
-                    temp = opt->windkmh;
-
+                double factor = 1, twindspeed = 1;
+                
+                switch ( opt->showWindSpeedchoice  )
+                {
+                case 0:
+                    if ( m_NMEA0183.Mwv.WindSpeedUnits == 'N' )
+                        factor = 1;
+                    else if ( m_NMEA0183.Mwv.WindSpeedUnits == 'M' )
+                        factor = 1.94384;
+                    else if ( m_NMEA0183.Mwv.WindSpeedUnits == 'K' )
+                        factor = 0.53995;
+                    break;
+                case 1:
+                    if ( m_NMEA0183.Mwv.WindSpeedUnits == 'N' )
+                        factor = 0.51444;
+                    else if ( m_NMEA0183.Mwv.WindSpeedUnits == 'M' )
+                        factor = 1;
+                    else if ( m_NMEA0183.Mwv.WindSpeedUnits == 'K' )
+                        factor = 0.27777;
+                    break;
+                case 2:
+                    if ( m_NMEA0183.Mwv.WindSpeedUnits == 'N' )
+                        factor = 1.852;
+                    else if ( m_NMEA0183.Mwv.WindSpeedUnits == 'M' )
+                        factor = 3.6;
+                    else if ( m_NMEA0183.Mwv.WindSpeedUnits == 'K' )
+                        factor = 1;
+                    break;
+                }
+                twindspeed = m_NMEA0183.Mwv.WindSpeed * factor;
+                
                 if ( m_NMEA0183.Mwv.Reference == _T( "T" ) )
                 {
                     if ( opt->showWindHeading && bCOW )
@@ -373,28 +404,28 @@ void Logbook::SetSentence( wxString &sentence )
                         dWind = m_NMEA0183.Mwv.WindAngle;
 
                     sWindT = wxString::Format( _T( "%3.0f%s" ), dWind,opt->Deg.c_str() );
-                    sWindSpeedT = wxString::Format( _T( "%3.1f %s" ), m_NMEA0183.Mwv.WindSpeed,temp.c_str() );
+                    sWindSpeedT = wxString::Format( _T( "%3.1f %s" ), twindspeed,opt->showWindSpeed.c_str() );
                     dtWindT = wxDateTime::Now();
                     bWindT = true;
-                    if ( minwindT > m_NMEA0183.Mwv.WindSpeed )
-                        minwindT = m_NMEA0183.Mwv.WindSpeed;
-                    if ( maxwindT < m_NMEA0183.Mwv.WindSpeed )
-                        maxwindT = m_NMEA0183.Mwv.WindSpeed;
-                    avgwindT = ( avgwindT + m_NMEA0183.Mwv.WindSpeed )/2;
+                    if ( minwindT > twindspeed )
+                        minwindT = twindspeed;
+                    if ( maxwindT < twindspeed )
+                        maxwindT = twindspeed;
+                    avgwindT = ( avgwindT + twindspeed )/2;
                     swindspeedsT = wxString::Format( _T( "%03.1f|%03.1f|%03.1f" ), minwindT, avgwindT, maxwindT );
                 }
                 else
                 {
                     dWind = m_NMEA0183.Mwv.WindAngle;
                     sWindA = wxString::Format( _T( "%3.0f%s" ), dWind,opt->Deg.c_str() );
-                    sWindSpeedA = wxString::Format( _T( "%3.1f %s" ), m_NMEA0183.Mwv.WindSpeed,temp.c_str() );
+                    sWindSpeedA = wxString::Format( _T( "%3.1f %s" ), twindspeed,opt->showWindSpeed.c_str() );
                     dtWindA = wxDateTime::Now();
                     bWindA = true;
-                    if ( minwindA > m_NMEA0183.Mwv.WindSpeed )
-                        minwindA = m_NMEA0183.Mwv.WindSpeed;
-                    if ( maxwindA < m_NMEA0183.Mwv.WindSpeed )
-                        maxwindA = m_NMEA0183.Mwv.WindSpeed;
-                    avgwindA = ( avgwindA + m_NMEA0183.Mwv.WindSpeed )/2;
+                    if ( minwindA > twindspeed )
+                        minwindA = twindspeed;
+                    if ( maxwindA < twindspeed )
+                        maxwindA = twindspeed;
+                    avgwindA = ( avgwindA + twindspeed )/2;
                     swindspeedsA = wxString::Format( _T( "%03.1f|%03.1f|%03.1f" ), minwindA, avgwindA, maxwindA );
                 }
             }
@@ -422,17 +453,30 @@ void Logbook::SetSentence( wxString &sentence )
 
                 sWindT = wxString::Format( _T( "%3.0f%s" ), dWind,opt->Deg.c_str() );
 
-                wxString temp = _T( "" );
-                temp = opt->windkts;
+                double factor, twindspeed;
+                
+                switch ( opt->showWindSpeedchoice  )
+                {
+                    case 0:
+                        factor = 1;
+                        break;
+                    case 1:
+                        factor = 0.51444;
+                        break;
+                    case 2:
+                        factor = 1.852;
+                        break;
+                }
+                twindspeed = m_NMEA0183.Vwt.WindSpeedKnots * factor;
 
-                sWindSpeedT = wxString::Format( _T( "%3.1f %s" ), m_NMEA0183.Vwt.WindSpeedKnots,temp.c_str() );
+                sWindSpeedT = wxString::Format( _T( "%3.1f %s" ), twindspeed,opt->showWindSpeed.c_str() );
                 dtWindT = wxDateTime::Now();
                 bWindT = true;
-                if ( minwindT > m_NMEA0183.Vwt.WindSpeedKnots )
-                    minwindT = m_NMEA0183.Vwt.WindSpeedKnots;
-                if ( maxwindT < m_NMEA0183.Vwt.WindSpeedKnots )
-                    maxwindT = m_NMEA0183.Vwt.WindSpeedKnots;
-                avgwindT = ( avgwindT + m_NMEA0183.Vwt.WindSpeedKnots )/2;
+                if ( minwindT > twindspeed )
+                    minwindT = twindspeed;
+                if ( maxwindT < twindspeed )
+                    maxwindT = twindspeed;
+                avgwindT = ( avgwindT + twindspeed )/2;
                 swindspeedsT = wxString::Format( _T( "%03.1f|%03.1f|%03.1f" ), minwindT, avgwindT, maxwindT );
             }
         }
@@ -450,18 +494,30 @@ void Logbook::SetSentence( wxString &sentence )
 
                 sWindA = wxString::Format( _T( "%3.0f%s" ), dWind,opt->Deg.c_str() );
 
-                wxString temp = _T( "" );
-                temp = opt->windkts;
+                double factor, twindspeed;
+                
+                switch ( opt->showWindSpeedchoice  )
+                {
+                    case 0:
+                        factor = 1;
+                        break;
+                    case 1:
+                        factor = 0.51444;
+                        break;
+                    case 2:
+                        factor = 1.852;
+                        break;
+                }
+                twindspeed = m_NMEA0183.Vwt.WindSpeedKnots * factor;
 
-
-                sWindSpeedA = wxString::Format( _T( "%3.1f %s" ), m_NMEA0183.Vwr.WindSpeedKnots,temp.c_str() );
+                sWindSpeedA = wxString::Format( _T( "%3.1f %s" ), twindspeed,opt->showWindSpeed.c_str() );
                 dtWindA = wxDateTime::Now();
                 bWindA = true;
-                if ( minwindA > m_NMEA0183.Vwr.WindSpeedKnots )
-                    minwindA = m_NMEA0183.Vwr.WindSpeedKnots;
-                if ( maxwindA < m_NMEA0183.Vwr.WindSpeedKnots )
-                    maxwindA = m_NMEA0183.Vwr.WindSpeedKnots;
-                avgwindA = ( avgwindA + m_NMEA0183.Vwr.WindSpeedKnots )/2;
+                if ( minwindA > twindspeed )
+                    minwindA = twindspeed;
+                if ( maxwindA < twindspeed )
+                    maxwindA = twindspeed;
+                avgwindA = ( avgwindA + twindspeed )/2;
                 swindspeedsA = wxString::Format( _T( "%03.1f|%03.1f|%03.1f" ), minwindA, avgwindA, maxwindA );
             }
         }
@@ -552,6 +608,8 @@ void Logbook::SetSentence( wxString &sentence )
 
             if (m_NMEA0183.Parse()) { 
                 double xdrdata;
+				wxString tempopt;
+
                 for (int i = 0; i<m_NMEA0183.Xdr.TransducerCnt; i++) {
 	        		wimdaSentence = true;
         			dtWimda = wxDateTime::Now();
@@ -574,7 +632,25 @@ void Logbook::SetSentence( wxString &sentence )
                     if (m_NMEA0183.Xdr.TransducerInfo[i].TransducerType == _T("H")) {
             			sHumidity = wxString::Format( _T( "%3.1f " ),xdrdata );
                     }
-
+					// XDR Volume
+                    if (m_NMEA0183.Xdr.TransducerInfo[i].TransducerType == _T("V")) {
+						tempopt = opt->vol.SubString( 0,0 ).Upper();
+                        if (m_NMEA0183.Xdr.TransducerInfo[i].UnitOfMeasurement == _T("M")) {
+                            xdrdata *= 1000;
+                            if ( tempopt == _T( "G" ))
+                                xdrdata = xdrdata * 0.264172;
+                        }
+                        if (m_NMEA0183.Xdr.TransducerInfo[i].UnitOfMeasurement == _T("L")) {
+                            if ( tempopt == _T( "G" ))
+                                xdrdata = xdrdata * 0.264172;
+                        }
+                        if (m_NMEA0183.Xdr.TransducerInfo[i].UnitOfMeasurement == _T("G")) {
+                            if ( tempopt == _T( "L" ))
+                                xdrdata = xdrdata * 3.7854;
+                        }
+                        dVolume += xdrdata;
+                        sVolume = wxString::Format( _T( "%4.2f " ),dVolume );
+                    }
                 }
             }
         }
@@ -1295,9 +1371,9 @@ wxString Logbook::makeDateFromFile( wxString date, wxString dateformat )
 {
     wxStringTokenizer tkzd( date,_T( "/" ) );
     wxDateTime dt;
-    wxDateTime::wxDateTime_t month = ( wxDateTime::wxDateTime_t ) wxAtoi( tkzd.GetNextToken() );
+    wxDateTime::Month month = ( wxDateTime::Month ) wxAtoi( tkzd.GetNextToken() );
     wxDateTime::wxDateTime_t day    = ( wxDateTime::wxDateTime_t ) wxAtoi( tkzd.GetNextToken() );
-    wxDateTime::wxDateTime_t year   = ( wxDateTime::wxDateTime_t ) wxAtoi( tkzd.GetNextToken() );
+    int year   =  wxAtoi( tkzd.GetNextToken() );
     dt.Set( day, month, year );
 
     return dt.Format( dateformat );
@@ -1729,6 +1805,11 @@ void Logbook::appendRow( bool showlastline, bool autoline )
         dialog->logGrids[1]->SetCellValue( lastRow,LogbookHTML::HYDRO,sHumidity );
     }
 
+    dialog->logGrids[2]->SetCellValue( lastRow,LogbookHTML::FUEL,sVolume );
+    sVolume = wxEmptyString;
+    dVolume = 0;
+    getModifiedCellValue( 2, lastRow, 0, LogbookHTML::FUEL );
+
     if ( bRPM1 )
     {
         if (	!opt->engine1Running )
@@ -1887,6 +1968,8 @@ void Logbook::appendRow( bool showlastline, bool autoline )
     dialog->setEqualRowHeight( lastRow );
 
     dialog->m_gridGlobal->SetReadOnly( lastRow,6 );
+                                              
+    update(); /* Save to file with every newline */
 
     if ( showlastline )
     {
@@ -2743,22 +2826,10 @@ void  Logbook::getModifiedCellValue( int grid, int row, int selCol, int col )
         {
             if ( !opt->windspeeds )
             {
-                if ( !s.Contains( opt->windkts ) && !s.Contains( opt->windmeter ) && !s.Contains( opt->windkmh ) )
+                if ( !s.Contains( opt->showWindSpeed ) )
                 {
-                    switch ( opt->showWindSpeed )
-                    {
-                    case 0:
-                        wind = opt->windkts;
-                        break;
-                    case 1:
-                        wind = opt->windmeter;
-                        break;
-                    case 2:
-                        wind = opt->windkmh;
-                        break;
-                    }
                     s.Replace( _T( "," ),_T( "." ) );
-                    s = wxString::Format( _T( "%3.2f %s" ),wxAtof( s ),wind.c_str() );
+                    s = wxString::Format( _T( "%3.2f %s" ),wxAtof( s ),opt->showWindSpeed.c_str() );
                     s.Replace( _T( "." ),dialog->decimalPoint );
                 }
                 dialog->logGrids[grid]->SetCellValue( row,col,s );

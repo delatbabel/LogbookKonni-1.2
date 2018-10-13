@@ -28,6 +28,7 @@ public:
     int			dlgWidth;
     int			dlgHeight;
     bool		popup;
+    bool        autostarttimer;
     bool		hourFormat;
     bool		statusbarGlobal;
     bool		layoutShow;
@@ -93,9 +94,6 @@ public:
     // Grid Weather
     wxString	baro;
     wxString    temperature;
-    wxString	windkts;
-    wxString	windmeter;
-    wxString	windkmh;
 
     // Grid MotorSails
     wxString	vol;
@@ -167,7 +165,7 @@ public:
     //wxChoice
     int		showDepth;
     int		showWaveSwell;
-    int		showWindSpeed;
+    int     showWindSpeedchoice;
     int		showWindDir;
     int		showWindHeading;
     int		showHeading;
@@ -207,6 +205,7 @@ public:
     int 	  timeformat;
     bool	  noseconds;
     int       dateformat;
+    wxString  showWindSpeed;
     wxString  dateseparatorlocale;
     wxString  dateseparatorindiv;
     wxString  sdateformat;

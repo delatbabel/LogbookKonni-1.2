@@ -1,0 +1,2649 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: opencpn\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-02-25 10:01-0300\n"
+"PO-Revision-Date: 2018-03-11 10:38-0400\n"
+"Last-Translator: nohal <pavel@kalian.cz>\n"
+"Language-Team: Indonesian\n"
+"Language: id_ID\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: crowdin.com\n"
+"X-Crowdin-Project: opencpn\n"
+"X-Crowdin-Language: id\n"
+"X-Crowdin-File: /plugins/LogbookKonni_pi/po/logbookkonni_pi.pot\n"
+
+#: src/logbook_pi.cpp:125 src/logbook_pi.cpp:676 src/logbook_pi.cpp:721
+#: src/logbook_pi.cpp:815 src/LogbookDialog.cpp:621 src/LogbookDialog.cpp:754
+#: src/LogbookDialog.cpp:7486
+msgid "Logbook"
+msgstr "Buku Catatan"
+
+#: src/logbook_pi.cpp:185
+msgid "Your engine(s) are still running\n\n"
+"Stop engine(s) ?"
+msgstr "Mesin kamu(s) masih berjalan\n\n"
+"Hentikan mesin(s)?"
+
+#: src/logbook_pi.cpp:265
+msgid "from "
+msgstr "dari "
+
+#: src/logbook_pi.cpp:267
+msgid "-Plugin"
+msgstr "-Plugin"
+
+#: src/logbook_pi.cpp:504 src/logbook_pi.cpp:844 src/Logbook.cpp:883
+#: src/Logbook.cpp:916 src/Logbook.cpp:1513 src/LogbookDialog.h:630
+#: src/LogbookDialog.cpp:7557 src/LogbookDialog.cpp:7663 src/OverView.cpp:216
+msgid "Active Logbook"
+msgstr "Buku Catatan Aktif"
+
+#: src/logbook_pi.cpp:681
+msgid "Logbook for OpenCPN"
+msgstr "Buku Catatan untuk OpenCPN"
+
+#: src/logbook_pi.cpp:686
+msgid "Logbook for OpenCPN\n\n"
+"Thanks to the community for their helpful suggestions.\n\n"
+"If you find a bug post it on\n"
+"http://www.cruisersforum.com/forums/f134/logbook-konni-for-opencpn-68945.html\n"
+"Helpful videos are at Youtube, search for LogbookKonni."
+msgstr "Buku catatan untuk OpenCPN\n\n"
+"Terima kasih kepada komunitas atas saran mereka yang bermanfaat.\n\n"
+"Jika anda menemukan bug posting di\n"
+"http://www.cruisersforum.com/forums/f134/logbook-konni-for-opencpn-68945.html\n"
+"Video yang membantu ada di Youtube, cari LogbookKonni."
+
+#: src/logbook_pi.cpp:794 src/logbook_pi.cpp:797 src/logbook_pi.cpp:800
+msgid "Logbook Preferences"
+msgstr "Preferensi Buku Catatan"
+
+#: src/logbook_pi.cpp:1493 src/logbook_pi.cpp:1497
+msgid "Select zipped Layout-Files"
+msgstr "Pilih zipped Layout-Files"
+
+#: src/logbook_pi.cpp:1579
+#, c-format
+msgid "Layouts %sinstalled at\n\n"
+"%s\n"
+"%s\n"
+"%s\n"
+"%s"
+msgstr "Layouts %sinstalled at\n\n"
+"%s\n"
+"%s\n"
+"%s\n"
+"%s"
+
+#: src/Options.cpp:61
+msgid "Ma"
+msgstr "Ma"
+
+#: src/Options.cpp:62
+msgid "Tr"
+msgstr "Tr"
+
+#: src/Options.cpp:63
+msgid "Ge1"
+msgstr "Ge1"
+
+#: src/Options.cpp:64
+msgid "Ge2"
+msgstr "Ge2"
+
+#: src/Options.cpp:65
+msgid "Ge3"
+msgstr "Ge3"
+
+#: src/Options.cpp:66
+msgid "Fo1"
+msgstr "Fo1"
+
+#: src/Options.cpp:67
+msgid "Fo2"
+msgstr "Fo2"
+
+#: src/Options.cpp:68
+msgid "Fo3"
+msgstr "Fo3"
+
+#: src/Options.cpp:69
+msgid "Ji"
+msgstr "Ji"
+
+#: src/Options.cpp:70
+msgid "Mi"
+msgstr "Mi"
+
+#: src/Options.cpp:71
+msgid "Mt"
+msgstr "Mt"
+
+#: src/Options.cpp:72
+msgid "St"
+msgstr "St"
+
+#: src/Options.cpp:73
+msgid "Sp"
+msgstr "Sp"
+
+#: src/Options.cpp:74
+msgid "?"
+msgstr "?"
+
+#: src/Options.cpp:76
+msgid "Main"
+msgstr "Utama"
+
+#: src/Options.cpp:77
+msgid "Try"
+msgstr "Coba"
+
+#: src/Options.cpp:78
+msgid "Genoa 1"
+msgstr "Genoa 1"
+
+#: src/Options.cpp:79
+msgid "Genoa 2"
+msgstr "Genoa 2"
+
+#: src/Options.cpp:80
+msgid "Genoa 3"
+msgstr "Genoa 3"
+
+#: src/Options.cpp:81
+msgid "Fock 1"
+msgstr "Fock 1"
+
+#: src/Options.cpp:82
+msgid "Fock 2"
+msgstr "Fock 2"
+
+#: src/Options.cpp:83
+msgid "Fock 3"
+msgstr "Fock 3"
+
+#: src/Options.cpp:84
+msgid "Jib"
+msgstr "Jib"
+
+#: src/Options.cpp:85
+msgid "Mizzen"
+msgstr "Mizzen"
+
+#: src/Options.cpp:86
+msgid "Mizzen Storm"
+msgstr "Badai Mizzen"
+
+#: src/Options.cpp:87
+msgid "Staysail"
+msgstr "Staysail"
+
+#: src/Options.cpp:88
+msgid "Spinnacker"
+msgstr "Spinnaker"
+
+#: src/Options.cpp:89
+msgid "You can change the abreviations and the names of the sails\n"
+"in Options/Miscellaneous/Sails"
+msgstr "Anda dapat mengubah singkatan dan nama layar\n"
+" dalam Pilihan/Miscellaneous/Sails"
+
+#: src/Options.cpp:122
+msgid "automatic line Waypoint arrived"
+msgstr "jalur otomatis Waypoint tiba"
+
+#: src/Options.cpp:124 src/LogbookOptions.cpp:358
+msgid "automatic line\n"
+"change of guards"
+msgstr "garis otomatis\n"
+"pergantian penjaga"
+
+#: src/Options.cpp:127 src/LogbookOptions.cpp:380
+msgid "automatic line\n"
+"change of course >"
+msgstr "garis otomatis\n"
+"perubahan tentu saja >"
+
+#: src/Options.cpp:131 src/LogbookOptions.cpp:369
+msgid "automatic line\n"
+"Distance > "
+msgstr "garis otomatis\n"
+"Jarak > "
+
+#: src/Options.cpp:146
+msgid "Automatic line by timer\n\n"
+"You can set/unset a timer-interval\n"
+"or change this text in Toolbox/Plugins/Logbook\n\n"
+"Shift+Enter appends a new line"
+msgstr "Baris otomatis dengan waktu\n\n"
+"Kamu dapat mengatur/menghapus interval waktu\n"
+" atau mengubah teks ini di Toolbox/Plugins/Logbook\n\n"
+"Shift+Enter menambahkan baris baru"
+
+#: src/Options.cpp:153 src/LogbookOptions.cpp:618
+msgid "'"
+msgstr "'"
+
+#: src/Options.cpp:154 src/LogbookOptions.cpp:625
+msgid "\""
+msgstr "\""
+
+#: src/Options.cpp:156 src/LogbookOptions.cpp:635
+msgid "NM"
+msgstr "NM"
+
+#: src/Options.cpp:157 src/Options.cpp:166 src/LogbookOptions.cpp:642
+#: src/LogbookOptions.cpp:724 src/LogbookOptions.cpp:855
+msgid "kts"
+msgstr "kts"
+
+#: src/Options.cpp:159 src/LogbookDialog.cpp:8731 src/LogbookOptions.cpp:662
+msgid "m"
+msgstr "m"
+
+#: src/Options.cpp:160 src/LogbookOptions.cpp:682
+msgid "ft"
+msgstr "ft"
+
+#: src/Options.cpp:161
+msgid "fth"
+msgstr "fth"
+
+#: src/Options.cpp:164 src/LogbookOptions.cpp:717
+msgid "mb"
+msgstr "mb"
+
+#: src/Options.cpp:165 src/LogbookOptions.cpp:752
+msgid "F"
+msgstr "F"
+
+#: src/Options.cpp:167 src/LogbookOptions.cpp:733 src/LogbookOptions.cpp:855
+msgid "m/s"
+msgstr "m/detik"
+
+#: src/Options.cpp:168 src/LogbookOptions.cpp:742 src/LogbookOptions.cpp:855
+msgid "km/h"
+msgstr "km/jam"
+
+#: src/Options.cpp:171 src/LogbookOptions.cpp:769
+msgid "gal"
+msgstr "gal"
+
+#: src/Options.cpp:172 src/LogbookDialog.cpp:8724 src/LogbookDialog.cpp:8773
+#: src/LogbookOptions.cpp:186 src/LogbookOptions.cpp:776
+msgid "h"
+msgstr "h"
+
+#: src/Options.cpp:178
+msgid "day(s)"
+msgstr "hari(s)"
+
+#: src/Options.cpp:179
+msgid "week(s)"
+msgstr "minggu(s)"
+
+#: src/Options.cpp:180
+msgid "month"
+msgstr "bulan"
+
+#: src/Logbook.h:238 src/Logbook.cpp:1556 src/Logbook.cpp:2440
+#: src/Logbook.cpp:2506 src/Logbook.cpp:2511 src/LogbookOptions.cpp:1532
+#: src/LogbookOptions.cpp:1648 src/LogbookOptions.cpp:1673
+#: src/LogbookOptions.cpp:1698 src/LogbookOptions.cpp:2214
+#: src/LogbookHTML.cpp:295 src/LogbookHTML.cpp:400 src/LogbookHTML.cpp:677
+#: src/LogbookHTML.cpp:775 src/CrewList.cpp:1787 src/CrewList.cpp:2195
+#: src/CrewList.cpp:2539 src/boat.cpp:290 src/boat.cpp:550
+msgid "Information"
+msgstr "Informasi"
+
+#: src/Logbook.h:257
+msgid "Reminder"
+msgstr "Peringatan"
+
+#: src/Logbook.h:319 src/LogbookDialog.cpp:424
+msgid "Search in Logbook"
+msgstr "Cari di buku catatan"
+
+#: src/Logbook.cpp:48
+#, c-format
+msgid "Your Logbook has %i lines\n\n"
+"You should create a new logbook to minimize loadingtime."
+msgstr "Buku Log Anda memiliki %i baris\n\n"
+"Anda harus membuat buku catatan baru untuk meminimalkan waktu muat."
+
+#: src/Logbook.cpp:195 src/Logbook.cpp:1851 src/Logbook.cpp:1908
+#: src/LogbookDialog.cpp:3834
+msgid " off"
+msgstr " mati"
+
+#: src/Logbook.cpp:196 src/Logbook.cpp:1852 src/Logbook.cpp:1909
+#: src/LogbookDialog.cpp:3835
+msgid " on"
+msgstr " hidup"
+
+#: src/Logbook.cpp:766
+msgid "Are you sure ?"
+msgstr "Anda yakin?"
+
+#: src/Logbook.cpp:766 src/Logbook.cpp:779 src/LogbookDialog.cpp:191
+msgid "New Logbook"
+msgstr "Buku catatan baru"
+
+#: src/Logbook.cpp:773
+msgid "Reset all Values to zero ?"
+msgstr "Setel ulang semua Nilai ke nol ?"
+
+#: src/Logbook.cpp:779
+msgid "Your Logbook has no lines ?"
+msgstr "Buku catatan Anda tidak memiliki garis ?"
+
+#: src/Logbook.cpp:827
+msgid "Last line from Logbook\n"
+msgstr "Deretan terakhir dari Logbook\n"
+
+#: src/Logbook.cpp:835
+msgid "Last Logbook is\n"
+msgstr "Logbook terakhir\n"
+
+#: src/Logbook.cpp:889
+#, c-format
+msgid "Old Logbook until %s"
+msgstr "Sampai Buku catatan tua %s"
+
+#: src/Logbook.cpp:949
+#, c-format
+msgid "Start converting to new Date/Time-Format\n"
+"and backup all datafiles from version 1.1 to\n\n"
+"%s"
+msgstr "Mulai mengkonversi ke tanggal baru/format-waktu\n"
+"dan cadangkan semua file data dari versi 1.1 ke\n\n"
+"%s"
+
+#: src/Logbook.cpp:1555
+#, c-format
+msgid "Your Logbook has %i lines\n\n"
+"\t\t\tYou should create a new logbook to minimize loadingtime."
+msgstr "Buku Log Anda memiliki %i baris\n\n"
+"\t\t\tAnda harus membuat buku catatan baru untuk meminimalkan waktu muat."
+
+#: src/Logbook.cpp:1595
+msgid "unnamed Route"
+msgstr "rute yang tidak ada nama"
+
+#: src/Logbook.cpp:1620
+msgid "*** MAN OVERBOARD ***\n"
+msgstr ""
+
+#: src/Logbook.cpp:1637
+msgid "Track "
+msgstr "Jalur "
+
+#: src/Logbook.cpp:1682
+msgid "Engine #1 started"
+msgstr "Mesin #1 dimulai"
+
+#: src/Logbook.cpp:1686
+msgid "Engine #1 running"
+msgstr "Mesin #1 berjalan"
+
+#: src/Logbook.cpp:1702
+msgid "Engine #1 stopped"
+msgstr "Mesin #1 berhenti"
+
+#: src/Logbook.cpp:1707
+msgid "Engine #2 started"
+msgstr "Mesin #2 mulai"
+
+#: src/Logbook.cpp:1713
+msgid "Engine #2 running"
+msgstr "Mesin #2 berjalan"
+
+#: src/Logbook.cpp:1715
+msgid "\n"
+"Engine #2 running"
+msgstr "\n"
+" mesin #2 bejalan"
+
+#: src/Logbook.cpp:1731
+msgid "Engine #2 stopped"
+msgstr "Mesin #2 berhenti"
+
+#: src/Logbook.cpp:1733
+msgid "\n"
+"Engine #2 stopped"
+msgstr "\n"
+" mesin #2 berhenti"
+
+#: src/Logbook.cpp:1739
+msgid "Generator started"
+msgstr "Generator dimulai"
+
+#: src/Logbook.cpp:1745
+msgid "Generator running"
+msgstr "Generator berjalan"
+
+#: src/Logbook.cpp:1747
+msgid "\n"
+"Generator running"
+msgstr "\n"
+"menjalankan pembangkit"
+
+#: src/Logbook.cpp:1764
+msgid "Generator stopped"
+msgstr "Generator berhenti"
+
+#: src/Logbook.cpp:1766
+msgid "\n"
+"Generator stopped"
+msgstr "\n"
+"Berhenti pembangkit"
+
+#: src/Logbook.cpp:1788
+msgid "Sails hoisted"
+msgstr "Layar dinaikkan"
+
+#: src/Logbook.cpp:1792
+msgid "Sails changed"
+msgstr "Layar digantikan"
+
+#: src/Logbook.cpp:1795
+msgid "Sails down"
+msgstr "Layar diturunkan"
+
+#: src/Logbook.cpp:2249 src/CrewList.cpp:2512 src/boat.cpp:827
+#, c-format
+msgid "Delete Row Nr. %i ?"
+msgstr "Hapus baris Nr. %i?"
+
+#: src/Logbook.cpp:2249 src/CrewList.cpp:2512 src/boat.cpp:827
+msgid "Confirm"
+msgstr "Konfirmasi"
+
+#: src/Logbook.cpp:2440
+#, c-format
+msgid "Please enter the Date in the format:\n"
+"      %s"
+msgstr "Silahkan memasukkan Tanggal dalam format:\n"
+"      %s"
+
+#: src/Logbook.cpp:2462
+#, c-format
+msgid "Please enter the Time in the format:\n"
+"   %s"
+msgstr "Silahkan memasukkan waktu ke format:\n"
+"  %s"
+
+#: src/Logbook.cpp:2506
+msgid "Please enter 0544512.15n0301205.15e for\n"
+"054Deg 45Min 12.15Sec N 030Deg 12Min 05.15Sec E"
+msgstr "Tolong masukkan 0544512.15n0301205.15e for\n"
+"054Deg 45Min 12.15Sec N 030Deg 12Min 05.15Sec E"
+
+#: src/Logbook.cpp:2511
+msgid "Please enter 05445.1234n03012.0504e for\n"
+"054Deg 45.1234Min N 030Deg 12.0504Min E"
+msgstr "Tolong masukkan 05445.1234n03012.0504e for\n"
+"054Deg 45.1234Min N 030Deg 12.0504Min E"
+
+#: src/Logbook.cpp:2851
+msgid "Minutes greater than 59"
+msgstr "Menit lebih besar dari 59"
+
+#: src/Logbook.cpp:3407
+msgid "Wind is set to Heading,\n"
+"but GPS sends no Heading Data.\n"
+"Wind is set now to Relative to boat\n\n"
+msgstr "Wind diatur ke Pos,\n"
+"tapi GPS tidak mengirim arah data.\n"
+"wind sekarang di atur ke relatif boat\n\n"
+
+#: src/Logbook.cpp:3447
+msgid "No GPS-Signal !"
+msgstr "Tidak ada sinyal GPS !"
+
+#: src/Logbook.cpp:3465
+msgid "Next WP Name: "
+msgstr "Berikutnya Nama WP: "
+
+#: src/Logbook.cpp:3469
+msgid "Last waypoint of the Route"
+msgstr "Titik arah terakhir dari Route"
+
+#: src/Logbook.cpp:3473
+#, c-format
+msgid "\n"
+"Name of Waypoint: %s\n"
+"%s %s"
+msgstr "\n"
+" nama titik arah: %s\n"
+"%s %s"
+
+#: src/Logbook.cpp:3476
+msgid "Waypoint skipped"
+msgstr "Melewati Waypoint"
+
+#: src/Logbook.cpp:3478
+msgid "WayPoint arrived"
+msgstr "Mencapai Waypoint"
+
+#: src/Logbook.cpp:3513
+msgid "It's not allowed to append Data to a old Logbook\n\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t\t\t OpenCPN switchs to actual logbook"
+msgstr "Ini tidak diizinkan menambahkan Data ke buku catatan lama\n\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t\t\t OpenCPN switchs ke buku catatan yang sebenarnya"
+
+#: src/Logbook.cpp:3588
+msgid "Search in"
+msgstr "Mencari"
+
+#: src/Logbook.cpp:3592 src/LogbookDialog.cpp:687
+msgid "Actual Logbook"
+msgstr "Buku catatan aktual"
+
+#: src/Logbook.cpp:3595 src/LogbookDialog.cpp:691
+msgid "All Logbooks"
+msgstr "Semua buku catatan"
+
+#: src/Logbook.cpp:3608
+msgid "Searchstring"
+msgstr "String pencarian"
+
+#: src/Logbook.cpp:3615
+msgid "In Column"
+msgstr "Dalam Kolom"
+
+#: src/Logbook.cpp:3624 src/LogbookDialog.cpp:383 src/LogbookDialog.cpp:1112
+#: src/LogbookDialog.cpp:1958
+msgid "Date"
+msgstr "Tanggal"
+
+#: src/Logbook.cpp:3642
+msgid "Select"
+msgstr "Pilih"
+
+#: src/LogbookDialog.h:783 src/LogbookDialog.cpp:4392 src/LogbookDialog.cpp:4547
+msgid "Select Route"
+msgstr "Pilih Rute"
+
+#: src/LogbookDialog.h:854 src/LogbookDialog.h:856 src/LogbookDialog.cpp:196
+#: src/LogbookDialog.cpp:697
+msgid "Select Logbook"
+msgstr "Pilih Buku catatan"
+
+#: src/LogbookDialog.h:967
+msgid "Textblocks Dialog"
+msgstr "Mencekal teks Dialog"
+
+#: src/LogbookDialog.h:1108
+msgid "Set Timer Interval"
+msgstr "Atur waktu interval"
+
+#: src/LogbookDialog.h:1158 src/LogbookDialog.cpp:389
+msgid "Position"
+msgstr "Posisi"
+
+#: src/LogbookDialog.cpp:98 src/LogbookDialog.cpp:1638
+#: src/LogbookDialog.cpp:1764 src/LogbookDialog.cpp:1881
+msgid "Add Line"
+msgstr "Tambah Baris"
+
+#: src/LogbookDialog.cpp:99
+msgid "add a line to the end of your logbook"
+msgstr "tambahkan baris ke akhir buku catatan Anda"
+
+#: src/LogbookDialog.cpp:103 src/LogbookDialog.cpp:644 src/LogbookDialog.cpp:834
+#: src/LogbookDialog.cpp:1200 src/LogbookDialog.cpp:1642
+#: src/LogbookDialog.cpp:1768 src/LogbookDialog.cpp:1885
+msgid "Export"
+msgstr "Ekspor"
+
+#: src/LogbookDialog.cpp:104
+msgid "export your logbook-data as:\n"
+"HTML, ODT,  ODS, XML, CSV"
+msgstr "ekspor data logbook Anda sebagai:\n"
+"HTML, ODT,  ODS, XML, CSV"
+
+#: src/LogbookDialog.cpp:112 src/LogbookDialog.cpp:3821
+msgid "Show Layout Selection Mode"
+msgstr "Tampilkan mode pilihan tata ruang"
+
+#: src/LogbookDialog.cpp:120 src/LogbookDialog.cpp:651 src/LogbookDialog.cpp:842
+#: src/LogbookDialog.cpp:1208
+msgid "Select Layout: "
+msgstr "Pilih tata ruang: "
+
+#: src/LogbookDialog.cpp:127 src/LogbookDialog.cpp:657 src/LogbookDialog.cpp:849
+#: src/LogbookDialog.cpp:1214 src/LogbookDialog.cpp:1655
+#: src/LogbookDialog.cpp:1781 src/LogbookDialog.cpp:1898
+msgid "Select a layout which is displayed\n"
+"with button \"View\""
+msgstr "Pilih tata ruang yang ditampilkan\n"
+"dengan tombol \"View\""
+
+#: src/LogbookDialog.cpp:131 src/LogbookDialog.cpp:662 src/LogbookDialog.cpp:853
+#: src/LogbookDialog.cpp:1218 src/LogbookDialog.cpp:1659
+#: src/LogbookDialog.cpp:1785 src/LogbookDialog.cpp:1902
+msgid "R"
+msgstr "R"
+
+#: src/LogbookDialog.cpp:132 src/LogbookDialog.cpp:663 src/LogbookDialog.cpp:854
+#: src/LogbookDialog.cpp:1219 src/LogbookDialog.cpp:1660
+#: src/LogbookDialog.cpp:1786 src/LogbookDialog.cpp:1903
+msgid "Reload Layouts"
+msgstr "Muat Ulang Tata Letak"
+
+#: src/LogbookDialog.cpp:136 src/LogbookDialog.cpp:667 src/LogbookDialog.cpp:858
+#: src/LogbookDialog.cpp:1223 src/LogbookDialog.cpp:1664
+#: src/LogbookDialog.cpp:1790 src/LogbookDialog.cpp:1907
+#: src/LogbookOptions.cpp:791
+msgid "E"
+msgstr "E"
+
+#: src/LogbookDialog.cpp:137 src/LogbookDialog.cpp:668 src/LogbookDialog.cpp:859
+#: src/LogbookDialog.cpp:1665 src/LogbookDialog.cpp:1791
+#: src/LogbookDialog.cpp:1908 src/LogbookDialog.cpp:7348
+msgid "Edit Layout"
+msgstr "Edit Tata Letak"
+
+#: src/LogbookDialog.cpp:176 src/LogbookDialog.cpp:863
+msgid "HTML"
+msgstr "HTML"
+
+#: src/LogbookDialog.cpp:180 src/LogbookDialog.cpp:867
+msgid "ODT"
+msgstr "ODT"
+
+#: src/LogbookDialog.cpp:183 src/LogbookDialog.cpp:679 src/LogbookDialog.cpp:870
+#: src/LogbookDialog.cpp:1235 src/LogbookDialog.cpp:1676
+#: src/LogbookDialog.cpp:1802 src/LogbookDialog.cpp:1919
+msgid "View"
+msgstr "Melihat"
+
+#: src/LogbookDialog.cpp:184 src/LogbookDialog.cpp:680 src/LogbookDialog.cpp:871
+#: src/LogbookDialog.cpp:1236 src/LogbookDialog.cpp:1677
+#: src/LogbookDialog.cpp:1803 src/LogbookDialog.cpp:1920
+msgid "View data in browser (HTML) or Openoffice/LibreOffice (ODT)"
+msgstr "Lihat data di browser (HTML) atau OpenOffice / LibreOffice (ODT)"
+
+#: src/LogbookDialog.cpp:192
+msgid "Create a new logbook\n"
+"the active logbook is saved with today's date\n"
+"and can be viewed with Button \"Select Logbook\""
+msgstr "Buat buku catatan baru\n"
+"buku catatan aktif disimpan dengan tanggal hari ini\n"
+"dan bisa dilihat dengan Button \"Pilih buku catatan\""
+
+#: src/LogbookDialog.cpp:197
+msgid "Select a old logbook\n"
+"Everytime a new logbook is created, you'll \n"
+"find the active logbook as old logbook here"
+msgstr "Pilih buku catatan lama\n"
+"Setiap buku catatan baru dibuat, Anda akan \n"
+"menemukan buku catatan aktif seperti buku catatan tua di sini"
+
+#: src/LogbookDialog.cpp:205
+msgid "Show/Hide Statusbar"
+msgstr "Tampilkan/Sembunyikan Statusbar"
+
+#: src/LogbookDialog.cpp:210
+msgid "Help"
+msgstr "Bantuan"
+
+#: src/LogbookDialog.cpp:225
+msgid "Set Timer"
+msgstr "Mengatur Waktu"
+
+#: src/LogbookDialog.cpp:226
+msgid "Set the interval for the timer"
+msgstr "Tetapkan interval untuk waktu"
+
+#: src/LogbookDialog.cpp:231 src/LogbookDialog.cpp:236
+#: src/LogbookOptions.cpp:334
+msgid "Timer"
+msgstr "Penghitung Waktu"
+
+#: src/LogbookDialog.cpp:244 src/LogbookDialog.cpp:249 src/LogbookDialog.cpp:386
+#: src/LogbookOptions.cpp:354
+msgid "Watch"
+msgstr "Menonton"
+
+#: src/LogbookDialog.cpp:258 src/LogbookDialog.cpp:263
+#: src/LogbookOptions.cpp:344
+msgid "Waypoint"
+msgstr "Titik arah"
+
+#: src/LogbookDialog.cpp:272 src/LogbookDialog.cpp:277 src/LogbookDialog.cpp:387
+#: src/LogbookDialog.cpp:759 src/LogbookOptions.cpp:365
+#: src/LogbookOptions.cpp:631
+msgid "Distance"
+msgstr "Jarak"
+
+#: src/LogbookDialog.cpp:283
+msgid "Set the desired distance in NM\n"
+" = (Track made good)"
+msgstr "Atur jarak yang diinginkan di NM\n"
+" = ( Track made good)"
+
+#: src/LogbookDialog.cpp:291 src/LogbookDialog.cpp:296
+msgid "Course"
+msgstr "Kursus"
+
+#: src/LogbookDialog.cpp:301
+msgid "Set desired Degrees\n"
+"if the course changes by this amount\n"
+"a course-changed-event occurs"
+msgstr "Atur Derajat yang diinginkan\n"
+"jika kursus berubah dengan jumlah ini\n"
+"a kursus-berubah-acara terjadi"
+
+#: src/LogbookDialog.cpp:306
+msgid "Set desired delay in minutes\n"
+"It's a good idea to set here a value > 0\n"
+"to find the right wind."
+msgstr "Tetapkan penundaan yang diinginkan dalam hitungan menit\n"
+" Sebaiknya atur di sini nilai> 0\n"
+" untuk menemukan angin yang tepat."
+
+#: src/LogbookDialog.cpp:313 src/LogbookDialog.cpp:2922
+#: src/LogbookDialog.cpp:3076
+msgid "Stop"
+msgstr "Berhenti"
+
+#: src/LogbookDialog.cpp:315
+msgid "Suspend/Resume running event/s"
+msgstr "Menanggung/menjalakan ringkasan acara/s"
+
+#: src/LogbookDialog.cpp:382 src/LogbookDialog.cpp:755
+#: src/LogbookDialog.cpp:4393 src/LogbookOptions.cpp:1001
+msgid "Route"
+msgstr "Rute"
+
+#: src/LogbookDialog.cpp:384 src/LogbookDialog.cpp:1113
+msgid "Time"
+msgstr "Waktu"
+
+#: src/LogbookDialog.cpp:385
+msgid "Status"
+msgstr "Status"
+
+#: src/LogbookDialog.cpp:388
+msgid "DistanceTotal"
+msgstr "Jarak jauh"
+
+#: src/LogbookDialog.cpp:390
+msgid "COG (T)"
+msgstr ""
+
+#: src/LogbookDialog.cpp:391 src/LogbookOptions.cpp:301
+#: src/LogbookOptions.cpp:688
+msgid "Heading"
+msgstr "Bagian Atas"
+
+#: src/LogbookDialog.cpp:392
+msgid "SOG"
+msgstr "SOG"
+
+#: src/LogbookDialog.cpp:393
+msgid "STW"
+msgstr "STW"
+
+#: src/LogbookDialog.cpp:394
+msgid "Depth"
+msgstr "Kedalaman"
+
+#: src/LogbookDialog.cpp:395 src/LogbookDialog.cpp:587
+#: src/LogbookDialog.cpp:1589
+msgid "Remarks"
+msgstr "Keterangan"
+
+#: src/LogbookDialog.cpp:410 src/LogbookDialog.cpp:956
+#: src/LogbookDialog.cpp:1603 src/LogbookDialog.cpp:1741
+#: src/LogbookDialog.cpp:1858 src/LogbookDialog.cpp:1975
+#: src/LogbookDialog.cpp:8812 src/LogbookDialog.cpp:8875
+msgid "Delete Row"
+msgstr "Hapus Baris"
+
+#: src/LogbookDialog.cpp:416 src/LogbookDialog.cpp:806 src/LogbookDialog.cpp:960
+msgid "Show hidden columns"
+msgstr "Tampilkan kolom tersembunyi"
+
+#: src/LogbookDialog.cpp:420 src/LogbookDialog.cpp:810
+msgid "Hide column"
+msgstr "Sembunyikan kolom"
+
+#: src/LogbookDialog.cpp:430
+msgid "Shutdown Logbook"
+msgstr "Matikan Buku catatan"
+
+#: src/LogbookDialog.cpp:443
+msgid "Delete Rows"
+msgstr "Hapus baris"
+
+#: src/LogbookDialog.cpp:447
+msgid "Flip Day<->Month"
+msgstr "Flip Day <-> Bulan"
+
+#: src/LogbookDialog.cpp:450 src/LogbookOptions.cpp:597
+msgid "Navigation"
+msgstr "Navigasi"
+
+#: src/LogbookDialog.cpp:483 src/LogbookOptions.cpp:713
+msgid "Barometer"
+msgstr "Barometer"
+
+#: src/LogbookDialog.cpp:484
+msgid "Hygrometer"
+msgstr "Hygrometer"
+
+#: src/LogbookDialog.cpp:485
+msgid "Air"
+msgstr "Udara"
+
+#: src/LogbookDialog.cpp:486 src/LogbookDialog.cpp:585
+#: src/LogbookOptions.cpp:465
+msgid "Water"
+msgstr "Air"
+
+#: src/LogbookDialog.cpp:487
+msgid "TWA"
+msgstr "TWA"
+
+#: src/LogbookDialog.cpp:491
+msgid "TWS\n"
+"Min|Avg|Max"
+msgstr "TWS\n"
+"Min | Rata-rata | Maks"
+
+#: src/LogbookDialog.cpp:492 src/LogbookDialog.cpp:498
+msgid "AWA"
+msgstr "AWA"
+
+#: src/LogbookDialog.cpp:493
+msgid "AWS\n"
+"Min|Avg|Max"
+msgstr "AWS\n"
+"Min | Rata-rata | Maks"
+
+#: src/LogbookDialog.cpp:497
+msgid "TWS"
+msgstr "TWS"
+
+#: src/LogbookDialog.cpp:499
+msgid "AWS"
+msgstr "AWS"
+
+#: src/LogbookDialog.cpp:501
+msgid "Current"
+msgstr "Arus"
+
+#: src/LogbookDialog.cpp:502
+msgid "C/Strength"
+msgstr "C/Kekuatan"
+
+#: src/LogbookDialog.cpp:503
+msgid "Wave"
+msgstr "Gelombang"
+
+#: src/LogbookDialog.cpp:504
+msgid "Swell"
+msgstr "Membengkak"
+
+#: src/LogbookDialog.cpp:505 src/LogbookOptions.cpp:707
+msgid "Weather"
+msgstr "Cuaca"
+
+#: src/LogbookDialog.cpp:506
+msgid "Clouds"
+msgstr "Awan"
+
+#: src/LogbookDialog.cpp:507
+msgid "Visibility"
+msgstr "Visibilitas"
+
+#: src/LogbookDialog.cpp:524
+msgid "Meteo"
+msgstr "Meteo"
+
+#: src/LogbookDialog.cpp:566 src/LogbookDialog.cpp:764
+msgid "Engine #1"
+msgstr "Mesih #1"
+
+#: src/LogbookDialog.cpp:567
+msgid "#1 Total"
+msgstr "#1 Total"
+
+#: src/LogbookDialog.cpp:569 src/LogbookDialog.cpp:765
+msgid "Engine #2"
+msgstr "Mesin #2"
+
+#: src/LogbookDialog.cpp:570
+msgid "#2 Total"
+msgstr "#2 Total"
+
+#: src/LogbookDialog.cpp:572 src/LogbookDialog.cpp:766
+#: src/LogbookOptions.cpp:509
+msgid "Fuel"
+msgstr "Bahan Bakar"
+
+#: src/LogbookDialog.cpp:573
+msgid "FuelTotal"
+msgstr "Total Bahan bakar"
+
+#: src/LogbookDialog.cpp:574 src/LogbookOptions.cpp:1268
+msgid "Sails"
+msgstr "Layar"
+
+#: src/LogbookDialog.cpp:575
+msgid "Reef"
+msgstr "Karang"
+
+#: src/LogbookDialog.cpp:576 src/LogbookDialog.cpp:767
+msgid "Generator"
+msgstr "Generator"
+
+#: src/LogbookDialog.cpp:577
+msgid "Gen. total"
+msgstr "Gen. total"
+
+#: src/LogbookDialog.cpp:578 src/LogbookOptions.cpp:548
+msgid "Bank #1"
+msgstr "Bank #1"
+
+#: src/LogbookDialog.cpp:579
+msgid "AH #1 Total"
+msgstr "AH #1 Total"
+
+#: src/LogbookDialog.cpp:580 src/LogbookOptions.cpp:560
+msgid "Bank #2"
+msgstr "Bank #2"
+
+#: src/LogbookDialog.cpp:581
+msgid "AH #2 Total"
+msgstr ""
+
+#: src/LogbookDialog.cpp:582 src/LogbookDialog.cpp:772
+#: src/LogbookOptions.cpp:487
+msgid "Watermaker"
+msgstr "Pembuat air"
+
+#: src/LogbookDialog.cpp:583
+msgid "W-Total"
+msgstr ""
+
+#: src/LogbookDialog.cpp:584
+msgid "W-Output"
+msgstr ""
+
+#: src/LogbookDialog.cpp:586
+msgid "WaterTotal"
+msgstr ""
+
+#: src/LogbookDialog.cpp:588
+msgid "RouteID"
+msgstr ""
+
+#: src/LogbookDialog.cpp:589
+msgid "TrackID"
+msgstr ""
+
+#: src/LogbookDialog.cpp:606
+msgid "Motor/Sails"
+msgstr "Motor / Layar"
+
+#: src/LogbookDialog.cpp:645
+msgid "export your Overview-data as HTML or ODT"
+msgstr "ekspor data-Ikhtisar Anda sebagai HTML atau ODT"
+
+#: src/LogbookDialog.cpp:698
+msgid "Select one of the old logbooks"
+msgstr "Pilih salah satu buku catatan lama"
+
+#: src/LogbookDialog.cpp:756 src/LogbookDialog.cpp:999
+#: src/LogbookDialog.cpp:2928 src/LogbookDialog.cpp:3063
+msgid "Start"
+msgstr "Mulai"
+
+#: src/LogbookDialog.cpp:757
+msgid "End"
+msgstr "Akhir"
+
+#: src/LogbookDialog.cpp:758
+msgid "Total Time"
+msgstr "Total Waktu"
+
+#: src/LogbookDialog.cpp:760
+msgid "Distance p. Day"
+msgstr "Jarak p. Hari"
+
+#: src/LogbookDialog.cpp:761
+msgid "Best Dist. p. Day"
+msgstr "Terbaik Dist. hal. Hari"
+
+#: src/LogbookDialog.cpp:762
+msgid "Speed Avg."
+msgstr "Kecepatan Rata-rata."
+
+#: src/LogbookDialog.cpp:763
+msgid "Speed Max."
+msgstr "Kecepatan Maksimum."
+
+#: src/LogbookDialog.cpp:768
+msgid "Bank #1 gen."
+msgstr "Gen #1 gen."
+
+#: src/LogbookDialog.cpp:769
+msgid "Bank #1 used"
+msgstr "Bank #1 digunakan"
+
+#: src/LogbookDialog.cpp:770
+msgid "Bank #2 gen."
+msgstr ""
+
+#: src/LogbookDialog.cpp:771
+msgid "Bank #2 used"
+msgstr "Bank #2 digunakan"
+
+#: src/LogbookDialog.cpp:773
+msgid "Waterm. Outp"
+msgstr "Air. Outp"
+
+#: src/LogbookDialog.cpp:774
+msgid "Water used"
+msgstr "Air yang digunakan"
+
+#: src/LogbookDialog.cpp:775
+msgid "TWA Avg."
+msgstr "TWA Rata-rata."
+
+#: src/LogbookDialog.cpp:776
+msgid "TWS Avg."
+msgstr "TWS Avg."
+
+#: src/LogbookDialog.cpp:777
+msgid "TWS Max."
+msgstr "TWS Max."
+
+#: src/LogbookDialog.cpp:778
+msgid "Currentdirection Avg."
+msgstr "Nilai Rata-Rata."
+
+#: src/LogbookDialog.cpp:779
+msgid "Current Avg."
+msgstr "Nilai rata-rata saat ini."
+
+#: src/LogbookDialog.cpp:780
+msgid "Current Max."
+msgstr "Max sekarang."
+
+#: src/LogbookDialog.cpp:781
+msgid "Wave Avg."
+msgstr "Gelombang Rata-rata."
+
+#: src/LogbookDialog.cpp:782
+msgid "Wave Max."
+msgstr "Wave Max."
+
+#: src/LogbookDialog.cpp:783
+msgid "Swell Avg."
+msgstr ""
+
+#: src/LogbookDialog.cpp:784
+msgid "Swell Max."
+msgstr ""
+
+#: src/LogbookDialog.cpp:785
+msgid "Sails used mostly"
+msgstr "Layar yang digunakan kebanyakan"
+
+#: src/LogbookDialog.cpp:786
+msgid "Path"
+msgstr "Jalan"
+
+#: src/LogbookDialog.cpp:802
+msgid "Goto Route"
+msgstr ""
+
+#: src/LogbookDialog.cpp:818
+msgid "Overview"
+msgstr "Ikhtisar"
+
+#: src/LogbookDialog.cpp:829
+msgid "Add Crew"
+msgstr "Tambahkan Kru"
+
+#: src/LogbookDialog.cpp:830
+msgid "Add a new Crewmember"
+msgstr "Menambahkan anggota baru"
+
+#: src/LogbookDialog.cpp:835
+msgid "export your crew-data as:\n"
+"HTML, ODT,  ODS, XML, CSV"
+msgstr "ekspor data awak sebagai: \n"
+"HTML, ODT, BPO, XML, CSV"
+
+#: src/LogbookDialog.cpp:878
+msgid "Copy to watch"
+msgstr "Salin untuk menonton"
+
+#: src/LogbookDialog.cpp:882
+msgid "Name in full"
+msgstr "Nama lengkap"
+
+#: src/LogbookDialog.cpp:882
+msgid "Firstname only"
+msgstr "Nama depan saja"
+
+#: src/LogbookDialog.cpp:882
+msgid "Lastname only"
+msgstr "Nama belakang saja"
+
+#: src/LogbookDialog.cpp:928
+msgid "Onboard"
+msgstr "Di atas kapal"
+
+#: src/LogbookDialog.cpp:929 src/LogbookDialog.cpp:1266
+#: src/LogbookOptions.cpp:1198
+msgid "Name"
+msgstr "Nama"
+
+#: src/LogbookDialog.cpp:930
+msgid "Birthname"
+msgstr "Nama lahir"
+
+#: src/LogbookDialog.cpp:931 src/LogbookDialog.cpp:1354
+msgid "Firstname"
+msgstr "Nama depan"
+
+#: src/LogbookDialog.cpp:932 src/LogbookDialog.cpp:1956
+msgid "Title"
+msgstr "Judul"
+
+#: src/LogbookDialog.cpp:933
+msgid "Date of Birth"
+msgstr "Tanggal Lahir"
+
+#: src/LogbookDialog.cpp:934
+msgid "Place of Birth"
+msgstr "Tempat Lahir"
+
+#: src/LogbookDialog.cpp:935
+msgid "Nationality"
+msgstr "Kebangsaan"
+
+#: src/LogbookDialog.cpp:936
+msgid "Passport-Nr"
+msgstr "Paspor-tidak"
+
+#: src/LogbookDialog.cpp:937
+msgid "Issued in"
+msgstr "Ditempatkan di"
+
+#: src/LogbookDialog.cpp:938
+msgid "Date of Issue"
+msgstr "Tanggal pengeluaran"
+
+#: src/LogbookDialog.cpp:939 src/LogbookDialog.cpp:1387
+msgid "Zip"
+msgstr "Zip"
+
+#: src/LogbookDialog.cpp:940
+msgid "Country"
+msgstr "Negara"
+
+#: src/LogbookDialog.cpp:941 src/LogbookDialog.cpp:1394
+msgid "Town"
+msgstr "Kota"
+
+#: src/LogbookDialog.cpp:942 src/LogbookDialog.cpp:1380
+msgid "Street"
+msgstr "Jalan"
+
+#: src/LogbookDialog.cpp:966
+msgid "Show onboard only"
+msgstr "Tampilkan onboard saja"
+
+#: src/LogbookDialog.cpp:971
+msgid "Show all entries"
+msgstr "Tampilkan semua entri"
+
+#: src/LogbookDialog.cpp:977
+msgid "Sort ascending"
+msgstr "Urutkan naik"
+
+#: src/LogbookDialog.cpp:981
+msgid "Sort descending"
+msgstr "Urutkan turun"
+
+#: src/LogbookDialog.cpp:997
+msgid "Set Watchtimes"
+msgstr "Tetapkan Waktu Tonton"
+
+#: src/LogbookDialog.cpp:1004
+msgid "Set the startdate of the sailing trip"
+msgstr "Atur permulaan tanggal dari prjalanan berlayar"
+
+#: src/LogbookDialog.cpp:1010
+msgid "Set the starttime of your sailing trip"
+msgstr "Atur waktu permulaan perjalanan anda berlayar"
+
+#: src/LogbookDialog.cpp:1014
+msgid "Days"
+msgstr "Hari"
+
+#: src/LogbookDialog.cpp:1019
+msgid "Length of your sailing trip"
+msgstr "Lama perjalanan anda berlayar"
+
+#: src/LogbookDialog.cpp:1023
+msgid "Calculate"
+msgstr "Hitung"
+
+#: src/LogbookDialog.cpp:1024
+msgid "Calculate the watches with the members entered in the columns"
+msgstr "Perhatikan hitungan dengan anggota yang telah masuk di kolom"
+
+#: src/LogbookDialog.cpp:1028 src/LogbookDialog.cpp:3903
+#: src/LogbookOptions.cpp:1254 src/LogbookOptions.cpp:1576
+msgid "Reset"
+msgstr "Setel ulang"
+
+#: src/LogbookDialog.cpp:1030
+msgid "Reset data to edit-level"
+msgstr "Ulang data ke edit-tingkat"
+
+#: src/LogbookDialog.cpp:1034
+msgid "Clear"
+msgstr "Bersihkan"
+
+#: src/LogbookDialog.cpp:1035
+msgid "Clear all data"
+msgstr "Bersihkan semua data"
+
+#: src/LogbookDialog.cpp:1044
+msgid "Day backward"
+msgstr "Hari sebelumnya"
+
+#: src/LogbookDialog.cpp:1048
+msgid "Now"
+msgstr "Sekarang"
+
+#: src/LogbookDialog.cpp:1050
+msgid "Go to date/time now"
+msgstr "Pergi ke tanggal/waktu sekarang"
+
+#: src/LogbookDialog.cpp:1056
+msgid "Day forward"
+msgstr "Hari selanjunya"
+
+#: src/LogbookDialog.cpp:1060
+msgid "Day:"
+msgstr "Hari:"
+
+#: src/LogbookDialog.cpp:1065
+msgid "Shows/Sets the day\n"
+"Displays the data in your ODT/Browser-program from this day to end"
+msgstr "Menunjukkan/Menetapkan hari\n"
+"Menampilkan data di ODT Anda/Browser - program dari hari ini berakhir"
+
+#: src/LogbookDialog.cpp:1069
+msgid "Display"
+msgstr "Tampilan"
+
+#: src/LogbookDialog.cpp:1073
+msgid "all"
+msgstr "semua"
+
+#: src/LogbookDialog.cpp:1073
+msgid "this day"
+msgstr "hari ini"
+
+#: src/LogbookDialog.cpp:1077
+msgid "Used for ODT/Browser-program\n"
+"One Row for the day + selected days = Days displayed"
+msgstr "Digunakan untuk ODT/Program-browser\n"
+"Satu Baris untuk hari + hari yang dipilih = Hari ditampilkan"
+
+#: src/LogbookDialog.cpp:1100
+msgid "1. Watch"
+msgstr "1. Perhatikan"
+
+#: src/LogbookDialog.cpp:1111
+msgid "Watchtime"
+msgstr "Menjaga waktu"
+
+#: src/LogbookDialog.cpp:1114
+msgid "Member"
+msgstr "Anggota"
+
+#: src/LogbookDialog.cpp:1124
+msgid "Set as Watchbase"
+msgstr "Tetapkan sebagai Watchbase"
+
+#: src/LogbookDialog.cpp:1128
+msgid "Split Watch"
+msgstr "Memisahkan waktu"
+
+#: src/LogbookDialog.cpp:1132
+msgid "Merge Watches"
+msgstr "Menyatukan waktu"
+
+#: src/LogbookDialog.cpp:1136
+msgid "Swap two Watches"
+msgstr "Tukar dua Jam"
+
+#: src/LogbookDialog.cpp:1140
+msgid "Delete Crewmembers"
+msgstr "Mehilangkan anggota baru"
+
+#: src/LogbookDialog.cpp:1171
+msgid "Crewlist"
+msgstr "Kru"
+
+#: src/LogbookDialog.cpp:1189
+msgid "Add Equipment"
+msgstr "Tambahkan Peralatan"
+
+#: src/LogbookDialog.cpp:1190
+msgid "add the equipment of your boat"
+msgstr "tambahkan peralatan perahu anda"
+
+#: src/LogbookDialog.cpp:1193 src/LogbookDialog.cpp:5728
+msgid "Show Equipment"
+msgstr "Tampilkan Peralatan"
+
+#: src/LogbookDialog.cpp:1194
+msgid "Show/Hide Equipmentgrid"
+msgstr "Tampilkan/Sembunyikan Equipmentgrid"
+
+#: src/LogbookDialog.cpp:1201
+msgid "export your boat/equipment-data as:\n"
+"      HTML, ODT,  ODS, XML, CSV"
+msgstr "ekspor perahu kamu/peralatan-data sebagai:\n"
+"    HTML, ODT, BPO, XML, CSV"
+
+#: src/LogbookDialog.cpp:1224
+msgid "Edit Layouts"
+msgstr "Edit Tata Letak"
+
+#: src/LogbookDialog.cpp:1258 src/LogbookDialog.cpp:1620
+msgid "Boat"
+msgstr "Perahu"
+
+#: src/LogbookDialog.cpp:1273
+msgid "Homeport"
+msgstr "Pelabuhan asal"
+
+#: src/LogbookDialog.cpp:1280
+msgid "Callsign"
+msgstr "Tanda panggilan"
+
+#: src/LogbookDialog.cpp:1287
+msgid "HIN-Nr."
+msgstr ""
+
+#: src/LogbookDialog.cpp:1292
+msgid "Hull Identification No."
+msgstr "Nomor Identitas kapal."
+
+#: src/LogbookDialog.cpp:1295
+msgid "Sail-Nr."
+msgstr ""
+
+#: src/LogbookDialog.cpp:1308
+msgid "Insurance"
+msgstr "Asuransi"
+
+#: src/LogbookDialog.cpp:1315
+msgid "Registration"
+msgstr "Pendaftaran"
+
+#: src/LogbookDialog.cpp:1322
+msgid "Policy"
+msgstr "Kebijakan"
+
+#: src/LogbookDialog.cpp:1329
+msgid "MMSI"
+msgstr "MMSI"
+
+#: src/LogbookDialog.cpp:1340
+msgid "Owner"
+msgstr "Pemilik"
+
+#: src/LogbookDialog.cpp:1347
+msgid "Name      "
+msgstr "Nama      "
+
+#: src/LogbookDialog.cpp:1361
+msgid "Telephone"
+msgstr "Telepon"
+
+#: src/LogbookDialog.cpp:1406
+msgid "Details"
+msgstr "Rincian"
+
+#: src/LogbookDialog.cpp:1414 src/LogbookDialog.cpp:1586
+msgid "Type"
+msgstr "Jenis"
+
+#: src/LogbookDialog.cpp:1421
+msgid "Builder"
+msgstr "Pembangun"
+
+#: src/LogbookDialog.cpp:1428
+msgid "Hull"
+msgstr "Lambung kapal"
+
+#: src/LogbookDialog.cpp:1435
+msgid "Date Launched"
+msgstr "Tanggal Diluncurkan"
+
+#: src/LogbookDialog.cpp:1442
+msgid "Yard-Nr."
+msgstr ""
+
+#: src/LogbookDialog.cpp:1449
+msgid "Designer"
+msgstr "Perancang"
+
+#: src/LogbookDialog.cpp:1456
+msgid "Construction"
+msgstr "Konstruksi"
+
+#: src/LogbookDialog.cpp:1481
+msgid "LOA"
+msgstr "LOA"
+
+#: src/LogbookDialog.cpp:1486
+msgid "Length over all"
+msgstr "Panjang keseluruhan"
+
+#: src/LogbookDialog.cpp:1490
+msgid "LOD"
+msgstr "LOD"
+
+#: src/LogbookDialog.cpp:1495
+msgid "Length over Deck"
+msgstr "Panjang di atas Deck"
+
+#: src/LogbookDialog.cpp:1499
+msgid "LWL"
+msgstr "LWL"
+
+#: src/LogbookDialog.cpp:1504
+msgid "Length in Waterline"
+msgstr "Suhu udara di permukaan Air"
+
+#: src/LogbookDialog.cpp:1508
+msgid "Beam"
+msgstr "Balok"
+
+#: src/LogbookDialog.cpp:1513
+msgid "Greatest Width of Hull"
+msgstr "Lebar terbesar dari lambung"
+
+#: src/LogbookDialog.cpp:1517
+msgid "Draft"
+msgstr "Konsep"
+
+#: src/LogbookDialog.cpp:1524 src/LogbookDialog.cpp:1532
+#: src/LogbookDialog.cpp:1540
+msgid "UserLabel"
+msgstr "Label pengguna"
+
+#: src/LogbookDialog.cpp:1525 src/LogbookDialog.cpp:1533
+#: src/LogbookDialog.cpp:1541
+msgid "write your own label"
+msgstr "tulis labelmu sendiri"
+
+#: src/LogbookDialog.cpp:1549
+msgid "Displacement"
+msgstr "Pemindahan"
+
+#: src/LogbookDialog.cpp:1565
+msgid "Equipment"
+msgstr "Peralatan"
+
+#: src/LogbookDialog.cpp:1587 src/LogbookDialog.cpp:7488
+msgid "Description"
+msgstr "Deskripsi"
+
+#: src/LogbookDialog.cpp:1588
+msgid "Serial-Nr."
+msgstr "Serial-Nr."
+
+#: src/LogbookDialog.cpp:1639 src/LogbookDialog.cpp:1765
+#: src/LogbookDialog.cpp:1882
+msgid "Add a new line"
+msgstr "Menambahkan baris baru"
+
+#: src/LogbookDialog.cpp:1643
+msgid "export your Service-data as HTML or ODT"
+msgstr "ekspor data-layanan sebagai HTML atau ODT"
+
+#: src/LogbookDialog.cpp:1649 src/LogbookDialog.cpp:1775
+#: src/LogbookDialog.cpp:1892
+msgid "Select Layout:"
+msgstr "Pilih Layout:"
+
+#: src/LogbookDialog.cpp:1711 src/LogbookDialog.cpp:1833
+#: src/LogbookDialog.cpp:1954
+msgid "Priority"
+msgstr "Diutamakan"
+
+#: src/LogbookDialog.cpp:1712
+msgid "Service TODO"
+msgstr "Layanan TODO"
+
+#: src/LogbookDialog.cpp:1713
+msgid "If"
+msgstr "Jika"
+
+#: src/LogbookDialog.cpp:1714
+msgid "Warnvalue"
+msgstr "Nilai peringatan"
+
+#: src/LogbookDialog.cpp:1715
+msgid "Urgentvalue"
+msgstr "Nilai yang mendesak"
+
+#: src/LogbookDialog.cpp:1716
+msgid "Startvalue"
+msgstr "Mulai nilai"
+
+#: src/LogbookDialog.cpp:1717
+msgid "Active"
+msgstr "Aktif"
+
+#: src/LogbookDialog.cpp:1733
+msgid "Service done"
+msgstr "Melakukan Layanan"
+
+#: src/LogbookDialog.cpp:1737
+msgid "Buy parts for this service"
+msgstr "Beli suku cadang untuk layanan ini"
+
+#: src/LogbookDialog.cpp:1752 src/Maintenance.cpp:458
+msgid "Service"
+msgstr "Layanan"
+
+#: src/LogbookDialog.cpp:1769
+msgid "export your Repairs-data as HTML or ODT"
+msgstr "ekspor data Perbaikan Anda sebagai HTML atau ODT"
+
+#: src/LogbookDialog.cpp:1834
+msgid "RepairsTODO"
+msgstr "PerbaikanTODO"
+
+#: src/LogbookDialog.cpp:1850
+msgid "Repair done"
+msgstr "Perbaikan dilakukan"
+
+#: src/LogbookDialog.cpp:1854
+msgid "Buy parts for this repair"
+msgstr "Beli suku cadang untuk perbaikan ini"
+
+#: src/LogbookDialog.cpp:1869 src/Maintenance.cpp:465
+msgid "Repairs"
+msgstr "Perbaikan"
+
+#: src/LogbookDialog.cpp:1886
+msgid "export your BuyParts-data as HTML or ODT"
+msgstr "ekspor data BuyParts Anda sebagai HTML atau ODT"
+
+#: src/LogbookDialog.cpp:1955
+msgid "Category"
+msgstr "Kategori"
+
+#: src/LogbookDialog.cpp:1957 src/LogbookDialog.cpp:1986
+msgid "Buy Parts"
+msgstr "Beli Suku Cadang"
+
+#: src/LogbookDialog.cpp:1959
+msgid "At"
+msgstr "Di"
+
+#: src/LogbookDialog.cpp:1993 src/LogbookOptions.cpp:807
+msgid "Maintenance"
+msgstr "Pemeliharaan"
+
+#: src/LogbookDialog.cpp:3394 src/LogbookDialog.cpp:3902
+#: src/LogbookOptions.cpp:1575
+msgid "none"
+msgstr "tidak ada"
+
+#: src/LogbookDialog.cpp:3634
+msgid " - Normal Timer - Interval: "
+msgstr ""
+
+#: src/LogbookDialog.cpp:3638
+msgid " - Full Hour Timer"
+msgstr " - Timer Jam Penuh"
+
+#: src/LogbookDialog.cpp:3641
+msgid " - Individual Timer"
+msgstr " - waktu perorang"
+
+#: src/LogbookDialog.cpp:3677
+msgid "no Event/s\n"
+"Click one or more bullets to start"
+msgstr "tidak ada acara/s\n"
+"Tekan satu atau lebih peluru untuk memulai"
+
+#: src/LogbookDialog.cpp:3678
+msgid "Event/s suspended\n"
+"Click the button to restart all events"
+msgstr "Peristiwa/s ditangguhkan\n"
+"Klik tombol untuk memulai ulang semua acara"
+
+#: src/LogbookDialog.cpp:3679
+msgid "Event/s running\n"
+"Click the button to suspend or a bullet to stop"
+msgstr "Acara/s berjalan\n"
+"Klik tombol untuk menangguhkan atau peluru untuk berhenti"
+
+#: src/LogbookDialog.cpp:3681
+msgid "green = Event is running\n"
+"red = Event is stopped\n"
+"yellow = Event is suspended. Restart event with Start-Button"
+msgstr "hijau = Acara sedang berjalan \n"
+"merah = Acara dihentikan\n"
+"kuning = Acara ditangguhkan. Restart acara dengan Tombol-start"
+
+#: src/LogbookDialog.cpp:3688
+msgid "Opendocument SpreadSheet(*.ods)|*.ods|Excel 2003 Format(*.xml)|*.xml|CSV Format OpenOffice(*.csv)|*.csv|Backup Logbook(*.txt)|*.txt"
+msgstr "Buka dukumen SpreadSheet(*.ods)|*.ods|Excel 2003 Format(*.xml)|*.xml|CSV Format OpenOffice(*.csv)|*.csv|Backup Logbook(*.txt)|*.txt"
+
+#: src/LogbookDialog.cpp:3820
+msgid "Show Engines/Sails Mode"
+msgstr "Tampilkan Mode Mesin / Layar"
+
+#: src/LogbookDialog.cpp:4337 src/LogbookDialog.cpp:4388
+#: src/LogbookOptions.cpp:1005
+msgid "Track"
+msgstr "Jalur"
+
+#: src/LogbookDialog.cpp:4387 src/LogbookDialog.cpp:4541
+msgid "Select Track"
+msgstr "Pilih Jalur"
+
+#: src/LogbookDialog.cpp:4398
+msgid "GUID"
+msgstr ""
+
+#: src/LogbookDialog.cpp:4620
+msgid "use Textblocks..."
+msgstr "gunakan Textblocks..."
+
+#: src/LogbookDialog.cpp:4726
+msgid "Save Logbook File"
+msgstr "Simpan File buku catatan"
+
+#: src/LogbookDialog.cpp:4798
+msgid "Normal Timer has 0 h 0 Min.\n\n"
+"Please change settings (Timer-Interval)"
+msgstr "Pengukur waktu Normal memiliki 0 h 0 Min.\n\n"
+"Silahkan ganti pengaturan (Pengukur Waktu-selang)"
+
+#: src/LogbookDialog.cpp:4960
+msgid "No Path set to HTML-Editor\n"
+"in ToolBox/Plugins/LogbookKonni/Preferences"
+msgstr "Tidak ada Jalur yang diatur ke HTML-Editor\n"
+" di ToolBox / Plugins / LogbookKonni / Preferences"
+
+#: src/LogbookDialog.cpp:5375
+msgid "Save CrewList File"
+msgstr "Simpan File Daftar Kru"
+
+#: src/LogbookDialog.cpp:5720
+msgid "Hide Equipment"
+msgstr "Sembunyikan Peralatan"
+
+#: src/LogbookDialog.cpp:5745
+msgid "Save Boat File"
+msgstr "Simpan File Perahu"
+
+#: src/LogbookDialog.cpp:5922
+msgid "Save Service File"
+msgstr "Simpan File Layanan"
+
+#: src/LogbookDialog.cpp:6180
+msgid "Save Repairs File"
+msgstr "Simpan File Perbaikan"
+
+#: src/LogbookDialog.cpp:6404
+msgid "Save BuyParts File"
+msgstr "Simpan file bagianpembelian"
+
+#: src/LogbookDialog.cpp:6632
+msgid "Save Overview File"
+msgstr "Simpan file ikhtisar"
+
+#: src/LogbookDialog.cpp:7358
+msgid "Filter Layout by"
+msgstr "Penyaring tata letak oleh"
+
+#: src/LogbookDialog.cpp:7369
+msgid "Rename Layout"
+msgstr "Ganti nama Tata Letak"
+
+#: src/LogbookDialog.cpp:7378
+msgid "Delete Layout"
+msgstr "Hapus Tata Letak"
+
+#: src/LogbookDialog.cpp:7387
+msgid "Send Layout by email"
+msgstr "Mengirim tata letak melalui email"
+
+#: src/LogbookDialog.cpp:7396
+msgid "Install single Layout"
+msgstr "Memasang tata letak tunggal"
+
+#: src/LogbookDialog.cpp:7487
+msgid "First/Last Entry"
+msgstr "Entri pertama/terakhir"
+
+#: src/LogbookDialog.cpp:7489
+msgid "File"
+msgstr "Berkas"
+
+#: src/LogbookDialog.cpp:8096
+msgid "Add Item"
+msgstr "Tambah Item"
+
+#: src/LogbookDialog.cpp:8100
+msgid "Delete Item"
+msgstr "Hapus Item"
+
+#: src/LogbookDialog.cpp:8104
+msgid "Rename Item"
+msgstr "Ubah Nama Item"
+
+#: src/LogbookDialog.cpp:8110 src/LogbookDialog.cpp:8434
+#: src/LogbookDialog.cpp:8436
+msgid "Add Treenode"
+msgstr "Tambahkan Treenode"
+
+#: src/LogbookDialog.cpp:8114 src/LogbookDialog.cpp:8429
+#: src/LogbookDialog.cpp:8431
+msgid "Delete Treenode"
+msgstr "Hapus Treenode"
+
+#: src/LogbookDialog.cpp:8127
+msgid "Text"
+msgstr "Teks"
+
+#: src/LogbookDialog.cpp:8249
+msgid "Textblocks"
+msgstr "Textblocks"
+
+#: src/LogbookDialog.cpp:8250
+msgid "Help\n"
+"-----\n\n"
+"Open treenode\n"
+"  'Texts when using this Dialog only'\n"
+"  and select e.g. 'Remarks'\n\n"
+"Rightclick in TreeView for menu\n\n"
+"Add a item and rename it\n"
+"   USE UNIQUE NAMES FOR ITEMS !\n\n"
+"Insert text\n\n"
+"In 'Texts when using this Dialog only' you can insert/delete treenodes only\n\n"
+"Use Drag 'n Drop to move item from/to menu\n\n"
+"see next treenodes for more help"
+msgstr "Help\n"
+"-----\n\n"
+"Buka treenode\n"
+"  'Teks saat menggunakan Dialog ini saja'\n"
+"  dan pilih misalnya 'Remarks'\n\n"
+"Klik kanan di TreeView untuk menu\n\n"
+"Tambahkan item dan rename itu\n"
+" \n"
+"GUNAKAN UNIK NAMA UNTUK BARANG!\n\n"
+"Masukkan teks\n\n"
+"Di 'Teks saat menggunakan Dialog ini saja' Anda dapat memasukkan / menghapus kode awal saja\n\n"
+"Gunakan Drag 'n Drop untuk memindahkan item dari/ke menu\n\n"
+"lihat kode awal berikutnya untuk lebih banyak bantuan"
+
+#: src/LogbookDialog.cpp:8254
+msgid "The itemname is shown in the rightcklick-menu of the following Columns\n"
+"By clicking on it the text is inserted\n\n"
+msgstr "Itemname ditampilkan dalam menu rightcklick dari Kolom berikut\n"
+" Dengan mengkliknya teks dimasukkan\n\n"
+
+#: src/LogbookDialog.cpp:8262
+msgid "Texts for Rightclick-Menu"
+msgstr "Teks untuk Rightclick-Menu"
+
+#: src/LogbookDialog.cpp:8268
+msgid "Sails up\n"
+"Engine stopped\n\n"
+"Demo - Rightclick-Menu 'use Testextblocks' for help"
+msgstr "Layar up\n"
+"Mesin berhenti\n\n"
+"Demo - klik kanan-Menu 'menggunakan Testextblocks' untuk membantu"
+
+#: src/LogbookDialog.cpp:8269
+msgid "Demo Sails up"
+msgstr "Demo Layar atas"
+
+#: src/LogbookDialog.cpp:8292
+msgid "These texts are inserted into the grid-colmn\n"
+"by calling this dialog\n\n"
+"Select Item\n"
+"Click OK-Button\n\n"
+"Use Drag 'n Drop to place a item in menu"
+msgstr "Teks-teks ini dimasukkan ke dalam grid-column\\dengan dialog dialog ini\n"
+"\\Pilih Item\tekan tombol OK Tombol\n\n"
+"gunakan Drag 'n Drop untuk menempatkan menu di item"
+
+#: src/LogbookDialog.cpp:8293
+msgid "Texts when using this Dialog only"
+msgstr "Teks saat menggunakan Dialog ini saja"
+
+#: src/LogbookDialog.cpp:8299
+msgid "Engine stopped\n\n"
+"Demo - Rightclick-Menu 'use Testextblocks' for help"
+msgstr "Mesin berhenti\n\n"
+"Demo - Menu Klik Kanan 'menggunakan Testextblocks' untuk mendapatkan bantuan"
+
+#: src/LogbookDialog.cpp:8300
+msgid "Demo Engine stopped"
+msgstr "Mesin Demo berhenti"
+
+#: src/LogbookDialog.cpp:8373
+#, c-format
+msgid "New Node%i"
+msgstr "Node baru%i"
+
+#: src/LogbookDialog.cpp:8410
+#, c-format
+msgid "New Item%i"
+msgstr "Item baru%i"
+
+#: src/LogbookDialog.cpp:8713
+msgid "Normal Timer"
+msgstr "Pengatur waktu normal"
+
+#: src/LogbookDialog.cpp:8749 src/LogbookDialog.cpp:8827
+#: src/LogbookDialog.cpp:8891
+msgid "Event"
+msgstr "Peristiwa"
+
+#: src/LogbookDialog.cpp:8763
+msgid "Full Hour Timer"
+msgstr "Alat pengukur waktu jam penuh"
+
+#: src/LogbookDialog.cpp:8766
+msgid "every"
+msgstr "setiap"
+
+#: src/LogbookDialog.cpp:8797
+msgid "+ Minutes"
+msgstr "+ Menit"
+
+#: src/LogbookDialog.cpp:8816 src/LogbookDialog.cpp:8879
+msgid "Clear all"
+msgstr "Bersihkan semua"
+
+#: src/LogbookDialog.cpp:8836
+msgid "Individual Timer"
+msgstr "Alat pengukur waktu individu"
+
+#: src/LogbookDialog.cpp:8859
+msgid "Hour"
+msgstr "Jam"
+
+#: src/LogbookDialog.cpp:8860 src/LogbookOptions.cpp:614
+msgid "Minutes"
+msgstr "Menit"
+
+#: src/LogbookDialog.cpp:9238 src/LogbookDialog.cpp:9243
+msgid "PM"
+msgstr "SORE"
+
+#: src/LogbookDialog.cpp:9245
+msgid "AM"
+msgstr "SAYA"
+
+#: src/LogbookDialog.cpp:9353
+msgid "AM/PM"
+msgstr "AM/PM"
+
+#: src/LogbookOptions.cpp:70
+msgid "Date-Format:"
+msgstr "Format tanggal:"
+
+#: src/LogbookOptions.cpp:74
+msgid "Local Format"
+msgstr "Format local"
+
+#: src/LogbookOptions.cpp:74
+msgid "Individual"
+msgstr "Individu"
+
+#: src/LogbookOptions.cpp:85 src/LogbookOptions.cpp:91 src/LogbookOptions.cpp:97
+#: src/LogbookOptions.cpp:831
+msgid "Month"
+msgstr "Bulan"
+
+#: src/LogbookOptions.cpp:85 src/LogbookOptions.cpp:91 src/LogbookOptions.cpp:97
+msgid "Day"
+msgstr "Hari"
+
+#: src/LogbookOptions.cpp:85 src/LogbookOptions.cpp:91 src/LogbookOptions.cpp:97
+msgid "Year"
+msgstr "Tahun"
+
+#: src/LogbookOptions.cpp:111
+msgid "Separator"
+msgstr "Pemisah"
+
+#: src/LogbookOptions.cpp:115
+msgid "."
+msgstr "."
+
+#: src/LogbookOptions.cpp:129
+msgid "Time-Format:"
+msgstr "Format waktu:"
+
+#: src/LogbookOptions.cpp:133
+msgid "24 Hour Format"
+msgstr "Format 24 Jam"
+
+#: src/LogbookOptions.cpp:133
+msgid "12 Hour Format"
+msgstr "Format 12 Jam"
+
+#: src/LogbookOptions.cpp:139
+msgid "No Seconds"
+msgstr "Tidak ada detik"
+
+#: src/LogbookOptions.cpp:160
+msgid "UTC"
+msgstr "UTC"
+
+#: src/LogbookOptions.cpp:163
+msgid "Local = UTC"
+msgstr "Lokal = UTC"
+
+#: src/LogbookOptions.cpp:190
+msgid "GPS Auto"
+msgstr "GPS otomatis"
+
+#: src/LogbookOptions.cpp:191
+msgid "every 15 Degrees +/- 1 hour"
+msgstr "setiap 15 derajat +/- 1 jam"
+
+#: src/LogbookOptions.cpp:208
+msgid "Show Logbook Icon"
+msgstr "Tampilkan ikon buku catatan"
+
+#: src/LogbookOptions.cpp:212
+msgid "Show Position Format"
+msgstr "Tampilkan Format Posisi"
+
+#: src/LogbookOptions.cpp:227
+msgid "Show ToolTips"
+msgstr "Tampilkan ToolTips"
+
+#: src/LogbookOptions.cpp:231
+msgid "No. of Inboard Engines"
+msgstr "Jumlah Mesin Inboard"
+
+#: src/LogbookOptions.cpp:235
+msgid "1"
+msgstr "1"
+
+#: src/LogbookOptions.cpp:235
+msgid "2"
+msgstr "2"
+
+#: src/LogbookOptions.cpp:243
+msgid "StatusBar at bottom of the page"
+msgstr "StatusBar di bagian bawah halaman"
+
+#: src/LogbookOptions.cpp:245
+msgid "If unchecked the StatusBar will be placed above the Navigation/Meteo/Motor-Sails buttons"
+msgstr "Jika tidak dicentang StatusBar akan ditempatkan di atas Navigasi/Meteo/Motor-Tombol layar"
+
+#: src/LogbookOptions.cpp:250
+msgid "Generator On Board"
+msgstr "Generator Di Kapal"
+
+#: src/LogbookOptions.cpp:252
+msgid "Check if there is a Generator onboard.\n"
+"If unchecked the Generator columns will not show in Logbook"
+msgstr "Memeriksa apakah ada Generator onboard.\n"
+"Jika tidak diperiksa kolom Generator tidak akan ditampilkan di buku catatan"
+
+#: src/LogbookOptions.cpp:257
+msgid "Show Min|Avg|Max wind speeds"
+msgstr "Tampilkan Min|Avg|Max kecepatan angin"
+
+#: src/LogbookOptions.cpp:259
+msgid "If checked the TWS and AWS will display Min|Avg|Max windspeeds"
+msgstr "Jika dicentang TWS dan AWS akan menampilkan Min|Avg|Max windspeeds"
+
+#: src/LogbookOptions.cpp:264
+msgid "Sails Messages"
+msgstr "Pesan pelayaran"
+
+#: src/LogbookOptions.cpp:270
+msgid "Show daily entries in Overview"
+msgstr "Tampilkan entri harian di dalam ikhtisar"
+
+#: src/LogbookOptions.cpp:272
+msgid "If checked the Overview for Active or Selected logbook will show daily lines-"
+msgstr "Jika memeriksa Ikhtisar untuk Aktif atau buku catatan yang dipilih akan menunjukkan garis harian-"
+
+#: src/LogbookOptions.cpp:277
+msgid "Write warning \"No GPS\""
+msgstr "Tulis peringatan \"Tidak ada GPS\""
+
+#: src/LogbookOptions.cpp:279
+msgid "Uncheck if You have no GPS\n"
+"If GPS is out of order, uncheck to\n"
+"prevent that the message repeats."
+msgstr "Hapus tanda centang jika Anda tidak memiliki GPS\n"
+"Jika GPS rusak, hapus centang ke\n"
+" mencegah agar pesan terulang."
+
+#: src/LogbookOptions.cpp:285
+msgid "Write message \"Engine running\" "
+msgstr "Menulis pesan \"Mesin berjalan\" "
+
+#: src/LogbookOptions.cpp:287
+msgid "If checked the message will be in Remarks when engine is started."
+msgstr "Jika memeriksa pesan akan di dalam Keterangan saat mesin dimulai."
+
+#: src/LogbookOptions.cpp:292
+msgid "On engine start set always all sails down"
+msgstr "Mulai hidupkan mesin selalu atur turun semua layar"
+
+#: src/LogbookOptions.cpp:297
+msgid "     Winddirection set to:"
+msgstr "     Arah angin diatur ke:"
+
+#: src/LogbookOptions.cpp:301
+msgid "default"
+msgstr "bawaan"
+
+#: src/LogbookOptions.cpp:305
+msgid "default = Relative to Boat\n"
+"Heading = Actual wind direction"
+msgstr "bawaan = Sehubungan dengan Perahu\n"
+"Judul = Arah angin sebenarnya"
+
+#: src/LogbookOptions.cpp:314
+msgid "Events"
+msgstr "Acara"
+
+#: src/LogbookOptions.cpp:323
+msgid "Writes this text to the logbook when the event occurs, alter texts as desired"
+msgstr "Menulis teks ini ke buku catatan saat acara terjadi, mengubah teks sesuai keinginan"
+
+#: src/LogbookOptions.cpp:338
+msgid "automatic line by timer\n"
+"You can set/unset a timer\n"
+" by clicking the bullet\n"
+"Change this text in options"
+msgstr "baris otomatis oleh timer\n"
+"Anda bisa mengatur/batalkan alat pengukur waktu\n"
+"dengan mengklik peluru\n"
+"Ubah teks ini menjadi pilihan"
+
+#: src/LogbookOptions.cpp:348
+msgid "automatic line\n"
+"Waypoint arrived:"
+msgstr "baris otomatis\n"
+"titik tujuan tiba:"
+
+#: src/LogbookOptions.cpp:376
+msgid "Course changes"
+msgstr "Perubahan kursus"
+
+#: src/LogbookOptions.cpp:390
+msgid "Popup logbook on event"
+msgstr "Buku catatan popup pada acara"
+
+#: src/LogbookOptions.cpp:405
+msgid "Install Layouts"
+msgstr "Memasang tata letak"
+
+#: src/LogbookOptions.cpp:409
+msgid "Uninstall Logbook"
+msgstr "Menghapus buku catatan"
+
+#: src/LogbookOptions.cpp:413
+msgid "Install"
+msgstr "Memasang"
+
+#: src/LogbookOptions.cpp:414
+msgid "Install OpenCPN_Logbook_Layouts.zip"
+msgstr "Memasang OpenCPN_Logbook_Layouts.zip"
+
+#: src/LogbookOptions.cpp:418
+msgid "Uninstall"
+msgstr "Mencopot"
+
+#: src/LogbookOptions.cpp:419
+msgid "Uninstalls\n"
+"Logbook-Plugin,\n"
+"all Logbook-Data,\n"
+"all Logbook-Layouts,\n"
+"all Logbook-Languages\n"
+"and cleans the OpenCPN.ini"
+msgstr "Menghapus pemasangan\n"
+"bukucatatan-Plugin,\n"
+"semua data-buku catatan,\n"
+"semua tata letak-buku catatan,\n"
+"semua bahasa-buku catatan \n"
+"dan bersihkan OpenCPN.ini"
+
+#: src/LogbookOptions.cpp:436
+msgid "Behavior"
+msgstr "Tingkah laku"
+
+#: src/LogbookOptions.cpp:450
+msgid "Only used when you enter 1/2, 1/4 ... in a total-field, or to calculate the watermaker\n"
+msgstr "Hanya digunakan ketika Anda memasukkan 1/2, 1/4 ... dalam bidang-total, atau untuk menghitung pembuat air\n"
+
+#: src/LogbookOptions.cpp:474 src/LogbookOptions.cpp:518
+msgid "Tank"
+msgstr "Tangki"
+
+#: src/LogbookOptions.cpp:481 src/LogbookOptions.cpp:494
+#: src/LogbookOptions.cpp:525
+msgid "Set gal/liter in Abbreviations "
+msgstr "Mengatur gal/liter dalam singkatan "
+
+#: src/LogbookOptions.cpp:539
+msgid "Battery"
+msgstr "Baterai"
+
+#: src/LogbookOptions.cpp:576 src/LogbookOptions.cpp:765
+msgid "Capacity"
+msgstr "Kapasitas"
+
+#: src/LogbookOptions.cpp:603
+msgid "Degrees"
+msgstr "Derajat"
+
+#: src/LogbookOptions.cpp:621
+msgid "Seconds"
+msgstr "Detik"
+
+#: src/LogbookOptions.cpp:638
+msgid "Speed"
+msgstr "Kecepatan"
+
+#: src/LogbookOptions.cpp:648
+msgid "Show Depth in"
+msgstr "Tampilkan Kedalaman di"
+
+#: src/LogbookOptions.cpp:652 src/LogbookOptions.cpp:658
+#: src/LogbookOptions.cpp:672
+msgid "Meter"
+msgstr "Meter"
+
+#: src/LogbookOptions.cpp:652 src/LogbookOptions.cpp:672
+#: src/LogbookOptions.cpp:678
+msgid "Feet"
+msgstr "Kaki"
+
+#: src/LogbookOptions.cpp:652 src/LogbookOptions.cpp:672
+#: src/LogbookOptions.cpp:698
+msgid "Fathom"
+msgstr "Memahami"
+
+#: src/LogbookOptions.cpp:668
+msgid "Show Wave/Swell in"
+msgstr "Tampilkan Gelombang/Membengkak masuk"
+
+#: src/LogbookOptions.cpp:692 src/LogbookOptions.cpp:869
+msgid "True"
+msgstr "Benar"
+
+#: src/LogbookOptions.cpp:692
+msgid "Magnetic"
+msgstr "Magnetik"
+
+#: src/LogbookOptions.cpp:702
+msgid "fm"
+msgstr "fm"
+
+#: src/LogbookOptions.cpp:720
+msgid "Windspeed"
+msgstr "Kecepatan angin"
+
+#: src/LogbookOptions.cpp:748
+msgid "Temperature"
+msgstr "Temperatur"
+
+#: src/LogbookOptions.cpp:759
+msgid "Fuel/Water"
+msgstr "Bahan bakar/air"
+
+#: src/LogbookOptions.cpp:772
+msgid "Motor Hours"
+msgstr "Mesin jam"
+
+#: src/LogbookOptions.cpp:779
+msgid "Ampere"
+msgstr "Amper"
+
+#: src/LogbookOptions.cpp:787
+msgid "Engine"
+msgstr "Mesin"
+
+#: src/LogbookOptions.cpp:794
+msgid "PropShaft"
+msgstr ""
+
+#: src/LogbookOptions.cpp:798
+msgid "S"
+msgstr "S"
+
+#: src/LogbookOptions.cpp:801
+msgid "Revolutions"
+msgstr "Revolusi"
+
+#: src/LogbookOptions.cpp:805
+msgid "RPM"
+msgstr "RPM"
+
+#: src/LogbookOptions.cpp:813 src/LogbookOptions.cpp:817
+msgid "Day(s)"
+msgstr "Hari(s)"
+
+#: src/LogbookOptions.cpp:820 src/LogbookOptions.cpp:824
+msgid "Week(s)"
+msgstr "Minggu(s)"
+
+#: src/LogbookOptions.cpp:827
+msgid "Month "
+msgstr "Bulan "
+
+#: src/LogbookOptions.cpp:839
+msgid "If GPS off use for manual entry"
+msgstr "Jika GPS tidak digunakan untuk entri manual"
+
+#: src/LogbookOptions.cpp:851
+msgid "Windspeed "
+msgstr "Kecepatan angin "
+
+#: src/LogbookOptions.cpp:865
+msgid " Direction "
+msgstr " Arah "
+
+#: src/LogbookOptions.cpp:869
+msgid "Relative"
+msgstr "Relatif"
+
+#: src/LogbookOptions.cpp:884 src/LogbookOptions.cpp:1197
+msgid "Abbreviations"
+msgstr "Singkatan"
+
+#: src/LogbookOptions.cpp:904
+msgid "Path to ODT-Editor"
+msgstr "Jalan menuju ODT-Editor"
+
+#: src/LogbookOptions.cpp:909
+#, c-format
+msgid "to use MS-Word, append %s like this:\n"
+"\"C:\\yourPathToWinword\\WINWORD.EXE\" %s"
+msgstr "untuk menggunakan MS-Word, tambahkan %s seperti ini:\n"
+"\"C:\\yourPathToWinword\\WINWORD.EXE\" %s"
+
+#: src/LogbookOptions.cpp:916
+msgid "Path to Datamanager"
+msgstr "Jalan menuju Datamanager"
+
+#: src/LogbookOptions.cpp:930
+msgid "Path to MailClient"
+msgstr "Jalan menuju MailClient"
+
+#: src/LogbookOptions.cpp:944
+msgid "Path to HTML-Editor\n"
+"(optional)"
+msgstr "Jalur ke HTML-Editor\n"
+"(opsional)"
+
+#: src/LogbookOptions.cpp:956
+msgid "Reset Paths"
+msgstr "Setel ulang jalur"
+
+#: src/LogbookOptions.cpp:962
+msgid "Paths"
+msgstr "Jalan"
+
+#: src/LogbookOptions.cpp:992
+msgid "Show"
+msgstr "Menunjukkan"
+
+#: src/LogbookOptions.cpp:1013
+msgid "Set Linewidth to"
+msgstr "Setel Linewidth ke"
+
+#: src/LogbookOptions.cpp:1017
+msgid "4"
+msgstr "4"
+
+#: src/LogbookOptions.cpp:1023
+msgid "Set Transparency to"
+msgstr "Atur Transparansi ke"
+
+#: src/LogbookOptions.cpp:1027
+msgid "transparent"
+msgstr "transparan"
+
+#: src/LogbookOptions.cpp:1027
+msgid "solid"
+msgstr "padat"
+
+#: src/LogbookOptions.cpp:1036
+msgid "Set Route-Linecolor to"
+msgstr "Setel Route-Linecolor ke"
+
+#: src/LogbookOptions.cpp:1040 src/LogbookOptions.cpp:1053
+msgid "white"
+msgstr "putih"
+
+#: src/LogbookOptions.cpp:1040 src/LogbookOptions.cpp:1053
+msgid "black"
+msgstr "hitam"
+
+#: src/LogbookOptions.cpp:1040 src/LogbookOptions.cpp:1053
+msgid "red"
+msgstr "merah"
+
+#: src/LogbookOptions.cpp:1040 src/LogbookOptions.cpp:1053
+msgid "yellow"
+msgstr "kuning"
+
+#: src/LogbookOptions.cpp:1049
+msgid "Set Track-Linecolor to"
+msgstr "Setel Track-Linecolor ke"
+
+#: src/LogbookOptions.cpp:1064
+msgid "KML"
+msgstr ""
+
+#: src/LogbookOptions.cpp:1074
+msgid "Check one of the below checkboxes, if you want use ERRPM-Sentence (see help)"
+msgstr "Centang salah satu kotak centang di bawah ini, jika Anda ingin menggunakan kalimat-ERRPM (lihat bantuan)"
+
+#: src/LogbookOptions.cpp:1093
+msgid "Check"
+msgstr "Memeriksa"
+
+#: src/LogbookOptions.cpp:1095
+msgid "Start your engine(s) and hit the button.\n"
+"You should see the ERRPM-Sentence\n"
+"left to the button"
+msgstr "Jalankan mesin(s) Anda dan tekan tombolnya.\n"
+"Anda harus melihat tombol ERRPM-Kalimat\n"
+"ke tombolnya"
+
+#: src/LogbookOptions.cpp:1101
+msgid "Engine-No. corresponds with column Engine #1"
+msgstr "Mesin-Tidak. sesuai dengan kolom Engine #1"
+
+#: src/LogbookOptions.cpp:1103 src/LogbookOptions.cpp:1116
+msgid "Check this box if the NMEA stream contains RPM messages for this engine\n"
+msgstr "Periksa kotak ini jika berkas NMEA berisi pesan RPM untuk mesin\n"
+
+#: src/LogbookOptions.cpp:1114
+msgid "Engine-No. corresponds with column Engine #2"
+msgstr "Mesin-Tidak. cocok dengan kolom Engine #2"
+
+#: src/LogbookOptions.cpp:1128
+msgid "Engine-No. corresponds with column Generator"
+msgstr "Mesin-Tidak. cocok dengan kolom pembangkit listrik"
+
+#: src/LogbookOptions.cpp:1130
+msgid "Check this box if the NMEA stream contains RPM messages for this generator\n"
+msgstr "Periksa kotak ini jika berkas NMEA berisi pesan RPM untuk pembangkit listrik\n"
+
+#: src/LogbookOptions.cpp:1143
+msgid "Use ERRPM-Sentence to calculate the engine-hours"
+msgstr "Gunakan ERRPM-Kalimat untuk menghitung jam-mesin"
+
+#: src/LogbookOptions.cpp:1152
+msgid "Use WIMDA-Sentence from the weatherstation"
+msgstr "Gunakan WIMDA dari kantor cuaca"
+
+#: src/LogbookOptions.cpp:1153
+msgid "For Barometer, Air Temperature and rel. Humidity"
+msgstr "Untuk Barometer, Suhu Udara dan Rel. Kelembaban"
+
+#: src/LogbookOptions.cpp:1160
+msgid "NMEA"
+msgstr "NMEA"
+
+#: src/LogbookOptions.cpp:1173
+msgid "Checkbox Space  >>"
+msgstr "Ruang kotak centang >>"
+
+#: src/LogbookOptions.cpp:1174
+msgid "Usefull for Tablet-PC's"
+msgstr "Berguna untuk Tablet-PC"
+
+#: src/LogbookOptions.cpp:1178
+msgid "Abbreviations are shown in the Sails-Checkboxes\n"
+"The Name is used for the column \"Sails\" when added a new entry"
+msgstr "Singkatan yang ditampilkan di Layar-Centang\n"
+"Nama yang digunakan untuk kolom \"Layar\" ketika menambahkan entri baru"
+
+#: src/LogbookOptions.cpp:1225
+msgid "<<  Back"
+msgstr "<< Kembali"
+
+#: src/LogbookOptions.cpp:1226
+msgid "Back to Sailnames"
+msgstr "Kembali ke Nama layar"
+
+#: src/LogbookOptions.cpp:1242
+msgid "Row +"
+msgstr "Baris +"
+
+#: src/LogbookOptions.cpp:1245
+msgid "Row -"
+msgstr "Baris -"
+
+#: src/LogbookOptions.cpp:1248
+msgid "Column +"
+msgstr "Kolom +"
+
+#: src/LogbookOptions.cpp:1251
+msgid "Column -"
+msgstr "Kolom -"
+
+#: src/LogbookOptions.cpp:1276
+msgid "Miscellaneous"
+msgstr "Miscellaneous"
+
+#: src/LogbookOptions.cpp:1532
+msgid "Your Generator is still running .\n\n"
+"Generator stopped now."
+msgstr "Generator Anda masih berjalan.\n\n"
+"Generator berhenti sekarang."
+
+#: src/LogbookOptions.cpp:1648
+msgid "Your Engine #1 is running in manual mode.\n\n"
+"Engine stopped now."
+msgstr "Mesin kamu #1 berjalan dalam mode manual..\n\n"
+"Mesin terhenti sekarang."
+
+#: src/LogbookOptions.cpp:1673
+msgid "Your Engine #2 is running in manual mode.\n\n"
+"Engine stopped now."
+msgstr "Mesin kamu #2 berjalan dalam mode manual..\n\n"
+"Mesin terhenti sekarang."
+
+#: src/LogbookOptions.cpp:1698
+msgid "Your Generator is running in manual mode.\n\n"
+"Generator stopped now."
+msgstr "Generator kamu berjalan dalam mode manual..\n\n"
+"Generator terhenti sekarang."
+
+#: src/LogbookOptions.cpp:1904
+msgid "Your Country has 24 Hour Format.\n"
+"In this case the OS doen't serve AM/PM-Strings.\n"
+msgstr "Negara kamu memiliki Format 24 Jam.\n"
+"Dalam hal ini OS tidak melayani pergesekan-AM/PM.\n"
+
+#: src/LogbookOptions.cpp:1970
+#, c-format
+msgid "You cannot set this dateformat.\n\n"
+"%s%s%s%s%s\n\n"
+"Please use a different Dateformat in all three Choiceboxes."
+msgstr "Kamu tidak bisa mengatur format tanggal.\n\n"
+"%s%s%s%s%s\n\n"
+"Harap gunakan Format Tanggal yang berbeda di ketiga kotak Pilihan."
+
+#: src/LogbookOptions.cpp:2002
+msgid "Please fill in one character in Degrees, Minutes and Seconds"
+msgstr "Harap mengisi satu karakter dalam Derajat, Menit dan Detik"
+
+#: src/LogbookOptions.cpp:2214
+msgid "Your Engine #2 is still running .\n\n"
+"Engine #2 stopped now."
+msgstr "Mesin kamu #2 sedang berjalan .\n\n"
+"Mesin #2 terhenti sekarang."
+
+#: src/LogbookOptions.cpp:2410
+msgid "Set Path to HTML-Editor"
+msgstr "Tetapkan Jalan ke HTML-Editor"
+
+#: src/LogbookOptions.cpp:2424
+msgid "Set Path to DataManager"
+msgstr "Tetapkan Jalur ke PengelolaData"
+
+#: src/LogbookOptions.cpp:2438
+msgid "Set Path to MailClient"
+msgstr "Tetapkan Jalan ke Klien email"
+
+#: src/LogbookOptions.cpp:2452
+msgid "Set Path to ODT-Editor"
+msgstr "Tetapkan Jalan ke ODT-Editor"
+
+#: src/LogbookHTML.cpp:191 src/LogbookHTML.cpp:347 src/LogbookHTML.cpp:800
+#: src/CrewList.cpp:1876 src/CrewList.cpp:1892 src/CrewList.cpp:2257
+#: src/CrewList.cpp:2294
+msgid "from"
+msgstr "dari"
+
+#: src/LogbookHTML.cpp:192 src/LogbookHTML.cpp:348 src/LogbookHTML.cpp:801
+#: src/CrewList.cpp:1877 src/CrewList.cpp:1893 src/CrewList.cpp:2258
+#: src/CrewList.cpp:2295
+msgid "to"
+msgstr "untuk"
+
+#: src/LogbookHTML.cpp:295 src/LogbookHTML.cpp:775 src/CrewList.cpp:1787
+#: src/CrewList.cpp:2195 src/boat.cpp:290 src/boat.cpp:550
+msgid "Sorry, no Layout installed"
+msgstr "Maaf, tidak ada tata letak yang terpasang"
+
+#: src/LogbookHTML.cpp:400 src/CrewList.cpp:2539
+msgid "Sorry, Logbook has no lines"
+msgstr "Maaf, buku catatan tidak memiliki baris"
+
+#: src/LogbookHTML.cpp:677
+msgid "\n"
+"not found in layoutfile "
+msgstr "\n"
+"tidak ditemukan dalam file tata letak "
+
+#: src/LogbookHTML.cpp:677
+msgid "!\n\n"
+"Did you forget to add this line in your layout ?"
+msgstr "!\n\n"
+"Apakah Anda lupa untuk menambahkan baris ini di tata letak Anda?"
+
+#: src/LogbookHTML.cpp:783
+msgid "Have You forgotten to enclose the Header with [[ and ]]\n"
+" or Data with {{ and }} ?"
+msgstr "Sudahkah kamu lupa untuk melampirkan Header dengan [[ and ]]\n"
+" atau Data dengan {{ and }} ?"
+
+#: src/LogbookHTML.cpp:1317
+msgid "Routepoints"
+msgstr "Titikrute"
+
+#: src/CrewList.cpp:114
+msgid "Enter default watchtime e.g. 3.30 / available formats are 3.30, 3,30, 3:30, 0330 for 3 hours 30 minutes"
+msgstr "Masukkan waktu menonton bawaan misalnya 3,30 / format yang tersedia 3.30, 3.30, 3:30, 0330 selama 3 jam 30 menit"
+
+#: src/CrewList.cpp:115
+msgid "Alter watchtimes as desired / Drag 'n Drop members from the Crewlist"
+msgstr "Mengubah watchtimes seperti yang diinginkan / Drag 'n Drop anggota dari daftar Kru"
+
+#: src/CrewList.cpp:116
+msgid "*Optional* Prepend a * to a member to make this member static to a watch / Click Calculate"
+msgstr "*Opsional* Menambah * ke anggota untuk membuat anggota statis ini terlindungi / Klik Hitung"
+
+#: src/CrewList.cpp:117
+msgid "All changes depending to this day only."
+msgstr "Semua perubahan tergantung hanya sampai hari ini."
+
+#: src/CrewList.cpp:189 src/CrewList.cpp:227 src/CrewList.cpp:355
+#: src/CrewList.cpp:364 src/Maintenance.cpp:105 src/Maintenance.cpp:202
+#: src/Maintenance.cpp:214 src/Maintenance.cpp:594
+msgid "Yes"
+msgstr "Ya"
+
+#: src/CrewList.cpp:2142
+msgid "Adress"
+msgstr "Alamat"
+
+#: src/Maintenance.h:148
+msgid "Select a date"
+msgstr "Pilih tanggal"
+
+#: src/Maintenance.cpp:92 src/Maintenance.cpp:93
+msgid "Engine "
+msgstr "Mesin "
+
+#: src/Maintenance.cpp:99
+msgid "Fix Date"
+msgstr "Menetapkan tanggal"
+
+#: src/Maintenance.cpp:100
+msgid "Date + Days"
+msgstr "Tanggal + Hari"
+
+#: src/Maintenance.cpp:101
+msgid "Date + Weeks"
+msgstr "Tanggal + Minggu"
+
+#: src/Maintenance.cpp:102
+msgid "Date + Months"
+msgstr "Tanggal + Bulan"
+
+#: src/Maintenance.cpp:106 src/Maintenance.cpp:202 src/Maintenance.cpp:1068
+#: src/Maintenance.cpp:1072
+msgid "No"
+msgstr "Tidak"
+
+#: src/OverView.cpp:220
+msgid "Logbook until "
+msgstr "Buku catatan sampai "
+
+#: src/OverView.cpp:1039
+msgid "Logbook Total"
+msgstr "Total buku catatan"
+
+#: src/OverView.cpp:1234
+#, c-format
+msgid "%i Year(s) %i Month(s) %i Day(s)"
+msgstr "%i tahun(s) %i bulan(s) %i hari(s)"
+
+#: src/OverView.cpp:1237
+msgid "%E Week(s) %D Day(s) %H:%M "
+msgstr "%E Minggu(s) %D Hari(s) %H:%M "
+

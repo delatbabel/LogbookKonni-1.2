@@ -112,6 +112,7 @@ Options::Options( void )
     dlgWidth = 1010;
     dlgHeight = 535;
     popup = true;
+    autostarttimer = false;
     for ( int i = 0; i < 7; i++ )
     {
         layoutPrefix[i] =  _T( "Label_" );
@@ -164,9 +165,6 @@ or change this text in Toolbox/Plugins/Logbook\n\nShift+Enter appends a new line
     // Grid Weather
     baro = _( "mb" );
     temperature = _( "F" );
-    windkts = _( "kts" );
-    windmeter = _( "m/s" );
-    windkmh = _( "km/h" );
 
     // Grid MotorSails
     vol = _( "gal" );
@@ -191,7 +189,8 @@ or change this text in Toolbox/Plugins/Logbook\n\nShift+Enter appends a new line
     //wxChoice
     showDepth = 0;
     showWaveSwell = 0;
-    showWindSpeed = 0;
+    showWindSpeedchoice = 0;
+    showWindSpeed = _T( "kts" );
     showWindHeading = 0;
     showWindDir = 0;
     showHeading = 0;
