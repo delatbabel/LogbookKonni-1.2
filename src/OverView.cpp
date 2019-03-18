@@ -1005,7 +1005,7 @@ void OverView::writeSumColumn( int row, wxString logbook, wxString path, bool co
     grid->SetCellValue( row,FSAILS,sail );
 
     if ( colour )
-        for ( int i = 0; i < grid->GetCols(); i++ )
+        for ( int i = 0; i < grid->GetNumberCols(); i++ )
             grid->SetCellBackgroundColour( row,i,wxColour( 230,230,230 ) );
 }
 
@@ -1014,7 +1014,7 @@ void OverView::writeSumColumnLogbook( total data, int row, wxString logbook, boo
     wxString nothing = _T( "-----" );
 
     parent->m_gridOverview->AppendRows();
-    row = parent->m_gridOverview->GetRows()-1;
+    row = parent->m_gridOverview->GetNumberRows()-1;
     for ( int i= 0; i < parent->m_gridOverview->GetNumberCols(); i++ )
         grid->SetCellBackgroundColour( row,i,wxColour( 156,156,156 ) );
 
@@ -1249,7 +1249,7 @@ void OverView::writeSumColumnLogbook( total data, int row, wxString logbook, boo
     grid->SetCellValue( row,FSAILS,sail );
 
     if ( colour )
-        for ( int i = 0; i < grid->GetCols(); i++ )
+        for ( int i = 0; i < grid->GetNumberCols(); i++ )
             grid->SetCellBackgroundColour( row,i,wxColour( 230,230,230 ) );
 }
 

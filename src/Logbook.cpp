@@ -1674,7 +1674,6 @@ void Logbook::appendRow( bool showlastline, bool autoline )
         //	dialog->logbookPlugIn->opt->timer = false;
 
         /*	wxFileConfig *pConf = (wxFileConfig *)dialog->logbookPlugIn->m_pconfig;
-
         if(pConf)
         {
         pConf->SetPath ( _T ( "/PlugIns/Logbook" ) );
@@ -3913,7 +3912,7 @@ LinesReminderDlg::LinesReminderDlg( wxString str, wxWindow* parent, wxWindowID i
     m_sdbSizer9 = new wxStdDialogButtonSizer();
     m_sdbSizer9OK = new wxButton( this, wxID_OK );
     m_sdbSizer9->AddButton( m_sdbSizer9OK );
-    m_sdbSizer9->Realize();
+m_sdbSizer9->Realize();
     bSizer38->Add( m_sdbSizer9, 0, wxALIGN_CENTER_HORIZONTAL, 5 );
 
     this->SetSizer( bSizer38 );

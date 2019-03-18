@@ -35,7 +35,7 @@ CrewList::CrewList( LogbookDialog* d, wxString data, wxString layout, wxString l
     opt = d->logbookPlugIn->opt;
     gridCrew = d->m_gridCrew;
     gridWake = d->m_gridCrewWake;
-    rowHeight = gridCrew->GetRowHeight( 0 );
+    //rowHeight = gridCrew->GetRowSize( 0 );
     selRow = 0;
     selCol = 0;
     day = 0;
@@ -188,7 +188,7 @@ void CrewList::loadData()
         myGridCellBoolEditor* boolEditor = new myGridCellBoolEditor();
         boolEditor->UseStringValues( _( "Yes" ) );
         gridCrew->SetCellEditor( numRows,0,boolEditor );
-        gridCrew->SetCellAlignment( wxALIGN_CENTRE,numRows,0 );
+        gridCrew->SetCellAlignment( numRows,0,wxALIGN_CENTRE,wxALIGN_CENTER );
 
         wxStringTokenizer tkz( line, _T( "\t" ),wxTOKEN_RET_EMPTY );
         int c;
@@ -275,7 +275,7 @@ void CrewList::filterCrewMembers()
     {
         if ( gridCrew->GetCellValue( row,ONBOARD ) == _T( "" ) )
         {
-            gridCrew->SetRowHeight( row,0 );
+            gridCrew->SetRowSize( row,0 );
             i++;
         }
     }
@@ -295,7 +295,7 @@ void CrewList::showAllCrewMembers()
     for ( int row = 0; row < gridCrew->GetNumberRows(); row++ )
     {
         if ( gridCrew->GetCellValue( row,ONBOARD ) == _T( "" ) )
-            gridCrew->SetRowHeight( row,rowHeight );
+            gridCrew->SetRowSize( row,gridCrew->GetRowSize( 0 ) );
     }
 
     gridCrew->ForceRefresh();
@@ -355,7 +355,7 @@ void CrewList::addCrew( wxGrid* grid, wxGrid* wake )
     boolEditor->UseStringValues( _( "Yes" ) );
     gridCrew->SetCellEditor( numRows,0,boolEditor );
 
-    gridCrew->SetCellAlignment( wxALIGN_CENTRE,numRows,0 );
+    gridCrew->SetCellAlignment( numRows,0,wxALIGN_CENTRE,wxALIGN_CENTRE );
     gridCrew->MakeCellVisible( numRows,NAME );
 
     if ( dialog->m_menu2->IsChecked( MENUCREWALL ) )
@@ -772,7 +772,7 @@ void CrewList::Calculate()
         {
             if ( r == 0 )
             {
-                s += wxString::Format( _T( "%i\t" ),gridWake->GetColumnWidth( c ) );
+                s += wxString::Format( _T( "%i\t" ),gridWake->GetColSize( c ) );
                 s += dialog->replaceDangerChar( gridWake->GetCellValue( r,c ) )+_T( "\t" );
             }
 
@@ -879,7 +879,7 @@ void CrewList::Calculate()
             {
                 if ( r == 0 )
                 {
-                    s += wxString::Format( _T( "%i\t" ),gridWake->GetColumnWidth( c ) );
+                    s += wxString::Format( _T( "%i\t" ),gridWake->GetColSize( c ) );
                     s += gridWake->GetCellValue( r,c )+_T( "\t" );
                     dialog->myParseTime( gridWake->GetCellValue( r,c ),time );
                 }
@@ -1186,8 +1186,8 @@ void CrewList::checkMemberIsInMenu( wxString member )
 
 void CrewList::wakeMemberDrag( int row, int col )
 {
-//	gridWake->SetRowHeight(row,gridWake->GetRowHeight(row)+30);
-    gridWake->SetColumnWidth( col,gridWake->GetColumnWidth( col )+20 );
+//	gridWake->SetRowSize(row,gridWake->GetRowSize(row)+30);
+    gridWake->SetColSize( col,gridWake->GetColSize( col )+20 );
     gridWake->Refresh();
 }
 
@@ -1225,7 +1225,7 @@ void CrewList::watchEditorHidden( int row, int col )
     }
     gridWake->AutoSizeRow( 3 );
     gridWake->AutoSizeColumn( col );
-    gridWake->SetRowHeight(	3, gridWake->GetRowHeight( 3 )+10 );
+    gridWake->SetRowSize(	3, gridWake->GetRowSize( 3 )+10 );
 }
 
 
@@ -1295,7 +1295,7 @@ void CrewList::dayPlus()
     day++;
     readRecord( day );
     if ( day == ActualWatch::day )
-        gridWake->SetCellBackgroundColour( wxColor( 0,255,0 ),2,ActualWatch::col );
+        gridWake->SetCellBackgroundColour( 2,ActualWatch::col,wxColor( 0,255,0 ) );
 }
 
 void CrewList::dayMinus()
@@ -1304,7 +1304,7 @@ void CrewList::dayMinus()
     day--;
     readRecord( day );
     if ( day == ActualWatch::day )
-        gridWake->SetCellBackgroundColour( wxColor( 0,255,0 ),2,ActualWatch::col );
+        gridWake->SetCellBackgroundColour( 2,ActualWatch::col,wxColor( 0,255,0 ) );
 }
 
 void CrewList::dayNow( bool mode )
@@ -1363,7 +1363,7 @@ void CrewList::dayNow( bool mode )
         if ( now.IsBetween( dtstart,dtend ) )
         {
             readRecord( d );
-            gridWake->SetCellBackgroundColour( wxColor( 0,255,0 ),2,col );
+            gridWake->SetCellBackgroundColour( 2,col,wxColor( 0,255,0 ) );
             gridWake->MakeCellVisible( 0,col );
 
             ActualWatch::active = true;
@@ -1572,7 +1572,7 @@ void CrewList::readRecord( int nr )
 
     gridWake->AutoSizeColumns();
     gridWake->AutoSizeRows();
-    gridWake->SetRowHeight(	3, gridWake->GetRowHeight( 3 )+10 );
+    gridWake->SetRowSize(	3, gridWake->GetRowSize( 3 )+10 );
 
     dialog->m_textCtrlWakeDay->SetValue( wxString::Format( _T( "%i" ),day ) );
 }
@@ -1590,7 +1590,7 @@ void CrewList::updateLine()
     for ( int c = 0; c < cc; c++ )
     {
         s  = wxString::Format( _T( "%i\t" ),day );
-        s += wxString::Format( _T( "%i\t" ),gridWake->GetColumnWidth( c ) );
+        s += wxString::Format( _T( "%i\t" ),gridWake->GetColSize( c ) );
 
         for ( int r = 0; r < gridWake->GetNumberRows(); r++ )
         {
@@ -2545,7 +2545,7 @@ void CrewList::saveXML( wxString path )
     {
         line = crewListFile->GetLine( i );
         wxStringTokenizer tkz( line, _T( "\t" ),wxTOKEN_RET_EMPTY );
-        s = wxString::Format( _T( "<Row ss:Height=\"%u\">" ),dialog->m_gridGlobal->GetRowHeight( i ) );
+        s = wxString::Format( _T( "<Row ss:Height=\"%u\">" ),dialog->m_gridGlobal->GetRowSize( i ) );
 
         while ( tkz.HasMoreTokens() )
         {
@@ -2857,7 +2857,7 @@ bool DnDWatch::OnDropText( wxCoord x, wxCoord y, const wxString &text )
 
     m_pOwner->AutoSizeRow( 3 );
     m_pOwner->AutoSizeColumn( col );
-    m_pOwner->SetRowHeight(	3, m_pOwner->GetRowHeight( 3 )+10 );
+    m_pOwner->SetRowSize(	3, m_pOwner->GetRowSize( 3 )+10 );
 
     crewList->updateLine();
     if ( ActualWatch::col == col && ActualWatch::day == crewList->day )

@@ -281,7 +281,7 @@ void logbookkonni_pi::SetPluginMessage( wxString &message_id, wxString &message_
             {
                 m_plogbook_window->maintenance->addLineBuyParts();
 
-                int lastRow = m_plogbook_window->m_gridMaintenanceBuyParts->GetRows()-1;
+                int lastRow = m_plogbook_window->m_gridMaintenanceBuyParts->GetNumberRows()-1;
 
                 m_plogbook_window->m_gridMaintenanceBuyParts->SetCellValue( lastRow,0,wxString::Format( _T( "%i" ),i ) );
                 m_plogbook_window->m_gridMaintenanceBuyParts->SetCellValue( lastRow,1,category );
@@ -306,7 +306,7 @@ void logbookkonni_pi::SetPluginMessage( wxString &message_id, wxString &message_
             startLogbook();
 
         m_plogbook_window->logbook->appendRow( true, true );
-        int lastRow = m_plogbook_window->m_gridGlobal->GetRows()-1;
+        int lastRow = m_plogbook_window->m_gridGlobal->GetNumberRows()-1;
 
         m_plogbook_window->m_gridGlobal->SetCellValue( lastRow,13,data.Item( _T( "Remarks" ) ).AsString() );
         m_plogbook_window->m_gridMotorSails->SetCellValue( lastRow,8,data.Item( _T( "MotorRemarks" ) ).AsString() );
@@ -615,7 +615,7 @@ void logbookkonni_pi::dialogDimmer( PI_ColorScheme cs,wxWindow* ctrl,wxColour co
             ( ( wxGrid* )win )->SetDefaultCellTextColour( uitext );
             ( ( wxGrid* )win )->SetLabelBackgroundColour( col );
             ( ( wxGrid* )win )->SetLabelTextColour( uitext );
-            ( ( wxGrid* )win )->SetDividerPen( wxPen( col ) );
+            //( ( wxGrid* )win )->SetDividerPen( wxPen( col ) );
             ( ( wxGrid* )win )->SetGridLineColour( gridline );
 
         }
@@ -1293,8 +1293,8 @@ void logbookkonni_pi::LoadConfig()
             
             for ( int i = 0; i < opt->numberSails; i++ )
             {
-                opt->abrSails.Item( i ) = tkz.GetNextToken();
-                opt->sailsName.Item( i ) = tkz.GetNextToken();
+                opt->abrSails.Insert( tkz.GetNextToken(), i );
+                opt->sailsName.Insert( tkz.GetNextToken(), i);
                 opt->bSailIsChecked[i] = ( wxAtoi( tkz.GetNextToken() )?true:false );
             }
         }

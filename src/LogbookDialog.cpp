@@ -153,13 +153,13 @@ LogbookDialog::LogbookDialog( logbookkonni_pi * d, wxTimer* t, LogbookTimer* lt,
     bSizer49 = new wxBoxSizer( wxVERTICAL );
 
     m_toggleBtnEngine1 = new wxToggleButton( m_panelEngine, wxID_ANY, wxEmptyString, wxDefaultPosition, wxDefaultSize, 0 );
-    bSizer49->Add( m_toggleBtnEngine1, 0, wxALIGN_CENTER_VERTICAL|wxRIGHT|wxLEFT, 0 );
+    bSizer49->Add( m_toggleBtnEngine1, 0, wxRIGHT|wxLEFT, 0 );
 
     m_toggleBtnEngine2 = new wxToggleButton( m_panelEngine, wxID_ANY, wxEmptyString, wxDefaultPosition, wxDefaultSize, 0 );
-    bSizer49->Add( m_toggleBtnEngine2, 0, wxALIGN_CENTER_VERTICAL|wxRIGHT|wxLEFT, 0 );
+    bSizer49->Add( m_toggleBtnEngine2, 0, wxRIGHT|wxLEFT, 0 );
 
     m_toggleBtnGenerator = new wxToggleButton( m_panelEngine, wxID_ANY, wxEmptyString, wxDefaultPosition, wxDefaultSize, 0 );
-    bSizer49->Add( m_toggleBtnGenerator, 0, wxALIGN_CENTER_VERTICAL|wxRIGHT|wxLEFT, 0 );
+    bSizer49->Add( m_toggleBtnGenerator, 0, wxRIGHT|wxLEFT, 0 );
 
     bSizer45->Add( bSizer49, 0, wxRIGHT|wxLEFT|wxBOTTOM, 5 );
 
@@ -339,7 +339,7 @@ LogbookDialog::LogbookDialog( logbookkonni_pi * d, wxTimer* t, LogbookTimer* lt,
     fgSizer53->Add( m_staticTextStatusText, 0, wxRIGHT|wxLEFT, 5 );
     m_staticTextStatusText->SetFont( wxFont( 7, 74, 90, 90, false, wxT( "Tahoma" ) ) );
 
-    bSizer39->Add( fgSizer53, 1, wxALIGN_RIGHT|wxALIGN_CENTER_VERTICAL, 0 );
+    bSizer39->Add( fgSizer53, 1, wxALIGN_CENTER_VERTICAL, 0 );
 
     if ( !logbookPlugIn->opt->statusbar )
     {
@@ -1744,7 +1744,7 @@ LogbookDialog::LogbookDialog( logbookkonni_pi * d, wxTimer* t, LogbookTimer* lt,
     m_menu7->Append( m_menuItem13 );
 
 
-    bSizer12->Add( m_gridMaintanence, 1, wxALIGN_CENTER_VERTICAL|wxALL, 5 );
+    bSizer12->Add( m_gridMaintanence, 1, wxALL, 5 );
 
     fgSizer151->Add( bSizer12, 1, wxEXPAND, 5 );
 
@@ -1861,7 +1861,7 @@ LogbookDialog::LogbookDialog( logbookkonni_pi * d, wxTimer* t, LogbookTimer* lt,
     m_menu71->Append( m_menuItem131 );
 
 
-    bSizer122->Add( m_gridMaintanenceRepairs, 1, wxALIGN_CENTER_VERTICAL|wxALL, 5 );
+    bSizer122->Add( m_gridMaintanenceRepairs, 1, wxALL, 5 );
 
     fgSizer1513->Add( bSizer122, 1, wxEXPAND, 5 );
 
@@ -2021,7 +2021,7 @@ LogbookDialog::LogbookDialog( logbookkonni_pi * d, wxTimer* t, LogbookTimer* lt,
     newLogbook->Connect( wxEVT_COMMAND_BUTTON_CLICKED, wxCommandEventHandler( LogbookDialog::newLogbookOnButtonClick ), NULL, this );
     selLogbook->Connect( wxEVT_COMMAND_BUTTON_CLICKED, wxCommandEventHandler( LogbookDialog::selLogbookOnButtonClick ), NULL, this );
     m_gridGlobal->Connect( wxEVT_GRID_CELL_RIGHT_CLICK, wxGridEventHandler( LogbookDialog::m_gridGlobalOnGridCellRightClick ), NULL, this );
-    m_gridGlobal->Connect( wxEVT_GRID_CELL_CHANGE, wxGridEventHandler( LogbookDialog::m_gridGlobalOnGridCmdCellChange ), NULL, this );
+    m_gridGlobal->Connect( wxEVT_GRID_CELL_CHANGED, wxGridEventHandler( LogbookDialog::m_gridGlobalOnGridCmdCellChange ), NULL, this );
     m_gridGlobal->Connect( wxEVT_GRID_SELECT_CELL, wxGridEventHandler( LogbookDialog::m_gridGlobalOnGridSelectCell ), NULL, this );
     m_gridGlobal->Connect( wxEVT_KEY_DOWN, wxKeyEventHandler( LogbookDialog::m_gridGlobalOnKeyDown ), NULL, this );
     m_gridGlobal->Connect( wxEVT_GRID_LABEL_LEFT_CLICK, wxGridEventHandler( LogbookDialog::OnGridLabelLeftClickGlobal ), NULL, this );
@@ -2033,25 +2033,25 @@ LogbookDialog::LogbookDialog( logbookkonni_pi * d, wxTimer* t, LogbookTimer* lt,
     this->Connect( m_menuItemSearch->GetId(), wxEVT_COMMAND_MENU_SELECTED, wxCommandEventHandler( LogbookDialog::OnMenuSelectionSearch ) );
     this->Connect( m_menuItemShutDown->GetId(), wxEVT_COMMAND_MENU_SELECTED, wxCommandEventHandler( LogbookDialog::OnMenuSelectionShutdown ) );
     m_gridWeather->Connect( wxEVT_GRID_CELL_RIGHT_CLICK, wxGridEventHandler( LogbookDialog::m_gridWeatherOnGridCellRightClick ), NULL, this );
-    m_gridWeather->Connect( wxEVT_GRID_CELL_CHANGE, wxGridEventHandler( LogbookDialog::m_gridWeatherOnGridCmdCellChange ), NULL, this );
+    m_gridWeather->Connect( wxEVT_GRID_CELL_CHANGED, wxGridEventHandler( LogbookDialog::m_gridWeatherOnGridCmdCellChange ), NULL, this );
     m_gridWeather->Connect( wxEVT_GRID_SELECT_CELL, wxGridEventHandler( LogbookDialog::m_gridWeatherOnGridSelectCell ), NULL, this );
     m_gridWeather->Connect( wxEVT_KEY_DOWN, wxKeyEventHandler( LogbookDialog::m_gridWeatherOnKeyDown ), NULL, this );
     m_gridMotorSails->Connect( wxEVT_GRID_CELL_RIGHT_CLICK, wxGridEventHandler( LogbookDialog::m_gridMotorSailsOnGridCellRightClick ), NULL, this );
-    m_gridMotorSails->Connect( wxEVT_GRID_CELL_CHANGE, wxGridEventHandler( LogbookDialog::m_gridMotorSailsOnGridCmdCellChange ), NULL, this );
+    m_gridMotorSails->Connect( wxEVT_GRID_CELL_CHANGED, wxGridEventHandler( LogbookDialog::m_gridMotorSailsOnGridCmdCellChange ), NULL, this );
     m_gridMotorSails->Connect( wxEVT_GRID_SELECT_CELL, wxGridEventHandler( LogbookDialog::m_gridMotorSailsOnGridSelectCell ), NULL, this );
     m_gridMotorSails->Connect( wxEVT_KEY_DOWN, wxKeyEventHandler( LogbookDialog::m_gridMotorSailsOnKeyDown ), NULL, this );
     crewAdd->Connect( wxEVT_COMMAND_BUTTON_CLICKED, wxCommandEventHandler( LogbookDialog::crewAddOnButtonClick ), NULL, this );
     crewSave->Connect( wxEVT_COMMAND_BUTTON_CLICKED, wxCommandEventHandler( LogbookDialog::crewSaveOnButtonClick ), NULL, this );
     crewView->Connect( wxEVT_COMMAND_BUTTON_CLICKED, wxCommandEventHandler( LogbookDialog::crewViewOnButtonClick ), NULL, this );
-    m_gridCrew->Connect( wxEVT_GRID_CELL_CHANGE, wxGridEventHandler( LogbookDialog::m_gridCrewOnGridCellChange ), NULL, this );
+    m_gridCrew->Connect( wxEVT_GRID_CELL_CHANGED, wxGridEventHandler( LogbookDialog::m_gridCrewOnGridCellChange ), NULL, this );
     m_gridCrew->Connect( wxEVT_GRID_CELL_RIGHT_CLICK, wxGridEventHandler( LogbookDialog::m_gridCrewOnGridCellRightClick ), NULL, this );
     this->Connect( m_menuItem2->GetId(), wxEVT_COMMAND_MENU_SELECTED, wxCommandEventHandler( LogbookDialog::m_menuItem2OnMenuSelection ) );
-    m_gridCrewWake->Connect( wxEVT_GRID_CELL_CHANGE, wxGridEventHandler( LogbookDialog::m_gridCrewWakeOnGridCellChange ), NULL, this );
+    m_gridCrewWake->Connect( wxEVT_GRID_CELL_CHANGED, wxGridEventHandler( LogbookDialog::m_gridCrewWakeOnGridCellChange ), NULL, this );
 
     addEquipmentButton->Connect( wxEVT_COMMAND_BUTTON_CLICKED, wxCommandEventHandler( LogbookDialog::boataddEquipmentButtonOnButtonClick ), NULL, this );
     boatSave->Connect( wxEVT_COMMAND_BUTTON_CLICKED, wxCommandEventHandler( LogbookDialog::boatSaveOnButtonClick ), NULL, this );
     boatView->Connect( wxEVT_COMMAND_BUTTON_CLICKED, wxCommandEventHandler( LogbookDialog::boatViewOnButtonClick ), NULL, this );
-    m_gridEquipment->Connect( wxEVT_GRID_CELL_CHANGE, wxGridEventHandler( LogbookDialog::m_gridEquipmentOnGridCellChange ), NULL, this );
+    m_gridEquipment->Connect( wxEVT_GRID_CELL_CHANGED, wxGridEventHandler( LogbookDialog::m_gridEquipmentOnGridCellChange ), NULL, this );
     m_gridEquipment->Connect( wxEVT_GRID_CELL_RIGHT_CLICK, wxGridEventHandler( LogbookDialog::m_gridEquipmentOnGridCellRightClick ), NULL, this );
     this->Connect( m_menuItem3->GetId(), wxEVT_COMMAND_MENU_SELECTED, wxCommandEventHandler( LogbookDialog::m_menuItem3OnMenuSelection ) );
     m_radioBtnHTML->Connect( wxEVT_COMMAND_RADIOBUTTON_SELECTED, wxCommandEventHandler( LogbookDialog::onRadioButtonHTML ), NULL, this );
@@ -2125,7 +2125,7 @@ LogbookDialog::LogbookDialog( logbookkonni_pi * d, wxTimer* t, LogbookTimer* lt,
     this->Connect( m_menuItem23->GetId(), wxEVT_COMMAND_MENU_SELECTED, wxCommandEventHandler( LogbookDialog::OnMenuSelectionMergeWatch ) );
     m_gridGlobal->Connect( wxEVT_GRID_CELL_LEFT_CLICK, wxGridEventHandler( LogbookDialog::OnGridCellLeftClickGlobal ), NULL, this );
 
-    m_gridMaintanence->Connect( wxEVT_GRID_CELL_CHANGE, wxGridEventHandler( LogbookDialog::onGridCellServiceChange ), NULL, this );
+    m_gridMaintanence->Connect( wxEVT_GRID_CELL_CHANGED, wxGridEventHandler( LogbookDialog::onGridCellServiceChange ), NULL, this );
     m_gridMaintanence->Connect( wxEVT_GRID_SELECT_CELL, wxGridEventHandler( LogbookDialog::onGridCellServiceSelected ), NULL, this );
     m_gridCrewWake->Connect( wxEVT_GRID_CELL_RIGHT_CLICK, wxGridEventHandler( LogbookDialog::OnGridCellRightClickWake ), NULL, this );
     m_gridCrew->Connect( wxEVT_KEY_DOWN, wxKeyEventHandler( LogbookDialog::OnKeyDownCrew ), NULL, this );
@@ -2146,7 +2146,7 @@ LogbookDialog::LogbookDialog( logbookkonni_pi * d, wxTimer* t, LogbookTimer* lt,
     m_radioBtnHTMLBuyParts->Connect( wxEVT_COMMAND_RADIOBUTTON_SELECTED, wxCommandEventHandler( LogbookDialog::onRadioButtonHTMLBuyParts ), NULL, this );
     m_radioBtnODTBuyParts->Connect( wxEVT_COMMAND_RADIOBUTTON_SELECTED, wxCommandEventHandler( LogbookDialog::onRadioButtonODTBuyParts ), NULL, this );
     m_buttonViewBuyParts->Connect( wxEVT_COMMAND_BUTTON_CLICKED, wxCommandEventHandler( LogbookDialog::onButtonClickViewBuyParts ), NULL, this );
-    m_gridMaintenanceBuyParts->Connect( wxEVT_GRID_CELL_CHANGE, wxGridEventHandler( LogbookDialog::onGridCellChangeBuyParts ), NULL, this );
+    m_gridMaintenanceBuyParts->Connect( wxEVT_GRID_CELL_CHANGED, wxGridEventHandler( LogbookDialog::onGridCellChangeBuyParts ), NULL, this );
     m_gridMaintenanceBuyParts->Connect( wxEVT_GRID_CELL_RIGHT_CLICK, wxGridEventHandler( LogbookDialog::onGridCellRightClickBuyParts ), NULL, this );
     m_gridMaintenanceBuyParts->Connect( wxEVT_GRID_CELL_LEFT_CLICK, wxGridEventHandler( LogbookDialog::onGridCellSelectedBuyParts ), NULL, this );
     m_gridMaintenanceBuyParts->Connect( wxEVT_KEY_DOWN, wxKeyEventHandler( LogbookDialog::OnKeyDownBuyParts ), NULL, this );
@@ -2161,7 +2161,7 @@ LogbookDialog::LogbookDialog( logbookkonni_pi * d, wxTimer* t, LogbookTimer* lt,
     this->Connect( m_menuItem132->GetId(), wxEVT_COMMAND_MENU_SELECTED, wxCommandEventHandler( LogbookDialog::OnMenuSelectionShowHiddenCols ) );
 
     this->Connect( m_menuItem14->GetId(), wxEVT_COMMAND_MENU_SELECTED, wxCommandEventHandler( LogbookDialog::OnMenuSelectionShowHiddenColsOverview ) );
-    m_gridMaintanenceRepairs->Connect( wxEVT_GRID_CELL_CHANGE, wxGridEventHandler( LogbookDialog::onGridCellRepairsChange ), NULL, this );
+    m_gridMaintanenceRepairs->Connect( wxEVT_GRID_CELL_CHANGED, wxGridEventHandler( LogbookDialog::onGridCellRepairsChange ), NULL, this );
     m_gridMaintanenceRepairs->Connect( wxEVT_GRID_CELL_RIGHT_CLICK, wxGridEventHandler( LogbookDialog::onGridCellRightClickRepairs ), NULL, this );
     m_gridMaintanenceRepairs->Connect( wxEVT_GRID_CELL_LEFT_CLICK, wxGridEventHandler( LogbookDialog::onGridCellRepairsSelected ), NULL, this );
     m_gridMaintanenceRepairs->Connect( wxEVT_KEY_DOWN, wxKeyEventHandler( LogbookDialog::OnKeyDownRepairs ), NULL, this );
@@ -2268,7 +2268,7 @@ LogbookDialog::~LogbookDialog()
     newLogbook->Disconnect( wxEVT_COMMAND_BUTTON_CLICKED, wxCommandEventHandler( LogbookDialog::newLogbookOnButtonClick ), NULL, this );
     selLogbook->Disconnect( wxEVT_COMMAND_BUTTON_CLICKED, wxCommandEventHandler( LogbookDialog::selLogbookOnButtonClick ), NULL, this );
     m_gridGlobal->Disconnect( wxEVT_GRID_CELL_RIGHT_CLICK, wxGridEventHandler( LogbookDialog::m_gridGlobalOnGridCellRightClick ), NULL, this );
-    m_gridGlobal->Disconnect( wxEVT_GRID_CELL_CHANGE, wxGridEventHandler( LogbookDialog::m_gridGlobalOnGridCmdCellChange ), NULL, this );
+    m_gridGlobal->Disconnect( wxEVT_GRID_CELL_CHANGED, wxGridEventHandler( LogbookDialog::m_gridGlobalOnGridCmdCellChange ), NULL, this );
     m_gridGlobal->Disconnect( wxEVT_GRID_SELECT_CELL, wxGridEventHandler( LogbookDialog::m_gridGlobalOnGridSelectCell ), NULL, this );
     m_gridGlobal->Disconnect( wxEVT_KEY_DOWN, wxKeyEventHandler( LogbookDialog::m_gridGlobalOnKeyDown ), NULL, this );
     m_gridGlobal->Disconnect( wxEVT_GRID_LABEL_LEFT_DCLICK, wxGridEventHandler( LogbookDialog::OnGridLabelLeftDClickGlobal ), NULL, this );
@@ -2288,24 +2288,24 @@ LogbookDialog::~LogbookDialog()
     m_gridMotorSails->Disconnect( wxEVT_GRID_LABEL_LEFT_CLICK, wxGridEventHandler( LogbookDialog::OnGridLabelLeftClickMotorSails ), NULL, this );
 
     m_gridWeather->Disconnect( wxEVT_GRID_CELL_RIGHT_CLICK, wxGridEventHandler( LogbookDialog::m_gridWeatherOnGridCellRightClick ), NULL, this );
-    m_gridWeather->Disconnect( wxEVT_GRID_CELL_CHANGE, wxGridEventHandler( LogbookDialog::m_gridWeatherOnGridCmdCellChange ), NULL, this );
+    m_gridWeather->Disconnect( wxEVT_GRID_CELL_CHANGED, wxGridEventHandler( LogbookDialog::m_gridWeatherOnGridCmdCellChange ), NULL, this );
     m_gridWeather->Disconnect( wxEVT_GRID_SELECT_CELL, wxGridEventHandler( LogbookDialog::m_gridWeatherOnGridSelectCell ), NULL, this );
     m_gridWeather->Disconnect( wxEVT_KEY_DOWN, wxKeyEventHandler( LogbookDialog::m_gridWeatherOnKeyDown ), NULL, this );
     m_gridMotorSails->Disconnect( wxEVT_GRID_CELL_RIGHT_CLICK, wxGridEventHandler( LogbookDialog::m_gridMotorSailsOnGridCellRightClick ), NULL, this );
-    m_gridMotorSails->Disconnect( wxEVT_GRID_CELL_CHANGE, wxGridEventHandler( LogbookDialog::m_gridMotorSailsOnGridCmdCellChange ), NULL, this );
+    m_gridMotorSails->Disconnect( wxEVT_GRID_CELL_CHANGED, wxGridEventHandler( LogbookDialog::m_gridMotorSailsOnGridCmdCellChange ), NULL, this );
     m_gridMotorSails->Disconnect( wxEVT_GRID_SELECT_CELL, wxGridEventHandler( LogbookDialog::m_gridMotorSailsOnGridSelectCell ), NULL, this );
     m_gridMotorSails->Disconnect( wxEVT_KEY_DOWN, wxKeyEventHandler( LogbookDialog::m_gridMotorSailsOnKeyDown ), NULL, this );
     crewAdd->Disconnect( wxEVT_COMMAND_BUTTON_CLICKED, wxCommandEventHandler( LogbookDialog::crewAddOnButtonClick ), NULL, this );
     crewSave->Disconnect( wxEVT_COMMAND_BUTTON_CLICKED, wxCommandEventHandler( LogbookDialog::crewSaveOnButtonClick ), NULL, this );
     crewView->Disconnect( wxEVT_COMMAND_BUTTON_CLICKED, wxCommandEventHandler( LogbookDialog::crewViewOnButtonClick ), NULL, this );
-    m_gridCrew->Disconnect( wxEVT_GRID_CELL_CHANGE, wxGridEventHandler( LogbookDialog::m_gridCrewOnGridCellChange ), NULL, this );
+    m_gridCrew->Disconnect( wxEVT_GRID_CELL_CHANGED, wxGridEventHandler( LogbookDialog::m_gridCrewOnGridCellChange ), NULL, this );
     m_gridCrew->Disconnect( wxEVT_GRID_CELL_RIGHT_CLICK, wxGridEventHandler( LogbookDialog::m_gridCrewOnGridCellRightClick ), NULL, this );
     this->Disconnect( wxID_ANY, wxEVT_COMMAND_MENU_SELECTED, wxCommandEventHandler( LogbookDialog::m_menuItem2OnMenuSelection ) );
-    m_gridCrewWake->Disconnect( wxEVT_GRID_CELL_CHANGE, wxGridEventHandler( LogbookDialog::m_gridCrewWakeOnGridCellChange ), NULL, this );
+    m_gridCrewWake->Disconnect( wxEVT_GRID_CELL_CHANGED, wxGridEventHandler( LogbookDialog::m_gridCrewWakeOnGridCellChange ), NULL, this );
     addEquipmentButton->Disconnect( wxEVT_COMMAND_BUTTON_CLICKED, wxCommandEventHandler( LogbookDialog::boataddEquipmentButtonOnButtonClick ), NULL, this );
     boatSave->Disconnect( wxEVT_COMMAND_BUTTON_CLICKED, wxCommandEventHandler( LogbookDialog::boatSaveOnButtonClick ), NULL, this );
     boatView->Disconnect( wxEVT_COMMAND_BUTTON_CLICKED, wxCommandEventHandler( LogbookDialog::boatViewOnButtonClick ), NULL, this );
-    m_gridEquipment->Disconnect( wxEVT_GRID_CELL_CHANGE, wxGridEventHandler( LogbookDialog::m_gridEquipmentOnGridCellChange ), NULL, this );
+    m_gridEquipment->Disconnect( wxEVT_GRID_CELL_CHANGED, wxGridEventHandler( LogbookDialog::m_gridEquipmentOnGridCellChange ), NULL, this );
     m_gridEquipment->Disconnect( wxEVT_GRID_CELL_RIGHT_CLICK, wxGridEventHandler( LogbookDialog::m_gridEquipmentOnGridCellRightClick ), NULL, this );
     this->Disconnect( wxID_ANY, wxEVT_COMMAND_MENU_SELECTED, wxCommandEventHandler( LogbookDialog::m_menuItem3OnMenuSelection ) );
     m_radioBtnHTML->Disconnect( wxEVT_COMMAND_RADIOBUTTON_SELECTED, wxCommandEventHandler( LogbookDialog::onRadioButtonHTML ), NULL, this );
@@ -2341,7 +2341,7 @@ LogbookDialog::~LogbookDialog()
     logViewOverview->Disconnect( wxEVT_COMMAND_BUTTON_CLICKED, wxCommandEventHandler( LogbookDialog::OnButtonClickOverView ), NULL, this );
     m_radioBtnHTMLOverview->Disconnect( wxEVT_COMMAND_RADIOBUTTON_SELECTED, wxCommandEventHandler( LogbookDialog::onRadioButtonHTMLOverview ), NULL, this );
     m_radioBtnAllLogbooks->Disconnect( wxEVT_COMMAND_RADIOBUTTON_SELECTED, wxCommandEventHandler( LogbookDialog::OnRadioButtonAllLogbooks ), NULL, this );
-    m_gridMaintanence->Disconnect( wxEVT_GRID_CELL_CHANGE, wxGridEventHandler( LogbookDialog::onGridCellServiceChange ), NULL, this );
+    m_gridMaintanence->Disconnect( wxEVT_GRID_CELL_CHANGED, wxGridEventHandler( LogbookDialog::onGridCellServiceChange ), NULL, this );
     m_gridMaintanence->Disconnect( wxEVT_GRID_SELECT_CELL, wxGridEventHandler( LogbookDialog::onGridCellServiceSelected ), NULL, this );
     m_gridMaintenanceBuyParts->Disconnect( wxEVT_GRID_CELL_LEFT_CLICK, wxGridEventHandler( LogbookDialog::onGridCellLeftClickBuyParts ), NULL, this );
     m_buttonSaveBuyParts->Disconnect( wxEVT_COMMAND_BUTTON_CLICKED, wxCommandEventHandler( LogbookDialog::onButtobClickSaveBuyParts ), NULL, this );
@@ -2398,7 +2398,7 @@ LogbookDialog::~LogbookDialog()
     m_gridMaintenanceBuyParts->Disconnect( wxEVT_GRID_LABEL_LEFT_CLICK, wxGridEventHandler( LogbookDialog::OnGridLabelLeftClickBuyParts ), NULL, this );
     m_gridMaintanenceRepairs->Disconnect( wxEVT_GRID_LABEL_LEFT_CLICK, wxGridEventHandler( LogbookDialog::OnGridLabelLeftClickRepairs ), NULL, this );
 
-    m_gridMaintenanceBuyParts->Disconnect( wxEVT_GRID_CELL_CHANGE, wxGridEventHandler( LogbookDialog::onGridCellChangeBuyParts ), NULL, this );
+    m_gridMaintenanceBuyParts->Disconnect( wxEVT_GRID_CELL_CHANGED, wxGridEventHandler( LogbookDialog::onGridCellChangeBuyParts ), NULL, this );
     m_gridMaintenanceBuyParts->Disconnect( wxEVT_GRID_CELL_RIGHT_CLICK, wxGridEventHandler( LogbookDialog::onGridCellRightClickBuyParts ), NULL, this );
     m_gridMaintenanceBuyParts->Disconnect( wxEVT_GRID_SELECT_CELL, wxGridEventHandler( LogbookDialog::onGridCellSelectedBuyParts ), NULL, this );
     m_buttonAddLineBuyParts->Disconnect( wxEVT_COMMAND_BUTTON_CLICKED, wxCommandEventHandler( LogbookDialog::onButtobClickAddLineBuyParts ), NULL, this );
@@ -2626,8 +2626,8 @@ void LogbookDialog::OnToggleButtonGenerator( wxCommandEvent& event )
 
 void LogbookDialog::setAbbreviations()
 {
-    m_gridMotorSails->SetLabelValue( wxHORIZONTAL,_T( "#1 " )+logbookPlugIn->opt->rpm,LogbookHTML::RPM1 );
-    m_gridMotorSails->SetLabelValue( wxHORIZONTAL,_T( "#2 " )+logbookPlugIn->opt->rpm,LogbookHTML::RPM2 );
+    m_gridMotorSails->SetColLabelValue( LogbookHTML::RPM1 ,_T( "#1 " )+logbookPlugIn->opt->rpm );
+    m_gridMotorSails->SetColLabelValue( LogbookHTML::RPM2, _T( "#2 " )+logbookPlugIn->opt->rpm );
 }
 
 void LogbookDialog::OnButtonClickResetSails( wxCommandEvent& event )
@@ -3170,12 +3170,12 @@ void LogbookDialog::navigationHideColumn( wxCommandEvent& ev )
     int count = 0;
 
     for ( int i = 0; i < logGrids[selGrid]->GetNumberCols() && count < 2; i++ )
-        if ( logGrids[selGrid]->GetColumnWidth( i ) > 0 )
+        if ( logGrids[selGrid]->GetColSize( i ) > 0 )
             count++;
 
     if ( count < 2 ) return;
 
-    logGrids[selGrid]->SetColumnWidth( selGridCol,0 );
+    logGrids[selGrid]->SetColSize( selGridCol,0 );
     if ( previousColumn != selGridCol )
         logGrids[selGrid]->SetGridCursor( selGridRow,previousColumn );
     selGridCol = previousColumn;
@@ -3553,7 +3553,7 @@ void LogbookDialog::m_gridGlobalOnGridSelectCell( wxGridEvent& ev )
     int rowHeight = m_gridGlobal->GetRowHeight( selGridRow );
 
     if ( selGridCol == LogbookHTML::REMARKS && rowHeight < 120 )
-        m_gridGlobal->SetRowHeight( selGridRow,120 );
+        m_gridGlobal->SetRowSize( selGridRow,120 );
     else if ( rowHeight == 120 && selGridCol != LogbookHTML::REMARKS )
         setEqualRowHeight( selGridRow );
 
@@ -3569,7 +3569,7 @@ void LogbookDialog::m_gridGlobalOnGridSelectCell( wxGridEvent& ev )
         int i = dlg->ShowModal();
         if ( i == wxID_OK )
         {
-            m_gridGlobal->SetCellValue( dlg->retstr,selGridRow,LogbookHTML::POSITION );
+            m_gridGlobal->SetCellValue( selGridRow,LogbookHTML::POSITION,dlg->retstr );
             logbook->getModifiedCellValue( 0,selGridRow,0,LogbookHTML::POSITION );
             setEqualRowHeight( selGridRow );
         }
@@ -3595,7 +3595,7 @@ void LogbookDialog::m_gridMotorSailsOnGridSelectCell( wxGridEvent& ev )
     previousColumn = ev.GetCol();
 
     if ( selGridCol == LogbookHTML::MREMARKS && m_gridMotorSails->GetRowHeight( selGridRow ) < 120 )
-        m_gridMotorSails->SetRowHeight( selGridRow,120 );
+        m_gridMotorSails->SetRowSize( selGridRow,120 );
     else if ( m_gridMotorSails->GetRowHeight( selGridRow ) == 120 && selGridCol != LogbookHTML::MREMARKS )
         setEqualRowHeight( selGridRow );
 
@@ -3814,8 +3814,8 @@ Backup Logbook(*.txt)|*.txt" );
 
     crewList->filterCrewMembers();
 
-    m_gridMotorSails->SetColumnWidth( LogbookHTML::ROUTEID,0 );
-    m_gridMotorSails->SetColumnWidth( LogbookHTML::TRACKID,0 );
+    m_gridMotorSails->SetColSize( LogbookHTML::ROUTEID,0 );
+    m_gridMotorSails->SetColSize( LogbookHTML::TRACKID,0 );
 
     setCheckboxSails();
     setSailsGap();
@@ -3999,9 +3999,9 @@ void LogbookDialog::setToNumberEngine()
 {
     if ( logbookPlugIn->opt->engines == 0 )
     {
-        m_gridMotorSails->SetColumnWidth( LogbookHTML::MOTOR1,0 );
-        m_gridMotorSails->SetColumnWidth( LogbookHTML::MOTOR1T,0 );
-        m_gridMotorSails->SetColumnWidth( LogbookHTML::RPM2,0 );
+        m_gridMotorSails->SetColSize( LogbookHTML::MOTOR1,0 );
+        m_gridMotorSails->SetColSize( LogbookHTML::MOTOR1T,0 );
+        m_gridMotorSails->SetColSize( LogbookHTML::RPM2,0 );
         m_toggleBtnEngine1->Enable( !logbookPlugIn->opt->bEng1RPMIsChecked );
         m_toggleBtnEngine1->SetLabel( m_gridMotorSails->GetColLabelValue( LogbookHTML::MOTOR )+onOff[( int ) m_toggleBtnEngine1->GetValue()] );
         m_toggleBtnEngine2->Enable( false );
@@ -4009,11 +4009,11 @@ void LogbookDialog::setToNumberEngine()
     }
     else
     {
-        m_gridMotorSails->SetColumnWidth( LogbookHTML::MOTOR1,1 );
+        m_gridMotorSails->SetColSize( LogbookHTML::MOTOR1,1 );
         m_gridMotorSails->AutoSizeColumn( LogbookHTML::MOTOR1,false );
-        m_gridMotorSails->SetColumnWidth( LogbookHTML::MOTOR1T,1 );
+        m_gridMotorSails->SetColSize( LogbookHTML::MOTOR1T,1 );
         m_gridMotorSails->AutoSizeColumn( LogbookHTML::MOTOR1T,false );
-        m_gridMotorSails->SetColumnWidth( LogbookHTML::RPM2,1 );
+        m_gridMotorSails->SetColSize( LogbookHTML::RPM2,1 );
         m_gridMotorSails->AutoSizeColumn( LogbookHTML::RPM2,false );
         m_toggleBtnEngine1->Enable( !logbookPlugIn->opt->bEng1RPMIsChecked );
         m_toggleBtnEngine1->SetLabel( m_gridMotorSails->GetColLabelValue( LogbookHTML::MOTOR )+onOff[( int ) m_toggleBtnEngine1->GetValue()] );
@@ -4029,9 +4029,9 @@ void LogbookDialog::setShowGenerator()
 {
     if ( logbookPlugIn->opt->generator == 1 )
     {
-        m_gridMotorSails->SetColumnWidth( LogbookHTML::GENE,1 );
+        m_gridMotorSails->SetColSize( LogbookHTML::GENE,1 );
         m_gridMotorSails->AutoSizeColumn( LogbookHTML::GENE,false );
-        m_gridMotorSails->SetColumnWidth( LogbookHTML::GENET,1 );
+        m_gridMotorSails->SetColSize( LogbookHTML::GENET,1 );
         m_gridMotorSails->AutoSizeColumn( LogbookHTML::GENET,false );
         m_toggleBtnGenerator->Show();
         m_toggleBtnGenerator->Enable( !logbookPlugIn->opt->bGenRPMIsChecked );
@@ -4039,8 +4039,8 @@ void LogbookDialog::setShowGenerator()
     }
     else
     {
-        m_gridMotorSails->SetColumnWidth( LogbookHTML::GENE,0 );
-        m_gridMotorSails->SetColumnWidth( LogbookHTML::GENET,0 );
+        m_gridMotorSails->SetColSize( LogbookHTML::GENE,0 );
+        m_gridMotorSails->SetColSize( LogbookHTML::GENET,0 );
         m_toggleBtnGenerator->Enable( false );
         m_toggleBtnGenerator->Hide();
     }
@@ -4311,7 +4311,7 @@ void LogbookDialog::m_menuItem1OnMenuSelection( wxCommandEvent& ev )
             m_notebook8->SetSelection( item->grid );
             wxString insert = logGrids[item->grid]->GetCellValue( selGridRow,item->gridcol );
 
-            logGrids[item->grid]->SetCellValue( insert+( ( insert.Length() == 0 )?_T( "" ):_T( "\n" ) )+item->text,selGridRow,item->gridcol );
+            logGrids[item->grid]->SetCellValue( selGridRow,item->gridcol,insert+( ( insert.Length() == 0 )?_T( "" ):_T( "\n" ) )+item->text );
 
             logGrids[item->grid]->SetFocus();
             logGrids[item->grid]->SetGridCursor( selGridRow,item->gridcol );
@@ -4463,20 +4463,20 @@ void LogbookDialog::OnMenuSelectionShowHiddenCols( wxCommandEvent &ev )
 {
     int selGrid = this->m_notebook8->GetSelection();
     for ( int i = 0; i < logGrids[selGrid]->GetNumberCols(); i++ )
-        if ( logGrids[selGrid]->GetColumnWidth( i ) == 0 )
+        if ( logGrids[selGrid]->GetColSize( i ) == 0 )
         {
             if ( ( selGrid == 2 && logbookPlugIn->opt->engines == 0 ) && ( ( i == LogbookHTML::MOTOR1 || i == LogbookHTML::MOTOR1T ) || i == LogbookHTML::RPM2
                     || ( i == LogbookHTML::GENE || i == LogbookHTML::GENET ) ) )
                 continue;
             else
             {
-                logGrids[selGrid]->SetColumnWidth( i,1 );
+                logGrids[selGrid]->SetColSize( i,1 );
                 logGrids[selGrid]->AutoSizeColumn( i,false );
             }
         }
 
-    m_gridMotorSails->SetColumnWidth( LogbookHTML::ROUTEID,0 );
-    m_gridMotorSails->SetColumnWidth( LogbookHTML::TRACKID,0 );
+    m_gridMotorSails->SetColSize( LogbookHTML::ROUTEID,0 );
+    m_gridMotorSails->SetColSize( LogbookHTML::TRACKID,0 );
 
     if ( logbookPlugIn->opt->engines == 0 )
         setToNumberEngine();
@@ -4489,9 +4489,9 @@ void LogbookDialog::OnMenuSelectionShowHiddenCols( wxCommandEvent &ev )
 void LogbookDialog::OnMenuSelectionShowHiddenColsOverview( wxCommandEvent &ev )
 {
     for ( int i = 0; i < m_gridOverview->GetNumberCols()-1; i++ )
-        if ( m_gridOverview->GetColumnWidth( i ) == 0 )
+        if ( m_gridOverview->GetColSize( i ) == 0 )
         {
-            m_gridOverview->SetColumnWidth( i,1 );
+            m_gridOverview->SetColSize( i,1 );
             m_gridOverview->AutoSizeColumn( i,false );
         }
 
@@ -4906,7 +4906,7 @@ void LogbookDialog::setEqualRowHeight( int row )
 
     for ( int i = 0; i < LOGGRIDS; i++ )
     {
-        logGrids[i]->SetRowHeight( row,max );
+        logGrids[i]->SetRowSize( row,max );
     }
 }
 
@@ -4995,34 +4995,34 @@ void LogbookDialog::setIniValues()
             switch ( i )
             {
             case 0:
-                opt->NavColWidth.Add( logGrids[i]->GetColumnWidth( n ) );
+                opt->NavColWidth.Add( logGrids[i]->GetColSize( n ) );
                 break;
             case 1:
-                opt->WeatherColWidth.Add( logGrids[i]->GetColumnWidth( n ) );
+                opt->WeatherColWidth.Add( logGrids[i]->GetColSize( n ) );
                 break;
             case 2:
-                opt->MotorColWidth.Add( logGrids[i]->GetColumnWidth( n ) );
+                opt->MotorColWidth.Add( logGrids[i]->GetColSize( n ) );
                 break;
             }
         }
     }
 
     for ( int n = 0; n < m_gridCrew->GetNumberCols(); n++ )
-        opt->CrewColWidth.Add( m_gridCrew->GetColumnWidth( n ) );
+        opt->CrewColWidth.Add( m_gridCrew->GetColSize( n ) );
     for ( int n = 0; n < m_gridCrewWake->GetNumberCols(); n++ )
-        opt->WakeColWidth.Add( m_gridCrewWake->GetColumnWidth( n ) );
+        opt->WakeColWidth.Add( m_gridCrewWake->GetColSize( n ) );
     for ( int n = 0; n < m_gridEquipment->GetNumberCols(); n++ )
-        opt->EquipColWidth.Add( m_gridEquipment->GetColumnWidth( n ) );
+        opt->EquipColWidth.Add( m_gridEquipment->GetColSize( n ) );
 
     for ( int n = 0; n < m_gridMaintanence->GetNumberCols(); n++ )
-        opt->ServiceColWidth.Add( m_gridMaintanence->GetColumnWidth( n ) );
+        opt->ServiceColWidth.Add( m_gridMaintanence->GetColSize( n ) );
     for ( int n = 0; n < m_gridMaintanenceRepairs->GetNumberCols(); n++ )
-        opt->RepairsColWidth.Add( m_gridMaintanenceRepairs->GetColumnWidth( n ) );
+        opt->RepairsColWidth.Add( m_gridMaintanenceRepairs->GetColSize( n ) );
     for ( int n = 0; n < m_gridMaintenanceBuyParts->GetNumberCols(); n++ )
-        opt->BuyPartsColWidth.Add( m_gridMaintenanceBuyParts->GetColumnWidth( n ) );
+        opt->BuyPartsColWidth.Add( m_gridMaintenanceBuyParts->GetColSize( n ) );
 
     for ( int n = 0; n < m_gridOverview->GetNumberCols(); n++ )
-        opt->OverviewColWidth.Add( m_gridOverview->GetColumnWidth( n ) );
+        opt->OverviewColWidth.Add( m_gridOverview->GetColSize( n ) );
 }
 
 void LogbookDialog::getIniValues()
@@ -5050,46 +5050,46 @@ void LogbookDialog::getIniValues()
             switch ( i )
             {
             case 0:
-                logGrids[i]->SetColumnWidth( n,opt->NavColWidth[n] );
+                logGrids[i]->SetColSize( n,opt->NavColWidth[n] );
                 break;
             case 1:
-                logGrids[i]->SetColumnWidth( n,opt->WeatherColWidth[n] );
+                logGrids[i]->SetColSize( n,opt->WeatherColWidth[n] );
                 break;
             case 2:
-                logGrids[i]->SetColumnWidth( n,opt->MotorColWidth[n] );
+                logGrids[i]->SetColSize( n,opt->MotorColWidth[n] );
                 break;
             }
         }
     }
 
     for ( int n = 0; n < m_gridCrew->GetNumberCols(); n++ )
-        m_gridCrew->SetColumnWidth( n,opt->CrewColWidth[n] );
+        m_gridCrew->SetColSize( n,opt->CrewColWidth[n] );
 
     for ( int n = 0; n < m_gridEquipment->GetNumberCols(); n++ )
-        m_gridEquipment->SetColumnWidth( n,opt->EquipColWidth[n] );
+        m_gridEquipment->SetColSize( n,opt->EquipColWidth[n] );
 
     if ( opt->OverviewColWidth[0] != -1 )
     {
         for ( int n = 0; n < m_gridOverview->GetNumberCols(); n++ )
-            m_gridOverview->SetColumnWidth( n,opt->OverviewColWidth[n] );
+            m_gridOverview->SetColSize( n,opt->OverviewColWidth[n] );
     }
 
     if ( opt->ServiceColWidth[0] != -1 )
     {
         for ( int n = 0; n < m_gridMaintanence->GetNumberCols(); n++ )
-            m_gridMaintanence->SetColumnWidth( n,opt->ServiceColWidth[n] );
+            m_gridMaintanence->SetColSize( n,opt->ServiceColWidth[n] );
     }
 
     if ( opt->RepairsColWidth[0] != -1 )
     {
         for ( int n = 0; n < m_gridMaintanenceRepairs->GetNumberCols(); n++ )
-            m_gridMaintanenceRepairs->SetColumnWidth( n,opt->RepairsColWidth[n] );
+            m_gridMaintanenceRepairs->SetColSize( n,opt->RepairsColWidth[n] );
     }
 
     if ( opt->BuyPartsColWidth[0] != -1 )
     {
         for ( int n = 0; n < m_gridMaintenanceBuyParts->GetNumberCols(); n++ )
-            m_gridMaintenanceBuyParts->SetColumnWidth( n,opt->BuyPartsColWidth[n] );
+            m_gridMaintenanceBuyParts->SetColSize( n,opt->BuyPartsColWidth[n] );
     }
 
     if ( logbookPlugIn->opt->navHTML )
@@ -5295,12 +5295,12 @@ void LogbookDialog::OnGridLabelLeftDClickCrew( wxGridEvent& ev )
     int count = 0;
 
     for ( int i = 0; i < m_gridCrew->GetNumberCols() && count < 2; i++ )
-        if ( m_gridCrew->GetColumnWidth( i ) > 0 )
+        if ( m_gridCrew->GetColSize( i ) > 0 )
             count++;
 
     if ( count < 2 ) return;
 
-    m_gridCrew->SetColumnWidth( ev.GetCol(),0 );
+    m_gridCrew->SetColSize( ev.GetCol(),0 );
     m_gridCrew->Refresh();
 }
 
@@ -5310,20 +5310,20 @@ void LogbookDialog::OnGridLabelLeftDClickCrewWake( wxGridEvent& ev )
     int count = 0;
 
     for ( int i = 0; i < m_gridCrewWake->GetNumberCols() && count < 2; i++ )
-        if ( m_gridCrewWake->GetColumnWidth( i ) > 0 )
+        if ( m_gridCrewWake->GetColSize( i ) > 0 )
             count++;
 
     if ( count < 2 ) return;
-    m_gridCrewWake->SetColumnWidth( ev.GetCol(),0 );
+    m_gridCrewWake->SetColSize( ev.GetCol(),0 );
     m_gridCrewWake->Refresh();
 }
 
 void LogbookDialog::OnMenuSelectionHiddenCrew( wxCommandEvent& event )
 {
     for ( int i = 0; i < m_gridCrew->GetNumberCols(); i++ )
-        if ( m_gridCrew->GetColumnWidth( i ) == 0 )
+        if ( m_gridCrew->GetColSize( i ) == 0 )
         {
-            m_gridCrew->SetColumnWidth( i,1 );
+            m_gridCrew->SetColSize( i,1 );
             m_gridCrew->AutoSizeColumn( i,false );
         }
 
@@ -6033,7 +6033,7 @@ void LogbookDialog::onMenuSelectionServiceOK( wxCommandEvent &ev )
 
 void LogbookDialog::onMenuSelectionServiceDelete( wxCommandEvent& ev )
 {
-    m_gridMaintanence->SetCellValue( maintenance->m_YesNo[1],maintenance->selectedRow,Maintenance::ACTIVE );
+    m_gridMaintanence->SetCellValue( maintenance->selectedRow,Maintenance::ACTIVE,maintenance->m_YesNo[1] );
     maintenance->checkService( m_gridGlobal->GetNumberRows()-1 );
 
     m_gridMaintanence->DeleteRows( maintenance->selectedRow );
@@ -6127,7 +6127,7 @@ void LogbookDialog::onGridCellRepairsSelected( wxGridEvent& ev )
         m_gridMaintanenceRepairs->AutoSizeRow( lastRowSelectedRepairs,false );
 
     if ( ev.GetCol() == maintenance->RTEXT )
-        m_gridMaintanenceRepairs->SetRowHeight( ev.GetRow(),170 );
+        m_gridMaintanenceRepairs->SetRowSize( ev.GetRow(),170 );
 
     ev.Skip();
     lastRowSelectedRepairs = maintenance->selectedRowRepairs;
@@ -6485,7 +6485,7 @@ void LogbookDialog::onGridCellSelectedBuyParts( wxGridEvent &ev )
 
     m_gridMaintenanceBuyParts->AutoSizeRow( lastRowSelectedBuyParts,false );
     if ( ev.GetCol() == maintenance->PARTS )
-        m_gridMaintenanceBuyParts->SetRowHeight( ev.GetRow(),170 );
+        m_gridMaintenanceBuyParts->SetRowSize( ev.GetRow(),170 );
 
     maintenance->checkBuyParts();
     m_gridMaintenanceBuyParts->Refresh();
@@ -6577,11 +6577,11 @@ void LogbookDialog::OnGridLabelLeftDClickOverview( wxGridEvent& ev )
     int count = 0;
 
     for ( int i = 0; i < m_gridOverview->GetNumberCols() && count < 2; i++ )
-        if ( m_gridOverview->GetColumnWidth( i ) > 0 )
+        if ( m_gridOverview->GetColSize( i ) > 0 )
             count++;
 
     if ( count < 2 ) return;
-    m_gridOverview->SetColumnWidth( ev.GetCol(),0 );
+    m_gridOverview->SetColSize( ev.GetCol(),0 );
     m_gridOverview->Refresh();
 }
 
@@ -6623,7 +6623,7 @@ void LogbookDialog::OnKeyDownOverview( wxKeyEvent& ev )
 
 void LogbookDialog::OnMenuSelectionHideColumnOverView( wxCommandEvent& ev )
 {
-    m_gridOverview->SetColumnWidth( m_gridOverview->GetCursorColumn(),0 );
+    m_gridOverview->SetColSize( m_gridOverview->GetGridCursorCol(),0 );
     m_gridOverview->Refresh();
 }
 
@@ -7523,7 +7523,7 @@ SelectLogbook::SelectLogbook( wxWindow* parent, wxString path, wxWindowID id, co
 
     this->Connect( wxEVT_INIT_DIALOG, wxInitDialogEventHandler( SelectLogbook::OnInit ) );
     m_grid13->Connect( wxEVT_GRID_CELL_LEFT_CLICK, wxGridEventHandler( SelectLogbook::OnCellSelecttion ), NULL, this );
-    m_grid13->Connect( wxEVT_GRID_CELL_CHANGE, wxGridEventHandler( SelectLogbook::OnGridCellChange ), NULL, this );
+    m_grid13->Connect( wxEVT_GRID_CELL_CHANGED, wxGridEventHandler( SelectLogbook::OnGridCellChange ), NULL, this );
     m_grid13->Connect( wxEVT_KEY_DOWN, wxKeyEventHandler( SelectLogbook::OnKeyDown ), NULL, this );
 }
 
@@ -7531,7 +7531,7 @@ SelectLogbook::~SelectLogbook()
 {
     this->Disconnect( wxEVT_INIT_DIALOG, wxInitDialogEventHandler( SelectLogbook::OnInit ) );
     m_grid13->Disconnect( wxEVT_GRID_CELL_LEFT_CLICK, wxGridEventHandler( SelectLogbook::OnCellSelecttion ), NULL, this );
-    m_grid13->Disconnect( wxEVT_GRID_CELL_CHANGE, wxGridEventHandler( SelectLogbook::OnGridCellChange ), NULL, this );
+    m_grid13->Disconnect( wxEVT_GRID_CELL_CHANGED, wxGridEventHandler( SelectLogbook::OnGridCellChange ), NULL, this );
     m_grid13->Disconnect( wxEVT_KEY_DOWN, wxKeyEventHandler( SelectLogbook::OnKeyDown ), NULL, this );
 }
 
@@ -7564,7 +7564,7 @@ void SelectLogbook::OnCellSelecttion( wxGridEvent& event )
     if ( event.GetCol() == 2 &&
             ( m_grid13->GetRowHeight( selRow ) < 120 && !m_grid13->GetCellValue( selRow,event.GetCol() ).Contains( _( "Active Logbook" ) ) ) )
     {
-        m_grid13->SetRowHeight( selRow,100 );
+        m_grid13->SetRowSize( selRow,100 );
         m_grid13->SetColSize( 2,250 );
         m_grid13->ForceRefresh();
         m_grid13->MakeCellVisible( selRow,event.GetCol() );
@@ -7666,7 +7666,7 @@ void SelectLogbook::OnInit( wxInitDialogEvent& ev )
         if ( back )
         {
             for ( int col = 0; col < m_grid13->GetNumberCols(); col++ )
-                m_grid13->SetCellBackgroundColour( wxColour( _T( "Green" ) ),i,col );
+                m_grid13->SetCellBackgroundColour( i,col,wxColour( _T( "Green" ) ) );
 
             description = _( "Active Logbook" );
             m_grid13->SetReadOnly( i,2 );
@@ -8921,9 +8921,9 @@ TimerInterval::TimerInterval( wxWindow* parent, Options* opt,  wxWindowID id, co
     m_radioBtnNormalTimer->Connect( wxEVT_COMMAND_RADIOBUTTON_SELECTED, wxCommandEventHandler( TimerInterval::OnRadioButtonNormal ), NULL, this );
     m_radioBtnFullHour->Connect( wxEVT_COMMAND_RADIOBUTTON_SELECTED, wxCommandEventHandler( TimerInterval::OnRadioButtonFull ), NULL, this );
     m_spinCtrl4->Connect( wxEVT_COMMAND_SPINCTRL_UPDATED, wxSpinEventHandler( TimerInterval::OnSpinCtrlFullh ), NULL, this );
-    m_gridFull->Connect( wxEVT_GRID_CELL_CHANGE, wxGridEventHandler( TimerInterval::OnGridCellChangeFull ), NULL, this );
+    m_gridFull->Connect( wxEVT_GRID_CELL_CHANGED, wxGridEventHandler( TimerInterval::OnGridCellChangeFull ), NULL, this );
     m_radioBtnIndividualTimer->Connect( wxEVT_COMMAND_RADIOBUTTON_SELECTED, wxCommandEventHandler( TimerInterval::OnRadioButtonIndividual ), NULL, this );
-    m_gridIndividual->Connect( wxEVT_GRID_CELL_CHANGE, wxGridEventHandler( TimerInterval::OnGridCellChangeIndividual ), NULL, this );
+    m_gridIndividual->Connect( wxEVT_GRID_CELL_CHANGED, wxGridEventHandler( TimerInterval::OnGridCellChangeIndividual ), NULL, this );
     m_sdbSizer9OK->Connect( wxEVT_COMMAND_BUTTON_CLICKED, wxCommandEventHandler( TimerInterval::OnButtonOKClick ), NULL, this );
     this->Connect( wxEVT_CLOSE_WINDOW, wxCloseEventHandler( TimerInterval::OnClose ) );
     m_sdbSizer9Cancel->Connect( wxEVT_COMMAND_BUTTON_CLICKED, wxCommandEventHandler( TimerInterval::OnCancel ), NULL, this );
@@ -8941,9 +8941,9 @@ TimerInterval::~TimerInterval()
     m_radioBtnNormalTimer->Disconnect( wxEVT_COMMAND_RADIOBUTTON_SELECTED, wxCommandEventHandler( TimerInterval::OnRadioButtonNormal ), NULL, this );
     m_radioBtnFullHour->Disconnect( wxEVT_COMMAND_RADIOBUTTON_SELECTED, wxCommandEventHandler( TimerInterval::OnRadioButtonFull ), NULL, this );
     m_spinCtrl4->Disconnect( wxEVT_COMMAND_SPINCTRL_UPDATED, wxSpinEventHandler( TimerInterval::OnSpinCtrlFullh ), NULL, this );
-    m_gridFull->Disconnect( wxEVT_GRID_CELL_CHANGE, wxGridEventHandler( TimerInterval::OnGridCellChangeFull ), NULL, this );
+    m_gridFull->Disconnect( wxEVT_GRID_CELL_CHANGED, wxGridEventHandler( TimerInterval::OnGridCellChangeFull ), NULL, this );
     m_radioBtnIndividualTimer->Disconnect( wxEVT_COMMAND_RADIOBUTTON_SELECTED, wxCommandEventHandler( TimerInterval::OnRadioButtonIndividual ), NULL, this );
-    m_gridIndividual->Disconnect( wxEVT_GRID_CELL_CHANGE, wxGridEventHandler( TimerInterval::OnGridCellChangeIndividual ), NULL, this );
+    m_gridIndividual->Disconnect( wxEVT_GRID_CELL_CHANGED, wxGridEventHandler( TimerInterval::OnGridCellChangeIndividual ), NULL, this );
     m_sdbSizer9OK->Disconnect( wxEVT_COMMAND_BUTTON_CLICKED, wxCommandEventHandler( TimerInterval::OnButtonOKClick ), NULL, this );
     this->Disconnect( wxEVT_CLOSE_WINDOW, wxCloseEventHandler( TimerInterval::OnClose ) );
     m_sdbSizer9Cancel->Disconnect( wxEVT_COMMAND_BUTTON_CLICKED, wxCommandEventHandler( TimerInterval::OnCancel ), NULL, this );
@@ -9359,12 +9359,12 @@ void TimerInterval::init( Options* opt, LogbookDialog* dialog )
 
     m_gridIndividual->InsertCols( 2 );
     m_gridIndividual->SetColLabelValue( 2,_( "AM/PM" ) );
-    m_gridIndividual->SetColumnWidth( 2,60 );
+    m_gridIndividual->SetColSize( 2,60 );
 
     if ( opt->timeformat == 0 )
     {
         m_gridIndividual->SetColMinimalAcceptableWidth( 0 );
-        m_gridIndividual->SetColumnWidth( 2,0 );
+        m_gridIndividual->SetColSize( 2,0 );
     }
 
     if ( !loadData() )

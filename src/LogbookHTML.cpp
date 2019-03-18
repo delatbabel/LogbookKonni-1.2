@@ -229,7 +229,7 @@ void LogbookHTML::setSelection()
 
     first = last = 0;
 
-    if ( parent->logGrids[0]->GetRows() == 0 ) return;
+    if ( parent->logGrids[0]->GetNumberRows() == 0 ) return;
 
     if ( parent->logGrids[parent->m_notebook8->GetSelection()]->IsSelection() )
     {
