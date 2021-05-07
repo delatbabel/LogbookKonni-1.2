@@ -50,6 +50,7 @@
 #include <wx/platinfo.h>
 #include <wx/timer.h>
 #include <wx/arrimpl.cpp>
+#include <wx/anybutton.h>
 #if wxCHECK_VERSION(2,9,0)
 #ifdef __WXOSX__
 #include <wx/uiaction.h>
@@ -212,6 +213,10 @@ LogbookDialog::LogbookDialog( logbookkonni_pi * d, wxTimer* t, LogbookTimer* lt,
     m_bpButtonHelpGlobal->SetToolTip( _( "Help" ) );
 
     bSizer6->Add( m_bpButtonHelpGlobal, 0, wxALIGN_CENTER_VERTICAL|wxRIGHT, 5 );
+
+    m_bpButtonFastAccessDialog = new wxToggleButton(m_panel2, wxID_ANY, _( "FAD"));
+    m_bpButtonFastAccessDialog->SetToolTip( _( "Show/Hide Fast Access Dialog" ) );
+    bSizer6->Add(m_bpButtonFastAccessDialog, 0, wxALIGN_CENTER_VERTICAL|wxRIGHT, 5);
 
     bSizer361->Add( bSizer6, 0, 0, 0 );
 
@@ -876,16 +881,6 @@ LogbookDialog::LogbookDialog( logbookkonni_pi * d, wxTimer* t, LogbookTimer* lt,
 
     m_staticline36 = new wxStaticLine( m_panel21, wxID_ANY, wxDefaultPosition, wxDefaultSize, wxLI_HORIZONTAL|wxLI_VERTICAL );
     bSizer3->Add( m_staticline36, 0, wxEXPAND | wxALL, 5 );
-
-    m_staticText1171 = new wxStaticText( m_panel21, wxID_ANY, _( "Copy to watch" ), wxDefaultPosition, wxDefaultSize, 0 );
-    m_staticText1171->Wrap( -1 );
-    bSizer3->Add( m_staticText1171, 0, wxALL|wxALIGN_CENTER_VERTICAL, 5 );
-
-    wxString m_choiceCrewNamesChoices[] = { _( "Name in full" ), _( "Firstname only" ), _( "Lastname only" ) };
-    int m_choiceCrewNamesNChoices = sizeof( m_choiceCrewNamesChoices ) / sizeof( wxString );
-    m_choiceCrewNames = new wxChoice( m_panel21, wxID_ANY, wxDefaultPosition, wxDefaultSize, m_choiceCrewNamesNChoices, m_choiceCrewNamesChoices, 0 );
-    m_choiceCrewNames->SetSelection( 0 );
-    bSizer3->Add( m_choiceCrewNames, 0, wxALL|wxALIGN_CENTER_VERTICAL, 5 );
 
     bSizer38->Add( bSizer3, 0, wxEXPAND, 5 );
 
@@ -2118,6 +2113,7 @@ LogbookDialog::LogbookDialog( logbookkonni_pi * d, wxTimer* t, LogbookTimer* lt,
     m_notebook8->Connect( wxEVT_COMMAND_NOTEBOOK_PAGE_CHANGED, wxNotebookEventHandler( LogbookDialog::OnNotebookPageChangedLoggrids ), NULL, this );
     m_bpButtonShowHideStatusGlobal->Connect( wxEVT_COMMAND_BUTTON_CLICKED, wxCommandEventHandler( LogbookDialog::OnButtomClickStatusbarGlobal ), NULL, this );
     m_bpButtonHelpGlobal->Connect( wxEVT_COMMAND_BUTTON_CLICKED, wxCommandEventHandler( LogbookDialog::OnClickButtonHelpGlobal ), NULL, this );
+    m_bpButtonFastAccessDialog->Connect( wxEVT_COMMAND_TOGGLEBUTTON_CLICKED, wxCommandEventHandler( LogbookDialog::OnClickButtonFastAccessDialog ), NULL, this );
 
     m_gridCrew->Connect( wxEVT_GRID_EDITOR_SHOWN, wxGridEventHandler( LogbookDialog::OnGridEditorShownCrew ), NULL, this );
 
@@ -2363,6 +2359,7 @@ LogbookDialog::~LogbookDialog()
     m_notebook8->Disconnect( wxEVT_COMMAND_NOTEBOOK_PAGE_CHANGED, wxNotebookEventHandler( LogbookDialog::OnNotebookPageChangedLoggrids ), NULL, this );
     m_bpButtonShowHideStatusGlobal->Disconnect( wxEVT_COMMAND_BUTTON_CLICKED, wxCommandEventHandler( LogbookDialog::OnButtomClickStatusbarGlobal ), NULL, this );
     m_bpButtonHelpGlobal->Disconnect( wxEVT_COMMAND_BUTTON_CLICKED, wxCommandEventHandler( LogbookDialog::OnClickButtonHelpGlobal ), NULL, this );
+    m_bpButtonFastAccessDialog->Disconnect( wxEVT_COMMAND_TOGGLEBUTTON_CLICKED, wxCommandEventHandler( LogbookDialog::OnClickButtonFastAccessDialog ), NULL, this );
     this->Disconnect( wxID_ANY, wxEVT_COMMAND_MENU_SELECTED, wxCommandEventHandler( LogbookDialog::OnMenuSelectionFlipWatches ) );
     logbookChoice->Disconnect( wxEVT_COMMAND_CHOICE_SELECTED, wxCommandEventHandler( LogbookDialog::OnChoiceGlobal ), NULL, this );
     crewChoice->Disconnect( wxEVT_COMMAND_CHOICE_SELECTED, wxCommandEventHandler( LogbookDialog::OnChoiceCrew ), NULL, this );
@@ -2690,6 +2687,7 @@ void LogbookDialog::OnClickButtonHelpGlobal( wxCommandEvent& event )
 {
     startBrowser( help_locn+_T( "Help.html" ) );
 }
+
 
 void LogbookDialog::OnChoiceGlobal( wxCommandEvent& event )
 {

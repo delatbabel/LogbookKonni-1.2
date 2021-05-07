@@ -1788,10 +1788,23 @@ void Logbook::appendRow( bool showlastline, bool autoline )
         dialog->logGrids[0]->SetCellValue( lastRow,RTIME,mCorrectedDateTime.Format( opt->stimeformat ) );
     }
 
-    if ( MOBIsActive )
-        dialog->logGrids[0]->SetCellValue( lastRow,REMARKS,_( "*** MAN OVERBOARD ***\n" ) );
+    if ( sLogText != _T( "" ) )
+        sLogText += wxString::Format( _T( "\n%s" ), customLogText );
     else
-        dialog->logGrids[0]->SetCellValue( lastRow,REMARKS,sLogText );
+        sLogText += wxString::Format( _T( "%s" ), customLogText );
+
+    // reset custom log text after it has been used
+    customLogText = _T("");
+
+    if ( MOBIsActive )
+    {
+    	if(sLogText != _T(""))
+    		sLogText += wxString::Format( _T( "\n%s" ), _( "*** MAN OVERBOARD ***" ));
+    	else
+    		sLogText += _( "*** MAN OVERBOARD ***" );
+    }
+
+	dialog->logGrids[0]->SetCellValue( lastRow,REMARKS,sLogText );
 
     if ( routeIsActive )
     {

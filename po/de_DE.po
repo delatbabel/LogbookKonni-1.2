@@ -18,272 +18,339 @@ msgstr ""
 
 #: src/logbook_pi.cpp:125 src/logbook_pi.cpp:676 src/logbook_pi.cpp:721
 #: src/logbook_pi.cpp:815 src/LogbookDialog.cpp:621 src/LogbookDialog.cpp:754
-#: src/LogbookDialog.cpp:7486
+#: src/LogbookDialog.cpp:7486 src/LogbookDialog.cpp:627
+#: src/LogbookDialog.cpp:760 src/LogbookDialog.cpp:7485
+#: ../src/LogbookDialog.cpp:628 ../src/LogbookDialog.cpp:761
+#: ../src/LogbookDialog.cpp:7486 ../src/logbook_pi.cpp:125
+#: ../src/logbook_pi.cpp:676 ../src/logbook_pi.cpp:721
+#: ../src/logbook_pi.cpp:815
 msgid "Logbook"
 msgstr "Logbuch"
 
-#: src/logbook_pi.cpp:185
-msgid "Your engine(s) are still running\n\n"
+#: src/logbook_pi.cpp:185 ../src/logbook_pi.cpp:185
+msgid ""
+"Your engine(s) are still running\n"
+"\n"
 "Stop engine(s) ?"
-msgstr "Motor(en) laufen noch\n\n"
+msgstr ""
+"Motor(en) laufen noch\n"
+"\n"
 "Stoppe Motor(en) ?"
 
-#: src/logbook_pi.cpp:265
+#: src/logbook_pi.cpp:265 ../src/logbook_pi.cpp:265
 msgid "from "
 msgstr "vom "
 
-#: src/logbook_pi.cpp:267
+#: src/logbook_pi.cpp:267 ../src/logbook_pi.cpp:267
 msgid "-Plugin"
 msgstr ""
 
 #: src/logbook_pi.cpp:504 src/logbook_pi.cpp:844 src/Logbook.cpp:883
 #: src/Logbook.cpp:916 src/Logbook.cpp:1513 src/LogbookDialog.h:630
 #: src/LogbookDialog.cpp:7557 src/LogbookDialog.cpp:7663 src/OverView.cpp:216
+#: src/Logbook.cpp:923 src/Logbook.cpp:956 src/Logbook.cpp:1553
+#: src/LogbookDialog.cpp:7556 src/LogbookDialog.cpp:7662 ../src/Logbook.cpp:923
+#: ../src/Logbook.cpp:956 ../src/Logbook.cpp:1553 ../src/LogbookDialog.cpp:7557
+#: ../src/LogbookDialog.cpp:7663 ../src/OverView.cpp:216
+#: ../src/logbook_pi.cpp:504 ../src/logbook_pi.cpp:844
 msgid "Active Logbook"
 msgstr "Aktives Logbuch"
 
-#: src/logbook_pi.cpp:681
+#: src/logbook_pi.cpp:681 ../src/logbook_pi.cpp:681
 msgid "Logbook for OpenCPN"
 msgstr "Logbuch für OpenCPN"
 
-#: src/logbook_pi.cpp:686
-msgid "Logbook for OpenCPN\n\n"
-"Thanks to the community for their helpful suggestions.\n\n"
+#: src/logbook_pi.cpp:686 ../src/logbook_pi.cpp:686
+msgid ""
+"Logbook for OpenCPN\n"
+"\n"
+"Thanks to the community for their helpful suggestions.\n"
+"\n"
 "If you find a bug post it on\n"
-"http://www.cruisersforum.com/forums/f134/logbook-konni-for-opencpn-68945.html\n"
+"http://www.cruisersforum.com/forums/f134/logbook-konni-for-opencpn-68945."
+"html\n"
 "Helpful videos are at Youtube, search for LogbookKonni."
 msgstr ""
 
 #: src/logbook_pi.cpp:794 src/logbook_pi.cpp:797 src/logbook_pi.cpp:800
+#: ../src/logbook_pi.cpp:794 ../src/logbook_pi.cpp:797
+#: ../src/logbook_pi.cpp:800
 msgid "Logbook Preferences"
 msgstr "Logbuch Optionen"
 
-#: src/logbook_pi.cpp:1493 src/logbook_pi.cpp:1497
+#: src/logbook_pi.cpp:1493 src/logbook_pi.cpp:1497 src/logbook_pi.cpp:1500
+#: src/logbook_pi.cpp:1504 ../src/logbook_pi.cpp:1500
+#: ../src/logbook_pi.cpp:1504
 msgid "Select zipped Layout-Files"
 msgstr "Wähle gezippte Layout-Dateien"
 
-#: src/logbook_pi.cpp:1579
+#: src/logbook_pi.cpp:1579 src/logbook_pi.cpp:1586 ../src/logbook_pi.cpp:1586
 #, c-format
-msgid "Layouts %sinstalled at\n\n"
+msgid ""
+"Layouts %sinstalled at\n"
+"\n"
 "%s\n"
 "%s\n"
 "%s\n"
 "%s"
-msgstr "Layouts %sinstallliert in Verzeichnisse:\n\n"
+msgstr ""
+"Layouts %sinstallliert in Verzeichnisse:\n"
+"\n"
 "%s\n"
 "%s\n"
 "%s\n"
 "%s"
 
-#: src/Options.cpp:61
+#: src/Options.cpp:61 src/Options.cpp:62 ../src/Options.cpp:62
 msgid "Ma"
 msgstr ""
 
-#: src/Options.cpp:62
+#: src/Options.cpp:62 src/Options.cpp:63 ../src/Options.cpp:63
 msgid "Tr"
 msgstr "Wahr"
 
-#: src/Options.cpp:63
+#: src/Options.cpp:63 src/Options.cpp:64 ../src/Options.cpp:64
 msgid "Ge1"
 msgstr ""
 
-#: src/Options.cpp:64
+#: src/Options.cpp:64 src/Options.cpp:65 ../src/Options.cpp:65
 msgid "Ge2"
 msgstr ""
 
-#: src/Options.cpp:65
+#: src/Options.cpp:65 src/Options.cpp:66 ../src/Options.cpp:66
 msgid "Ge3"
 msgstr ""
 
-#: src/Options.cpp:66
+#: src/Options.cpp:66 src/Options.cpp:67 ../src/Options.cpp:67
 msgid "Fo1"
 msgstr ""
 
-#: src/Options.cpp:67
+#: src/Options.cpp:67 src/Options.cpp:68 ../src/Options.cpp:68
 msgid "Fo2"
 msgstr ""
 
-#: src/Options.cpp:68
+#: src/Options.cpp:68 src/Options.cpp:69 ../src/Options.cpp:69
 msgid "Fo3"
 msgstr ""
 
-#: src/Options.cpp:69
+#: src/Options.cpp:69 src/Options.cpp:70 ../src/Options.cpp:70
 msgid "Ji"
 msgstr ""
 
-#: src/Options.cpp:70
+#: src/Options.cpp:70 src/Options.cpp:71 ../src/Options.cpp:71
 msgid "Mi"
 msgstr ""
 
-#: src/Options.cpp:71
+#: src/Options.cpp:71 src/Options.cpp:72 ../src/Options.cpp:72
 msgid "Mt"
 msgstr ""
 
-#: src/Options.cpp:72
+#: src/Options.cpp:72 src/Options.cpp:73 ../src/Options.cpp:73
 msgid "St"
 msgstr "Stop"
 
-#: src/Options.cpp:73
+#: src/Options.cpp:73 src/Options.cpp:74 ../src/Options.cpp:74
 msgid "Sp"
 msgstr "Stop"
 
-#: src/Options.cpp:74
+#: src/Options.cpp:74 src/Options.cpp:75 ../src/Options.cpp:75
 msgid "?"
 msgstr ""
 
-#: src/Options.cpp:76
+#: src/Options.cpp:76 src/Options.cpp:77 ../src/Options.cpp:77
 msgid "Main"
 msgstr "Groß"
 
-#: src/Options.cpp:77
+#: src/Options.cpp:77 src/Options.cpp:78 ../src/Options.cpp:78
 msgid "Try"
 msgstr ""
 
-#: src/Options.cpp:78
+#: src/Options.cpp:78 src/Options.cpp:79 ../src/Options.cpp:79
 msgid "Genoa 1"
 msgstr "Genua 1"
 
-#: src/Options.cpp:79
+#: src/Options.cpp:79 src/Options.cpp:80 ../src/Options.cpp:80
 msgid "Genoa 2"
 msgstr "Genua 2"
 
-#: src/Options.cpp:80
+#: src/Options.cpp:80 src/Options.cpp:81 ../src/Options.cpp:81
 msgid "Genoa 3"
 msgstr "Genua 3"
 
-#: src/Options.cpp:81
+#: src/Options.cpp:81 src/Options.cpp:82 ../src/Options.cpp:82
 msgid "Fock 1"
 msgstr ""
 
-#: src/Options.cpp:82
+#: src/Options.cpp:82 src/Options.cpp:83 ../src/Options.cpp:83
 msgid "Fock 2"
 msgstr ""
 
-#: src/Options.cpp:83
+#: src/Options.cpp:83 src/Options.cpp:84 ../src/Options.cpp:84
 msgid "Fock 3"
 msgstr ""
 
-#: src/Options.cpp:84
+#: src/Options.cpp:84 src/Options.cpp:85 ../src/Options.cpp:85
 msgid "Jib"
 msgstr ""
 
-#: src/Options.cpp:85
+#: src/Options.cpp:85 src/Options.cpp:86 ../src/Options.cpp:86
 msgid "Mizzen"
 msgstr "Mizzen"
 
-#: src/Options.cpp:86
+#: src/Options.cpp:86 src/Options.cpp:87 ../src/Options.cpp:87
 msgid "Mizzen Storm"
 msgstr "Mizzen Sturm"
 
-#: src/Options.cpp:87
+#: src/Options.cpp:87 src/Options.cpp:88 ../src/Options.cpp:88
 msgid "Staysail"
 msgstr "Stagsegel"
 
-#: src/Options.cpp:88
+#: src/Options.cpp:88 src/Options.cpp:89 ../src/Options.cpp:89
 msgid "Spinnacker"
 msgstr "Spinnacker"
 
-#: src/Options.cpp:89
-msgid "You can change the abreviations and the names of the sails\n"
+#: src/Options.cpp:89 src/Options.cpp:90 ../src/Options.cpp:90
+msgid ""
+"You can change the abreviations and the names of the sails\n"
 "in Options/Miscellaneous/Sails"
 msgstr ""
 
-#: src/Options.cpp:122
+#: src/Options.cpp:122 src/Options.cpp:123 ../src/Options.cpp:123
 msgid "automatic line Waypoint arrived"
-msgstr "automatische Zeile\n"
+msgstr ""
+"automatische Zeile\n"
 "Wegpunlt erreicht"
 
-#: src/Options.cpp:124 src/LogbookOptions.cpp:358
-msgid "automatic line\n"
+#: src/Options.cpp:124 src/LogbookOptions.cpp:358 src/LogbookOptions.cpp:372
+#: src/Options.cpp:125 ../src/LogbookOptions.cpp:372 ../src/Options.cpp:125
+msgid ""
+"automatic line\n"
 "change of guards"
-msgstr "automatische Zeile\n"
+msgstr ""
+"automatische Zeile\n"
 "Wachwechsel"
 
-#: src/Options.cpp:127 src/LogbookOptions.cpp:380
-msgid "automatic line\n"
+#: src/Options.cpp:127 src/LogbookOptions.cpp:380 src/LogbookOptions.cpp:394
+#: src/Options.cpp:128 ../src/LogbookOptions.cpp:394 ../src/Options.cpp:128
+msgid ""
+"automatic line\n"
 "change of course >"
-msgstr "automatische Zeile\n"
+msgstr ""
+"automatische Zeile\n"
 "Kursänderung > "
 
-#: src/Options.cpp:131 src/LogbookOptions.cpp:369
-msgid "automatic line\n"
+#: src/Options.cpp:131 src/LogbookOptions.cpp:369 src/LogbookOptions.cpp:383
+#: src/Options.cpp:132 ../src/LogbookOptions.cpp:383 ../src/Options.cpp:132
+msgid ""
+"automatic line\n"
 "Distance > "
-msgstr "automatische Zeile\n"
+msgstr ""
+"automatische Zeile\n"
 "Distanz > "
 
-#: src/Options.cpp:146
-msgid "Automatic line by timer\n\n"
+#: src/Options.cpp:146 src/Options.cpp:147 ../src/Options.cpp:147
+msgid ""
+"Automatic line by timer\n"
+"\n"
 "You can set/unset a timer-interval\n"
-"or change this text in Toolbox/Plugins/Logbook\n\n"
+"or change this text in Toolbox/Plugins/Logbook\n"
+"\n"
 "Shift+Enter appends a new line"
-msgstr "Automatischer Eintrag durch Timer\n\n"
+msgstr ""
+"Automatischer Eintrag durch Timer\n"
+"\n"
 "Sie können ein Timer-Intervall setzen\n"
-"oder diesen Text ändern unter Optionen/Plugins/Logbook\n\n"
+"oder diesen Text ändern unter Optionen/Plugins/Logbook\n"
+"\n"
 "Shift+Enter = Zeilenumbruch"
 
-#: src/Options.cpp:153 src/LogbookOptions.cpp:618
+#: src/Options.cpp:153 src/LogbookOptions.cpp:618 src/LogbookOptions.cpp:632
+#: src/Options.cpp:154 ../src/LogbookOptions.cpp:632 ../src/Options.cpp:154
 msgid "'"
 msgstr ""
 
-#: src/Options.cpp:154 src/LogbookOptions.cpp:625
+#: src/Options.cpp:154 src/LogbookOptions.cpp:625 src/LogbookOptions.cpp:639
+#: src/Options.cpp:155 ../src/LogbookOptions.cpp:639 ../src/Options.cpp:155
 msgid "\""
 msgstr ""
 
-#: src/Options.cpp:156 src/LogbookOptions.cpp:635
+#: src/Options.cpp:156 src/LogbookOptions.cpp:635 src/LogbookOptions.cpp:649
+#: src/Options.cpp:157 ../src/LogbookOptions.cpp:649 ../src/Options.cpp:157
 msgid "NM"
 msgstr ""
 
 #: src/Options.cpp:157 src/Options.cpp:166 src/LogbookOptions.cpp:642
 #: src/LogbookOptions.cpp:724 src/LogbookOptions.cpp:855
+#: src/LogbookOptions.cpp:656 src/LogbookOptions.cpp:738
+#: src/LogbookOptions.cpp:869 src/Options.cpp:158 src/Options.cpp:167
+#: ../src/LogbookOptions.cpp:656 ../src/LogbookOptions.cpp:738
+#: ../src/LogbookOptions.cpp:869 ../src/Options.cpp:158 ../src/Options.cpp:167
 msgid "kts"
 msgstr "kn"
 
 #: src/Options.cpp:159 src/LogbookDialog.cpp:8731 src/LogbookOptions.cpp:662
+#: src/LogbookDialog.cpp:8730 src/LogbookOptions.cpp:676 src/Options.cpp:160
+#: ../src/LogbookDialog.cpp:8731 ../src/LogbookOptions.cpp:676
+#: ../src/Options.cpp:160
 msgid "m"
 msgstr "m"
 
-#: src/Options.cpp:160 src/LogbookOptions.cpp:682
+#: src/Options.cpp:160 src/LogbookOptions.cpp:682 src/LogbookOptions.cpp:696
+#: src/Options.cpp:161 ../src/LogbookOptions.cpp:696 ../src/Options.cpp:161
 msgid "ft"
 msgstr ""
 
-#: src/Options.cpp:161
+#: src/Options.cpp:161 src/Options.cpp:162 ../src/Options.cpp:162
 msgid "fth"
 msgstr ""
 
-#: src/Options.cpp:164 src/LogbookOptions.cpp:717
+#: src/Options.cpp:164 src/LogbookOptions.cpp:717 src/LogbookOptions.cpp:731
+#: src/Options.cpp:165 ../src/LogbookOptions.cpp:731 ../src/Options.cpp:165
 msgid "mb"
 msgstr "hPa"
 
-#: src/Options.cpp:165 src/LogbookOptions.cpp:752
+#: src/Options.cpp:165 src/LogbookOptions.cpp:752 src/LogbookOptions.cpp:766
+#: src/Options.cpp:166 ../src/LogbookOptions.cpp:766 ../src/Options.cpp:166
 msgid "F"
 msgstr "C"
 
 #: src/Options.cpp:167 src/LogbookOptions.cpp:733 src/LogbookOptions.cpp:855
+#: src/LogbookOptions.cpp:747 src/LogbookOptions.cpp:869 src/Options.cpp:168
+#: ../src/LogbookOptions.cpp:747 ../src/LogbookOptions.cpp:869
+#: ../src/Options.cpp:168
 msgid "m/s"
 msgstr ""
 
 #: src/Options.cpp:168 src/LogbookOptions.cpp:742 src/LogbookOptions.cpp:855
+#: src/LogbookOptions.cpp:756 src/LogbookOptions.cpp:869 src/Options.cpp:169
+#: ../src/LogbookOptions.cpp:756 ../src/LogbookOptions.cpp:869
+#: ../src/Options.cpp:169
 msgid "km/h"
 msgstr "km/h"
 
-#: src/Options.cpp:171 src/LogbookOptions.cpp:769
+#: src/Options.cpp:171 src/LogbookOptions.cpp:769 src/LogbookOptions.cpp:783
+#: src/Options.cpp:172 ../src/LogbookOptions.cpp:783 ../src/Options.cpp:172
 msgid "gal"
 msgstr "l"
 
 #: src/Options.cpp:172 src/LogbookDialog.cpp:8724 src/LogbookDialog.cpp:8773
 #: src/LogbookOptions.cpp:186 src/LogbookOptions.cpp:776
+#: src/LogbookDialog.cpp:8723 src/LogbookDialog.cpp:8772
+#: src/LogbookOptions.cpp:790 src/Options.cpp:173 ../src/LogbookDialog.cpp:8724
+#: ../src/LogbookDialog.cpp:8773 ../src/LogbookOptions.cpp:186
+#: ../src/LogbookOptions.cpp:790 ../src/Options.cpp:173
 msgid "h"
 msgstr "h"
 
-#: src/Options.cpp:178
+#: src/Options.cpp:178 src/Options.cpp:179 ../src/Options.cpp:179
 msgid "day(s)"
 msgstr "Tag(e)"
 
-#: src/Options.cpp:179
+#: src/Options.cpp:179 src/Options.cpp:180 ../src/Options.cpp:180
 msgid "week(s)"
 msgstr "Woche(n)"
 
-#: src/Options.cpp:180
+#: src/Options.cpp:180 src/Options.cpp:181 ../src/Options.cpp:181
 msgid "month"
 msgstr "Monat(e)"
 
@@ -293,7 +360,18 @@ msgstr "Monat(e)"
 #: src/LogbookOptions.cpp:1698 src/LogbookOptions.cpp:2214
 #: src/LogbookHTML.cpp:295 src/LogbookHTML.cpp:400 src/LogbookHTML.cpp:677
 #: src/LogbookHTML.cpp:775 src/CrewList.cpp:1787 src/CrewList.cpp:2195
-#: src/CrewList.cpp:2539 src/boat.cpp:290 src/boat.cpp:550
+#: src/CrewList.cpp:2539 src/boat.cpp:290 src/boat.cpp:550 src/Logbook.cpp:1596
+#: src/Logbook.cpp:2493 src/Logbook.cpp:2559 src/Logbook.cpp:2564
+#: src/LogbookOptions.cpp:1541 src/LogbookOptions.cpp:1657
+#: src/LogbookOptions.cpp:1682 src/LogbookOptions.cpp:1707
+#: src/LogbookOptions.cpp:2223 ../src/CrewList.cpp:1787
+#: ../src/CrewList.cpp:2195 ../src/CrewList.cpp:2539 ../src/Logbook.cpp:1596
+#: ../src/Logbook.cpp:2493 ../src/Logbook.cpp:2559 ../src/Logbook.cpp:2564
+#: ../src/LogbookHTML.cpp:295 ../src/LogbookHTML.cpp:400
+#: ../src/LogbookHTML.cpp:677 ../src/LogbookHTML.cpp:775
+#: ../src/LogbookOptions.cpp:1541 ../src/LogbookOptions.cpp:1657
+#: ../src/LogbookOptions.cpp:1682 ../src/LogbookOptions.cpp:1707
+#: ../src/LogbookOptions.cpp:2223 ../src/boat.cpp:290 ../src/boat.cpp:550
 msgid "Information"
 msgstr "Info"
 
@@ -301,72 +379,89 @@ msgstr "Info"
 msgid "Reminder"
 msgstr "Erinnerung"
 
-#: src/Logbook.h:319 src/LogbookDialog.cpp:424
+#: src/Logbook.h:319 src/LogbookDialog.cpp:424 src/LogbookDialog.cpp:430
+#: ../src/LogbookDialog.cpp:431
 msgid "Search in Logbook"
 msgstr "Suche in Logbuch"
 
-#: src/Logbook.cpp:48
+#: src/Logbook.cpp:48 ../src/Logbook.cpp:48
 #, c-format
-msgid "Your Logbook has %i lines\n\n"
+msgid ""
+"Your Logbook has %i lines\n"
+"\n"
 "You should create a new logbook to minimize loadingtime."
-msgstr "Ihr Logbuch hat %i Zeilen\n\n"
+msgstr ""
+"Ihr Logbuch hat %i Zeilen\n"
+"\n"
 "Sie sollten ein neues Logbuch erstellen, um Ladezeiten zu verringern."
 
 #: src/Logbook.cpp:195 src/Logbook.cpp:1851 src/Logbook.cpp:1908
-#: src/LogbookDialog.cpp:3834
+#: src/LogbookDialog.cpp:3834 src/Logbook.cpp:1904 src/Logbook.cpp:1961
+#: src/LogbookDialog.cpp:3833 ../src/Logbook.cpp:195 ../src/Logbook.cpp:1904
+#: ../src/Logbook.cpp:1961 ../src/LogbookDialog.cpp:3834
 msgid " off"
 msgstr "Aus"
 
 #: src/Logbook.cpp:196 src/Logbook.cpp:1852 src/Logbook.cpp:1909
-#: src/LogbookDialog.cpp:3835
+#: src/LogbookDialog.cpp:3835 src/Logbook.cpp:1905 src/Logbook.cpp:1962
+#: src/LogbookDialog.cpp:3834 ../src/Logbook.cpp:196 ../src/Logbook.cpp:1905
+#: ../src/Logbook.cpp:1962 ../src/LogbookDialog.cpp:3835
 msgid " on"
 msgstr "An"
 
-#: src/Logbook.cpp:766
+#: src/Logbook.cpp:766 src/Logbook.cpp:806 ../src/Logbook.cpp:806
 msgid "Are you sure ?"
 msgstr "Sind Sie sicher ?"
 
 #: src/Logbook.cpp:766 src/Logbook.cpp:779 src/LogbookDialog.cpp:191
+#: src/Logbook.cpp:806 src/Logbook.cpp:819 src/LogbookDialog.cpp:194
+#: ../src/Logbook.cpp:806 ../src/Logbook.cpp:819 ../src/LogbookDialog.cpp:194
 msgid "New Logbook"
 msgstr "Neues Logbuch"
 
-#: src/Logbook.cpp:773
+#: src/Logbook.cpp:773 src/Logbook.cpp:813 ../src/Logbook.cpp:813
 msgid "Reset all Values to zero ?"
 msgstr "alle Werte zurücksetzen ?"
 
-#: src/Logbook.cpp:779
+#: src/Logbook.cpp:779 src/Logbook.cpp:819 ../src/Logbook.cpp:819
 msgid "Your Logbook has no lines ?"
 msgstr "Ihr Logbuch hat keine Zeilen ?"
 
-#: src/Logbook.cpp:827
+#: src/Logbook.cpp:827 src/Logbook.cpp:867 ../src/Logbook.cpp:867
 msgid "Last line from Logbook\n"
 msgstr "Letzte Zeile aus Logbuch\n"
 
-#: src/Logbook.cpp:835
+#: src/Logbook.cpp:835 src/Logbook.cpp:875 ../src/Logbook.cpp:875
 msgid "Last Logbook is\n"
 msgstr "letzte Logbuch-Datei ist\n"
 
-#: src/Logbook.cpp:889
+#: src/Logbook.cpp:889 src/Logbook.cpp:929 ../src/Logbook.cpp:929
 #, c-format
 msgid "Old Logbook until %s"
 msgstr "Altes Logbuch bis %s"
 
-#: src/Logbook.cpp:949
+#: src/Logbook.cpp:949 src/Logbook.cpp:989 ../src/Logbook.cpp:989
 #, c-format
-msgid "Start converting to new Date/Time-Format\n"
-"and backup all datafiles from version 1.1 to\n\n"
+msgid ""
+"Start converting to new Date/Time-Format\n"
+"and backup all datafiles from version 1.1 to\n"
+"\n"
 "%s"
-msgstr "Starte Konvertierung in neues Datumsformat und\n"
-"erstelle ein Backup aller Daten der Version 1.1 im Verzeichnis\n\n"
+msgstr ""
+"Starte Konvertierung in neues Datumsformat und\n"
+"erstelle ein Backup aller Daten der Version 1.1 im Verzeichnis\n"
+"\n"
 "%s"
 
-#: src/Logbook.cpp:1555
+#: src/Logbook.cpp:1555 src/Logbook.cpp:1595 ../src/Logbook.cpp:1595
 #, c-format
-msgid "Your Logbook has %i lines\n\n"
+msgid ""
+"Your Logbook has %i lines\n"
+"\n"
 "\t\t\tYou should create a new logbook to minimize loadingtime."
 msgstr ""
 
-#: src/Logbook.cpp:1595
+#: src/Logbook.cpp:1595 src/Logbook.cpp:1635 ../src/Logbook.cpp:1635
 msgid "unnamed Route"
 msgstr "unbenannte Route"
 
@@ -374,196 +469,232 @@ msgstr "unbenannte Route"
 msgid "*** MAN OVERBOARD ***\n"
 msgstr "*** Mann über Bord ***\n"
 
-#: src/Logbook.cpp:1637
+#: src/Logbook.cpp:1637 src/Logbook.cpp:1690 ../src/Logbook.cpp:1690
 msgid "Track "
 msgstr ""
 
-#: src/Logbook.cpp:1682
+#: src/Logbook.cpp:1682 src/Logbook.cpp:1735 ../src/Logbook.cpp:1735
 msgid "Engine #1 started"
 msgstr "Motor #1 gestartet"
 
-#: src/Logbook.cpp:1686
+#: src/Logbook.cpp:1686 src/Logbook.cpp:1739 ../src/Logbook.cpp:1739
 msgid "Engine #1 running"
 msgstr "Motor #1 läuft"
 
-#: src/Logbook.cpp:1702
+#: src/Logbook.cpp:1702 src/Logbook.cpp:1755 ../src/Logbook.cpp:1755
 msgid "Engine #1 stopped"
 msgstr "Motor #1 gestoppt"
 
-#: src/Logbook.cpp:1707
+#: src/Logbook.cpp:1707 src/Logbook.cpp:1760 ../src/Logbook.cpp:1760
 msgid "Engine #2 started"
 msgstr "Motor #2 gestartet"
 
-#: src/Logbook.cpp:1713
+#: src/Logbook.cpp:1713 src/Logbook.cpp:1766 ../src/Logbook.cpp:1766
 msgid "Engine #2 running"
 msgstr "Motor #2 läuft"
 
-#: src/Logbook.cpp:1715
-msgid "\n"
+#: src/Logbook.cpp:1715 src/Logbook.cpp:1768 ../src/Logbook.cpp:1768
+msgid ""
+"\n"
 "Engine #2 running"
-msgstr "\n"
+msgstr ""
+"\n"
 "Motor #2 läuft"
 
-#: src/Logbook.cpp:1731
+#: src/Logbook.cpp:1731 src/Logbook.cpp:1784 ../src/Logbook.cpp:1784
 msgid "Engine #2 stopped"
 msgstr "Motor #2 gestoppt"
 
-#: src/Logbook.cpp:1733
-msgid "\n"
+#: src/Logbook.cpp:1733 src/Logbook.cpp:1786 ../src/Logbook.cpp:1786
+msgid ""
+"\n"
 "Engine #2 stopped"
-msgstr "\n"
+msgstr ""
+"\n"
 "Motor #2 gestoppt"
 
-#: src/Logbook.cpp:1739
+#: src/Logbook.cpp:1739 src/Logbook.cpp:1792 ../src/Logbook.cpp:1792
 msgid "Generator started"
 msgstr ""
 
-#: src/Logbook.cpp:1745
+#: src/Logbook.cpp:1745 src/Logbook.cpp:1798 ../src/Logbook.cpp:1798
 msgid "Generator running"
 msgstr ""
 
-#: src/Logbook.cpp:1747
-msgid "\n"
+#: src/Logbook.cpp:1747 src/Logbook.cpp:1800 ../src/Logbook.cpp:1800
+msgid ""
+"\n"
 "Generator running"
 msgstr ""
 
-#: src/Logbook.cpp:1764
+#: src/Logbook.cpp:1764 src/Logbook.cpp:1817 ../src/Logbook.cpp:1817
 msgid "Generator stopped"
 msgstr ""
 
-#: src/Logbook.cpp:1766
-msgid "\n"
+#: src/Logbook.cpp:1766 src/Logbook.cpp:1819 ../src/Logbook.cpp:1819
+msgid ""
+"\n"
 "Generator stopped"
 msgstr ""
 
-#: src/Logbook.cpp:1788
+#: src/Logbook.cpp:1788 src/Logbook.cpp:1841 ../src/Logbook.cpp:1841
 msgid "Sails hoisted"
 msgstr "Segel hoch"
 
-#: src/Logbook.cpp:1792
+#: src/Logbook.cpp:1792 src/Logbook.cpp:1845 ../src/Logbook.cpp:1845
 msgid "Sails changed"
 msgstr "Segel gewechselt"
 
-#: src/Logbook.cpp:1795
+#: src/Logbook.cpp:1795 src/Logbook.cpp:1848 ../src/Logbook.cpp:1848
 msgid "Sails down"
 msgstr "Segel runter"
 
 #: src/Logbook.cpp:2249 src/CrewList.cpp:2512 src/boat.cpp:827
+#: src/Logbook.cpp:2302 ../src/CrewList.cpp:2512 ../src/Logbook.cpp:2302
+#: ../src/boat.cpp:827
 #, c-format
 msgid "Delete Row Nr. %i ?"
 msgstr "Lösche Zeile Nr. %i ?"
 
 #: src/Logbook.cpp:2249 src/CrewList.cpp:2512 src/boat.cpp:827
+#: src/Logbook.cpp:2302 ../src/CrewList.cpp:2512 ../src/Logbook.cpp:2302
+#: ../src/boat.cpp:827
 msgid "Confirm"
 msgstr "Bestätige"
 
-#: src/Logbook.cpp:2440
+#: src/Logbook.cpp:2440 src/Logbook.cpp:2493 ../src/Logbook.cpp:2493
 #, c-format
-msgid "Please enter the Date in the format:\n"
+msgid ""
+"Please enter the Date in the format:\n"
 "      %s"
-msgstr "Bitte geben Sie das Datum im Format:\n"
+msgstr ""
+"Bitte geben Sie das Datum im Format:\n"
 "      %s"
 
-#: src/Logbook.cpp:2462
+#: src/Logbook.cpp:2462 src/Logbook.cpp:2515 ../src/Logbook.cpp:2515
 #, c-format
-msgid "Please enter the Time in the format:\n"
+msgid ""
+"Please enter the Time in the format:\n"
 "   %s"
-msgstr "Bitte geben Sie die Zeit im diesem Format ein:\n"
+msgstr ""
+"Bitte geben Sie die Zeit im diesem Format ein:\n"
 "   %s"
 
-#: src/Logbook.cpp:2506
-msgid "Please enter 0544512.15n0301205.15e for\n"
+#: src/Logbook.cpp:2506 src/Logbook.cpp:2559 ../src/Logbook.cpp:2559
+msgid ""
+"Please enter 0544512.15n0301205.15e for\n"
 "054Deg 45Min 12.15Sec N 030Deg 12Min 05.15Sec E"
-msgstr "Bitte geben Sie 0544512.15n0301205.15e für\n"
+msgstr ""
+"Bitte geben Sie 0544512.15n0301205.15e für\n"
 "054° 45' 12.15\" N \n"
 "030°12' 05.15\" E ein"
 
-#: src/Logbook.cpp:2511
-msgid "Please enter 05445.1234n03012.0504e for\n"
+#: src/Logbook.cpp:2511 src/Logbook.cpp:2564 ../src/Logbook.cpp:2564
+msgid ""
+"Please enter 05445.1234n03012.0504e for\n"
 "054Deg 45.1234Min N 030Deg 12.0504Min E"
-msgstr "Bitte geben Sie 05445.1234n03012.0504e für\n"
+msgstr ""
+"Bitte geben Sie 05445.1234n03012.0504e für\n"
 "054° 45,1234' N \n"
 "030°12,0504' E ein"
 
-#: src/Logbook.cpp:2851
+#: src/Logbook.cpp:2851 src/Logbook.cpp:2904 ../src/Logbook.cpp:2904
 msgid "Minutes greater than 59"
 msgstr "Minuten sind größer als 59"
 
-#: src/Logbook.cpp:3407
-msgid "Wind is set to Heading,\n"
+#: src/Logbook.cpp:3407 src/Logbook.cpp:3460 ../src/Logbook.cpp:3460
+msgid ""
+"Wind is set to Heading,\n"
 "but GPS sends no Heading Data.\n"
-"Wind is set now to Relative to boat\n\n"
+"Wind is set now to Relative to boat\n"
+"\n"
 msgstr ""
 
-#: src/Logbook.cpp:3447
+#: src/Logbook.cpp:3447 src/Logbook.cpp:3500 ../src/Logbook.cpp:3500
 msgid "No GPS-Signal !"
 msgstr "kein GPS-Signal"
 
-#: src/Logbook.cpp:3465
+#: src/Logbook.cpp:3465 src/Logbook.cpp:3518 ../src/Logbook.cpp:3518
 msgid "Next WP Name: "
 msgstr "Nächster WP Name:"
 
-#: src/Logbook.cpp:3469
+#: src/Logbook.cpp:3469 src/Logbook.cpp:3522 ../src/Logbook.cpp:3522
 msgid "Last waypoint of the Route"
 msgstr "Letzter Wegpunkt in der Route"
 
-#: src/Logbook.cpp:3473
+#: src/Logbook.cpp:3473 src/Logbook.cpp:3526 ../src/Logbook.cpp:3526
 #, c-format
-msgid "\n"
+msgid ""
+"\n"
 "Name of Waypoint: %s\n"
 "%s %s"
-msgstr "\n"
+msgstr ""
+"\n"
 "Wegpunkt-Name: %s\n"
 "%s %s"
 
-#: src/Logbook.cpp:3476
+#: src/Logbook.cpp:3476 src/Logbook.cpp:3529 ../src/Logbook.cpp:3529
 msgid "Waypoint skipped"
 msgstr "Wegpunkt übersprungen"
 
-#: src/Logbook.cpp:3478
+#: src/Logbook.cpp:3478 src/Logbook.cpp:3531 ../src/Logbook.cpp:3531
 msgid "WayPoint arrived"
 msgstr "Wegpunkt erreicht"
 
-#: src/Logbook.cpp:3513
-msgid "It's not allowed to append Data to a old Logbook\n\n"
+#: src/Logbook.cpp:3513 src/Logbook.cpp:3566 ../src/Logbook.cpp:3566
+msgid ""
+"It's not allowed to append Data to a old Logbook\n"
+"\n"
 "\t\t\t\t\t\t\t\t\t\t\t\t\t\t OpenCPN switchs to actual logbook"
 msgstr ""
 
-#: src/Logbook.cpp:3588
+#: src/Logbook.cpp:3588 src/Logbook.cpp:3641 ../src/Logbook.cpp:3641
 msgid "Search in"
 msgstr "Suche in"
 
-#: src/Logbook.cpp:3592 src/LogbookDialog.cpp:687
+#: src/Logbook.cpp:3592 src/LogbookDialog.cpp:687 src/Logbook.cpp:3645
+#: src/LogbookDialog.cpp:693 ../src/Logbook.cpp:3645
+#: ../src/LogbookDialog.cpp:694
 msgid "Actual Logbook"
 msgstr ""
 
-#: src/Logbook.cpp:3595 src/LogbookDialog.cpp:691
+#: src/Logbook.cpp:3595 src/LogbookDialog.cpp:691 src/Logbook.cpp:3648
+#: src/LogbookDialog.cpp:697 ../src/Logbook.cpp:3648
+#: ../src/LogbookDialog.cpp:698
 msgid "All Logbooks"
 msgstr "Alle Logbücher"
 
-#: src/Logbook.cpp:3608
+#: src/Logbook.cpp:3608 src/Logbook.cpp:3661 ../src/Logbook.cpp:3661
 msgid "Searchstring"
 msgstr "Sucheingabe"
 
-#: src/Logbook.cpp:3615
+#: src/Logbook.cpp:3615 src/Logbook.cpp:3668 ../src/Logbook.cpp:3668
 msgid "In Column"
 msgstr "In Spalte"
 
 #: src/Logbook.cpp:3624 src/LogbookDialog.cpp:383 src/LogbookDialog.cpp:1112
-#: src/LogbookDialog.cpp:1958
+#: src/LogbookDialog.cpp:1958 src/Logbook.cpp:3677 src/LogbookDialog.cpp:389
+#: src/LogbookDialog.cpp:1108 src/LogbookDialog.cpp:1954
+#: ../src/Logbook.cpp:3677 ../src/LogbookDialog.cpp:390
+#: ../src/LogbookDialog.cpp:1109 ../src/LogbookDialog.cpp:1955
 msgid "Date"
 msgstr "Datum"
 
-#: src/Logbook.cpp:3642
+#: src/Logbook.cpp:3642 src/Logbook.cpp:3695 ../src/Logbook.cpp:3695
 msgid "Select"
 msgstr "Wähle"
 
-#: src/LogbookDialog.h:783 src/LogbookDialog.cpp:4392 src/LogbookDialog.cpp:4547
+#: src/LogbookDialog.h:783 src/LogbookDialog.cpp:4392
+#: src/LogbookDialog.cpp:4547 src/LogbookDialog.cpp:4391
+#: src/LogbookDialog.cpp:4546 ../src/LogbookDialog.cpp:4392
+#: ../src/LogbookDialog.cpp:4547
 msgid "Select Route"
 msgstr "Wähle Route"
 
 #: src/LogbookDialog.h:854 src/LogbookDialog.h:856 src/LogbookDialog.cpp:196
-#: src/LogbookDialog.cpp:697
+#: src/LogbookDialog.cpp:697 src/LogbookDialog.cpp:199
+#: src/LogbookDialog.cpp:703 ../src/LogbookDialog.cpp:199
+#: ../src/LogbookDialog.cpp:704
 msgid "Select Logbook"
 msgstr "Wähle Logbuch"
 
@@ -575,221 +706,365 @@ msgstr "Textblöcke Dialog"
 msgid "Set Timer Interval"
 msgstr "Setze das Timer-Interval"
 
-#: src/LogbookDialog.h:1158 src/LogbookDialog.cpp:389
+#: src/LogbookDialog.h:1158 src/LogbookDialog.cpp:389 src/LogbookDialog.cpp:395
+#: ../src/LogbookDialog.cpp:396
 msgid "Position"
 msgstr "Position"
 
 #: src/LogbookDialog.cpp:98 src/LogbookDialog.cpp:1638
 #: src/LogbookDialog.cpp:1764 src/LogbookDialog.cpp:1881
+#: src/LogbookDialog.cpp:99 src/LogbookDialog.cpp:1634
+#: src/LogbookDialog.cpp:1760 src/LogbookDialog.cpp:1877
+#: ../src/LogbookDialog.cpp:99 ../src/LogbookDialog.cpp:1635
+#: ../src/LogbookDialog.cpp:1761 ../src/LogbookDialog.cpp:1878
 msgid "Add Line"
 msgstr "Neue Zeile"
 
-#: src/LogbookDialog.cpp:99
+#: src/LogbookDialog.cpp:99 src/LogbookDialog.cpp:100
+#: ../src/LogbookDialog.cpp:100
 msgid "add a line to the end of your logbook"
 msgstr "Fügt eine Zeile am Ende des Logbuchs hinzu"
 
-#: src/LogbookDialog.cpp:103 src/LogbookDialog.cpp:644 src/LogbookDialog.cpp:834
-#: src/LogbookDialog.cpp:1200 src/LogbookDialog.cpp:1642
-#: src/LogbookDialog.cpp:1768 src/LogbookDialog.cpp:1885
+#: src/LogbookDialog.cpp:103 src/LogbookDialog.cpp:644
+#: src/LogbookDialog.cpp:834 src/LogbookDialog.cpp:1200
+#: src/LogbookDialog.cpp:1642 src/LogbookDialog.cpp:1768
+#: src/LogbookDialog.cpp:1885 src/LogbookDialog.cpp:104
+#: src/LogbookDialog.cpp:650 src/LogbookDialog.cpp:840
+#: src/LogbookDialog.cpp:1196 src/LogbookDialog.cpp:1638
+#: src/LogbookDialog.cpp:1764 src/LogbookDialog.cpp:1881
+#: ../src/LogbookDialog.cpp:104 ../src/LogbookDialog.cpp:651
+#: ../src/LogbookDialog.cpp:841 ../src/LogbookDialog.cpp:1197
+#: ../src/LogbookDialog.cpp:1639 ../src/LogbookDialog.cpp:1765
+#: ../src/LogbookDialog.cpp:1882
 msgid "Export"
 msgstr "Export"
 
-#: src/LogbookDialog.cpp:104
-msgid "export your logbook-data as:\n"
+#: src/LogbookDialog.cpp:104 src/LogbookDialog.cpp:105
+#: ../src/LogbookDialog.cpp:105
+msgid ""
+"export your logbook-data as:\n"
 "HTML, ODT,  ODS, XML, CSV"
-msgstr "Exportieren Sie Ihre  \"Logbuch\"-Daten in:\n"
+msgstr ""
+"Exportieren Sie Ihre  \"Logbuch\"-Daten in:\n"
 "   HTML, ODT,  ODS, XML, CSV"
 
 #: src/LogbookDialog.cpp:112 src/LogbookDialog.cpp:3821
+#: src/LogbookDialog.cpp:113 src/LogbookDialog.cpp:3820
+#: ../src/LogbookDialog.cpp:113 ../src/LogbookDialog.cpp:3821
 msgid "Show Layout Selection Mode"
 msgstr "Zeige Layout Auswahl Modus"
 
-#: src/LogbookDialog.cpp:120 src/LogbookDialog.cpp:651 src/LogbookDialog.cpp:842
-#: src/LogbookDialog.cpp:1208
+#: src/LogbookDialog.cpp:120 src/LogbookDialog.cpp:651
+#: src/LogbookDialog.cpp:842 src/LogbookDialog.cpp:1208
+#: src/LogbookDialog.cpp:121 src/LogbookDialog.cpp:657
+#: src/LogbookDialog.cpp:848 src/LogbookDialog.cpp:1204
+#: ../src/LogbookDialog.cpp:121 ../src/LogbookDialog.cpp:658
+#: ../src/LogbookDialog.cpp:849 ../src/LogbookDialog.cpp:1205
 msgid "Select Layout: "
 msgstr "Wähle Layout"
 
-#: src/LogbookDialog.cpp:127 src/LogbookDialog.cpp:657 src/LogbookDialog.cpp:849
-#: src/LogbookDialog.cpp:1214 src/LogbookDialog.cpp:1655
-#: src/LogbookDialog.cpp:1781 src/LogbookDialog.cpp:1898
-msgid "Select a layout which is displayed\n"
+#: src/LogbookDialog.cpp:127 src/LogbookDialog.cpp:657
+#: src/LogbookDialog.cpp:849 src/LogbookDialog.cpp:1214
+#: src/LogbookDialog.cpp:1655 src/LogbookDialog.cpp:1781
+#: src/LogbookDialog.cpp:1898 src/LogbookDialog.cpp:128
+#: src/LogbookDialog.cpp:663 src/LogbookDialog.cpp:855
+#: src/LogbookDialog.cpp:1210 src/LogbookDialog.cpp:1651
+#: src/LogbookDialog.cpp:1777 src/LogbookDialog.cpp:1894
+#: ../src/LogbookDialog.cpp:128 ../src/LogbookDialog.cpp:664
+#: ../src/LogbookDialog.cpp:856 ../src/LogbookDialog.cpp:1211
+#: ../src/LogbookDialog.cpp:1652 ../src/LogbookDialog.cpp:1778
+#: ../src/LogbookDialog.cpp:1895
+msgid ""
+"Select a layout which is displayed\n"
 "with button \"View\""
-msgstr "Wählt ein Layout, das angezeit wird \n"
+msgstr ""
+"Wählt ein Layout, das angezeit wird \n"
 "mit dem Button \"Zeige\""
 
-#: src/LogbookDialog.cpp:131 src/LogbookDialog.cpp:662 src/LogbookDialog.cpp:853
-#: src/LogbookDialog.cpp:1218 src/LogbookDialog.cpp:1659
-#: src/LogbookDialog.cpp:1785 src/LogbookDialog.cpp:1902
+#: src/LogbookDialog.cpp:131 src/LogbookDialog.cpp:662
+#: src/LogbookDialog.cpp:853 src/LogbookDialog.cpp:1218
+#: src/LogbookDialog.cpp:1659 src/LogbookDialog.cpp:1785
+#: src/LogbookDialog.cpp:1902 src/LogbookDialog.cpp:132
+#: src/LogbookDialog.cpp:668 src/LogbookDialog.cpp:859
+#: src/LogbookDialog.cpp:1214 src/LogbookDialog.cpp:1655
+#: src/LogbookDialog.cpp:1781 src/LogbookDialog.cpp:1898
+#: ../src/LogbookDialog.cpp:132 ../src/LogbookDialog.cpp:669
+#: ../src/LogbookDialog.cpp:860 ../src/LogbookDialog.cpp:1215
+#: ../src/LogbookDialog.cpp:1656 ../src/LogbookDialog.cpp:1782
+#: ../src/LogbookDialog.cpp:1899
 msgid "R"
 msgstr ""
 
-#: src/LogbookDialog.cpp:132 src/LogbookDialog.cpp:663 src/LogbookDialog.cpp:854
-#: src/LogbookDialog.cpp:1219 src/LogbookDialog.cpp:1660
-#: src/LogbookDialog.cpp:1786 src/LogbookDialog.cpp:1903
+#: src/LogbookDialog.cpp:132 src/LogbookDialog.cpp:663
+#: src/LogbookDialog.cpp:854 src/LogbookDialog.cpp:1219
+#: src/LogbookDialog.cpp:1660 src/LogbookDialog.cpp:1786
+#: src/LogbookDialog.cpp:1903 src/LogbookDialog.cpp:133
+#: src/LogbookDialog.cpp:669 src/LogbookDialog.cpp:860
+#: src/LogbookDialog.cpp:1215 src/LogbookDialog.cpp:1656
+#: src/LogbookDialog.cpp:1782 src/LogbookDialog.cpp:1899
+#: ../src/LogbookDialog.cpp:133 ../src/LogbookDialog.cpp:670
+#: ../src/LogbookDialog.cpp:861 ../src/LogbookDialog.cpp:1216
+#: ../src/LogbookDialog.cpp:1657 ../src/LogbookDialog.cpp:1783
+#: ../src/LogbookDialog.cpp:1900
 msgid "Reload Layouts"
 msgstr "Layouts neu laden"
 
-#: src/LogbookDialog.cpp:136 src/LogbookDialog.cpp:667 src/LogbookDialog.cpp:858
-#: src/LogbookDialog.cpp:1223 src/LogbookDialog.cpp:1664
-#: src/LogbookDialog.cpp:1790 src/LogbookDialog.cpp:1907
-#: src/LogbookOptions.cpp:791
+#: src/LogbookDialog.cpp:136 src/LogbookDialog.cpp:667
+#: src/LogbookDialog.cpp:858 src/LogbookDialog.cpp:1223
+#: src/LogbookDialog.cpp:1664 src/LogbookDialog.cpp:1790
+#: src/LogbookDialog.cpp:1907 src/LogbookOptions.cpp:791
+#: src/LogbookDialog.cpp:137 src/LogbookDialog.cpp:673
+#: src/LogbookDialog.cpp:864 src/LogbookDialog.cpp:1219
+#: src/LogbookDialog.cpp:1660 src/LogbookDialog.cpp:1786
+#: src/LogbookDialog.cpp:1903 src/LogbookOptions.cpp:805
+#: ../src/LogbookDialog.cpp:137 ../src/LogbookDialog.cpp:674
+#: ../src/LogbookDialog.cpp:865 ../src/LogbookDialog.cpp:1220
+#: ../src/LogbookDialog.cpp:1661 ../src/LogbookDialog.cpp:1787
+#: ../src/LogbookDialog.cpp:1904 ../src/LogbookOptions.cpp:805
 msgid "E"
 msgstr ""
 
-#: src/LogbookDialog.cpp:137 src/LogbookDialog.cpp:668 src/LogbookDialog.cpp:859
-#: src/LogbookDialog.cpp:1665 src/LogbookDialog.cpp:1791
-#: src/LogbookDialog.cpp:1908 src/LogbookDialog.cpp:7348
+#: src/LogbookDialog.cpp:137 src/LogbookDialog.cpp:668
+#: src/LogbookDialog.cpp:859 src/LogbookDialog.cpp:1665
+#: src/LogbookDialog.cpp:1791 src/LogbookDialog.cpp:1908
+#: src/LogbookDialog.cpp:7348 src/LogbookDialog.cpp:138
+#: src/LogbookDialog.cpp:674 src/LogbookDialog.cpp:865
+#: src/LogbookDialog.cpp:1661 src/LogbookDialog.cpp:1787
+#: src/LogbookDialog.cpp:1904 src/LogbookDialog.cpp:7347
+#: ../src/LogbookDialog.cpp:138 ../src/LogbookDialog.cpp:675
+#: ../src/LogbookDialog.cpp:866 ../src/LogbookDialog.cpp:1662
+#: ../src/LogbookDialog.cpp:1788 ../src/LogbookDialog.cpp:1905
+#: ../src/LogbookDialog.cpp:7348
 msgid "Edit Layout"
 msgstr "Layout editieren"
 
 #: src/LogbookDialog.cpp:176 src/LogbookDialog.cpp:863
+#: src/LogbookDialog.cpp:179 src/LogbookDialog.cpp:869
+#: ../src/LogbookDialog.cpp:179 ../src/LogbookDialog.cpp:870
 msgid "HTML"
 msgstr "HTML"
 
 #: src/LogbookDialog.cpp:180 src/LogbookDialog.cpp:867
+#: src/LogbookDialog.cpp:183 src/LogbookDialog.cpp:873
+#: ../src/LogbookDialog.cpp:183 ../src/LogbookDialog.cpp:874
 msgid "ODT"
 msgstr ""
 
-#: src/LogbookDialog.cpp:183 src/LogbookDialog.cpp:679 src/LogbookDialog.cpp:870
-#: src/LogbookDialog.cpp:1235 src/LogbookDialog.cpp:1676
-#: src/LogbookDialog.cpp:1802 src/LogbookDialog.cpp:1919
+#: src/LogbookDialog.cpp:183 src/LogbookDialog.cpp:679
+#: src/LogbookDialog.cpp:870 src/LogbookDialog.cpp:1235
+#: src/LogbookDialog.cpp:1676 src/LogbookDialog.cpp:1802
+#: src/LogbookDialog.cpp:1919 src/LogbookDialog.cpp:186
+#: src/LogbookDialog.cpp:685 src/LogbookDialog.cpp:876
+#: src/LogbookDialog.cpp:1231 src/LogbookDialog.cpp:1672
+#: src/LogbookDialog.cpp:1798 src/LogbookDialog.cpp:1915
+#: ../src/LogbookDialog.cpp:186 ../src/LogbookDialog.cpp:686
+#: ../src/LogbookDialog.cpp:877 ../src/LogbookDialog.cpp:1232
+#: ../src/LogbookDialog.cpp:1673 ../src/LogbookDialog.cpp:1799
+#: ../src/LogbookDialog.cpp:1916
 msgid "View"
 msgstr "Zeige"
 
-#: src/LogbookDialog.cpp:184 src/LogbookDialog.cpp:680 src/LogbookDialog.cpp:871
-#: src/LogbookDialog.cpp:1236 src/LogbookDialog.cpp:1677
-#: src/LogbookDialog.cpp:1803 src/LogbookDialog.cpp:1920
+#: src/LogbookDialog.cpp:184 src/LogbookDialog.cpp:680
+#: src/LogbookDialog.cpp:871 src/LogbookDialog.cpp:1236
+#: src/LogbookDialog.cpp:1677 src/LogbookDialog.cpp:1803
+#: src/LogbookDialog.cpp:1920 src/LogbookDialog.cpp:187
+#: src/LogbookDialog.cpp:686 src/LogbookDialog.cpp:877
+#: src/LogbookDialog.cpp:1232 src/LogbookDialog.cpp:1673
+#: src/LogbookDialog.cpp:1799 src/LogbookDialog.cpp:1916
+#: ../src/LogbookDialog.cpp:187 ../src/LogbookDialog.cpp:687
+#: ../src/LogbookDialog.cpp:878 ../src/LogbookDialog.cpp:1233
+#: ../src/LogbookDialog.cpp:1674 ../src/LogbookDialog.cpp:1800
+#: ../src/LogbookDialog.cpp:1917
 msgid "View data in browser (HTML) or Openoffice/LibreOffice (ODT)"
 msgstr "Sehen Sie Ihre Daten im Browser(HTML) oder Open/Libreoffice (ODT) an"
 
-#: src/LogbookDialog.cpp:192
-msgid "Create a new logbook\n"
+#: src/LogbookDialog.cpp:192 src/LogbookDialog.cpp:195
+#: ../src/LogbookDialog.cpp:195
+msgid ""
+"Create a new logbook\n"
 "the active logbook is saved with today's date\n"
 "and can be viewed with Button \"Select Logbook\""
-msgstr "Erstellt ein neues Logbuch\n"
+msgstr ""
+"Erstellt ein neues Logbuch\n"
 "das aktive Logbuch wird mit dem heutigen Datum gespeichert\n"
 "und kann über den Button \"Wähle Logbuch\" angezeigt werden."
 
-#: src/LogbookDialog.cpp:197
-msgid "Select a old logbook\n"
+#: src/LogbookDialog.cpp:197 src/LogbookDialog.cpp:200
+#: ../src/LogbookDialog.cpp:200
+msgid ""
+"Select a old logbook\n"
 "Everytime a new logbook is created, you'll \n"
 "find the active logbook as old logbook here"
-msgstr "Wählen Sie ein altes Logbuch aus.\n"
+msgstr ""
+"Wählen Sie ein altes Logbuch aus.\n"
 "Immer wenn ein neues Logbuch erstellt wird,\n"
 "finden Sie das aktive Logbuch als neues Logbuch hier "
 
-#: src/LogbookDialog.cpp:205
+#: src/LogbookDialog.cpp:205 src/LogbookDialog.cpp:208
+#: ../src/LogbookDialog.cpp:208
 msgid "Show/Hide Statusbar"
 msgstr "Ein-/Ausblenden der Statuszeile"
 
-#: src/LogbookDialog.cpp:210
+#: src/LogbookDialog.cpp:210 src/LogbookDialog.cpp:213
+#: ../src/LogbookDialog.cpp:213
 msgid "Help"
 msgstr "Hilfe"
 
-#: src/LogbookDialog.cpp:225
+#: src/LogbookDialog.cpp:225 src/LogbookDialog.cpp:231
+#: ../src/LogbookDialog.cpp:232
 msgid "Set Timer"
 msgstr "Timerintervall"
 
-#: src/LogbookDialog.cpp:226
+#: src/LogbookDialog.cpp:226 src/LogbookDialog.cpp:232
+#: ../src/LogbookDialog.cpp:233
 msgid "Set the interval for the timer"
 msgstr "Timerintervall für den Timer setzen"
 
 #: src/LogbookDialog.cpp:231 src/LogbookDialog.cpp:236
-#: src/LogbookOptions.cpp:334
+#: src/LogbookOptions.cpp:334 src/LogbookDialog.cpp:237
+#: src/LogbookDialog.cpp:242 src/LogbookOptions.cpp:348
+#: ../src/LogbookDialog.cpp:238 ../src/LogbookDialog.cpp:243
+#: ../src/LogbookOptions.cpp:348
 msgid "Timer"
 msgstr "Timer an/aus"
 
-#: src/LogbookDialog.cpp:244 src/LogbookDialog.cpp:249 src/LogbookDialog.cpp:386
-#: src/LogbookOptions.cpp:354
+#: src/LogbookDialog.cpp:244 src/LogbookDialog.cpp:249
+#: src/LogbookDialog.cpp:386 src/LogbookOptions.cpp:354
+#: src/FastAccessDialog.cpp:278 src/LogbookDialog.cpp:250
+#: src/LogbookDialog.cpp:255 src/LogbookDialog.cpp:392
+#: src/LogbookOptions.cpp:368 ../src/FastAccessDialog.cpp:278
+#: ../src/LogbookDialog.cpp:251 ../src/LogbookDialog.cpp:256
+#: ../src/LogbookDialog.cpp:393 ../src/LogbookOptions.cpp:368
 msgid "Watch"
 msgstr "Wache"
 
 #: src/LogbookDialog.cpp:258 src/LogbookDialog.cpp:263
-#: src/LogbookOptions.cpp:344
+#: src/LogbookOptions.cpp:344 src/LogbookDialog.cpp:264
+#: src/LogbookDialog.cpp:269 src/LogbookOptions.cpp:358
+#: ../src/LogbookDialog.cpp:265 ../src/LogbookDialog.cpp:270
+#: ../src/LogbookOptions.cpp:358
 msgid "Waypoint"
 msgstr "Wegpunkt"
 
-#: src/LogbookDialog.cpp:272 src/LogbookDialog.cpp:277 src/LogbookDialog.cpp:387
-#: src/LogbookDialog.cpp:759 src/LogbookOptions.cpp:365
-#: src/LogbookOptions.cpp:631
+#: src/LogbookDialog.cpp:272 src/LogbookDialog.cpp:277
+#: src/LogbookDialog.cpp:387 src/LogbookDialog.cpp:759
+#: src/LogbookOptions.cpp:365 src/LogbookOptions.cpp:631
+#: src/LogbookDialog.cpp:278 src/LogbookDialog.cpp:283
+#: src/LogbookDialog.cpp:393 src/LogbookDialog.cpp:765
+#: src/LogbookOptions.cpp:379 src/LogbookOptions.cpp:645
+#: ../src/LogbookDialog.cpp:279 ../src/LogbookDialog.cpp:284
+#: ../src/LogbookDialog.cpp:394 ../src/LogbookDialog.cpp:766
+#: ../src/LogbookOptions.cpp:379 ../src/LogbookOptions.cpp:645
 msgid "Distance"
 msgstr "Distanz"
 
-#: src/LogbookDialog.cpp:283
-msgid "Set the desired distance in NM\n"
+#: src/LogbookDialog.cpp:283 src/LogbookDialog.cpp:289
+#: ../src/LogbookDialog.cpp:290
+msgid ""
+"Set the desired distance in NM\n"
 " = (Track made good)"
-msgstr "Setze die gewünschte Distanz in sm ein\n"
+msgstr ""
+"Setze die gewünschte Distanz in sm ein\n"
 " = (Track made good)"
 
 #: src/LogbookDialog.cpp:291 src/LogbookDialog.cpp:296
+#: src/LogbookDialog.cpp:297 src/LogbookDialog.cpp:302
+#: ../src/LogbookDialog.cpp:298 ../src/LogbookDialog.cpp:303
 msgid "Course"
 msgstr "Kurs"
 
-#: src/LogbookDialog.cpp:301
-msgid "Set desired Degrees\n"
+#: src/LogbookDialog.cpp:301 src/LogbookDialog.cpp:307
+#: ../src/LogbookDialog.cpp:308
+msgid ""
+"Set desired Degrees\n"
 "if the course changes by this amount\n"
 "a course-changed-event occurs"
-msgstr "Setze gewünschte Gradzahl ein\n"
+msgstr ""
+"Setze gewünschte Gradzahl ein\n"
 "Wenn sich der Kurs um diesen Betrag ändert,\n"
 "erfolgt ein Logbucheintrag (course-change-event)."
 
-#: src/LogbookDialog.cpp:306
-msgid "Set desired delay in minutes\n"
+#: src/LogbookDialog.cpp:306 src/LogbookDialog.cpp:312
+#: ../src/LogbookDialog.cpp:313
+msgid ""
+"Set desired delay in minutes\n"
 "It's a good idea to set here a value > 0\n"
 "to find the right wind."
-msgstr "Setze die gewünschte Verzögerung in Minuten\n"
+msgstr ""
+"Setze die gewünschte Verzögerung in Minuten\n"
 "Es ist immer ratsam, hier einnen Wert > 0 einzusetzen,\n"
 "um z.B. den richtigen Kurs zum Wind zu finden. "
 
 #: src/LogbookDialog.cpp:313 src/LogbookDialog.cpp:2922
-#: src/LogbookDialog.cpp:3076
+#: src/LogbookDialog.cpp:3076 src/LogbookDialog.cpp:319
+#: src/LogbookDialog.cpp:2921 src/LogbookDialog.cpp:3075
+#: ../src/LogbookDialog.cpp:320 ../src/LogbookDialog.cpp:2922
+#: ../src/LogbookDialog.cpp:3076
 msgid "Stop"
 msgstr ""
 
-#: src/LogbookDialog.cpp:315
+#: src/LogbookDialog.cpp:315 src/LogbookDialog.cpp:321
+#: ../src/LogbookDialog.cpp:322
 msgid "Suspend/Resume running event/s"
 msgstr "Unterbrechen/Wiederaufnehmen von Ereignissen"
 
 #: src/LogbookDialog.cpp:382 src/LogbookDialog.cpp:755
 #: src/LogbookDialog.cpp:4393 src/LogbookOptions.cpp:1001
+#: src/LogbookDialog.cpp:388 src/LogbookDialog.cpp:761
+#: src/LogbookDialog.cpp:4392 src/LogbookOptions.cpp:1015
+#: ../src/LogbookDialog.cpp:389 ../src/LogbookDialog.cpp:762
+#: ../src/LogbookDialog.cpp:4393 ../src/LogbookOptions.cpp:1015
 msgid "Route"
 msgstr "Route"
 
 #: src/LogbookDialog.cpp:384 src/LogbookDialog.cpp:1113
+#: src/LogbookDialog.cpp:390 src/LogbookDialog.cpp:1109
+#: ../src/LogbookDialog.cpp:391 ../src/LogbookDialog.cpp:1110
 msgid "Time"
 msgstr "Zeit"
 
-#: src/LogbookDialog.cpp:385
+#: src/LogbookDialog.cpp:385 src/LogbookDialog.cpp:391
+#: ../src/LogbookDialog.cpp:392
 msgid "Status"
 msgstr "Status"
 
-#: src/LogbookDialog.cpp:388
+#: src/LogbookDialog.cpp:388 src/LogbookDialog.cpp:394
+#: ../src/LogbookDialog.cpp:395
 msgid "DistanceTotal"
 msgstr "Distanz gesamt"
 
-#: src/LogbookDialog.cpp:390
+#: src/LogbookDialog.cpp:390 src/LogbookDialog.cpp:396
+#: ../src/LogbookDialog.cpp:397
 msgid "COG (T)"
 msgstr "KüG"
 
 #: src/LogbookDialog.cpp:391 src/LogbookOptions.cpp:301
-#: src/LogbookOptions.cpp:688
+#: src/LogbookOptions.cpp:688 src/LogbookDialog.cpp:397
+#: src/LogbookOptions.cpp:702 ../src/LogbookDialog.cpp:398
+#: ../src/LogbookOptions.cpp:301 ../src/LogbookOptions.cpp:702
 msgid "Heading"
 msgstr "KdW"
 
-#: src/LogbookDialog.cpp:392
+#: src/LogbookDialog.cpp:392 src/LogbookDialog.cpp:398
+#: ../src/LogbookDialog.cpp:399
 msgid "SOG"
 msgstr "FüG"
 
-#: src/LogbookDialog.cpp:393
+#: src/LogbookDialog.cpp:393 src/LogbookDialog.cpp:399
+#: ../src/LogbookDialog.cpp:400
 msgid "STW"
 msgstr "FdW"
 
-#: src/LogbookDialog.cpp:394
+#: src/LogbookDialog.cpp:394 src/LogbookDialog.cpp:400
+#: ../src/LogbookDialog.cpp:401
 msgid "Depth"
 msgstr "Tiefe"
 
 #: src/LogbookDialog.cpp:395 src/LogbookDialog.cpp:587
-#: src/LogbookDialog.cpp:1589
+#: src/LogbookDialog.cpp:1589 src/LogbookDialog.cpp:401
+#: src/LogbookDialog.cpp:593 src/LogbookDialog.cpp:1585
+#: ../src/LogbookDialog.cpp:402 ../src/LogbookDialog.cpp:594
+#: ../src/LogbookDialog.cpp:1586
 msgid "Remarks"
 msgstr "Notizen"
 
@@ -797,1260 +1072,1667 @@ msgstr "Notizen"
 #: src/LogbookDialog.cpp:1603 src/LogbookDialog.cpp:1741
 #: src/LogbookDialog.cpp:1858 src/LogbookDialog.cpp:1975
 #: src/LogbookDialog.cpp:8812 src/LogbookDialog.cpp:8875
+#: src/LogbookDialog.cpp:416 src/LogbookDialog.cpp:952
+#: src/LogbookDialog.cpp:1599 src/LogbookDialog.cpp:1737
+#: src/LogbookDialog.cpp:1854 src/LogbookDialog.cpp:1971
+#: src/LogbookDialog.cpp:8811 src/LogbookDialog.cpp:8874
+#: ../src/LogbookDialog.cpp:417 ../src/LogbookDialog.cpp:953
+#: ../src/LogbookDialog.cpp:1600 ../src/LogbookDialog.cpp:1738
+#: ../src/LogbookDialog.cpp:1855 ../src/LogbookDialog.cpp:1972
+#: ../src/LogbookDialog.cpp:8812 ../src/LogbookDialog.cpp:8875
 msgid "Delete Row"
 msgstr "Lösche Zeile"
 
-#: src/LogbookDialog.cpp:416 src/LogbookDialog.cpp:806 src/LogbookDialog.cpp:960
+#: src/LogbookDialog.cpp:416 src/LogbookDialog.cpp:806
+#: src/LogbookDialog.cpp:960 src/LogbookDialog.cpp:422
+#: src/LogbookDialog.cpp:812 src/LogbookDialog.cpp:956
+#: ../src/LogbookDialog.cpp:423 ../src/LogbookDialog.cpp:813
+#: ../src/LogbookDialog.cpp:957
 msgid "Show hidden columns"
 msgstr "Zeige versteckte Spalten"
 
 #: src/LogbookDialog.cpp:420 src/LogbookDialog.cpp:810
+#: src/LogbookDialog.cpp:426 src/LogbookDialog.cpp:816
+#: ../src/LogbookDialog.cpp:427 ../src/LogbookDialog.cpp:817
 msgid "Hide column"
 msgstr "Spalte ausblenden"
 
-#: src/LogbookDialog.cpp:430
+#: src/LogbookDialog.cpp:430 src/LogbookDialog.cpp:436
+#: ../src/LogbookDialog.cpp:437
 msgid "Shutdown Logbook"
 msgstr "Logbuch schließen"
 
-#: src/LogbookDialog.cpp:443
+#: src/LogbookDialog.cpp:443 src/LogbookDialog.cpp:449
+#: ../src/LogbookDialog.cpp:450
 msgid "Delete Rows"
 msgstr "Lösche Zeile/n"
 
-#: src/LogbookDialog.cpp:447
+#: src/LogbookDialog.cpp:447 src/LogbookDialog.cpp:453
+#: ../src/LogbookDialog.cpp:454
 msgid "Flip Day<->Month"
 msgstr "Tausche Tag<->Monat"
 
 #: src/LogbookDialog.cpp:450 src/LogbookOptions.cpp:597
+#: src/LogbookDialog.cpp:456 src/LogbookOptions.cpp:611
+#: ../src/LogbookDialog.cpp:457 ../src/LogbookOptions.cpp:611
 msgid "Navigation"
 msgstr "Navigation"
 
 #: src/LogbookDialog.cpp:483 src/LogbookOptions.cpp:713
+#: src/LogbookDialog.cpp:489 src/LogbookOptions.cpp:727
+#: ../src/LogbookDialog.cpp:490 ../src/LogbookOptions.cpp:727
 msgid "Barometer"
 msgstr "Barometer"
 
-#: src/LogbookDialog.cpp:484
+#: src/LogbookDialog.cpp:484 src/LogbookDialog.cpp:490
+#: ../src/LogbookDialog.cpp:491
 msgid "Hygrometer"
 msgstr ""
 
-#: src/LogbookDialog.cpp:485
+#: src/LogbookDialog.cpp:485 src/LogbookDialog.cpp:491
+#: ../src/LogbookDialog.cpp:492
 msgid "Air"
 msgstr "Luft"
 
 #: src/LogbookDialog.cpp:486 src/LogbookDialog.cpp:585
-#: src/LogbookOptions.cpp:465
+#: src/LogbookOptions.cpp:465 src/LogbookDialog.cpp:492
+#: src/LogbookDialog.cpp:591 src/LogbookOptions.cpp:479
+#: ../src/LogbookDialog.cpp:493 ../src/LogbookDialog.cpp:592
+#: ../src/LogbookOptions.cpp:479
 msgid "Water"
 msgstr "Wasser"
 
-#: src/LogbookDialog.cpp:487
+#: src/LogbookDialog.cpp:487 src/LogbookDialog.cpp:493
+#: ../src/LogbookDialog.cpp:494
 msgid "TWA"
 msgstr ""
 
-#: src/LogbookDialog.cpp:491
-msgid "TWS\n"
+#: src/LogbookDialog.cpp:491 src/LogbookDialog.cpp:497
+#: ../src/LogbookDialog.cpp:498
+msgid ""
+"TWS\n"
 "Min|Avg|Max"
 msgstr ""
 
 #: src/LogbookDialog.cpp:492 src/LogbookDialog.cpp:498
+#: src/LogbookDialog.cpp:504 ../src/LogbookDialog.cpp:499
+#: ../src/LogbookDialog.cpp:505
 msgid "AWA"
 msgstr ""
 
-#: src/LogbookDialog.cpp:493
-msgid "AWS\n"
+#: src/LogbookDialog.cpp:493 src/LogbookDialog.cpp:499
+#: ../src/LogbookDialog.cpp:500
+msgid ""
+"AWS\n"
 "Min|Avg|Max"
 msgstr ""
 
-#: src/LogbookDialog.cpp:497
+#: src/LogbookDialog.cpp:497 src/LogbookDialog.cpp:503
+#: ../src/LogbookDialog.cpp:504
 msgid "TWS"
 msgstr ""
 
-#: src/LogbookDialog.cpp:499
+#: src/LogbookDialog.cpp:499 src/LogbookDialog.cpp:505
+#: ../src/LogbookDialog.cpp:506
 msgid "AWS"
 msgstr ""
 
-#: src/LogbookDialog.cpp:501
+#: src/LogbookDialog.cpp:501 src/LogbookDialog.cpp:507
+#: ../src/LogbookDialog.cpp:508
 msgid "Current"
 msgstr "Strom"
 
-#: src/LogbookDialog.cpp:502
+#: src/LogbookDialog.cpp:502 src/LogbookDialog.cpp:508
+#: ../src/LogbookDialog.cpp:509
 msgid "C/Strength"
 msgstr "Stromstärke"
 
-#: src/LogbookDialog.cpp:503
+#: src/LogbookDialog.cpp:503 src/LogbookDialog.cpp:509
+#: ../src/LogbookDialog.cpp:510
 msgid "Wave"
 msgstr "Wellenhöhe"
 
-#: src/LogbookDialog.cpp:504
+#: src/LogbookDialog.cpp:504 src/LogbookDialog.cpp:510
+#: ../src/LogbookDialog.cpp:511
 msgid "Swell"
 msgstr "Schwell"
 
 #: src/LogbookDialog.cpp:505 src/LogbookOptions.cpp:707
+#: src/LogbookDialog.cpp:511 src/LogbookOptions.cpp:721
+#: ../src/LogbookDialog.cpp:512 ../src/LogbookOptions.cpp:721
 msgid "Weather"
 msgstr "Wetter"
 
-#: src/LogbookDialog.cpp:506
+#: src/LogbookDialog.cpp:506 src/LogbookDialog.cpp:512
+#: ../src/LogbookDialog.cpp:513
 msgid "Clouds"
 msgstr "Wolken"
 
-#: src/LogbookDialog.cpp:507
+#: src/LogbookDialog.cpp:507 src/LogbookDialog.cpp:513
+#: ../src/LogbookDialog.cpp:514
 msgid "Visibility"
 msgstr "Sicht"
 
-#: src/LogbookDialog.cpp:524
+#: src/LogbookDialog.cpp:524 src/LogbookDialog.cpp:530
+#: ../src/LogbookDialog.cpp:531
 msgid "Meteo"
 msgstr "Wetter"
 
 #: src/LogbookDialog.cpp:566 src/LogbookDialog.cpp:764
+#: src/LogbookDialog.cpp:572 src/LogbookDialog.cpp:770
+#: ../src/LogbookDialog.cpp:573 ../src/LogbookDialog.cpp:771
 msgid "Engine #1"
 msgstr "Maschine #1"
 
-#: src/LogbookDialog.cpp:567
+#: src/LogbookDialog.cpp:567 src/LogbookDialog.cpp:573
+#: ../src/LogbookDialog.cpp:574
 msgid "#1 Total"
 msgstr "#1 gesamt"
 
 #: src/LogbookDialog.cpp:569 src/LogbookDialog.cpp:765
+#: src/LogbookDialog.cpp:575 src/LogbookDialog.cpp:771
+#: ../src/LogbookDialog.cpp:576 ../src/LogbookDialog.cpp:772
 msgid "Engine #2"
 msgstr "Maschine #2"
 
-#: src/LogbookDialog.cpp:570
+#: src/LogbookDialog.cpp:570 src/LogbookDialog.cpp:576
+#: ../src/LogbookDialog.cpp:577
 msgid "#2 Total"
 msgstr "#2 gesamt"
 
 #: src/LogbookDialog.cpp:572 src/LogbookDialog.cpp:766
-#: src/LogbookOptions.cpp:509
+#: src/LogbookOptions.cpp:509 src/LogbookDialog.cpp:578
+#: src/LogbookDialog.cpp:772 src/LogbookOptions.cpp:523
+#: ../src/LogbookDialog.cpp:579 ../src/LogbookDialog.cpp:773
+#: ../src/LogbookOptions.cpp:523
 msgid "Fuel"
 msgstr "Treibstoff"
 
-#: src/LogbookDialog.cpp:573
+#: src/LogbookDialog.cpp:573 src/LogbookDialog.cpp:579
+#: ../src/LogbookDialog.cpp:580
 msgid "FuelTotal"
 msgstr "Treibstoff gesamt"
 
 #: src/LogbookDialog.cpp:574 src/LogbookOptions.cpp:1268
+#: src/FastAccessDialog.cpp:275 src/LogbookDialog.cpp:580
+#: src/LogbookOptions.cpp:1277 ../src/FastAccessDialog.cpp:275
+#: ../src/LogbookDialog.cpp:581 ../src/LogbookOptions.cpp:1277
 msgid "Sails"
 msgstr "Segel"
 
-#: src/LogbookDialog.cpp:575
+#: src/LogbookDialog.cpp:575 src/LogbookDialog.cpp:581
+#: ../src/LogbookDialog.cpp:582
 msgid "Reef"
 msgstr "Reff"
 
 #: src/LogbookDialog.cpp:576 src/LogbookDialog.cpp:767
+#: src/LogbookDialog.cpp:582 src/LogbookDialog.cpp:773
+#: ../src/LogbookDialog.cpp:583 ../src/LogbookDialog.cpp:774
 msgid "Generator"
 msgstr ""
 
-#: src/LogbookDialog.cpp:577
+#: src/LogbookDialog.cpp:577 src/LogbookDialog.cpp:583
+#: ../src/LogbookDialog.cpp:584
 msgid "Gen. total"
 msgstr "Gen. gesamt"
 
 #: src/LogbookDialog.cpp:578 src/LogbookOptions.cpp:548
+#: src/LogbookDialog.cpp:584 src/LogbookOptions.cpp:562
+#: ../src/LogbookDialog.cpp:585 ../src/LogbookOptions.cpp:562
 msgid "Bank #1"
 msgstr ""
 
-#: src/LogbookDialog.cpp:579
+#: src/LogbookDialog.cpp:579 src/LogbookDialog.cpp:585
+#: ../src/LogbookDialog.cpp:586
 msgid "AH #1 Total"
 msgstr "AH #1 gesamt"
 
 #: src/LogbookDialog.cpp:580 src/LogbookOptions.cpp:560
+#: src/LogbookDialog.cpp:586 src/LogbookOptions.cpp:574
+#: ../src/LogbookDialog.cpp:587 ../src/LogbookOptions.cpp:574
 msgid "Bank #2"
 msgstr ""
 
-#: src/LogbookDialog.cpp:581
+#: src/LogbookDialog.cpp:581 src/LogbookDialog.cpp:587
+#: ../src/LogbookDialog.cpp:588
 msgid "AH #2 Total"
 msgstr "AH #2 gesamt"
 
 #: src/LogbookDialog.cpp:582 src/LogbookDialog.cpp:772
-#: src/LogbookOptions.cpp:487
+#: src/LogbookOptions.cpp:487 src/LogbookDialog.cpp:588
+#: src/LogbookDialog.cpp:778 src/LogbookOptions.cpp:501
+#: ../src/LogbookDialog.cpp:589 ../src/LogbookDialog.cpp:779
+#: ../src/LogbookOptions.cpp:501
 msgid "Watermaker"
 msgstr "Wassermacher"
 
-#: src/LogbookDialog.cpp:583
+#: src/LogbookDialog.cpp:583 src/LogbookDialog.cpp:589
+#: ../src/LogbookDialog.cpp:590
 msgid "W-Total"
 msgstr "W-Gesamt"
 
-#: src/LogbookDialog.cpp:584
+#: src/LogbookDialog.cpp:584 src/LogbookDialog.cpp:590
+#: ../src/LogbookDialog.cpp:591
 msgid "W-Output"
 msgstr "W-Ausstoß"
 
-#: src/LogbookDialog.cpp:586
+#: src/LogbookDialog.cpp:586 src/LogbookDialog.cpp:592
+#: ../src/LogbookDialog.cpp:593
 msgid "WaterTotal"
 msgstr "Wasser gesamt"
 
-#: src/LogbookDialog.cpp:588
+#: src/LogbookDialog.cpp:588 src/LogbookDialog.cpp:594
+#: ../src/LogbookDialog.cpp:595
 msgid "RouteID"
 msgstr ""
 
-#: src/LogbookDialog.cpp:589
+#: src/LogbookDialog.cpp:589 src/LogbookDialog.cpp:595
+#: ../src/LogbookDialog.cpp:596
 msgid "TrackID"
 msgstr ""
 
-#: src/LogbookDialog.cpp:606
+#: src/LogbookDialog.cpp:606 src/LogbookDialog.cpp:612
+#: ../src/LogbookDialog.cpp:613
 msgid "Motor/Sails"
 msgstr "Maschine/Segel"
 
-#: src/LogbookDialog.cpp:645
+#: src/LogbookDialog.cpp:645 src/LogbookDialog.cpp:651
+#: ../src/LogbookDialog.cpp:652
 msgid "export your Overview-data as HTML or ODT"
 msgstr "Exportieren Sie Ihre \"Übersicht\"-Daten in HTML oder ODT"
 
-#: src/LogbookDialog.cpp:698
+#: src/LogbookDialog.cpp:698 src/LogbookDialog.cpp:704
+#: ../src/LogbookDialog.cpp:705
 msgid "Select one of the old logbooks"
 msgstr "Wählen Sie eines der alten Logbücher"
 
 #: src/LogbookDialog.cpp:756 src/LogbookDialog.cpp:999
 #: src/LogbookDialog.cpp:2928 src/LogbookDialog.cpp:3063
+#: src/LogbookDialog.cpp:762 src/LogbookDialog.cpp:995
+#: src/LogbookDialog.cpp:2927 src/LogbookDialog.cpp:3062
+#: ../src/LogbookDialog.cpp:763 ../src/LogbookDialog.cpp:996
+#: ../src/LogbookDialog.cpp:2928 ../src/LogbookDialog.cpp:3063
 msgid "Start"
 msgstr ""
 
-#: src/LogbookDialog.cpp:757
+#: src/LogbookDialog.cpp:757 src/LogbookDialog.cpp:763
+#: ../src/LogbookDialog.cpp:764
 msgid "End"
 msgstr "Ende"
 
-#: src/LogbookDialog.cpp:758
+#: src/LogbookDialog.cpp:758 src/LogbookDialog.cpp:764
+#: ../src/LogbookDialog.cpp:765
 msgid "Total Time"
 msgstr "Reisezeit"
 
-#: src/LogbookDialog.cpp:760
+#: src/LogbookDialog.cpp:760 src/LogbookDialog.cpp:766
+#: ../src/LogbookDialog.cpp:767
 msgid "Distance p. Day"
 msgstr "Distanz p. Tag"
 
-#: src/LogbookDialog.cpp:761
+#: src/LogbookDialog.cpp:761 src/LogbookDialog.cpp:767
+#: ../src/LogbookDialog.cpp:768
 msgid "Best Dist. p. Day"
 msgstr "Beste Dist. p. Tag"
 
-#: src/LogbookDialog.cpp:762
+#: src/LogbookDialog.cpp:762 src/LogbookDialog.cpp:768
+#: ../src/LogbookDialog.cpp:769
 msgid "Speed Avg."
 msgstr "Fahrt durchsch."
 
-#: src/LogbookDialog.cpp:763
+#: src/LogbookDialog.cpp:763 src/LogbookDialog.cpp:769
+#: ../src/LogbookDialog.cpp:770
 msgid "Speed Max."
 msgstr "Fahrt max."
 
-#: src/LogbookDialog.cpp:768
+#: src/LogbookDialog.cpp:768 src/LogbookDialog.cpp:774
+#: ../src/LogbookDialog.cpp:775
 msgid "Bank #1 gen."
 msgstr "Bank #1 ges."
 
-#: src/LogbookDialog.cpp:769
+#: src/LogbookDialog.cpp:769 src/LogbookDialog.cpp:775
+#: ../src/LogbookDialog.cpp:776
 msgid "Bank #1 used"
 msgstr "Bank #1 Verbrauch"
 
-#: src/LogbookDialog.cpp:770
+#: src/LogbookDialog.cpp:770 src/LogbookDialog.cpp:776
+#: ../src/LogbookDialog.cpp:777
 msgid "Bank #2 gen."
 msgstr "Bank #2 ges."
 
-#: src/LogbookDialog.cpp:771
+#: src/LogbookDialog.cpp:771 src/LogbookDialog.cpp:777
+#: ../src/LogbookDialog.cpp:778
 msgid "Bank #2 used"
 msgstr "Bank #2 Verbrauch"
 
-#: src/LogbookDialog.cpp:773
+#: src/LogbookDialog.cpp:773 src/LogbookDialog.cpp:779
+#: ../src/LogbookDialog.cpp:780
 msgid "Waterm. Outp"
 msgstr "Wasserm. Ausst."
 
-#: src/LogbookDialog.cpp:774
+#: src/LogbookDialog.cpp:774 src/LogbookDialog.cpp:780
+#: ../src/LogbookDialog.cpp:781
 msgid "Water used"
 msgstr "Wasserverbrauch"
 
-#: src/LogbookDialog.cpp:775
+#: src/LogbookDialog.cpp:775 src/LogbookDialog.cpp:781
+#: ../src/LogbookDialog.cpp:782
 msgid "TWA Avg."
 msgstr ""
 
-#: src/LogbookDialog.cpp:776
+#: src/LogbookDialog.cpp:776 src/LogbookDialog.cpp:782
+#: ../src/LogbookDialog.cpp:783
 msgid "TWS Avg."
 msgstr ""
 
-#: src/LogbookDialog.cpp:777
+#: src/LogbookDialog.cpp:777 src/LogbookDialog.cpp:783
+#: ../src/LogbookDialog.cpp:784
 msgid "TWS Max."
 msgstr ""
 
-#: src/LogbookDialog.cpp:778
+#: src/LogbookDialog.cpp:778 src/LogbookDialog.cpp:784
+#: ../src/LogbookDialog.cpp:785
 msgid "Currentdirection Avg."
 msgstr "Stromrichtung durchsch."
 
-#: src/LogbookDialog.cpp:779
+#: src/LogbookDialog.cpp:779 src/LogbookDialog.cpp:785
+#: ../src/LogbookDialog.cpp:786
 msgid "Current Avg."
 msgstr "Strom durchsch."
 
-#: src/LogbookDialog.cpp:780
+#: src/LogbookDialog.cpp:780 src/LogbookDialog.cpp:786
+#: ../src/LogbookDialog.cpp:787
 msgid "Current Max."
 msgstr "Strom max."
 
-#: src/LogbookDialog.cpp:781
+#: src/LogbookDialog.cpp:781 src/LogbookDialog.cpp:787
+#: ../src/LogbookDialog.cpp:788
 msgid "Wave Avg."
 msgstr "Wellenhöhe durchschn."
 
-#: src/LogbookDialog.cpp:782
+#: src/LogbookDialog.cpp:782 src/LogbookDialog.cpp:788
+#: ../src/LogbookDialog.cpp:789
 msgid "Wave Max."
 msgstr "Wellen max."
 
-#: src/LogbookDialog.cpp:783
+#: src/LogbookDialog.cpp:783 src/LogbookDialog.cpp:789
+#: ../src/LogbookDialog.cpp:790
 msgid "Swell Avg."
 msgstr "Swell durchsch."
 
-#: src/LogbookDialog.cpp:784
+#: src/LogbookDialog.cpp:784 src/LogbookDialog.cpp:790
+#: ../src/LogbookDialog.cpp:791
 msgid "Swell Max."
 msgstr "Swell max."
 
-#: src/LogbookDialog.cpp:785
+#: src/LogbookDialog.cpp:785 src/LogbookDialog.cpp:791
+#: ../src/LogbookDialog.cpp:792
 msgid "Sails used mostly"
 msgstr "Segel meistens"
 
-#: src/LogbookDialog.cpp:786
+#: src/LogbookDialog.cpp:786 src/LogbookDialog.cpp:792
+#: ../src/LogbookDialog.cpp:793
 msgid "Path"
 msgstr "Pfade"
 
-#: src/LogbookDialog.cpp:802
+#: src/LogbookDialog.cpp:802 src/LogbookDialog.cpp:808
+#: ../src/LogbookDialog.cpp:809
 msgid "Goto Route"
 msgstr "Gehe zu Route"
 
-#: src/LogbookDialog.cpp:818
+#: src/LogbookDialog.cpp:818 src/LogbookDialog.cpp:824
+#: ../src/LogbookDialog.cpp:825
 msgid "Overview"
 msgstr "Übersicht"
 
-#: src/LogbookDialog.cpp:829
+#: src/LogbookDialog.cpp:829 src/LogbookDialog.cpp:835
+#: ../src/LogbookDialog.cpp:836
 msgid "Add Crew"
 msgstr "neues Crewmitglied"
 
-#: src/LogbookDialog.cpp:830
+#: src/LogbookDialog.cpp:830 src/LogbookDialog.cpp:836
+#: ../src/LogbookDialog.cpp:837
 msgid "Add a new Crewmember"
 msgstr "Fügt ein neues Crewmitglied hinzu"
 
-#: src/LogbookDialog.cpp:835
-msgid "export your crew-data as:\n"
+#: src/LogbookDialog.cpp:835 src/LogbookDialog.cpp:841
+#: ../src/LogbookDialog.cpp:842
+msgid ""
+"export your crew-data as:\n"
 "HTML, ODT,  ODS, XML, CSV"
-msgstr "Exportieren Sie Ihre \"Crew\"-Daten in:\n"
+msgstr ""
+"Exportieren Sie Ihre \"Crew\"-Daten in:\n"
 "        HTML, ODT,  ODS, XML, CSV"
 
 #: src/LogbookDialog.cpp:878
 msgid "Copy to watch"
 msgstr "In die Wachliste kopieren"
 
-#: src/LogbookDialog.cpp:882
+#: src/LogbookDialog.cpp:882 src/LogbookOptions.cpp:317
+#: ../src/LogbookOptions.cpp:317
 msgid "Name in full"
 msgstr "Vor-/Zuname"
 
-#: src/LogbookDialog.cpp:882
+#: src/LogbookDialog.cpp:882 src/LogbookOptions.cpp:317
+#: ../src/LogbookOptions.cpp:317
 msgid "Firstname only"
 msgstr "nur Vorname"
 
-#: src/LogbookDialog.cpp:882
+#: src/LogbookDialog.cpp:882 src/LogbookOptions.cpp:317
+#: ../src/LogbookOptions.cpp:317
 msgid "Lastname only"
 msgstr "nur Nachname"
 
-#: src/LogbookDialog.cpp:928
+#: src/LogbookDialog.cpp:928 src/LogbookDialog.cpp:924
+#: ../src/LogbookDialog.cpp:925
 msgid "Onboard"
 msgstr "an Bord"
 
 #: src/LogbookDialog.cpp:929 src/LogbookDialog.cpp:1266
-#: src/LogbookOptions.cpp:1198
+#: src/LogbookOptions.cpp:1198 src/LogbookDialog.cpp:925
+#: src/LogbookDialog.cpp:1262 src/LogbookOptions.cpp:1207
+#: ../src/LogbookDialog.cpp:926 ../src/LogbookDialog.cpp:1263
+#: ../src/LogbookOptions.cpp:1207
 msgid "Name"
 msgstr ""
 
-#: src/LogbookDialog.cpp:930
+#: src/LogbookDialog.cpp:930 src/LogbookDialog.cpp:926
+#: ../src/LogbookDialog.cpp:927
 msgid "Birthname"
 msgstr "Geburtsname"
 
 #: src/LogbookDialog.cpp:931 src/LogbookDialog.cpp:1354
+#: src/LogbookDialog.cpp:927 src/LogbookDialog.cpp:1350
+#: ../src/LogbookDialog.cpp:928 ../src/LogbookDialog.cpp:1351
 msgid "Firstname"
 msgstr "Vorname"
 
 #: src/LogbookDialog.cpp:932 src/LogbookDialog.cpp:1956
+#: src/LogbookDialog.cpp:928 src/LogbookDialog.cpp:1952
+#: ../src/LogbookDialog.cpp:929 ../src/LogbookDialog.cpp:1953
 msgid "Title"
 msgstr "Titel"
 
-#: src/LogbookDialog.cpp:933
+#: src/LogbookDialog.cpp:933 src/LogbookDialog.cpp:929
+#: ../src/LogbookDialog.cpp:930
 msgid "Date of Birth"
 msgstr "Geburtstag"
 
-#: src/LogbookDialog.cpp:934
+#: src/LogbookDialog.cpp:934 src/LogbookDialog.cpp:930
+#: ../src/LogbookDialog.cpp:931
 msgid "Place of Birth"
 msgstr "Geburtsort"
 
-#: src/LogbookDialog.cpp:935
+#: src/LogbookDialog.cpp:935 src/LogbookDialog.cpp:931
+#: ../src/LogbookDialog.cpp:932
 msgid "Nationality"
 msgstr "Nationalität"
 
-#: src/LogbookDialog.cpp:936
+#: src/LogbookDialog.cpp:936 src/LogbookDialog.cpp:932
+#: ../src/LogbookDialog.cpp:933
 msgid "Passport-Nr"
 msgstr "Pass-Nr."
 
-#: src/LogbookDialog.cpp:937
+#: src/LogbookDialog.cpp:937 src/LogbookDialog.cpp:933
+#: ../src/LogbookDialog.cpp:934
 msgid "Issued in"
 msgstr "ausgestellt in"
 
-#: src/LogbookDialog.cpp:938
+#: src/LogbookDialog.cpp:938 src/LogbookDialog.cpp:934
+#: ../src/LogbookDialog.cpp:935
 msgid "Date of Issue"
 msgstr "ausgegeben am"
 
 #: src/LogbookDialog.cpp:939 src/LogbookDialog.cpp:1387
+#: src/LogbookDialog.cpp:935 src/LogbookDialog.cpp:1383
+#: ../src/LogbookDialog.cpp:936 ../src/LogbookDialog.cpp:1384
 msgid "Zip"
 msgstr "PLZ"
 
-#: src/LogbookDialog.cpp:940
+#: src/LogbookDialog.cpp:940 src/LogbookDialog.cpp:936
+#: ../src/LogbookDialog.cpp:937
 msgid "Country"
 msgstr "Land"
 
 #: src/LogbookDialog.cpp:941 src/LogbookDialog.cpp:1394
+#: src/LogbookDialog.cpp:937 src/LogbookDialog.cpp:1390
+#: ../src/LogbookDialog.cpp:938 ../src/LogbookDialog.cpp:1391
 msgid "Town"
 msgstr "Stadt"
 
 #: src/LogbookDialog.cpp:942 src/LogbookDialog.cpp:1380
+#: src/LogbookDialog.cpp:938 src/LogbookDialog.cpp:1376
+#: ../src/LogbookDialog.cpp:939 ../src/LogbookDialog.cpp:1377
 msgid "Street"
 msgstr "Strasse"
 
-#: src/LogbookDialog.cpp:966
+#: src/LogbookDialog.cpp:966 src/LogbookDialog.cpp:962
+#: ../src/LogbookDialog.cpp:963
 msgid "Show onboard only"
 msgstr "Zeige nur Crew an Bord"
 
-#: src/LogbookDialog.cpp:971
+#: src/LogbookDialog.cpp:971 src/LogbookDialog.cpp:967
+#: ../src/LogbookDialog.cpp:968
 msgid "Show all entries"
 msgstr "Zeige alle Einträge"
 
-#: src/LogbookDialog.cpp:977
+#: src/LogbookDialog.cpp:977 src/LogbookDialog.cpp:973
+#: ../src/LogbookDialog.cpp:974
 msgid "Sort ascending"
 msgstr "Sortierung aufsteigend"
 
-#: src/LogbookDialog.cpp:981
+#: src/LogbookDialog.cpp:981 src/LogbookDialog.cpp:977
+#: ../src/LogbookDialog.cpp:978
 msgid "Sort descending"
 msgstr "Sortierung absteigend"
 
-#: src/LogbookDialog.cpp:997
+#: src/LogbookDialog.cpp:997 src/LogbookDialog.cpp:993
+#: ../src/LogbookDialog.cpp:994
 msgid "Set Watchtimes"
 msgstr "Wachzeiten setzen"
 
-#: src/LogbookDialog.cpp:1004
+#: src/LogbookDialog.cpp:1004 src/LogbookDialog.cpp:1000
+#: ../src/LogbookDialog.cpp:1001
 msgid "Set the startdate of the sailing trip"
 msgstr "Setze das Startdatum des Törns ein"
 
-#: src/LogbookDialog.cpp:1010
+#: src/LogbookDialog.cpp:1010 src/LogbookDialog.cpp:1006
+#: ../src/LogbookDialog.cpp:1007
 msgid "Set the starttime of your sailing trip"
 msgstr "Setze die Startzeit des Törns ein"
 
-#: src/LogbookDialog.cpp:1014
+#: src/LogbookDialog.cpp:1014 src/LogbookDialog.cpp:1010
+#: ../src/LogbookDialog.cpp:1011
 msgid "Days"
 msgstr "Tag(e)"
 
-#: src/LogbookDialog.cpp:1019
+#: src/LogbookDialog.cpp:1019 src/LogbookDialog.cpp:1015
+#: ../src/LogbookDialog.cpp:1016
 msgid "Length of your sailing trip"
 msgstr "Dauer des Törns"
 
-#: src/LogbookDialog.cpp:1023
+#: src/LogbookDialog.cpp:1023 src/LogbookDialog.cpp:1019
+#: ../src/LogbookDialog.cpp:1020
 msgid "Calculate"
 msgstr "Berechne"
 
-#: src/LogbookDialog.cpp:1024
+#: src/LogbookDialog.cpp:1024 src/LogbookDialog.cpp:1020
+#: ../src/LogbookDialog.cpp:1021
 msgid "Calculate the watches with the members entered in the columns"
-msgstr "Berechene die Wachzeiten mit den in den Spalten eingegebenen Mitgliedern"
+msgstr ""
+"Berechene die Wachzeiten mit den in den Spalten eingegebenen Mitgliedern"
 
 #: src/LogbookDialog.cpp:1028 src/LogbookDialog.cpp:3903
 #: src/LogbookOptions.cpp:1254 src/LogbookOptions.cpp:1576
+#: src/LogbookDialog.cpp:1024 src/LogbookDialog.cpp:3902
+#: src/LogbookOptions.cpp:1263 src/LogbookOptions.cpp:1585
+#: ../src/LogbookDialog.cpp:1025 ../src/LogbookDialog.cpp:3903
+#: ../src/LogbookOptions.cpp:1263 ../src/LogbookOptions.cpp:1585
 msgid "Reset"
 msgstr "Zurücksetzen"
 
-#: src/LogbookDialog.cpp:1030
+#: src/LogbookDialog.cpp:1030 src/LogbookDialog.cpp:1026
+#: ../src/LogbookDialog.cpp:1027
 msgid "Reset data to edit-level"
 msgstr "Zurücksetzen der Daten"
 
-#: src/LogbookDialog.cpp:1034
+#: src/LogbookDialog.cpp:1034 src/LogbookDialog.cpp:1030
+#: ../src/LogbookDialog.cpp:1031
 msgid "Clear"
 msgstr "Löschen"
 
-#: src/LogbookDialog.cpp:1035
+#: src/LogbookDialog.cpp:1035 src/LogbookDialog.cpp:1031
+#: ../src/LogbookDialog.cpp:1032
 msgid "Clear all data"
 msgstr "Löscht alle Daten"
 
-#: src/LogbookDialog.cpp:1044
+#: src/LogbookDialog.cpp:1044 src/LogbookDialog.cpp:1040
+#: ../src/LogbookDialog.cpp:1041
 msgid "Day backward"
 msgstr "Tag zurück"
 
-#: src/LogbookDialog.cpp:1048
+#: src/LogbookDialog.cpp:1048 src/LogbookDialog.cpp:1044
+#: ../src/LogbookDialog.cpp:1045
 msgid "Now"
 msgstr "Jetzt"
 
-#: src/LogbookDialog.cpp:1050
+#: src/LogbookDialog.cpp:1050 src/LogbookDialog.cpp:1046
+#: ../src/LogbookDialog.cpp:1047
 msgid "Go to date/time now"
 msgstr "Springe zur jetzigen Wache"
 
-#: src/LogbookDialog.cpp:1056
+#: src/LogbookDialog.cpp:1056 src/LogbookDialog.cpp:1052
+#: ../src/LogbookDialog.cpp:1053
 msgid "Day forward"
 msgstr "Tag vorwärts"
 
-#: src/LogbookDialog.cpp:1060
+#: src/LogbookDialog.cpp:1060 src/LogbookDialog.cpp:1056
+#: ../src/LogbookDialog.cpp:1057
 msgid "Day:"
 msgstr "Tag:"
 
-#: src/LogbookDialog.cpp:1065
-msgid "Shows/Sets the day\n"
+#: src/LogbookDialog.cpp:1065 src/LogbookDialog.cpp:1061
+#: ../src/LogbookDialog.cpp:1062
+msgid ""
+"Shows/Sets the day\n"
 "Displays the data in your ODT/Browser-program from this day to end"
-msgstr "Zeigt oder setzt den Tag\n"
+msgstr ""
+"Zeigt oder setzt den Tag\n"
 "Anzeige der Daten von diesem Tag bis Ende im ODT/Browser-Pragramm"
 
-#: src/LogbookDialog.cpp:1069
+#: src/LogbookDialog.cpp:1069 src/LogbookDialog.cpp:1065
+#: ../src/LogbookDialog.cpp:1066
 msgid "Display"
 msgstr "Anzeige"
 
-#: src/LogbookDialog.cpp:1073
+#: src/LogbookDialog.cpp:1073 src/LogbookDialog.cpp:1069
+#: ../src/LogbookDialog.cpp:1070
 msgid "all"
 msgstr "alle"
 
-#: src/LogbookDialog.cpp:1073
+#: src/LogbookDialog.cpp:1073 src/LogbookDialog.cpp:1069
+#: ../src/LogbookDialog.cpp:1070
 msgid "this day"
 msgstr "dieser Tag"
 
-#: src/LogbookDialog.cpp:1077
-msgid "Used for ODT/Browser-program\n"
+#: src/LogbookDialog.cpp:1077 src/LogbookDialog.cpp:1073
+#: ../src/LogbookDialog.cpp:1074
+msgid ""
+"Used for ODT/Browser-program\n"
 "One Row for the day + selected days = Days displayed"
-msgstr "Zeigt im ODT/Browser-Programm die Daten ab dem im Textfeld\n"
+msgstr ""
+"Zeigt im ODT/Browser-Programm die Daten ab dem im Textfeld\n"
 "eingegeben Tag an plus der gewählten Tage"
 
-#: src/LogbookDialog.cpp:1100
+#: src/LogbookDialog.cpp:1100 src/LogbookDialog.cpp:1096
+#: ../src/LogbookDialog.cpp:1097
 msgid "1. Watch"
 msgstr "1. Wache"
 
-#: src/LogbookDialog.cpp:1111
+#: src/LogbookDialog.cpp:1111 src/LogbookDialog.cpp:1107
+#: ../src/LogbookDialog.cpp:1108
 msgid "Watchtime"
 msgstr "Wachdauer"
 
-#: src/LogbookDialog.cpp:1114
+#: src/LogbookDialog.cpp:1114 src/LogbookDialog.cpp:1110
+#: ../src/LogbookDialog.cpp:1111
 msgid "Member"
 msgstr "Mitglied"
 
-#: src/LogbookDialog.cpp:1124
+#: src/LogbookDialog.cpp:1124 src/LogbookDialog.cpp:1120
+#: ../src/LogbookDialog.cpp:1121
 msgid "Set as Watchbase"
 msgstr "Setze als Wachzeiten-Basis"
 
-#: src/LogbookDialog.cpp:1128
+#: src/LogbookDialog.cpp:1128 src/LogbookDialog.cpp:1124
+#: ../src/LogbookDialog.cpp:1125
 msgid "Split Watch"
 msgstr "Teile Wachzeiten"
 
-#: src/LogbookDialog.cpp:1132
+#: src/LogbookDialog.cpp:1132 src/LogbookDialog.cpp:1128
+#: ../src/LogbookDialog.cpp:1129
 msgid "Merge Watches"
 msgstr "Verbinde Wachzeiten"
 
-#: src/LogbookDialog.cpp:1136
+#: src/LogbookDialog.cpp:1136 src/LogbookDialog.cpp:1132
+#: ../src/LogbookDialog.cpp:1133
 msgid "Swap two Watches"
 msgstr "Tausche zwei Wachzeiten"
 
-#: src/LogbookDialog.cpp:1140
+#: src/LogbookDialog.cpp:1140 src/LogbookDialog.cpp:1136
+#: ../src/LogbookDialog.cpp:1137
 msgid "Delete Crewmembers"
 msgstr "Lösche Crewmitglieder"
 
-#: src/LogbookDialog.cpp:1171
+#: src/LogbookDialog.cpp:1171 src/LogbookDialog.cpp:1167
+#: ../src/LogbookDialog.cpp:1168
 msgid "Crewlist"
 msgstr "Crewliste"
 
-#: src/LogbookDialog.cpp:1189
+#: src/LogbookDialog.cpp:1189 src/LogbookDialog.cpp:1185
+#: ../src/LogbookDialog.cpp:1186
 msgid "Add Equipment"
 msgstr "Zubehör hinzufügen"
 
-#: src/LogbookDialog.cpp:1190
+#: src/LogbookDialog.cpp:1190 src/LogbookDialog.cpp:1186
+#: ../src/LogbookDialog.cpp:1187
 msgid "add the equipment of your boat"
 msgstr "fügen Sie die Ausrüstung Ihres Bootes hinzu"
 
 #: src/LogbookDialog.cpp:1193 src/LogbookDialog.cpp:5728
+#: src/LogbookDialog.cpp:1189 src/LogbookDialog.cpp:5727
+#: ../src/LogbookDialog.cpp:1190 ../src/LogbookDialog.cpp:5728
 msgid "Show Equipment"
 msgstr "Zeige Zubehör"
 
-#: src/LogbookDialog.cpp:1194
+#: src/LogbookDialog.cpp:1194 src/LogbookDialog.cpp:1190
+#: ../src/LogbookDialog.cpp:1191
 msgid "Show/Hide Equipmentgrid"
 msgstr "Zeige/Verstecke Zubehör"
 
-#: src/LogbookDialog.cpp:1201
-msgid "export your boat/equipment-data as:\n"
+#: src/LogbookDialog.cpp:1201 src/LogbookDialog.cpp:1197
+#: ../src/LogbookDialog.cpp:1198
+msgid ""
+"export your boat/equipment-data as:\n"
 "      HTML, ODT,  ODS, XML, CSV"
-msgstr "Exportieren Sie Ihre \"Boots/Ausrüstungs\"-Daten in:\n"
+msgstr ""
+"Exportieren Sie Ihre \"Boots/Ausrüstungs\"-Daten in:\n"
 "           HTML, ODT,  ODS, XML, CSV"
 
-#: src/LogbookDialog.cpp:1224
+#: src/LogbookDialog.cpp:1224 src/LogbookDialog.cpp:1220
+#: ../src/LogbookDialog.cpp:1221
 msgid "Edit Layouts"
 msgstr "Layout editieren"
 
 #: src/LogbookDialog.cpp:1258 src/LogbookDialog.cpp:1620
+#: src/LogbookDialog.cpp:1254 src/LogbookDialog.cpp:1616
+#: ../src/LogbookDialog.cpp:1255 ../src/LogbookDialog.cpp:1617
 msgid "Boat"
 msgstr "Boot"
 
-#: src/LogbookDialog.cpp:1273
+#: src/LogbookDialog.cpp:1273 src/LogbookDialog.cpp:1269
+#: ../src/LogbookDialog.cpp:1270
 msgid "Homeport"
 msgstr "Heimathafen"
 
-#: src/LogbookDialog.cpp:1280
+#: src/LogbookDialog.cpp:1280 src/LogbookDialog.cpp:1276
+#: ../src/LogbookDialog.cpp:1277
 msgid "Callsign"
 msgstr "Rufzeichen"
 
-#: src/LogbookDialog.cpp:1287
+#: src/LogbookDialog.cpp:1287 src/LogbookDialog.cpp:1283
+#: ../src/LogbookDialog.cpp:1284
 msgid "HIN-Nr."
 msgstr ""
 
-#: src/LogbookDialog.cpp:1292
+#: src/LogbookDialog.cpp:1292 src/LogbookDialog.cpp:1288
+#: ../src/LogbookDialog.cpp:1289
 msgid "Hull Identification No."
 msgstr "Rumpf Identifikations-Nr."
 
-#: src/LogbookDialog.cpp:1295
+#: src/LogbookDialog.cpp:1295 src/LogbookDialog.cpp:1291
+#: ../src/LogbookDialog.cpp:1292
 msgid "Sail-Nr."
 msgstr "Segel-Nr."
 
-#: src/LogbookDialog.cpp:1308
+#: src/LogbookDialog.cpp:1308 src/LogbookDialog.cpp:1304
+#: ../src/LogbookDialog.cpp:1305
 msgid "Insurance"
 msgstr "Versicherung"
 
-#: src/LogbookDialog.cpp:1315
+#: src/LogbookDialog.cpp:1315 src/LogbookDialog.cpp:1311
+#: ../src/LogbookDialog.cpp:1312
 msgid "Registration"
 msgstr "Register-Nr."
 
-#: src/LogbookDialog.cpp:1322
+#: src/LogbookDialog.cpp:1322 src/LogbookDialog.cpp:1318
+#: ../src/LogbookDialog.cpp:1319
 msgid "Policy"
 msgstr "Police"
 
-#: src/LogbookDialog.cpp:1329
+#: src/LogbookDialog.cpp:1329 src/LogbookDialog.cpp:1325
+#: ../src/LogbookDialog.cpp:1326
 msgid "MMSI"
 msgstr ""
 
-#: src/LogbookDialog.cpp:1340
+#: src/LogbookDialog.cpp:1340 src/LogbookDialog.cpp:1336
+#: ../src/LogbookDialog.cpp:1337
 msgid "Owner"
 msgstr "Eigner"
 
-#: src/LogbookDialog.cpp:1347
+#: src/LogbookDialog.cpp:1347 src/LogbookDialog.cpp:1343
+#: ../src/LogbookDialog.cpp:1344
 msgid "Name      "
 msgstr ""
 
-#: src/LogbookDialog.cpp:1361
+#: src/LogbookDialog.cpp:1361 src/LogbookDialog.cpp:1357
+#: ../src/LogbookDialog.cpp:1358
 msgid "Telephone"
 msgstr "Telefon"
 
-#: src/LogbookDialog.cpp:1406
+#: src/LogbookDialog.cpp:1406 src/LogbookDialog.cpp:1402
+#: ../src/LogbookDialog.cpp:1403
 msgid "Details"
 msgstr ""
 
 #: src/LogbookDialog.cpp:1414 src/LogbookDialog.cpp:1586
+#: src/LogbookDialog.cpp:1410 src/LogbookDialog.cpp:1582
+#: ../src/LogbookDialog.cpp:1411 ../src/LogbookDialog.cpp:1583
 msgid "Type"
 msgstr "Typ"
 
-#: src/LogbookDialog.cpp:1421
+#: src/LogbookDialog.cpp:1421 src/LogbookDialog.cpp:1417
+#: ../src/LogbookDialog.cpp:1418
 msgid "Builder"
 msgstr "Hersteller"
 
-#: src/LogbookDialog.cpp:1428
+#: src/LogbookDialog.cpp:1428 src/LogbookDialog.cpp:1424
+#: ../src/LogbookDialog.cpp:1425
 msgid "Hull"
 msgstr "Rumpf"
 
-#: src/LogbookDialog.cpp:1435
+#: src/LogbookDialog.cpp:1435 src/LogbookDialog.cpp:1431
+#: ../src/LogbookDialog.cpp:1432
 msgid "Date Launched"
 msgstr "Stapellauf"
 
-#: src/LogbookDialog.cpp:1442
+#: src/LogbookDialog.cpp:1442 src/LogbookDialog.cpp:1438
+#: ../src/LogbookDialog.cpp:1439
 msgid "Yard-Nr."
 msgstr "Werft-Nr."
 
-#: src/LogbookDialog.cpp:1449
+#: src/LogbookDialog.cpp:1449 src/LogbookDialog.cpp:1445
+#: ../src/LogbookDialog.cpp:1446
 msgid "Designer"
 msgstr ""
 
-#: src/LogbookDialog.cpp:1456
+#: src/LogbookDialog.cpp:1456 src/LogbookDialog.cpp:1452
+#: ../src/LogbookDialog.cpp:1453
 msgid "Construction"
 msgstr "Konstruktion"
 
-#: src/LogbookDialog.cpp:1481
+#: src/LogbookDialog.cpp:1481 src/LogbookDialog.cpp:1477
+#: ../src/LogbookDialog.cpp:1478
 msgid "LOA"
 msgstr ""
 
-#: src/LogbookDialog.cpp:1486
+#: src/LogbookDialog.cpp:1486 src/LogbookDialog.cpp:1482
+#: ../src/LogbookDialog.cpp:1483
 msgid "Length over all"
 msgstr "Länge über alles"
 
-#: src/LogbookDialog.cpp:1490
+#: src/LogbookDialog.cpp:1490 src/LogbookDialog.cpp:1486
+#: ../src/LogbookDialog.cpp:1487
 msgid "LOD"
 msgstr ""
 
-#: src/LogbookDialog.cpp:1495
+#: src/LogbookDialog.cpp:1495 src/LogbookDialog.cpp:1491
+#: ../src/LogbookDialog.cpp:1492
 msgid "Length over Deck"
 msgstr "Länge über Deck"
 
-#: src/LogbookDialog.cpp:1499
+#: src/LogbookDialog.cpp:1499 src/LogbookDialog.cpp:1495
+#: ../src/LogbookDialog.cpp:1496
 msgid "LWL"
 msgstr ""
 
-#: src/LogbookDialog.cpp:1504
+#: src/LogbookDialog.cpp:1504 src/LogbookDialog.cpp:1500
+#: ../src/LogbookDialog.cpp:1501
 msgid "Length in Waterline"
 msgstr "Länge in der Wasserlinie"
 
-#: src/LogbookDialog.cpp:1508
+#: src/LogbookDialog.cpp:1508 src/LogbookDialog.cpp:1504
+#: ../src/LogbookDialog.cpp:1505
 msgid "Beam"
 msgstr "Breite"
 
-#: src/LogbookDialog.cpp:1513
+#: src/LogbookDialog.cpp:1513 src/LogbookDialog.cpp:1509
+#: ../src/LogbookDialog.cpp:1510
 msgid "Greatest Width of Hull"
 msgstr "Größte Breite des Rumpfes"
 
-#: src/LogbookDialog.cpp:1517
+#: src/LogbookDialog.cpp:1517 src/LogbookDialog.cpp:1513
+#: ../src/LogbookDialog.cpp:1514
 msgid "Draft"
 msgstr "Tiefgang"
 
 #: src/LogbookDialog.cpp:1524 src/LogbookDialog.cpp:1532
-#: src/LogbookDialog.cpp:1540
+#: src/LogbookDialog.cpp:1540 src/LogbookDialog.cpp:1520
+#: src/LogbookDialog.cpp:1528 src/LogbookDialog.cpp:1536
+#: ../src/LogbookDialog.cpp:1521 ../src/LogbookDialog.cpp:1529
+#: ../src/LogbookDialog.cpp:1537
 msgid "UserLabel"
 msgstr "Anwender-Label"
 
 #: src/LogbookDialog.cpp:1525 src/LogbookDialog.cpp:1533
-#: src/LogbookDialog.cpp:1541
+#: src/LogbookDialog.cpp:1541 src/LogbookDialog.cpp:1521
+#: src/LogbookDialog.cpp:1529 src/LogbookDialog.cpp:1537
+#: ../src/LogbookDialog.cpp:1522 ../src/LogbookDialog.cpp:1530
+#: ../src/LogbookDialog.cpp:1538
 msgid "write your own label"
 msgstr "schreiben Sie Ihr eigenes Label"
 
-#: src/LogbookDialog.cpp:1549
+#: src/LogbookDialog.cpp:1549 src/LogbookDialog.cpp:1545
+#: ../src/LogbookDialog.cpp:1546
 msgid "Displacement"
 msgstr "Verdrängung"
 
-#: src/LogbookDialog.cpp:1565
+#: src/LogbookDialog.cpp:1565 src/LogbookDialog.cpp:1561
+#: ../src/LogbookDialog.cpp:1562
 msgid "Equipment"
 msgstr "Zubehör"
 
 #: src/LogbookDialog.cpp:1587 src/LogbookDialog.cpp:7488
+#: src/LogbookDialog.cpp:1583 src/LogbookDialog.cpp:7487
+#: ../src/LogbookDialog.cpp:1584 ../src/LogbookDialog.cpp:7488
 msgid "Description"
 msgstr "Beschreibung"
 
-#: src/LogbookDialog.cpp:1588
+#: src/LogbookDialog.cpp:1588 src/LogbookDialog.cpp:1584
+#: ../src/LogbookDialog.cpp:1585
 msgid "Serial-Nr."
 msgstr "Serien-Nr."
 
 #: src/LogbookDialog.cpp:1639 src/LogbookDialog.cpp:1765
-#: src/LogbookDialog.cpp:1882
+#: src/LogbookDialog.cpp:1882 src/LogbookDialog.cpp:1635
+#: src/LogbookDialog.cpp:1761 src/LogbookDialog.cpp:1878
+#: ../src/LogbookDialog.cpp:1636 ../src/LogbookDialog.cpp:1762
+#: ../src/LogbookDialog.cpp:1879
 msgid "Add a new line"
 msgstr "Neue Zeile"
 
-#: src/LogbookDialog.cpp:1643
+#: src/LogbookDialog.cpp:1643 src/LogbookDialog.cpp:1639
+#: ../src/LogbookDialog.cpp:1640
 msgid "export your Service-data as HTML or ODT"
 msgstr "Exportieren Sie Ihre \"Service\"-Daten in HTML oder ODT"
 
 #: src/LogbookDialog.cpp:1649 src/LogbookDialog.cpp:1775
-#: src/LogbookDialog.cpp:1892
+#: src/LogbookDialog.cpp:1892 src/LogbookDialog.cpp:1645
+#: src/LogbookDialog.cpp:1771 src/LogbookDialog.cpp:1888
+#: ../src/LogbookDialog.cpp:1646 ../src/LogbookDialog.cpp:1772
+#: ../src/LogbookDialog.cpp:1889
 msgid "Select Layout:"
 msgstr "Wähle Layout:"
 
 #: src/LogbookDialog.cpp:1711 src/LogbookDialog.cpp:1833
-#: src/LogbookDialog.cpp:1954
+#: src/LogbookDialog.cpp:1954 src/LogbookDialog.cpp:1707
+#: src/LogbookDialog.cpp:1829 src/LogbookDialog.cpp:1950
+#: ../src/LogbookDialog.cpp:1708 ../src/LogbookDialog.cpp:1830
+#: ../src/LogbookDialog.cpp:1951
 msgid "Priority"
 msgstr "Priorität"
 
-#: src/LogbookDialog.cpp:1712
+#: src/LogbookDialog.cpp:1712 src/LogbookDialog.cpp:1708
+#: ../src/LogbookDialog.cpp:1709
 msgid "Service TODO"
 msgstr "Service zu erledigen"
 
-#: src/LogbookDialog.cpp:1713
+#: src/LogbookDialog.cpp:1713 src/LogbookDialog.cpp:1709
+#: ../src/LogbookDialog.cpp:1710
 msgid "If"
 msgstr "Wenn"
 
-#: src/LogbookDialog.cpp:1714
+#: src/LogbookDialog.cpp:1714 src/LogbookDialog.cpp:1710
+#: ../src/LogbookDialog.cpp:1711
 msgid "Warnvalue"
 msgstr "Warnbetrag"
 
-#: src/LogbookDialog.cpp:1715
+#: src/LogbookDialog.cpp:1715 src/LogbookDialog.cpp:1711
+#: ../src/LogbookDialog.cpp:1712
 msgid "Urgentvalue"
 msgstr "Dringendbetrag"
 
-#: src/LogbookDialog.cpp:1716
+#: src/LogbookDialog.cpp:1716 src/LogbookDialog.cpp:1712
+#: ../src/LogbookDialog.cpp:1713
 msgid "Startvalue"
 msgstr "Startbetrag"
 
-#: src/LogbookDialog.cpp:1717
+#: src/LogbookDialog.cpp:1717 src/LogbookDialog.cpp:1713
+#: ../src/LogbookDialog.cpp:1714
 msgid "Active"
 msgstr "Aktiv"
 
-#: src/LogbookDialog.cpp:1733
+#: src/LogbookDialog.cpp:1733 src/LogbookDialog.cpp:1729
+#: ../src/LogbookDialog.cpp:1730
 msgid "Service done"
 msgstr "Service erledigt"
 
-#: src/LogbookDialog.cpp:1737
+#: src/LogbookDialog.cpp:1737 src/LogbookDialog.cpp:1733
+#: ../src/LogbookDialog.cpp:1734
 msgid "Buy parts for this service"
 msgstr "kaufe Zubehör für diesen Service"
 
 #: src/LogbookDialog.cpp:1752 src/Maintenance.cpp:458
+#: src/LogbookDialog.cpp:1748 ../src/LogbookDialog.cpp:1749
+#: ../src/Maintenance.cpp:458
 msgid "Service"
 msgstr ""
 
-#: src/LogbookDialog.cpp:1769
+#: src/LogbookDialog.cpp:1769 src/LogbookDialog.cpp:1765
+#: ../src/LogbookDialog.cpp:1766
 msgid "export your Repairs-data as HTML or ODT"
 msgstr "Exportieren Sie Ihre \"Reparatur\"-Daten in HTML oder ODT"
 
-#: src/LogbookDialog.cpp:1834
+#: src/LogbookDialog.cpp:1834 src/LogbookDialog.cpp:1830
+#: ../src/LogbookDialog.cpp:1831
 msgid "RepairsTODO"
 msgstr "Reparaturen zu erledigen"
 
-#: src/LogbookDialog.cpp:1850
+#: src/LogbookDialog.cpp:1850 src/LogbookDialog.cpp:1846
+#: ../src/LogbookDialog.cpp:1847
 msgid "Repair done"
 msgstr "Reparatur erledigt"
 
-#: src/LogbookDialog.cpp:1854
+#: src/LogbookDialog.cpp:1854 src/LogbookDialog.cpp:1850
+#: ../src/LogbookDialog.cpp:1851
 msgid "Buy parts for this repair"
 msgstr "kaufe Zubehör für diese Reparatur"
 
 #: src/LogbookDialog.cpp:1869 src/Maintenance.cpp:465
+#: src/LogbookDialog.cpp:1865 ../src/LogbookDialog.cpp:1866
+#: ../src/Maintenance.cpp:465
 msgid "Repairs"
 msgstr "Reparaturen"
 
-#: src/LogbookDialog.cpp:1886
+#: src/LogbookDialog.cpp:1886 src/LogbookDialog.cpp:1882
+#: ../src/LogbookDialog.cpp:1883
 msgid "export your BuyParts-data as HTML or ODT"
 msgstr "Exportieren Sie Ihre \"Kaufe-Zubehör\"-Daten in HTML oder ODT"
 
-#: src/LogbookDialog.cpp:1955
+#: src/LogbookDialog.cpp:1955 src/LogbookDialog.cpp:1951
+#: ../src/LogbookDialog.cpp:1952
 msgid "Category"
 msgstr "Kategorie"
 
 #: src/LogbookDialog.cpp:1957 src/LogbookDialog.cpp:1986
+#: src/LogbookDialog.cpp:1953 src/LogbookDialog.cpp:1982
+#: ../src/LogbookDialog.cpp:1954 ../src/LogbookDialog.cpp:1983
 msgid "Buy Parts"
 msgstr "Zubehör kaufen"
 
-#: src/LogbookDialog.cpp:1959
+#: src/LogbookDialog.cpp:1959 src/LogbookDialog.cpp:1955
+#: ../src/LogbookDialog.cpp:1956
 msgid "At"
 msgstr "bei"
 
 #: src/LogbookDialog.cpp:1993 src/LogbookOptions.cpp:807
+#: src/LogbookDialog.cpp:1989 src/LogbookOptions.cpp:821
+#: ../src/LogbookDialog.cpp:1990 ../src/LogbookOptions.cpp:821
 msgid "Maintenance"
 msgstr "Instandhaltung"
 
 #: src/LogbookDialog.cpp:3394 src/LogbookDialog.cpp:3902
-#: src/LogbookOptions.cpp:1575
+#: src/LogbookOptions.cpp:1575 src/LogbookDialog.cpp:3393
+#: src/LogbookDialog.cpp:3901 src/LogbookOptions.cpp:1584
+#: ../src/LogbookDialog.cpp:3394 ../src/LogbookDialog.cpp:3902
+#: ../src/LogbookOptions.cpp:1584
 msgid "none"
 msgstr "kein"
 
-#: src/LogbookDialog.cpp:3634
+#: src/LogbookDialog.cpp:3634 src/LogbookDialog.cpp:3633
+#: ../src/LogbookDialog.cpp:3634
 msgid " - Normal Timer - Interval: "
 msgstr "- Normaler Timer - Intervall:"
 
-#: src/LogbookDialog.cpp:3638
+#: src/LogbookDialog.cpp:3638 src/LogbookDialog.cpp:3637
+#: ../src/LogbookDialog.cpp:3638
 msgid " - Full Hour Timer"
 msgstr "- Stunden Timer"
 
-#: src/LogbookDialog.cpp:3641
+#: src/LogbookDialog.cpp:3641 src/LogbookDialog.cpp:3640
+#: ../src/LogbookDialog.cpp:3641
 msgid " - Individual Timer"
 msgstr "- Individueller Timer"
 
-#: src/LogbookDialog.cpp:3677
-msgid "no Event/s\n"
+#: src/LogbookDialog.cpp:3677 src/LogbookDialog.cpp:3676
+#: ../src/LogbookDialog.cpp:3677
+msgid ""
+"no Event/s\n"
 "Click one or more bullets to start"
-msgstr "keine Ereignisse\n"
+msgstr ""
+"keine Ereignisse\n"
 "Start mit Klick auf (roten) Knopf, mehrere Events möglich"
 
-#: src/LogbookDialog.cpp:3678
-msgid "Event/s suspended\n"
+#: src/LogbookDialog.cpp:3678 src/LogbookDialog.cpp:3677
+#: ../src/LogbookDialog.cpp:3678
+msgid ""
+"Event/s suspended\n"
 "Click the button to restart all events"
-msgstr "Ereignis/se unterbrochen\n"
+msgstr ""
+"Ereignis/se unterbrochen\n"
 "Klicke den Start-Button für Wiederaufnahme aller Ereignisse"
 
-#: src/LogbookDialog.cpp:3679
-msgid "Event/s running\n"
+#: src/LogbookDialog.cpp:3679 src/LogbookDialog.cpp:3678
+#: ../src/LogbookDialog.cpp:3679
+msgid ""
+"Event/s running\n"
 "Click the button to suspend or a bullet to stop"
-msgstr "Ereignis/se gestartet\n"
+msgstr ""
+"Ereignis/se gestartet\n"
 "Klick auf den Stop-Button unterbricht, auf einen Knopf (grün) stoppt "
 
-#: src/LogbookDialog.cpp:3681
-msgid "green = Event is running\n"
+#: src/LogbookDialog.cpp:3681 src/LogbookDialog.cpp:3680
+#: ../src/LogbookDialog.cpp:3681
+msgid ""
+"green = Event is running\n"
 "red = Event is stopped\n"
 "yellow = Event is suspended. Restart event with Start-Button"
-msgstr "grün = Ereignis läuft\n"
+msgstr ""
+"grün = Ereignis läuft\n"
 "rot = Ereignis gestoppt\n"
 "gelb = Ereignis pausiert. Wiederaufnahme mit Start-Button"
 
-#: src/LogbookDialog.cpp:3688
-msgid "Opendocument SpreadSheet(*.ods)|*.ods|Excel 2003 Format(*.xml)|*.xml|CSV Format OpenOffice(*.csv)|*.csv|Backup Logbook(*.txt)|*.txt"
-msgstr "Opendocument Tabellenkalkulation(*.ods)|*.ods|Excel 2003 Format(*.xml)|*.xml|CSV Format OpenOffice(*.csv)|*.csv|Backup Logbook(*.txt)|*.txt"
+#: src/LogbookDialog.cpp:3688 src/LogbookDialog.cpp:3687
+#: ../src/LogbookDialog.cpp:3688
+msgid ""
+"Opendocument SpreadSheet(*.ods)|*.ods|Excel 2003 Format(*.xml)|*.xml|CSV "
+"Format OpenOffice(*.csv)|*.csv|Backup Logbook(*.txt)|*.txt"
+msgstr ""
+"Opendocument Tabellenkalkulation(*.ods)|*.ods|Excel 2003 Format(*.xml)|*.xml|"
+"CSV Format OpenOffice(*.csv)|*.csv|Backup Logbook(*.txt)|*.txt"
 
-#: src/LogbookDialog.cpp:3820
+#: src/LogbookDialog.cpp:3820 src/LogbookDialog.cpp:3819
+#: ../src/LogbookDialog.cpp:3820
 msgid "Show Engines/Sails Mode"
 msgstr "Zeige Motor/Segel Modus"
 
 #: src/LogbookDialog.cpp:4337 src/LogbookDialog.cpp:4388
-#: src/LogbookOptions.cpp:1005
+#: src/LogbookOptions.cpp:1005 src/LogbookDialog.cpp:4336
+#: src/LogbookDialog.cpp:4387 src/LogbookOptions.cpp:1019
+#: ../src/LogbookDialog.cpp:4337 ../src/LogbookDialog.cpp:4388
+#: ../src/LogbookOptions.cpp:1019
 msgid "Track"
 msgstr ""
 
 #: src/LogbookDialog.cpp:4387 src/LogbookDialog.cpp:4541
+#: src/LogbookDialog.cpp:4386 src/LogbookDialog.cpp:4540
+#: ../src/LogbookDialog.cpp:4387 ../src/LogbookDialog.cpp:4541
 msgid "Select Track"
 msgstr "Wähle Track"
 
-#: src/LogbookDialog.cpp:4398
+#: src/LogbookDialog.cpp:4398 src/LogbookDialog.cpp:4397
+#: ../src/LogbookDialog.cpp:4398
 msgid "GUID"
 msgstr ""
 
-#: src/LogbookDialog.cpp:4620
+#: src/LogbookDialog.cpp:4620 src/LogbookDialog.cpp:4619
+#: ../src/LogbookDialog.cpp:4620
 msgid "use Textblocks..."
 msgstr "nutze Textblöcke..."
 
-#: src/LogbookDialog.cpp:4726
+#: src/LogbookDialog.cpp:4726 src/LogbookDialog.cpp:4725
+#: ../src/LogbookDialog.cpp:4726
 msgid "Save Logbook File"
 msgstr "Logbuchdatei speichern"
 
-#: src/LogbookDialog.cpp:4798
-msgid "Normal Timer has 0 h 0 Min.\n\n"
+#: src/LogbookDialog.cpp:4798 src/LogbookDialog.cpp:4797
+#: ../src/LogbookDialog.cpp:4798
+msgid ""
+"Normal Timer has 0 h 0 Min.\n"
+"\n"
 "Please change settings (Timer-Interval)"
-msgstr "Normaler Timer hat 0 h 0Min 0 sec.\n\n"
+msgstr ""
+"Normaler Timer hat 0 h 0Min 0 sec.\n"
+"\n"
 "Bitte ändern Sie die Werte"
 
-#: src/LogbookDialog.cpp:4960
-msgid "No Path set to HTML-Editor\n"
+#: src/LogbookDialog.cpp:4960 src/LogbookDialog.cpp:4959
+#: ../src/LogbookDialog.cpp:4960
+msgid ""
+"No Path set to HTML-Editor\n"
 "in ToolBox/Plugins/LogbookKonni/Preferences"
-msgstr "kein Pfad zum HTML-Editor\n"
+msgstr ""
+"kein Pfad zum HTML-Editor\n"
 "in Optionen/Plugins/LogbookKonni/Preferences gesetzt "
 
-#: src/LogbookDialog.cpp:5375
+#: src/LogbookDialog.cpp:5375 src/LogbookDialog.cpp:5374
+#: ../src/LogbookDialog.cpp:5375
 msgid "Save CrewList File"
 msgstr "Crewliste speichern"
 
-#: src/LogbookDialog.cpp:5720
+#: src/LogbookDialog.cpp:5720 src/LogbookDialog.cpp:5719
+#: ../src/LogbookDialog.cpp:5720
 msgid "Hide Equipment"
 msgstr "Verstecke Zubehör"
 
-#: src/LogbookDialog.cpp:5745
+#: src/LogbookDialog.cpp:5745 src/LogbookDialog.cpp:5744
+#: ../src/LogbookDialog.cpp:5745
 msgid "Save Boat File"
 msgstr "Boot Datei speichern"
 
-#: src/LogbookDialog.cpp:5922
+#: src/LogbookDialog.cpp:5922 src/LogbookDialog.cpp:5921
+#: ../src/LogbookDialog.cpp:5922
 msgid "Save Service File"
 msgstr "Service-Datei speichern"
 
-#: src/LogbookDialog.cpp:6180
+#: src/LogbookDialog.cpp:6180 src/LogbookDialog.cpp:6179
+#: ../src/LogbookDialog.cpp:6180
 msgid "Save Repairs File"
 msgstr "Reparaturen-Datei speichern"
 
-#: src/LogbookDialog.cpp:6404
+#: src/LogbookDialog.cpp:6404 src/LogbookDialog.cpp:6403
+#: ../src/LogbookDialog.cpp:6404
 msgid "Save BuyParts File"
 msgstr "Kaufe-Zubehör-Datei speichern"
 
-#: src/LogbookDialog.cpp:6632
+#: src/LogbookDialog.cpp:6632 src/LogbookDialog.cpp:6631
+#: ../src/LogbookDialog.cpp:6632
 msgid "Save Overview File"
 msgstr "Übersicht-Datei speichern"
 
-#: src/LogbookDialog.cpp:7358
+#: src/LogbookDialog.cpp:7358 src/LogbookDialog.cpp:7357
+#: ../src/LogbookDialog.cpp:7358
 msgid "Filter Layout by"
 msgstr "Filtere Layout nach"
 
-#: src/LogbookDialog.cpp:7369
+#: src/LogbookDialog.cpp:7369 src/LogbookDialog.cpp:7368
+#: ../src/LogbookDialog.cpp:7369
 msgid "Rename Layout"
 msgstr "Layout umbenennen"
 
-#: src/LogbookDialog.cpp:7378
+#: src/LogbookDialog.cpp:7378 src/LogbookDialog.cpp:7377
+#: ../src/LogbookDialog.cpp:7378
 msgid "Delete Layout"
 msgstr "Lösche Layout"
 
-#: src/LogbookDialog.cpp:7387
+#: src/LogbookDialog.cpp:7387 src/LogbookDialog.cpp:7386
+#: ../src/LogbookDialog.cpp:7387
 msgid "Send Layout by email"
 msgstr "Sende Layout via Email"
 
-#: src/LogbookDialog.cpp:7396
+#: src/LogbookDialog.cpp:7396 src/LogbookDialog.cpp:7395
+#: ../src/LogbookDialog.cpp:7396
 msgid "Install single Layout"
 msgstr "Installiere ein Layout"
 
-#: src/LogbookDialog.cpp:7487
+#: src/LogbookDialog.cpp:7487 src/LogbookDialog.cpp:7486
+#: ../src/LogbookDialog.cpp:7487
 msgid "First/Last Entry"
 msgstr "Erster/Letzter Eintrag"
 
-#: src/LogbookDialog.cpp:7489
+#: src/LogbookDialog.cpp:7489 src/LogbookDialog.cpp:7488
+#: ../src/LogbookDialog.cpp:7489
 msgid "File"
 msgstr "Datei"
 
-#: src/LogbookDialog.cpp:8096
+#: src/LogbookDialog.cpp:8096 src/LogbookDialog.cpp:8095
+#: ../src/LogbookDialog.cpp:8096
 msgid "Add Item"
 msgstr "Neuen Eintrag einfügen"
 
-#: src/LogbookDialog.cpp:8100
+#: src/LogbookDialog.cpp:8100 src/LogbookDialog.cpp:8099
+#: ../src/LogbookDialog.cpp:8100
 msgid "Delete Item"
 msgstr "Lösche Eintrag"
 
-#: src/LogbookDialog.cpp:8104
+#: src/LogbookDialog.cpp:8104 src/LogbookDialog.cpp:8103
+#: ../src/LogbookDialog.cpp:8104
 msgid "Rename Item"
 msgstr "Eintrag umbenennen"
 
 #: src/LogbookDialog.cpp:8110 src/LogbookDialog.cpp:8434
-#: src/LogbookDialog.cpp:8436
+#: src/LogbookDialog.cpp:8436 src/LogbookDialog.cpp:8109
+#: src/LogbookDialog.cpp:8433 src/LogbookDialog.cpp:8435
+#: ../src/LogbookDialog.cpp:8110 ../src/LogbookDialog.cpp:8434
+#: ../src/LogbookDialog.cpp:8436
 msgid "Add Treenode"
 msgstr "Neuen Knoten einfügen"
 
 #: src/LogbookDialog.cpp:8114 src/LogbookDialog.cpp:8429
-#: src/LogbookDialog.cpp:8431
+#: src/LogbookDialog.cpp:8431 src/LogbookDialog.cpp:8113
+#: src/LogbookDialog.cpp:8428 src/LogbookDialog.cpp:8430
+#: ../src/LogbookDialog.cpp:8114 ../src/LogbookDialog.cpp:8429
+#: ../src/LogbookDialog.cpp:8431
 msgid "Delete Treenode"
 msgstr "Knoten löschen"
 
-#: src/LogbookDialog.cpp:8127
+#: src/LogbookDialog.cpp:8127 src/LogbookDialog.cpp:8126
+#: ../src/LogbookDialog.cpp:8127
 msgid "Text"
 msgstr "Text"
 
-#: src/LogbookDialog.cpp:8249
+#: src/LogbookDialog.cpp:8249 src/LogbookDialog.cpp:8248
+#: ../src/LogbookDialog.cpp:8249
 msgid "Textblocks"
 msgstr "Textblöcke"
 
-#: src/LogbookDialog.cpp:8250
-msgid "Help\n"
-"-----\n\n"
+#: src/LogbookDialog.cpp:8250 src/LogbookDialog.cpp:8249
+#: ../src/LogbookDialog.cpp:8250
+msgid ""
+"Help\n"
+"-----\n"
+"\n"
 "Open treenode\n"
 "  'Texts when using this Dialog only'\n"
-"  and select e.g. 'Remarks'\n\n"
-"Rightclick in TreeView for menu\n\n"
+"  and select e.g. 'Remarks'\n"
+"\n"
+"Rightclick in TreeView for menu\n"
+"\n"
 "Add a item and rename it\n"
-"   USE UNIQUE NAMES FOR ITEMS !\n\n"
-"Insert text\n\n"
-"In 'Texts when using this Dialog only' you can insert/delete treenodes only\n\n"
-"Use Drag 'n Drop to move item from/to menu\n\n"
+"   USE UNIQUE NAMES FOR ITEMS !\n"
+"\n"
+"Insert text\n"
+"\n"
+"In 'Texts when using this Dialog only' you can insert/delete treenodes only\n"
+"\n"
+"Use Drag 'n Drop to move item from/to menu\n"
+"\n"
 "see next treenodes for more help"
-msgstr "Hilfe\n"
-"------\n\n"
+msgstr ""
+"Hilfe\n"
+"------\n"
+"\n"
 "Öffne den Knoten\n"
 "  'Texte nur mit diesem Dialog'\n"
-"  und wähle z.B. 'Notizen''\n\n"
-"Rechtsklick auf diesen Knoten für Menü \n\n"
+"  und wähle z.B. 'Notizen''\n"
+"\n"
+"Rechtsklick auf diesen Knoten für Menü \n"
+"\n"
 "wähle 'Eintrag einfügen' und vergib einen neuen Namen\n"
-"   BITTE KEINE DOPPELTEN NAMEN VERGEBEN !\n\n"
-"Gib den Text ein\n\n"
-"Nur in 'Texte nur mit diesem Dialog' können Knoten eingefügt/gelöscht werden.\n\n"
-"Nutze Drag 'n Drop um einen Eintrag ins Menü zu verschieben\n\n"
+"   BITTE KEINE DOPPELTEN NAMEN VERGEBEN !\n"
+"\n"
+"Gib den Text ein\n"
+"\n"
+"Nur in 'Texte nur mit diesem Dialog' können Knoten eingefügt/gelöscht "
+"werden.\n"
+"\n"
+"Nutze Drag 'n Drop um einen Eintrag ins Menü zu verschieben\n"
+"\n"
 "Für mehr Hilfe klicke auf die nächsten Knoten"
 
-#: src/LogbookDialog.cpp:8254
-msgid "The itemname is shown in the rightcklick-menu of the following Columns\n"
-"By clicking on it the text is inserted\n\n"
-msgstr "Der Name des Eintrags wird im Rechtsklickmenü der folgenden Spalten angezeigt.\n"
-"Wenn der Name angeklickt wird, wird der entsprechende Text eingefügt.\n\n"
+#: src/LogbookDialog.cpp:8254 src/LogbookDialog.cpp:8253
+#: ../src/LogbookDialog.cpp:8254
+msgid ""
+"The itemname is shown in the rightcklick-menu of the following Columns\n"
+"By clicking on it the text is inserted\n"
+"\n"
+msgstr ""
+"Der Name des Eintrags wird im Rechtsklickmenü der folgenden Spalten "
+"angezeigt.\n"
+"Wenn der Name angeklickt wird, wird der entsprechende Text eingefügt.\n"
+"\n"
 
-#: src/LogbookDialog.cpp:8262
+#: src/LogbookDialog.cpp:8262 src/LogbookDialog.cpp:8261
+#: ../src/LogbookDialog.cpp:8262
 msgid "Texts for Rightclick-Menu"
 msgstr "Texte für das Rechtsklick-Menü"
 
-#: src/LogbookDialog.cpp:8268
-msgid "Sails up\n"
-"Engine stopped\n\n"
+#: src/LogbookDialog.cpp:8268 src/LogbookDialog.cpp:8267
+#: ../src/LogbookDialog.cpp:8268
+msgid ""
+"Sails up\n"
+"Engine stopped\n"
+"\n"
 "Demo - Rightclick-Menu 'use Testextblocks' for help"
-msgstr "Segel rauf\n"
-"Maschine gestoppt\n\n"
+msgstr ""
+"Segel rauf\n"
+"Maschine gestoppt\n"
+"\n"
 "Demo - klicke im Rechtsklickmenu 'nutze Textblocks für Hilfe'"
 
-#: src/LogbookDialog.cpp:8269
+#: src/LogbookDialog.cpp:8269 src/LogbookDialog.cpp:8268
+#: ../src/LogbookDialog.cpp:8269
 msgid "Demo Sails up"
 msgstr "Demo Segel rauf"
 
-#: src/LogbookDialog.cpp:8292
-msgid "These texts are inserted into the grid-colmn\n"
-"by calling this dialog\n\n"
+#: src/LogbookDialog.cpp:8292 src/LogbookDialog.cpp:8291
+#: ../src/LogbookDialog.cpp:8292
+msgid ""
+"These texts are inserted into the grid-colmn\n"
+"by calling this dialog\n"
+"\n"
 "Select Item\n"
-"Click OK-Button\n\n"
+"Click OK-Button\n"
+"\n"
 "Use Drag 'n Drop to place a item in menu"
-msgstr "Diese Texte werden in die entsprechende Grid-Spalte eingefügt\n"
-"wenn dieser Dialog aufgerufen wird.\n\n"
+msgstr ""
+"Diese Texte werden in die entsprechende Grid-Spalte eingefügt\n"
+"wenn dieser Dialog aufgerufen wird.\n"
+"\n"
 "Wähle einen Eintrag\n"
-"Klicke den OK-Button\n\n"
+"Klicke den OK-Button\n"
+"\n"
 "Nutze Drag'n Drop, um einen Eintrag ins Menü zu verschieben."
 
-#: src/LogbookDialog.cpp:8293
+#: src/LogbookDialog.cpp:8293 src/LogbookDialog.cpp:8292
+#: ../src/LogbookDialog.cpp:8293
 msgid "Texts when using this Dialog only"
 msgstr "Texte nur mit diesem Dialog"
 
-#: src/LogbookDialog.cpp:8299
-msgid "Engine stopped\n\n"
+#: src/LogbookDialog.cpp:8299 src/LogbookDialog.cpp:8298
+#: ../src/LogbookDialog.cpp:8299
+msgid ""
+"Engine stopped\n"
+"\n"
 "Demo - Rightclick-Menu 'use Testextblocks' for help"
-msgstr "Maschine gestoppt\n\n"
+msgstr ""
+"Maschine gestoppt\n"
+"\n"
 "Demo - klicke im Rechtsklickmenu 'nutze Textblocks für Hilfe'"
 
-#: src/LogbookDialog.cpp:8300
+#: src/LogbookDialog.cpp:8300 src/LogbookDialog.cpp:8299
+#: ../src/LogbookDialog.cpp:8300
 msgid "Demo Engine stopped"
 msgstr "Demo Maschine gestartet"
 
-#: src/LogbookDialog.cpp:8373
+#: src/LogbookDialog.cpp:8373 src/LogbookDialog.cpp:8372
+#: ../src/LogbookDialog.cpp:8373
 #, c-format
 msgid "New Node%i"
 msgstr "Neuer Knoten%i"
 
-#: src/LogbookDialog.cpp:8410
+#: src/LogbookDialog.cpp:8410 src/LogbookDialog.cpp:8409
+#: ../src/LogbookDialog.cpp:8410
 #, c-format
 msgid "New Item%i"
 msgstr "Neuer Eintrag%i"
 
-#: src/LogbookDialog.cpp:8713
+#: src/LogbookDialog.cpp:8713 src/LogbookDialog.cpp:8712
+#: ../src/LogbookDialog.cpp:8713
 msgid "Normal Timer"
 msgstr "Normaler Timer"
 
 #: src/LogbookDialog.cpp:8749 src/LogbookDialog.cpp:8827
-#: src/LogbookDialog.cpp:8891
+#: src/LogbookDialog.cpp:8891 src/LogbookDialog.cpp:8748
+#: src/LogbookDialog.cpp:8826 src/LogbookDialog.cpp:8890
+#: ../src/LogbookDialog.cpp:8749 ../src/LogbookDialog.cpp:8827
+#: ../src/LogbookDialog.cpp:8891
 msgid "Event"
 msgstr "Ereignis"
 
-#: src/LogbookDialog.cpp:8763
+#: src/LogbookDialog.cpp:8763 src/LogbookDialog.cpp:8762
+#: ../src/LogbookDialog.cpp:8763
 msgid "Full Hour Timer"
 msgstr "Stunden Timer"
 
-#: src/LogbookDialog.cpp:8766
+#: src/LogbookDialog.cpp:8766 src/LogbookDialog.cpp:8765
+#: ../src/LogbookDialog.cpp:8766
 msgid "every"
 msgstr "jede"
 
-#: src/LogbookDialog.cpp:8797
+#: src/LogbookDialog.cpp:8797 src/LogbookDialog.cpp:8796
+#: ../src/LogbookDialog.cpp:8797
 msgid "+ Minutes"
 msgstr "+ Minuten"
 
 #: src/LogbookDialog.cpp:8816 src/LogbookDialog.cpp:8879
+#: src/LogbookDialog.cpp:8815 src/LogbookDialog.cpp:8878
+#: ../src/LogbookDialog.cpp:8816 ../src/LogbookDialog.cpp:8879
 msgid "Clear all"
 msgstr "Lösche alles"
 
-#: src/LogbookDialog.cpp:8836
+#: src/LogbookDialog.cpp:8836 src/LogbookDialog.cpp:8835
+#: ../src/LogbookDialog.cpp:8836
 msgid "Individual Timer"
 msgstr "Individueller Timer"
 
-#: src/LogbookDialog.cpp:8859
+#: src/LogbookDialog.cpp:8859 src/LogbookDialog.cpp:8858
+#: ../src/LogbookDialog.cpp:8859
 msgid "Hour"
 msgstr "Stunde"
 
 #: src/LogbookDialog.cpp:8860 src/LogbookOptions.cpp:614
+#: src/LogbookDialog.cpp:8859 src/LogbookOptions.cpp:628
+#: ../src/LogbookDialog.cpp:8860 ../src/LogbookOptions.cpp:628
 msgid "Minutes"
 msgstr "Minuten"
 
 #: src/LogbookDialog.cpp:9238 src/LogbookDialog.cpp:9243
+#: src/LogbookDialog.cpp:9237 src/LogbookDialog.cpp:9242
+#: ../src/LogbookDialog.cpp:9238 ../src/LogbookDialog.cpp:9243
 msgid "PM"
 msgstr ""
 
-#: src/LogbookDialog.cpp:9245
+#: src/LogbookDialog.cpp:9245 src/LogbookDialog.cpp:9244
+#: ../src/LogbookDialog.cpp:9245
 msgid "AM"
 msgstr ""
 
-#: src/LogbookDialog.cpp:9353
+#: src/LogbookDialog.cpp:9353 src/LogbookDialog.cpp:9352
+#: ../src/LogbookDialog.cpp:9353
 msgid "AM/PM"
 msgstr ""
 
-#: src/LogbookOptions.cpp:70
+#: src/LogbookOptions.cpp:70 ../src/LogbookOptions.cpp:70
 msgid "Date-Format:"
 msgstr "Datums-Format:"
 
-#: src/LogbookOptions.cpp:74
+#: src/LogbookOptions.cpp:74 ../src/LogbookOptions.cpp:74
 msgid "Local Format"
 msgstr "Lokales Format"
 
-#: src/LogbookOptions.cpp:74
+#: src/LogbookOptions.cpp:74 ../src/LogbookOptions.cpp:74
 msgid "Individual"
 msgstr "Individuell"
 
-#: src/LogbookOptions.cpp:85 src/LogbookOptions.cpp:91 src/LogbookOptions.cpp:97
-#: src/LogbookOptions.cpp:831
+#: src/LogbookOptions.cpp:85 src/LogbookOptions.cpp:91
+#: src/LogbookOptions.cpp:97 src/LogbookOptions.cpp:831
+#: src/LogbookOptions.cpp:845 ../src/LogbookOptions.cpp:85
+#: ../src/LogbookOptions.cpp:91 ../src/LogbookOptions.cpp:97
+#: ../src/LogbookOptions.cpp:845
 msgid "Month"
 msgstr "Monat(e)"
 
-#: src/LogbookOptions.cpp:85 src/LogbookOptions.cpp:91 src/LogbookOptions.cpp:97
+#: src/LogbookOptions.cpp:85 src/LogbookOptions.cpp:91
+#: src/LogbookOptions.cpp:97 ../src/LogbookOptions.cpp:85
+#: ../src/LogbookOptions.cpp:91 ../src/LogbookOptions.cpp:97
 msgid "Day"
 msgstr "Tag"
 
-#: src/LogbookOptions.cpp:85 src/LogbookOptions.cpp:91 src/LogbookOptions.cpp:97
+#: src/LogbookOptions.cpp:85 src/LogbookOptions.cpp:91
+#: src/LogbookOptions.cpp:97 ../src/LogbookOptions.cpp:85
+#: ../src/LogbookOptions.cpp:91 ../src/LogbookOptions.cpp:97
 msgid "Year"
 msgstr "Jahr"
 
-#: src/LogbookOptions.cpp:111
+#: src/LogbookOptions.cpp:111 ../src/LogbookOptions.cpp:111
 msgid "Separator"
 msgstr ""
 
-#: src/LogbookOptions.cpp:115
+#: src/LogbookOptions.cpp:115 ../src/LogbookOptions.cpp:115
 msgid "."
 msgstr ""
 
-#: src/LogbookOptions.cpp:129
+#: src/LogbookOptions.cpp:129 ../src/LogbookOptions.cpp:129
 msgid "Time-Format:"
 msgstr "Zeit-Format:"
 
-#: src/LogbookOptions.cpp:133
+#: src/LogbookOptions.cpp:133 ../src/LogbookOptions.cpp:133
 msgid "24 Hour Format"
 msgstr "24 Stunden Format"
 
-#: src/LogbookOptions.cpp:133
+#: src/LogbookOptions.cpp:133 ../src/LogbookOptions.cpp:133
 msgid "12 Hour Format"
 msgstr "12 Stunden Format"
 
-#: src/LogbookOptions.cpp:139
+#: src/LogbookOptions.cpp:139 ../src/LogbookOptions.cpp:139
 msgid "No Seconds"
 msgstr "keine Sekunden"
 
-#: src/LogbookOptions.cpp:160
+#: src/LogbookOptions.cpp:160 ../src/LogbookOptions.cpp:160
 msgid "UTC"
 msgstr "UTC"
 
-#: src/LogbookOptions.cpp:163
+#: src/LogbookOptions.cpp:163 ../src/LogbookOptions.cpp:163
 msgid "Local = UTC"
 msgstr "Lokal = UTC"
 
-#: src/LogbookOptions.cpp:190
+#: src/LogbookOptions.cpp:190 ../src/LogbookOptions.cpp:190
 msgid "GPS Auto"
 msgstr ""
 
-#: src/LogbookOptions.cpp:191
+#: src/LogbookOptions.cpp:191 ../src/LogbookOptions.cpp:191
 msgid "every 15 Degrees +/- 1 hour"
 msgstr "je 15 Grad +/- 1 Stunde"
 
-#: src/LogbookOptions.cpp:208
+#: src/LogbookOptions.cpp:208 ../src/LogbookOptions.cpp:208
 msgid "Show Logbook Icon"
 msgstr "Zeige Logbuch-Icon"
 
-#: src/LogbookOptions.cpp:212
+#: src/LogbookOptions.cpp:212 ../src/LogbookOptions.cpp:212
 msgid "Show Position Format"
 msgstr ""
 
-#: src/LogbookOptions.cpp:227
+#: src/LogbookOptions.cpp:227 ../src/LogbookOptions.cpp:227
 msgid "Show ToolTips"
 msgstr "Zeige Tooltips"
 
-#: src/LogbookOptions.cpp:231
+#: src/LogbookOptions.cpp:231 ../src/LogbookOptions.cpp:231
 msgid "No. of Inboard Engines"
 msgstr ""
 
-#: src/LogbookOptions.cpp:235
+#: src/LogbookOptions.cpp:235 ../src/LogbookOptions.cpp:235
 msgid "1"
 msgstr ""
 
-#: src/LogbookOptions.cpp:235
+#: src/LogbookOptions.cpp:235 ../src/LogbookOptions.cpp:235
 msgid "2"
 msgstr ""
 
-#: src/LogbookOptions.cpp:243
+#: src/LogbookOptions.cpp:243 ../src/LogbookOptions.cpp:243
 msgid "StatusBar at bottom of the page"
 msgstr ""
 
-#: src/LogbookOptions.cpp:245
-msgid "If unchecked the StatusBar will be placed above the Navigation/Meteo/Motor-Sails buttons"
+#: src/LogbookOptions.cpp:245 ../src/LogbookOptions.cpp:245
+msgid ""
+"If unchecked the StatusBar will be placed above the Navigation/Meteo/Motor-"
+"Sails buttons"
 msgstr ""
 
-#: src/LogbookOptions.cpp:250
+#: src/LogbookOptions.cpp:250 ../src/LogbookOptions.cpp:250
 msgid "Generator On Board"
 msgstr ""
 
-#: src/LogbookOptions.cpp:252
-msgid "Check if there is a Generator onboard.\n"
+#: src/LogbookOptions.cpp:252 ../src/LogbookOptions.cpp:252
+msgid ""
+"Check if there is a Generator onboard.\n"
 "If unchecked the Generator columns will not show in Logbook"
 msgstr ""
 
-#: src/LogbookOptions.cpp:257
+#: src/LogbookOptions.cpp:257 ../src/LogbookOptions.cpp:257
 msgid "Show Min|Avg|Max wind speeds"
 msgstr ""
 
-#: src/LogbookOptions.cpp:259
+#: src/LogbookOptions.cpp:259 ../src/LogbookOptions.cpp:259
 msgid "If checked the TWS and AWS will display Min|Avg|Max windspeeds"
 msgstr ""
 
-#: src/LogbookOptions.cpp:264
+#: src/LogbookOptions.cpp:264 ../src/LogbookOptions.cpp:264
 msgid "Sails Messages"
 msgstr "Segel Nachricht"
 
-#: src/LogbookOptions.cpp:270
+#: src/LogbookOptions.cpp:270 ../src/LogbookOptions.cpp:270
 msgid "Show daily entries in Overview"
 msgstr ""
 
-#: src/LogbookOptions.cpp:272
-msgid "If checked the Overview for Active or Selected logbook will show daily lines-"
+#: src/LogbookOptions.cpp:272 ../src/LogbookOptions.cpp:272
+msgid ""
+"If checked the Overview for Active or Selected logbook will show daily lines-"
 msgstr ""
 
-#: src/LogbookOptions.cpp:277
+#: src/LogbookOptions.cpp:277 ../src/LogbookOptions.cpp:277
 msgid "Write warning \"No GPS\""
 msgstr "schreibe Warnung  \"kein GPS\""
 
-#: src/LogbookOptions.cpp:279
-msgid "Uncheck if You have no GPS\n"
+#: src/LogbookOptions.cpp:279 ../src/LogbookOptions.cpp:279
+msgid ""
+"Uncheck if You have no GPS\n"
 "If GPS is out of order, uncheck to\n"
 "prevent that the message repeats."
-msgstr "kein Haken, wenn Sie kein GPS benutzen\n"
+msgstr ""
+"kein Haken, wenn Sie kein GPS benutzen\n"
 "oder es defekt ist. Es verhindert, dass die\n"
 "Nachricht permanent wiederholt wird."
 
-#: src/LogbookOptions.cpp:285
+#: src/LogbookOptions.cpp:285 ../src/LogbookOptions.cpp:285
 msgid "Write message \"Engine running\" "
 msgstr ""
 
-#: src/LogbookOptions.cpp:287
+#: src/LogbookOptions.cpp:287 ../src/LogbookOptions.cpp:287
 msgid "If checked the message will be in Remarks when engine is started."
 msgstr ""
 
-#: src/LogbookOptions.cpp:292
+#: src/LogbookOptions.cpp:292 ../src/LogbookOptions.cpp:292
 msgid "On engine start set always all sails down"
 msgstr "Bei Motorstart immer Segel runter"
 
@@ -2058,350 +2740,468 @@ msgstr "Bei Motorstart immer Segel runter"
 msgid "     Winddirection set to:"
 msgstr "     Windrichtung bezogen auf:"
 
-#: src/LogbookOptions.cpp:301
+#: src/LogbookOptions.cpp:301 ../src/LogbookOptions.cpp:301
 msgid "default"
 msgstr ""
 
-#: src/LogbookOptions.cpp:305
-msgid "default = Relative to Boat\n"
+#: src/LogbookOptions.cpp:305 ../src/LogbookOptions.cpp:305
+msgid ""
+"default = Relative to Boat\n"
 "Heading = Actual wind direction"
-msgstr "default = Relativ zum Schiff\n"
+msgstr ""
+"default = Relativ zum Schiff\n"
 "KdW = Aktuelle Windrichtung"
 
-#: src/LogbookOptions.cpp:314
+#: src/LogbookOptions.cpp:314 src/LogbookOptions.cpp:328
+#: ../src/LogbookOptions.cpp:328
 msgid "Events"
 msgstr "Ereignisse"
 
-#: src/LogbookOptions.cpp:323
-msgid "Writes this text to the logbook when the event occurs, alter texts as desired"
-msgstr "Schreibt diesen Text in das Logbuch, wenn ein Ereignis auftritt. Ändere den Text nach Wunsch"
+#: src/LogbookOptions.cpp:323 src/LogbookOptions.cpp:337
+#: ../src/LogbookOptions.cpp:337
+msgid ""
+"Writes this text to the logbook when the event occurs, alter texts as desired"
+msgstr ""
+"Schreibt diesen Text in das Logbuch, wenn ein Ereignis auftritt. Ändere den "
+"Text nach Wunsch"
 
-#: src/LogbookOptions.cpp:338
-msgid "automatic line by timer\n"
+#: src/LogbookOptions.cpp:338 src/LogbookOptions.cpp:352
+#: ../src/LogbookOptions.cpp:352
+msgid ""
+"automatic line by timer\n"
 "You can set/unset a timer\n"
 " by clicking the bullet\n"
 "Change this text in options"
-msgstr "Automatischer Eintrag durch Timerr\n"
+msgstr ""
+"Automatischer Eintrag durch Timerr\n"
 "Sie können einen Timer ein- oder ausschalten\n"
 "durch klicken auf den Timer-Bullet.\n"
 "Ändere diesen Text in Options"
 
-#: src/LogbookOptions.cpp:348
-msgid "automatic line\n"
+#: src/LogbookOptions.cpp:348 src/LogbookOptions.cpp:362
+#: ../src/LogbookOptions.cpp:362
+msgid ""
+"automatic line\n"
 "Waypoint arrived:"
-msgstr "automatische Zeile\n"
+msgstr ""
+"automatische Zeile\n"
 "Wegpunlt erreicht"
 
-#: src/LogbookOptions.cpp:376
+#: src/LogbookOptions.cpp:376 src/LogbookOptions.cpp:390
+#: ../src/LogbookOptions.cpp:390
 msgid "Course changes"
 msgstr "Kursänderung"
 
-#: src/LogbookOptions.cpp:390
+#: src/LogbookOptions.cpp:390 src/LogbookOptions.cpp:404
+#: ../src/LogbookOptions.cpp:404
 msgid "Popup logbook on event"
 msgstr "Zeige Logbuch bei einem Ereignis an (Popup)"
 
-#: src/LogbookOptions.cpp:405
+#: src/LogbookOptions.cpp:405 src/LogbookOptions.cpp:419
+#: ../src/LogbookOptions.cpp:419
 msgid "Install Layouts"
 msgstr "Installiere ein Layout"
 
-#: src/LogbookOptions.cpp:409
+#: src/LogbookOptions.cpp:409 src/LogbookOptions.cpp:423
+#: ../src/LogbookOptions.cpp:423
 msgid "Uninstall Logbook"
 msgstr "Deinstalliere Logbuch"
 
-#: src/LogbookOptions.cpp:413
+#: src/LogbookOptions.cpp:413 src/LogbookOptions.cpp:427
+#: ../src/LogbookOptions.cpp:427
 msgid "Install"
 msgstr "Installiere"
 
-#: src/LogbookOptions.cpp:414
+#: src/LogbookOptions.cpp:414 src/LogbookOptions.cpp:428
+#: ../src/LogbookOptions.cpp:428
 msgid "Install OpenCPN_Logbook_Layouts.zip"
 msgstr "Installiere OpenCPN_Logbook_Layouts.zip"
 
-#: src/LogbookOptions.cpp:418
+#: src/LogbookOptions.cpp:418 src/LogbookOptions.cpp:432
+#: ../src/LogbookOptions.cpp:432
 msgid "Uninstall"
 msgstr "Deinstalliere"
 
-#: src/LogbookOptions.cpp:419
-msgid "Uninstalls\n"
+#: src/LogbookOptions.cpp:419 src/LogbookOptions.cpp:433
+#: ../src/LogbookOptions.cpp:433
+msgid ""
+"Uninstalls\n"
 "Logbook-Plugin,\n"
 "all Logbook-Data,\n"
 "all Logbook-Layouts,\n"
 "all Logbook-Languages\n"
 "and cleans the OpenCPN.ini"
-msgstr "Deinstalliert\n"
+msgstr ""
+"Deinstalliert\n"
 "Logbuch-Plugin\n"
 "alle Logbuchdaten\n"
 "alle Logbuchlayouts\n"
 "alle Logbuchsprachen\n"
 "und bereinigt OpenCPN.ini"
 
-#: src/LogbookOptions.cpp:436
+#: src/LogbookOptions.cpp:436 src/LogbookOptions.cpp:450
+#: ../src/LogbookOptions.cpp:450
 msgid "Behavior"
 msgstr "Verhalten"
 
-#: src/LogbookOptions.cpp:450
-msgid "Only used when you enter 1/2, 1/4 ... in a total-field, or to calculate the watermaker\n"
-msgstr "Wird zwingend benötigt bei einer Eingabe von 1/2, 1/4....\n"
+#: src/LogbookOptions.cpp:450 src/LogbookOptions.cpp:464
+#: ../src/LogbookOptions.cpp:464
+msgid ""
+"Only used when you enter 1/2, 1/4 ... in a total-field, or to calculate the "
+"watermaker\n"
+msgstr ""
+"Wird zwingend benötigt bei einer Eingabe von 1/2, 1/4....\n"
 "in einem Gesamt-Feld (z.B. Wasser gesamt)\n"
 "oder um den Wassermacher zu berechnen\n"
 
 #: src/LogbookOptions.cpp:474 src/LogbookOptions.cpp:518
+#: src/LogbookOptions.cpp:488 src/LogbookOptions.cpp:532
+#: ../src/LogbookOptions.cpp:488 ../src/LogbookOptions.cpp:532
 msgid "Tank"
 msgstr ""
 
 #: src/LogbookOptions.cpp:481 src/LogbookOptions.cpp:494
-#: src/LogbookOptions.cpp:525
+#: src/LogbookOptions.cpp:525 src/LogbookOptions.cpp:495
+#: src/LogbookOptions.cpp:508 src/LogbookOptions.cpp:539
+#: ../src/LogbookOptions.cpp:495 ../src/LogbookOptions.cpp:508
+#: ../src/LogbookOptions.cpp:539
 msgid "Set gal/liter in Abbreviations "
 msgstr "gal/l kann in Abkürzungen gesetzt werden"
 
-#: src/LogbookOptions.cpp:539
+#: src/LogbookOptions.cpp:539 src/LogbookOptions.cpp:553
+#: ../src/LogbookOptions.cpp:553
 msgid "Battery"
 msgstr "Batterie"
 
 #: src/LogbookOptions.cpp:576 src/LogbookOptions.cpp:765
+#: src/LogbookOptions.cpp:590 src/LogbookOptions.cpp:779
+#: ../src/LogbookOptions.cpp:590 ../src/LogbookOptions.cpp:779
 msgid "Capacity"
 msgstr "Kapazität"
 
-#: src/LogbookOptions.cpp:603
+#: src/LogbookOptions.cpp:603 src/LogbookOptions.cpp:617
+#: ../src/LogbookOptions.cpp:617
 msgid "Degrees"
 msgstr ""
 
-#: src/LogbookOptions.cpp:621
+#: src/LogbookOptions.cpp:621 src/LogbookOptions.cpp:635
+#: ../src/LogbookOptions.cpp:635
 msgid "Seconds"
 msgstr "Sekunden"
 
-#: src/LogbookOptions.cpp:638
+#: src/LogbookOptions.cpp:638 src/LogbookOptions.cpp:652
+#: ../src/LogbookOptions.cpp:652
 msgid "Speed"
 msgstr "Fahrt"
 
-#: src/LogbookOptions.cpp:648
+#: src/LogbookOptions.cpp:648 src/LogbookOptions.cpp:662
+#: ../src/LogbookOptions.cpp:662
 msgid "Show Depth in"
 msgstr "Tiefe in"
 
 #: src/LogbookOptions.cpp:652 src/LogbookOptions.cpp:658
-#: src/LogbookOptions.cpp:672
+#: src/LogbookOptions.cpp:672 src/LogbookOptions.cpp:666
+#: src/LogbookOptions.cpp:686 ../src/LogbookOptions.cpp:666
+#: ../src/LogbookOptions.cpp:672 ../src/LogbookOptions.cpp:686
 msgid "Meter"
 msgstr ""
 
 #: src/LogbookOptions.cpp:652 src/LogbookOptions.cpp:672
-#: src/LogbookOptions.cpp:678
+#: src/LogbookOptions.cpp:678 src/LogbookOptions.cpp:666
+#: src/LogbookOptions.cpp:686 src/LogbookOptions.cpp:692
+#: ../src/LogbookOptions.cpp:666 ../src/LogbookOptions.cpp:686
+#: ../src/LogbookOptions.cpp:692
 msgid "Feet"
 msgstr "Fuß"
 
 #: src/LogbookOptions.cpp:652 src/LogbookOptions.cpp:672
-#: src/LogbookOptions.cpp:698
+#: src/LogbookOptions.cpp:698 src/LogbookOptions.cpp:666
+#: src/LogbookOptions.cpp:686 src/LogbookOptions.cpp:712
+#: ../src/LogbookOptions.cpp:666 ../src/LogbookOptions.cpp:686
+#: ../src/LogbookOptions.cpp:712
 msgid "Fathom"
 msgstr "Faden"
 
-#: src/LogbookOptions.cpp:668
+#: src/LogbookOptions.cpp:668 src/LogbookOptions.cpp:682
+#: ../src/LogbookOptions.cpp:682
 msgid "Show Wave/Swell in"
 msgstr "Welle/Schwell in"
 
 #: src/LogbookOptions.cpp:692 src/LogbookOptions.cpp:869
+#: src/LogbookOptions.cpp:706 src/LogbookOptions.cpp:883
+#: ../src/LogbookOptions.cpp:706 ../src/LogbookOptions.cpp:883
 msgid "True"
 msgstr "Wahr"
 
-#: src/LogbookOptions.cpp:692
+#: src/LogbookOptions.cpp:692 src/LogbookOptions.cpp:706
+#: ../src/LogbookOptions.cpp:706
 msgid "Magnetic"
 msgstr "Magnet"
 
-#: src/LogbookOptions.cpp:702
+#: src/LogbookOptions.cpp:702 src/LogbookOptions.cpp:716
+#: ../src/LogbookOptions.cpp:716
 msgid "fm"
 msgstr ""
 
-#: src/LogbookOptions.cpp:720
+#: src/LogbookOptions.cpp:720 src/LogbookOptions.cpp:734
+#: ../src/LogbookOptions.cpp:734
 msgid "Windspeed"
 msgstr "Windstärke"
 
-#: src/LogbookOptions.cpp:748
+#: src/LogbookOptions.cpp:748 src/LogbookOptions.cpp:762
+#: ../src/LogbookOptions.cpp:762
 msgid "Temperature"
 msgstr "Temperatur"
 
-#: src/LogbookOptions.cpp:759
+#: src/LogbookOptions.cpp:759 src/LogbookOptions.cpp:773
+#: ../src/LogbookOptions.cpp:773
 msgid "Fuel/Water"
 msgstr "Treibstoff/Wasser"
 
-#: src/LogbookOptions.cpp:772
+#: src/LogbookOptions.cpp:772 src/LogbookOptions.cpp:786
+#: ../src/LogbookOptions.cpp:786
 msgid "Motor Hours"
 msgstr "Motor Stunden"
 
-#: src/LogbookOptions.cpp:779
+#: src/LogbookOptions.cpp:779 src/LogbookOptions.cpp:793
+#: ../src/LogbookOptions.cpp:793
 msgid "Ampere"
 msgstr ""
 
-#: src/LogbookOptions.cpp:787
+#: src/LogbookOptions.cpp:787 src/FastAccessDialog.cpp:276
+#: src/LogbookOptions.cpp:801 ../src/FastAccessDialog.cpp:276
+#: ../src/LogbookOptions.cpp:801
 msgid "Engine"
 msgstr "Motor"
 
-#: src/LogbookOptions.cpp:794
+#: src/LogbookOptions.cpp:794 src/LogbookOptions.cpp:808
+#: ../src/LogbookOptions.cpp:808
 msgid "PropShaft"
 msgstr "Propwelle"
 
-#: src/LogbookOptions.cpp:798
+#: src/LogbookOptions.cpp:798 src/LogbookOptions.cpp:812
+#: ../src/LogbookOptions.cpp:812
 msgid "S"
 msgstr ""
 
-#: src/LogbookOptions.cpp:801
+#: src/LogbookOptions.cpp:801 src/LogbookOptions.cpp:815
+#: ../src/LogbookOptions.cpp:815
 msgid "Revolutions"
 msgstr "Umdrehungen"
 
-#: src/LogbookOptions.cpp:805
+#: src/LogbookOptions.cpp:805 src/LogbookOptions.cpp:819
+#: ../src/LogbookOptions.cpp:819
 msgid "RPM"
 msgstr "U/min"
 
 #: src/LogbookOptions.cpp:813 src/LogbookOptions.cpp:817
+#: src/LogbookOptions.cpp:827 src/LogbookOptions.cpp:831
+#: ../src/LogbookOptions.cpp:827 ../src/LogbookOptions.cpp:831
 msgid "Day(s)"
 msgstr "Tag(e)"
 
 #: src/LogbookOptions.cpp:820 src/LogbookOptions.cpp:824
+#: src/LogbookOptions.cpp:834 src/LogbookOptions.cpp:838
+#: ../src/LogbookOptions.cpp:834 ../src/LogbookOptions.cpp:838
 msgid "Week(s)"
 msgstr "Woche(n)"
 
-#: src/LogbookOptions.cpp:827
+#: src/LogbookOptions.cpp:827 src/LogbookOptions.cpp:841
+#: ../src/LogbookOptions.cpp:841
 msgid "Month "
 msgstr "Monat"
 
-#: src/LogbookOptions.cpp:839
+#: src/LogbookOptions.cpp:839 src/LogbookOptions.cpp:853
+#: ../src/LogbookOptions.cpp:853
 msgid "If GPS off use for manual entry"
 msgstr "Wenn GPS nicht eingeschaltet ist benutze"
 
-#: src/LogbookOptions.cpp:851
+#: src/LogbookOptions.cpp:851 src/LogbookOptions.cpp:865
+#: ../src/LogbookOptions.cpp:865
 msgid "Windspeed "
 msgstr "Windstärke"
 
-#: src/LogbookOptions.cpp:865
+#: src/LogbookOptions.cpp:865 src/LogbookOptions.cpp:879
+#: ../src/LogbookOptions.cpp:879
 msgid " Direction "
 msgstr "Richtung"
 
-#: src/LogbookOptions.cpp:869
+#: src/LogbookOptions.cpp:869 src/LogbookOptions.cpp:883
+#: ../src/LogbookOptions.cpp:883
 msgid "Relative"
 msgstr "Relativ"
 
 #: src/LogbookOptions.cpp:884 src/LogbookOptions.cpp:1197
+#: src/LogbookOptions.cpp:898 src/LogbookOptions.cpp:1206
+#: ../src/LogbookOptions.cpp:898 ../src/LogbookOptions.cpp:1206
 msgid "Abbreviations"
 msgstr "Abkürzungen"
 
-#: src/LogbookOptions.cpp:904
+#: src/LogbookOptions.cpp:904 src/LogbookOptions.cpp:918
+#: ../src/LogbookOptions.cpp:918
 msgid "Path to ODT-Editor"
 msgstr "Pfad zum ODT-Editor"
 
-#: src/LogbookOptions.cpp:909
+#: src/LogbookOptions.cpp:909 src/LogbookOptions.cpp:923
+#: ../src/LogbookOptions.cpp:923
 #, c-format
-msgid "to use MS-Word, append %s like this:\n"
+msgid ""
+"to use MS-Word, append %s like this:\n"
 "\"C:\\yourPathToWinword\\WINWORD.EXE\" %s"
-msgstr "damit MS-Word richtig started, bitte ein %s anhängen:\n"
+msgstr ""
+"damit MS-Word richtig started, bitte ein %s anhängen:\n"
 "\"C:\\DeinPfadzuWinword\\WINWORD.EXE\" %s"
 
-#: src/LogbookOptions.cpp:916
+#: src/LogbookOptions.cpp:916 src/LogbookOptions.cpp:930
+#: ../src/LogbookOptions.cpp:930
 msgid "Path to Datamanager"
 msgstr "Pfad zum Dateimanager"
 
-#: src/LogbookOptions.cpp:930
+#: src/LogbookOptions.cpp:930 src/LogbookOptions.cpp:944
+#: ../src/LogbookOptions.cpp:944
 msgid "Path to MailClient"
 msgstr "Pfad zum Mail-Programm"
 
-#: src/LogbookOptions.cpp:944
-msgid "Path to HTML-Editor\n"
+#: src/LogbookOptions.cpp:944 src/LogbookOptions.cpp:958
+#: ../src/LogbookOptions.cpp:958
+msgid ""
+"Path to HTML-Editor\n"
 "(optional)"
-msgstr "Pfad zum HTML-Editor\n"
+msgstr ""
+"Pfad zum HTML-Editor\n"
 "(optional)"
 
-#: src/LogbookOptions.cpp:956
+#: src/LogbookOptions.cpp:956 src/LogbookOptions.cpp:970
+#: ../src/LogbookOptions.cpp:970
 msgid "Reset Paths"
 msgstr "Pfade zurücksetzen"
 
-#: src/LogbookOptions.cpp:962
+#: src/LogbookOptions.cpp:962 src/LogbookOptions.cpp:976
+#: ../src/LogbookOptions.cpp:976
 msgid "Paths"
 msgstr "Pfade"
 
-#: src/LogbookOptions.cpp:992
+#: src/LogbookOptions.cpp:992 src/LogbookOptions.cpp:1006
+#: ../src/LogbookOptions.cpp:1006
 msgid "Show"
 msgstr "Zeige"
 
-#: src/LogbookOptions.cpp:1013
+#: src/LogbookOptions.cpp:1013 src/LogbookOptions.cpp:1027
+#: ../src/LogbookOptions.cpp:1027
 msgid "Set Linewidth to"
 msgstr "Setze Zeilenbreite auf"
 
-#: src/LogbookOptions.cpp:1017
+#: src/LogbookOptions.cpp:1017 src/LogbookOptions.cpp:1031
+#: ../src/LogbookOptions.cpp:1031
 msgid "4"
 msgstr ""
 
-#: src/LogbookOptions.cpp:1023
+#: src/LogbookOptions.cpp:1023 src/LogbookOptions.cpp:1037
+#: ../src/LogbookOptions.cpp:1037
 msgid "Set Transparency to"
 msgstr "Setze Transparenz auf"
 
-#: src/LogbookOptions.cpp:1027
+#: src/LogbookOptions.cpp:1027 src/LogbookOptions.cpp:1041
+#: ../src/LogbookOptions.cpp:1041
 msgid "transparent"
 msgstr ""
 
-#: src/LogbookOptions.cpp:1027
+#: src/LogbookOptions.cpp:1027 src/LogbookOptions.cpp:1041
+#: ../src/LogbookOptions.cpp:1041
 msgid "solid"
 msgstr ""
 
-#: src/LogbookOptions.cpp:1036
+#: src/LogbookOptions.cpp:1036 src/LogbookOptions.cpp:1050
+#: ../src/LogbookOptions.cpp:1050
 msgid "Set Route-Linecolor to"
 msgstr "Setze Routen-Linienfarbe auf"
 
 #: src/LogbookOptions.cpp:1040 src/LogbookOptions.cpp:1053
+#: src/LogbookOptions.cpp:1054 src/LogbookOptions.cpp:1067
+#: ../src/LogbookOptions.cpp:1054 ../src/LogbookOptions.cpp:1067
 msgid "white"
 msgstr "weiß"
 
 #: src/LogbookOptions.cpp:1040 src/LogbookOptions.cpp:1053
+#: src/LogbookOptions.cpp:1054 src/LogbookOptions.cpp:1067
+#: ../src/LogbookOptions.cpp:1054 ../src/LogbookOptions.cpp:1067
 msgid "black"
 msgstr "schwarz"
 
 #: src/LogbookOptions.cpp:1040 src/LogbookOptions.cpp:1053
+#: src/LogbookOptions.cpp:1054 src/LogbookOptions.cpp:1067
+#: ../src/LogbookOptions.cpp:1054 ../src/LogbookOptions.cpp:1067
 msgid "red"
 msgstr "rot"
 
 #: src/LogbookOptions.cpp:1040 src/LogbookOptions.cpp:1053
+#: src/LogbookOptions.cpp:1054 src/LogbookOptions.cpp:1067
+#: ../src/LogbookOptions.cpp:1054 ../src/LogbookOptions.cpp:1067
 msgid "yellow"
 msgstr "gelb"
 
-#: src/LogbookOptions.cpp:1049
+#: src/LogbookOptions.cpp:1049 src/LogbookOptions.cpp:1063
+#: ../src/LogbookOptions.cpp:1063
 msgid "Set Track-Linecolor to"
 msgstr "Setze Track-Linienfarbe auf"
 
-#: src/LogbookOptions.cpp:1064
+#: src/LogbookOptions.cpp:1064 src/LogbookOptions.cpp:1078
+#: ../src/LogbookOptions.cpp:1078
 msgid "KML"
 msgstr "KML"
 
-#: src/LogbookOptions.cpp:1074
-msgid "Check one of the below checkboxes, if you want use ERRPM-Sentence (see help)"
+#: src/LogbookOptions.cpp:1074 src/LogbookOptions.cpp:1088
+#: ../src/LogbookOptions.cpp:1088
+msgid ""
+"Check one of the below checkboxes, if you want use ERRPM-Sentence (see help)"
 msgstr ""
 
-#: src/LogbookOptions.cpp:1093
+#: src/LogbookOptions.cpp:1093 src/LogbookOptions.cpp:1107
+#: ../src/LogbookOptions.cpp:1107
 msgid "Check"
 msgstr ""
 
-#: src/LogbookOptions.cpp:1095
-msgid "Start your engine(s) and hit the button.\n"
+#: src/LogbookOptions.cpp:1095 src/LogbookOptions.cpp:1109
+#: ../src/LogbookOptions.cpp:1109
+msgid ""
+"Start your engine(s) and hit the button.\n"
 "You should see the ERRPM-Sentence\n"
 "left to the button"
-msgstr "Starte Motor(en) und klick den Button.\n"
+msgstr ""
+"Starte Motor(en) und klick den Button.\n"
 "Es soll die ERRPM-Sequenz links vom Button\n"
 "zu sehen sein"
 
-#: src/LogbookOptions.cpp:1101
+#: src/LogbookOptions.cpp:1101 src/LogbookOptions.cpp:1115
+#: ../src/LogbookOptions.cpp:1115
 msgid "Engine-No. corresponds with column Engine #1"
 msgstr "Motor-Nr. entspricht Spalte Motor #1"
 
 #: src/LogbookOptions.cpp:1103 src/LogbookOptions.cpp:1116
-msgid "Check this box if the NMEA stream contains RPM messages for this engine\n"
+#: src/LogbookOptions.cpp:1117 src/LogbookOptions.cpp:1130
+#: ../src/LogbookOptions.cpp:1117 ../src/LogbookOptions.cpp:1130
+msgid ""
+"Check this box if the NMEA stream contains RPM messages for this engine\n"
 msgstr ""
 
-#: src/LogbookOptions.cpp:1114
+#: src/LogbookOptions.cpp:1114 src/LogbookOptions.cpp:1128
+#: ../src/LogbookOptions.cpp:1128
 msgid "Engine-No. corresponds with column Engine #2"
 msgstr "Motor-Nr. entspricht Spalte Motor #2"
 
-#: src/LogbookOptions.cpp:1128
+#: src/LogbookOptions.cpp:1128 src/LogbookOptions.cpp:1142
+#: ../src/LogbookOptions.cpp:1142
 msgid "Engine-No. corresponds with column Generator"
 msgstr ""
 
-#: src/LogbookOptions.cpp:1130
-msgid "Check this box if the NMEA stream contains RPM messages for this generator\n"
+#: src/LogbookOptions.cpp:1130 src/LogbookOptions.cpp:1144
+#: ../src/LogbookOptions.cpp:1144
+msgid ""
+"Check this box if the NMEA stream contains RPM messages for this generator\n"
 msgstr ""
 
-#: src/LogbookOptions.cpp:1143
+#: src/LogbookOptions.cpp:1143 src/LogbookOptions.cpp:1157
+#: ../src/LogbookOptions.cpp:1157
 msgid "Use ERRPM-Sentence to calculate the engine-hours"
 msgstr "Verwende ERRPM-Sequenz zur Berechnung Motorstunden"
 
@@ -2413,178 +3213,250 @@ msgstr "Verwende WIMDA-Sequenz von Wetterstation"
 msgid "For Barometer, Air Temperature and rel. Humidity"
 msgstr "Für Barometer, Lufttemperatur und rel. Feuchte"
 
-#: src/LogbookOptions.cpp:1160
+#: src/LogbookOptions.cpp:1160 src/LogbookOptions.cpp:1169
+#: ../src/LogbookOptions.cpp:1169
 msgid "NMEA"
 msgstr "NMEA"
 
-#: src/LogbookOptions.cpp:1173
+#: src/LogbookOptions.cpp:1173 src/LogbookOptions.cpp:1182
+#: ../src/LogbookOptions.cpp:1182
 msgid "Checkbox Space  >>"
 msgstr "Checkbox Leerz.  >>"
 
-#: src/LogbookOptions.cpp:1174
+#: src/LogbookOptions.cpp:1174 src/LogbookOptions.cpp:1183
+#: ../src/LogbookOptions.cpp:1183
 msgid "Usefull for Tablet-PC's"
 msgstr "Nützlich für Tablet-PC's"
 
-#: src/LogbookOptions.cpp:1178
-msgid "Abbreviations are shown in the Sails-Checkboxes\n"
+#: src/LogbookOptions.cpp:1178 src/LogbookOptions.cpp:1187
+#: ../src/LogbookOptions.cpp:1187
+msgid ""
+"Abbreviations are shown in the Sails-Checkboxes\n"
 "The Name is used for the column \"Sails\" when added a new entry"
-msgstr "Abkürzungen gezeigt in den Segel-Checkboxen\n"
-"Der Name wird in der Spalte \"Segel\" beim Zufügen eines neuen Eintrags benutzt"
+msgstr ""
+"Abkürzungen gezeigt in den Segel-Checkboxen\n"
+"Der Name wird in der Spalte \"Segel\" beim Zufügen eines neuen Eintrags "
+"benutzt"
 
-#: src/LogbookOptions.cpp:1225
+#: src/LogbookOptions.cpp:1225 src/LogbookOptions.cpp:1234
+#: ../src/LogbookOptions.cpp:1234
 msgid "<<  Back"
 msgstr "<<  Zurück"
 
-#: src/LogbookOptions.cpp:1226
+#: src/LogbookOptions.cpp:1226 src/LogbookOptions.cpp:1235
+#: ../src/LogbookOptions.cpp:1235
 msgid "Back to Sailnames"
 msgstr "Zurück zu Segelnamen"
 
-#: src/LogbookOptions.cpp:1242
+#: src/LogbookOptions.cpp:1242 src/LogbookOptions.cpp:1251
+#: ../src/LogbookOptions.cpp:1251
 msgid "Row +"
 msgstr "Zeile +"
 
-#: src/LogbookOptions.cpp:1245
+#: src/LogbookOptions.cpp:1245 src/LogbookOptions.cpp:1254
+#: ../src/LogbookOptions.cpp:1254
 msgid "Row -"
 msgstr "Zeile -"
 
-#: src/LogbookOptions.cpp:1248
+#: src/LogbookOptions.cpp:1248 src/LogbookOptions.cpp:1257
+#: ../src/LogbookOptions.cpp:1257
 msgid "Column +"
 msgstr "Spalte +"
 
-#: src/LogbookOptions.cpp:1251
+#: src/LogbookOptions.cpp:1251 src/LogbookOptions.cpp:1260
+#: ../src/LogbookOptions.cpp:1260
 msgid "Column -"
 msgstr "Spalte -"
 
-#: src/LogbookOptions.cpp:1276
+#: src/LogbookOptions.cpp:1276 src/LogbookOptions.cpp:1285
+#: ../src/LogbookOptions.cpp:1285
 msgid "Miscellaneous"
 msgstr "Sonstiges"
 
-#: src/LogbookOptions.cpp:1532
-msgid "Your Generator is still running .\n\n"
+#: src/LogbookOptions.cpp:1532 src/LogbookOptions.cpp:1541
+#: ../src/LogbookOptions.cpp:1541
+msgid ""
+"Your Generator is still running .\n"
+"\n"
 "Generator stopped now."
 msgstr ""
 
-#: src/LogbookOptions.cpp:1648
-msgid "Your Engine #1 is running in manual mode.\n\n"
+#: src/LogbookOptions.cpp:1648 src/LogbookOptions.cpp:1657
+#: ../src/LogbookOptions.cpp:1657
+msgid ""
+"Your Engine #1 is running in manual mode.\n"
+"\n"
 "Engine stopped now."
 msgstr ""
 
-#: src/LogbookOptions.cpp:1673
-msgid "Your Engine #2 is running in manual mode.\n\n"
+#: src/LogbookOptions.cpp:1673 src/LogbookOptions.cpp:1682
+#: ../src/LogbookOptions.cpp:1682
+msgid ""
+"Your Engine #2 is running in manual mode.\n"
+"\n"
 "Engine stopped now."
 msgstr ""
 
-#: src/LogbookOptions.cpp:1698
-msgid "Your Generator is running in manual mode.\n\n"
+#: src/LogbookOptions.cpp:1698 src/LogbookOptions.cpp:1707
+#: ../src/LogbookOptions.cpp:1707
+msgid ""
+"Your Generator is running in manual mode.\n"
+"\n"
 "Generator stopped now."
 msgstr ""
 
-#: src/LogbookOptions.cpp:1904
-msgid "Your Country has 24 Hour Format.\n"
+#: src/LogbookOptions.cpp:1904 src/LogbookOptions.cpp:1913
+#: ../src/LogbookOptions.cpp:1913
+msgid ""
+"Your Country has 24 Hour Format.\n"
 "In this case the OS doen't serve AM/PM-Strings.\n"
-msgstr "In Ihrem Land wird das 24 Stunden Format verwendet.\n"
+msgstr ""
+"In Ihrem Land wird das 24 Stunden Format verwendet.\n"
 "In diesem Fall stellt das Betriebssytem keine AM/PM-Strings zur Verfügung. \n"
 
-#: src/LogbookOptions.cpp:1970
+#: src/LogbookOptions.cpp:1970 src/LogbookOptions.cpp:1979
+#: ../src/LogbookOptions.cpp:1979
 #, c-format
-msgid "You cannot set this dateformat.\n\n"
-"%s%s%s%s%s\n\n"
+msgid ""
+"You cannot set this dateformat.\n"
+"\n"
+"%s%s%s%s%s\n"
+"\n"
 "Please use a different Dateformat in all three Choiceboxes."
-msgstr "Sie können dieses Datumsformat nicht nutzen.\n\n"
-"%s%s%s%s%s\n\n"
+msgstr ""
+"Sie können dieses Datumsformat nicht nutzen.\n"
+"\n"
+"%s%s%s%s%s\n"
+"\n"
 "Bitte setzen Sie in den drei Auswahlboxen unterschiedliche Daten."
 
-#: src/LogbookOptions.cpp:2002
+#: src/LogbookOptions.cpp:2002 src/LogbookOptions.cpp:2011
+#: ../src/LogbookOptions.cpp:2011
 msgid "Please fill in one character in Degrees, Minutes and Seconds"
 msgstr "Bitte ein Zeichen für Grad, Minuten, Sekunden einfügen"
 
-#: src/LogbookOptions.cpp:2214
-msgid "Your Engine #2 is still running .\n\n"
+#: src/LogbookOptions.cpp:2214 src/LogbookOptions.cpp:2223
+#: ../src/LogbookOptions.cpp:2223
+msgid ""
+"Your Engine #2 is still running .\n"
+"\n"
 "Engine #2 stopped now."
 msgstr ""
 
-#: src/LogbookOptions.cpp:2410
+#: src/LogbookOptions.cpp:2410 src/LogbookOptions.cpp:2427
+#: ../src/LogbookOptions.cpp:2427
 msgid "Set Path to HTML-Editor"
 msgstr "Pfad zum HTML-Editor"
 
-#: src/LogbookOptions.cpp:2424
+#: src/LogbookOptions.cpp:2424 src/LogbookOptions.cpp:2441
+#: ../src/LogbookOptions.cpp:2441
 msgid "Set Path to DataManager"
 msgstr "Pfad zum Dateimanager"
 
-#: src/LogbookOptions.cpp:2438
+#: src/LogbookOptions.cpp:2438 src/LogbookOptions.cpp:2455
+#: ../src/LogbookOptions.cpp:2455
 msgid "Set Path to MailClient"
 msgstr "Pfad zum Mail-Program"
 
-#: src/LogbookOptions.cpp:2452
+#: src/LogbookOptions.cpp:2452 src/LogbookOptions.cpp:2469
+#: ../src/LogbookOptions.cpp:2469
 msgid "Set Path to ODT-Editor"
 msgstr "Pfad zum ODT-Editor"
 
 #: src/LogbookHTML.cpp:191 src/LogbookHTML.cpp:347 src/LogbookHTML.cpp:800
 #: src/CrewList.cpp:1876 src/CrewList.cpp:1892 src/CrewList.cpp:2257
-#: src/CrewList.cpp:2294
+#: src/CrewList.cpp:2294 ../src/CrewList.cpp:1876 ../src/CrewList.cpp:1892
+#: ../src/CrewList.cpp:2257 ../src/CrewList.cpp:2294 ../src/LogbookHTML.cpp:191
+#: ../src/LogbookHTML.cpp:347 ../src/LogbookHTML.cpp:800
 msgid "from"
 msgstr "vom"
 
 #: src/LogbookHTML.cpp:192 src/LogbookHTML.cpp:348 src/LogbookHTML.cpp:801
 #: src/CrewList.cpp:1877 src/CrewList.cpp:1893 src/CrewList.cpp:2258
-#: src/CrewList.cpp:2295
+#: src/CrewList.cpp:2295 ../src/CrewList.cpp:1877 ../src/CrewList.cpp:1893
+#: ../src/CrewList.cpp:2258 ../src/CrewList.cpp:2295 ../src/LogbookHTML.cpp:192
+#: ../src/LogbookHTML.cpp:348 ../src/LogbookHTML.cpp:801
 msgid "to"
 msgstr "bis"
 
 #: src/LogbookHTML.cpp:295 src/LogbookHTML.cpp:775 src/CrewList.cpp:1787
 #: src/CrewList.cpp:2195 src/boat.cpp:290 src/boat.cpp:550
+#: ../src/CrewList.cpp:1787 ../src/CrewList.cpp:2195 ../src/LogbookHTML.cpp:295
+#: ../src/LogbookHTML.cpp:775 ../src/boat.cpp:290 ../src/boat.cpp:550
 msgid "Sorry, no Layout installed"
 msgstr "Sorry, kein Layout installiert"
 
-#: src/LogbookHTML.cpp:400 src/CrewList.cpp:2539
+#: src/LogbookHTML.cpp:400 src/CrewList.cpp:2539 ../src/CrewList.cpp:2539
+#: ../src/LogbookHTML.cpp:400
 msgid "Sorry, Logbook has no lines"
 msgstr "Sorry, Logbuch hat keine Einträge"
 
-#: src/LogbookHTML.cpp:677
-msgid "\n"
+#: src/LogbookHTML.cpp:677 ../src/LogbookHTML.cpp:677
+msgid ""
+"\n"
 "not found in layoutfile "
-msgstr "\n"
+msgstr ""
+"\n"
 "nicht gefunden in Layoutdatei"
 
-#: src/LogbookHTML.cpp:677
-msgid "!\n\n"
+#: src/LogbookHTML.cpp:677 ../src/LogbookHTML.cpp:677
+msgid ""
+"!\n"
+"\n"
 "Did you forget to add this line in your layout ?"
-msgstr "!\n\n"
+msgstr ""
+"!\n"
+"\n"
 "Haben Sie diese Zeile im Layout vergessen  ?"
 
-#: src/LogbookHTML.cpp:783
-msgid "Have You forgotten to enclose the Header with [[ and ]]\n"
+#: src/LogbookHTML.cpp:783 ../src/LogbookHTML.cpp:783
+msgid ""
+"Have You forgotten to enclose the Header with [[ and ]]\n"
 " or Data with {{ and }} ?"
-msgstr "Haben Sie vergessen den Header mit [[ und ]]\n"
+msgstr ""
+"Haben Sie vergessen den Header mit [[ und ]]\n"
 "oder Daten mit {{ und }} einzuschließen ?"
 
-#: src/LogbookHTML.cpp:1317
+#: src/LogbookHTML.cpp:1317 ../src/LogbookHTML.cpp:1317
 msgid "Routepoints"
 msgstr "Routenpunkte"
 
-#: src/CrewList.cpp:114
-msgid "Enter default watchtime e.g. 3.30 / available formats are 3.30, 3,30, 3:30, 0330 for 3 hours 30 minutes"
-msgstr "Geben Sie eine Wachzeit ein, z.B. 3.30 / verfügbare Eingabeformate sind: 3.30, 3,30, 3:30, 0330 für 3 Std 30 Min"
+#: src/CrewList.cpp:114 ../src/CrewList.cpp:114
+msgid ""
+"Enter default watchtime e.g. 3.30 / available formats are 3.30, 3,30, 3:30, "
+"0330 for 3 hours 30 minutes"
+msgstr ""
+"Geben Sie eine Wachzeit ein, z.B. 3.30 / verfügbare Eingabeformate sind: "
+"3.30, 3,30, 3:30, 0330 für 3 Std 30 Min"
 
-#: src/CrewList.cpp:115
+#: src/CrewList.cpp:115 ../src/CrewList.cpp:115
 msgid "Alter watchtimes as desired / Drag 'n Drop members from the Crewlist"
-msgstr "Ändere die Wachzeiten nach Wunsch / Drag'n Drop Crewmitglieder aus der Crewliste"
+msgstr ""
+"Ändere die Wachzeiten nach Wunsch / Drag'n Drop Crewmitglieder aus der "
+"Crewliste"
 
-#: src/CrewList.cpp:116
-msgid "*Optional* Prepend a * to a member to make this member static to a watch / Click Calculate"
-msgstr "*Optional* Setzte ein '*'-Zeichen voran, und das Mitglied wird dieser Wache statisch zugewiesen. (Hat immer diese Wache)"
+#: src/CrewList.cpp:116 ../src/CrewList.cpp:116
+msgid ""
+"*Optional* Prepend a * to a member to make this member static to a watch / "
+"Click Calculate"
+msgstr ""
+"*Optional* Setzte ein '*'-Zeichen voran, und das Mitglied wird dieser Wache "
+"statisch zugewiesen. (Hat immer diese Wache)"
 
-#: src/CrewList.cpp:117
+#: src/CrewList.cpp:117 ../src/CrewList.cpp:117
 msgid "All changes depending to this day only."
 msgstr "Alle Änderungen betreffen nur diesen Tag"
 
 #: src/CrewList.cpp:189 src/CrewList.cpp:227 src/CrewList.cpp:355
 #: src/CrewList.cpp:364 src/Maintenance.cpp:105 src/Maintenance.cpp:202
-#: src/Maintenance.cpp:214 src/Maintenance.cpp:594
+#: src/Maintenance.cpp:214 src/Maintenance.cpp:594 ../src/CrewList.cpp:189
+#: ../src/CrewList.cpp:227 ../src/CrewList.cpp:355 ../src/CrewList.cpp:364
+#: ../src/Maintenance.cpp:105 ../src/Maintenance.cpp:202
+#: ../src/Maintenance.cpp:214 ../src/Maintenance.cpp:594
 msgid "Yes"
 msgstr "Ja"
 
-#: src/CrewList.cpp:2142
+#: src/CrewList.cpp:2142 ../src/CrewList.cpp:2142
 msgid "Adress"
 msgstr "Adresse"
 
@@ -2592,45 +3464,192 @@ msgstr "Adresse"
 msgid "Select a date"
 msgstr "Wähle ein Datum"
 
-#: src/Maintenance.cpp:92 src/Maintenance.cpp:93
+#: src/Maintenance.cpp:92 src/Maintenance.cpp:93 ../src/Maintenance.cpp:92
+#: ../src/Maintenance.cpp:93
 msgid "Engine "
 msgstr "Maschine"
 
-#: src/Maintenance.cpp:99
+#: src/Maintenance.cpp:99 ../src/Maintenance.cpp:99
 msgid "Fix Date"
 msgstr "fixes Datum"
 
-#: src/Maintenance.cpp:100
+#: src/Maintenance.cpp:100 ../src/Maintenance.cpp:100
 msgid "Date + Days"
 msgstr "Datum + Tage"
 
-#: src/Maintenance.cpp:101
+#: src/Maintenance.cpp:101 ../src/Maintenance.cpp:101
 msgid "Date + Weeks"
 msgstr "Datum + Woche(n)"
 
-#: src/Maintenance.cpp:102
+#: src/Maintenance.cpp:102 ../src/Maintenance.cpp:102
 msgid "Date + Months"
 msgstr ""
 
 #: src/Maintenance.cpp:106 src/Maintenance.cpp:202 src/Maintenance.cpp:1068
-#: src/Maintenance.cpp:1072
+#: src/Maintenance.cpp:1072 ../src/Maintenance.cpp:106
+#: ../src/Maintenance.cpp:202 ../src/Maintenance.cpp:1068
+#: ../src/Maintenance.cpp:1072
 msgid "No"
 msgstr "Nein"
 
-#: src/OverView.cpp:220
+#: src/OverView.cpp:220 ../src/OverView.cpp:220
 msgid "Logbook until "
 msgstr "Altes Logbuch bis "
 
-#: src/OverView.cpp:1039
+#: src/OverView.cpp:1039 ../src/OverView.cpp:1039
 msgid "Logbook Total"
 msgstr "Logbuch gesamt"
 
-#: src/OverView.cpp:1234
+#: src/OverView.cpp:1234 ../src/OverView.cpp:1234
 #, c-format
 msgid "%i Year(s) %i Month(s) %i Day(s)"
 msgstr "%i Jahr(e) %i Monat(e) %i Tage(s)"
 
-#: src/OverView.cpp:1237
+#: src/OverView.cpp:1237 ../src/OverView.cpp:1237
 msgid "%E Week(s) %D Day(s) %H:%M "
 msgstr "%E Woche(n) %D Tag(e) %H:%M "
 
+#: src/FastAccessDialog.cpp:65 ../src/FastAccessDialog.cpp:65
+msgid "docked at pier"
+msgstr "am Pier angelegt"
+
+#: src/FastAccessDialog.cpp:71 ../src/FastAccessDialog.cpp:71
+msgid "landed at buoy"
+msgstr "an Boje angelegt"
+
+#: src/FastAccessDialog.cpp:77 ../src/FastAccessDialog.cpp:77
+msgid "dropped anchor"
+msgstr "Anker ausgebracht"
+
+#: src/FastAccessDialog.cpp:96 ../src/FastAccessDialog.cpp:96
+msgid "How?"
+msgstr "Wie?"
+
+#: src/FastAccessDialog.cpp:97 ../src/FastAccessDialog.cpp:97
+msgid "Pier"
+msgstr "Pier"
+
+#: src/FastAccessDialog.cpp:98 ../src/FastAccessDialog.cpp:98
+msgid "Buoy"
+msgstr "Boje"
+
+#: src/FastAccessDialog.cpp:99 ../src/FastAccessDialog.cpp:99
+msgid "Anchor"
+msgstr "Anker"
+
+#: src/FastAccessDialog.cpp:100 src/FastAccessDialog.cpp:177
+#: ../src/FastAccessDialog.cpp:100 ../src/FastAccessDialog.cpp:177
+msgid "Cancel"
+msgstr "Abbrechen"
+
+#: src/FastAccessDialog.cpp:108 ../src/FastAccessDialog.cpp:108
+msgid "at sea again"
+msgstr "wieder unterwegs"
+
+#: src/FastAccessDialog.cpp:132 ../src/FastAccessDialog.cpp:132
+msgid "change of watch"
+msgstr "Wachwechsel"
+
+#: src/FastAccessDialog.cpp:144 ../src/FastAccessDialog.cpp:144
+msgid "Who's next?"
+msgstr "nächste Wache"
+
+#: src/FastAccessDialog.cpp:176 ../src/FastAccessDialog.cpp:176
+msgid "OK"
+msgstr ""
+
+#: src/FastAccessDialog.cpp:189 ../src/FastAccessDialog.cpp:189
+#, fuzzy
+msgid "Reef in"
+msgstr "Reffen"
+
+#: src/FastAccessDialog.cpp:191 ../src/FastAccessDialog.cpp:191
+#, fuzzy
+msgid "Reef out"
+msgstr "Reff entfernt"
+
+#: src/FastAccessDialog.cpp:202 ../src/FastAccessDialog.cpp:202
+msgid "Jackline strung"
+msgstr "Strecktau ausgebracht"
+
+#: src/FastAccessDialog.cpp:204 ../src/FastAccessDialog.cpp:204
+msgid "Jackline retrieved"
+msgstr "Strecktau eingeholt"
+
+#: src/FastAccessDialog.cpp:215 ../src/FastAccessDialog.cpp:215
+msgid "Lifebelts/wests on"
+msgstr "Schwimmwesten/Lifebeltpflicht"
+
+#: src/FastAccessDialog.cpp:217 ../src/FastAccessDialog.cpp:217
+msgid "Lifebelts/wests off"
+msgstr "Schwimmwesten/Lifebeltpflicht aufgehoben"
+
+#: src/FastAccessDialog.cpp:229 src/FastAccessDialog.cpp:279
+#: ../src/FastAccessDialog.cpp:229 ../src/FastAccessDialog.cpp:279
+#, fuzzy
+msgid "heavy weather"
+msgstr "Schwerwetter"
+
+#: src/FastAccessDialog.cpp:230 ../src/FastAccessDialog.cpp:230
+msgid "reef"
+msgstr "Reff"
+
+#: src/FastAccessDialog.cpp:231 ../src/FastAccessDialog.cpp:231
+msgid "jackline"
+msgstr "Strecktau"
+
+#: src/FastAccessDialog.cpp:232 ../src/FastAccessDialog.cpp:232
+msgid "lifebelts/wests"
+msgstr "Schwimmwesten/Lifebelt"
+
+#: src/FastAccessDialog.cpp:252 ../src/FastAccessDialog.cpp:252
+msgid "MOB ended"
+msgstr "MÜB beendet"
+
+#: src/FastAccessDialog.cpp:264 ../src/FastAccessDialog.cpp:264
+msgid "Enter Log Message"
+msgstr "Lognachricht eingeben"
+
+#: src/FastAccessDialog.cpp:274 ../src/FastAccessDialog.cpp:274
+#, fuzzy
+msgid "Log Event"
+msgstr "Ereignis"
+
+#: src/FastAccessDialog.cpp:277 ../src/FastAccessDialog.cpp:277
+msgid "Dock"
+msgstr "Anlegen"
+
+#: src/FastAccessDialog.cpp:280 ../src/FastAccessDialog.cpp:280
+msgid "MOB"
+msgstr "Mann über Bord"
+
+#: src/FastAccessDialog.cpp:281 ../src/FastAccessDialog.cpp:281
+msgid "Custom"
+msgstr "Manueller Eintrag"
+
+#: src/FastAccessDialog.cpp:282 ../src/FastAccessDialog.cpp:282
+msgid "undo last entry"
+msgstr "letzten Eintrag löschen"
+
+#: src/Logbook.cpp:1670 src/Logbook.cpp:1672 ../src/Logbook.cpp:1670
+#: ../src/Logbook.cpp:1672
+#, fuzzy
+msgid "*** MAN OVERBOARD ***"
+msgstr "*** Mann über Bord ***\n"
+
+#: src/LogbookDialog.cpp:217 ../src/LogbookDialog.cpp:217
+msgid "FAD"
+msgstr "SZD"
+
+#: src/LogbookOptions.cpp:297 ../src/LogbookOptions.cpp:297
+#, fuzzy
+msgid "Winddirection set to:"
+msgstr "     Windrichtung bezogen auf:"
+
+#: src/LogbookOptions.cpp:313 ../src/LogbookOptions.cpp:313
+msgid "Crew Naming Style: "
+msgstr "Namensformat"
+
+#: ../src/LogbookDialog.cpp:218
+msgid "Show/Hide Fast Access Dialog"
+msgstr "Zeige/Verstecke Schnellzugriffsdialog"

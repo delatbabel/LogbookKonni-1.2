@@ -2785,7 +2785,7 @@ bool DnDWatch::OnDropText( wxCoord x, wxCoord y, const wxString &text )
         if ( !oldTxt.IsEmpty() )
             oldTxt += _T( "\n" );
 
-        int sel = crewList->dialog->m_choiceCrewNames->GetSelection();
+        int sel = crewList->dialog->logbookPlugIn->opt->crewNamingStyle;
 
         switch ( sel )
         {
