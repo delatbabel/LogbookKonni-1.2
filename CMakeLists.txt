@@ -1,11 +1,12 @@
 # ~~~
-# Author:      Rasbats aka. Mike Rossiter
+# Logbookkonni_pi
 # Copyright:
 # License:     wxWidgets License
 # ~~~
-# Using ShipDriver_pi VERSION 2.8.5.1
+# Using ShipDriver_pi VERSION 2.8.7.2 plus leamas changes
 # -------- Cmake setup ---------
 #
+
 cmake_minimum_required(VERSION 3.12.0)
 
 cmake_policy(SET CMP0042 NEW)
@@ -56,41 +57,28 @@ set(OCPN_RELEASE_REPO
 
 option(PLUGIN_USE_SVG "Use SVG graphics" ON)
 
-set(OCPN_TARGET_TUPLE "" CACHE STRING
-  "Target spec: \"platform;version;arch\""
-)
-
-string(TOLOWER "${OCPN_TARGET_TUPLE}" _lc_target)
-if ("${_lc_target}" MATCHES "android*")
-  set(QT_ANDROID ON)
-  # Until we have a proper toolchain file:
-  set(CMAKE_CROSSCOMPILING ON)
-else ()
-  set(QT_ANDROID OFF)
-  add_definitions(-D__OCPN_USE_CURL__)
-endif ()
+include(PluginOptions)
 
 #
 # -------  Plugin setup --------
 #
-project(LogbookKonni_pi VERSION 1.4.17.0)
+project(LogbookKonni_pi VERSION 1.4.22.0)
 set(PKG_PRERELEASE "")  # Empty, or a tag like 'beta'
 
 set(DISPLAY_NAME Logbook)    # Dialogs, installer artifacts, ...
 set(PLUGIN_API_NAME Logbook) # As of GetCommonName() in plugin API
 set(CPACK_PACKAGE_CONTACT "Del Elson")
 set(CPACK_PACKAGE_DESCRIPTION_SUMMARY "Complex, feature-rich logbook")
-set(CPACK_PACKAGE_DESCRIPTION [=[
-Complex logbook with a lot of features including a customizable layout.
-To use all the features, you will have to download and install the Layout Files as instructed when you run the plugin for the first time.
-
-Help is available on YouTube, search LogbookKonni
+set(CPACK_PACKAGE_DESCRIPTION [=[ Marine Logbook
+with flexible and customizable  layout. Help on YouTube,
+search LogbookKonni
 ]=])
 
 set(PKG_AUTHOR "Del Elson")
 set(PKG_IS_OPEN_SOURCE "yes")
 set(CPACK_PACKAGE_HOMEPAGE_URL https://github.com/rgleason/LogbookKonni_pi)
 set(PKG_INFO_URL https://opencpn.org/OpenCPN/plugins/logbookkonni.html)
+
 SET(SRC
   src/logbook_pi.h
   src/logbook_pi.cpp
@@ -116,7 +104,8 @@ SET(SRC
   src/OverView.cpp
   src/Export.h
   src/Export.cpp
-  ocpnsrc/TexFont.cpp
+  src/TexFont.cpp
+  src/TexFont.h
 )
 
 # -------- Setup completed, build the plugin --------
@@ -160,8 +149,7 @@ if (NOT ${BUILD_TYPE} STREQUAL "flatpak")
   include(PluginInstall)
   include(PluginPackage)
   if (QT_ANDROID)
-    include(libs/AndroidLibs.cmake)
-    include_directories(BEFORE ${PROJECT_SOURCE_DIR}/include/android)
+    include(AndroidLibs)
   else ()
     include(PluginLibs)
   endif ()
@@ -169,7 +157,11 @@ if (NOT ${BUILD_TYPE} STREQUAL "flatpak")
 
   include_directories(BEFORE ${CMAKE_BINARY_DIR}/include)
 
-  
+# shipdriver added
+  add_subdirectory("libs/jsoncpp")
+  target_link_libraries(${PACKAGE_NAME} ocpn::jsoncpp)
+
+# Needed for Logbook  
   add_subdirectory("libs/nmea0183")
   target_link_libraries(${PACKAGE_NAME} ocpn::nmea0183)
 
@@ -178,10 +170,10 @@ if (NOT ${BUILD_TYPE} STREQUAL "flatpak")
   
   add_subdirectory("libs/wxJSON")
   target_link_libraries(${PACKAGE_NAME} ocpn::wxjson)
-endif ()
 
-# For OSX pkg generation.
-file(COPY ${PROJECT_SOURCE_DIR}/data DESTINATION ${CMAKE_BINARY_DIR})
+  add_subdirectory("libs/plugingl")
+  target_link_libraries(${PACKAGE_NAME} ocpn::plugingl)
+endif ()
 
 configure_file(
   ${CMAKE_SOURCE_DIR}/config.h.in ${CMAKE_BINARY_DIR}/include//config.h

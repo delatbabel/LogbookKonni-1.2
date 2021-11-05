@@ -26,26 +26,23 @@
 
 #include <memory>
 
+#include "config.h"
+#include "Logbook.h"
+#include "LogbookDialog.h"
+#include "LogbookOptions.h"
+#include "Options.h"
+#include "icons.h"
+#include "logbook_pi.h"
 
-#include <wx/datectrl.h>
 #include <wx/dir.h>
 #include <wx/event.h>
 #include <wx/filefn.h>
 #include <wx/jsonreader.h>
 #include <wx/msgdlg.h>
 #include <wx/stdpaths.h>
-#include <wx/stdpaths.h>
 #include <wx/sysopt.h>
 #include <wx/timer.h>
 #include <wx/wxprec.h>
-
-#include "Logbook.h"
-#include "LogbookDialog.h"
-#include "LogbookOptions.h"
-#include "Options.h"
-#include "config.h"
-#include "icons.h"
-#include "logbook_pi.h"
 
 using namespace std;
 
@@ -739,6 +736,7 @@ void logbookkonni_pi::ShowPreferencesDialog(wxWindow* parent) {
     }
     SaveConfig();
   }
+  delete optionsDialog;
 }
 
 void logbookkonni_pi::OnToolbarToolCallback(int id) {

@@ -36,4 +36,3 @@ modules:
           - type: git
             url: ..
             branch: master
-
