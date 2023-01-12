@@ -1,3 +1,9 @@
+# ~~~
+# Summary:      Plugin OpenGL support library cmake setup
+# License:      GPLv3+
+# Copyright (c) 2021 Alec Leamas
+# ~~~
+
 cmake_minimum_required(VERSION 3.1)
 
 if (TARGET ocpn::plugingl)
@@ -5,12 +11,10 @@ if (TARGET ocpn::plugingl)
 endif ()
 
 set(SRC
-  src/pidc.cpp
   src/pi_shaders.cpp
   src/qtstylesheet.cpp
   src/TexFont.cpp
   include/linmath.h
-  include/pidc.h
   include/pi_shaders.h
   include/qtstylesheet.h
   include/TexFont.h

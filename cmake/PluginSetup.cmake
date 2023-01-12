@@ -1,7 +1,15 @@
-#
-# Export variables used in plugin setup: plugin_target and
-# plugin_target_version.
-#
+# ~~~
+# Summary:     Set up and export plugin_target and plugin_target_version
+# License:     GPLv3+
+# Copyright (c) 2020-2021 Alec Leamas
+# ~~~
+
+# This program is free software; you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation; either version 3 of the License, or
+# (at your option) any later version.
+
+
 if (DEFINED plugin_target)
   return ()
 endif ()
@@ -28,7 +36,7 @@ elseif (MINGW)
     set(plugin_target_version 10)
   endif ()
 elseif (MSVC)
-  set(plugin_target "msvc")
+  set(plugin_target "msvc-wx32")
   if (CMAKE_SYSTEM_VERSION)
     set(plugin_target_version ${CMAKE_SYSTEM_VERSION})
   elseif (CMAKE_VS_WINDOWS_TARGET_PLATFORM_VERSION)
@@ -37,7 +45,7 @@ elseif (MSVC)
     set(plugin_target_version 10)
   endif ()
 elseif (APPLE)
-  set(plugin_target "darwin-wx315")
+  set(plugin_target "darwin-wx32")
   set(plugin_target_version "10.13.6")
 elseif (UNIX)
   # Some linux dist:
@@ -74,9 +82,16 @@ if (plugin_target STREQUAL "ubuntu")
       OUTPUT_STRIP_TRAILING_WHITESPACE
     )
     if (_WX_SELECTED_CONFIG MATCHES gtk3)
-      set(plugin_target ubuntu-gtk3)
+      if (${plugin_target_version} VERSION_LESS 22.04)
+        set(plugin_target ubuntu-gtk3)
+      endif ()
     endif ()
   else ()
     message(WARNING "Cannot locate wx-config utility")
   endif ()
 endif ()
+
+string(CONCAT msg "Building for target-release "
+  "${plugin_target}-${plugin_target_version}"
+)
+message(STATUS "${msg}")

@@ -79,6 +79,7 @@ logbookkonni_pi::logbookkonni_pi(void* ppimgr) : opencpn_plugin_116(ppimgr) {
 logbookkonni_pi::~logbookkonni_pi() {
   if (m_timer != NULL && m_timer->IsRunning()) {
     m_timer->Stop();
+    delete m_timer;
     m_timer = NULL;
   }
   if (opt != NULL) delete opt;
@@ -151,8 +152,10 @@ bool logbookkonni_pi::DeInit(void) {
 void logbookkonni_pi::shutdown(bool menu) {
   SendPluginMessage("LOGBOOK_READY_FOR_REQUESTS", "FALSE");
 
-  if (m_timer)
+  if (m_timer){
     if (m_timer->IsRunning()) m_timer->Stop();
+    delete m_timer;
+  }
   if (timer) {
     timer->Disconnect(wxEVT_TIMER,
                       wxObjectEventFunction(&LogbookTimer::OnTimer));
@@ -176,7 +179,8 @@ void logbookkonni_pi::shutdown(bool menu) {
     }
     SaveConfig();
     m_plogbook_window->Close();
-    m_plogbook_window->Destroy();
+    //m_plogbook_window->Destroy();
+    delete m_plogbook_window;
     m_plogbook_window = NULL;
     dlgShow = false;
     //	SetToolbarItemState( m_leftclick_tool_id, dlgShow );
@@ -608,11 +612,13 @@ int logbookkonni_pi::GetPlugInVersionMinor() { return PLUGIN_VERSION_MINOR; }
 wxString logbookkonni_pi::GetCommonName() { return _("Logbook"); }
 
 wxString logbookkonni_pi::GetShortDescription() {
-  return _(CPACK_PACKAGE_DESCRIPTION_SUMMARY);
+//  return _(CPACK_PACKAGE_DESCRIPTION_SUMMARY);
+  return _("Complex, feature-rich logbook");
 }
 
 wxString logbookkonni_pi::GetLongDescription() {
-  return _(CPACK_PACKAGE_DESCRIPTION);
+// return _(CPACK_PACKAGE_DESCRIPTION);
+  return _("Marine Logbook with flexible and customizable layout. Help on YouTube, search LogbookKonni");
 }
 
 void logbookkonni_pi::OnContextMenuItemCallback(int id) {}

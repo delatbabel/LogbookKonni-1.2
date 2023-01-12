@@ -1,7 +1,18 @@
+# ~~~
+# Summary:      Wraps the master.zip binary Android libs blob
+# License:      GPLv3+
+# Copyright (c) 2021 Alec Leamas
 #
-# For armhf and arm64: Download precompiled libraries and set up
-# linking
-#
+# For android armhf and arm64: Download precompiled libraries and set up
+# linkage
+# ~~~
+
+# This program is free software; you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation; either version 3 of the License, or
+# (at your option) any later version.
+
+
 cmake_minimum_required(VERSION 3.1)
 
 find_package(Gettext REQUIRED)
@@ -25,7 +36,7 @@ if (NOT EXISTS ${OCPN_ANDROID_CACHEDIR}/master.zip)
       https://github.com/bdbcat/OCPNAndroidCommon/archive/master.zip
       ${OCPN_ANDROID_CACHEDIR}/master.zip
     EXPECTED_HASH
-      SHA256=ac36afaf4f026e9b2624a963f5356f5b1fb2c45dec1134209333a8b46fb05ca0
+      SHA256=a15ebd49fd4e7c0f2d6e99328ed6a9fdb8ed7c8fcaa993cab585fc9d8aab4f56
     SHOW_PROGRESS
   )
 endif ()
@@ -68,7 +79,6 @@ else ()
 endif ()
 
 include_directories(
-  ${PROJECT_SOURCE_DIR}/libs/AndroidHeaders/include
   ${_qt_include}
   ${_qt_include}/QtWidgets
   ${_qt_include}/QtCore
@@ -90,9 +100,6 @@ target_link_libraries(${PACKAGE_NAME}
 )
 add_compile_definitions(
   __WXQT__
-  __OCPN__ANDROID__
-  ANDROID
-  ARMHF
   BUILDING_PLUGIN
   OCPN_USE_WRAPPER
   ocpnUSE_GLES

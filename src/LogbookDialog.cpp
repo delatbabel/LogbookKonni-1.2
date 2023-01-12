@@ -99,6 +99,7 @@ LogbookDialog::LogbookDialog(logbookkonni_pi* d, wxTimer* t, LogbookTimer* lt,
   timer = t;
   logbookTimerWindow = lt;
   GPSTimer = NULL;
+  SailsTimer = NULL;
   //	wxInitAllImageHandlers();
 
   this->SetSizeHints(wxSize(-1, -1), wxDefaultSize);
@@ -199,19 +200,19 @@ LogbookDialog::LogbookDialog(logbookkonni_pi* d, wxTimer* t, LogbookTimer* lt,
       new wxToggleButton(m_panelEngine, wxID_ANY, wxEmptyString,
                          wxDefaultPosition, wxDefaultSize, 0);
   bSizer49->Add(m_toggleBtnEngine1, 0,
-                wxALIGN_CENTER_VERTICAL | wxRIGHT | wxLEFT, 0);
+                 wxRIGHT | wxLEFT, 0);
 
   m_toggleBtnEngine2 =
       new wxToggleButton(m_panelEngine, wxID_ANY, wxEmptyString,
                          wxDefaultPosition, wxDefaultSize, 0);
   bSizer49->Add(m_toggleBtnEngine2, 0,
-                wxALIGN_CENTER_VERTICAL | wxRIGHT | wxLEFT, 0);
+                 wxRIGHT | wxLEFT, 0);
 
   m_toggleBtnGenerator =
       new wxToggleButton(m_panelEngine, wxID_ANY, wxEmptyString,
                          wxDefaultPosition, wxDefaultSize, 0);
   bSizer49->Add(m_toggleBtnGenerator, 0,
-                wxALIGN_CENTER_VERTICAL | wxRIGHT | wxLEFT, 0);
+                 wxRIGHT | wxLEFT, 0);
 
   bSizer45->Add(bSizer49, 0, wxRIGHT | wxLEFT | wxBOTTOM, 5);
 
@@ -459,7 +460,7 @@ LogbookDialog::LogbookDialog(logbookkonni_pi* d, wxTimer* t, LogbookTimer* lt,
   fgSizer53->Add(m_staticTextStatusText, 0, wxRIGHT | wxLEFT, 5);
   m_staticTextStatusText->SetFont(wxFont(7, 74, 90, 90, false, "Tahoma"));
 
-  bSizer39->Add(fgSizer53, 1, wxALIGN_RIGHT | wxALIGN_CENTER_VERTICAL, 0);
+  bSizer39->Add(fgSizer53, 1);
 
   if (!logbookPlugIn->opt->statusbar) {
     Statusbar->SetSizer(bSizer39);
@@ -476,7 +477,7 @@ LogbookDialog::LogbookDialog(logbookkonni_pi* d, wxTimer* t, LogbookTimer* lt,
   wxBoxSizer* bSizer391;
   bSizer391 = new wxBoxSizer(wxVERTICAL);
   m_gridGlobal = new wxGrid(m_panel6, wxID_ANY, wxDefaultPosition,
-                            wxDefaultSize, wxALWAYS_SHOW_SB);
+                            wxDefaultSize/*, wxALWAYS_SHOW_SB*/);
 
   // Grid
   m_gridGlobal->CreateGrid(0, 14);
@@ -592,7 +593,7 @@ LogbookDialog::LogbookDialog(logbookkonni_pi* d, wxTimer* t, LogbookTimer* lt,
   bSizer11 = new wxBoxSizer(wxVERTICAL);
 
   m_gridWeather = new wxGrid(m_panel7, wxID_ANY, wxDefaultPosition,
-                             wxDefaultSize, wxALWAYS_SHOW_SB);
+                             wxDefaultSize/*, wxALWAYS_SHOW_SB*/);
 
   // Grid
   m_gridWeather->CreateGrid(0, 15);
@@ -665,7 +666,7 @@ LogbookDialog::LogbookDialog(logbookkonni_pi* d, wxTimer* t, LogbookTimer* lt,
   bSizer111 = new wxBoxSizer(wxVERTICAL);
 
   m_gridMotorSails = new wxGrid(m_panel71, wxID_ANY, wxDefaultPosition,
-                                wxDefaultSize, wxALWAYS_SHOW_SB);
+                                wxDefaultSize/*, wxALWAYS_SHOW_SB*/);
 
   // Grid
   m_gridMotorSails->CreateGrid(0, 24);
@@ -1097,7 +1098,7 @@ LogbookDialog::LogbookDialog(logbookkonni_pi* d, wxTimer* t, LogbookTimer* lt,
   bSizer36 = new wxBoxSizer(wxVERTICAL);
 
   m_gridCrew = new wxGrid(m_panel211, wxID_ANY, wxDefaultPosition,
-                          wxDefaultSize, wxALWAYS_SHOW_SB);
+                          wxDefaultSize/*, wxALWAYS_SHOW_SB*/);
 
   // Grid
   m_gridCrew->CreateGrid(0, 15);
@@ -2109,7 +2110,7 @@ LogbookDialog::LogbookDialog(logbookkonni_pi* d, wxTimer* t, LogbookTimer* lt,
                                 wxEmptyString, wxITEM_NORMAL);
   m_menu7->Append(m_menuItem13);
 
-  bSizer12->Add(m_gridMaintanence, 1, wxALIGN_CENTER_VERTICAL | wxALL, 5);
+  bSizer12->Add(m_gridMaintanence, 1, wxALL, 5);
 
   fgSizer151->Add(bSizer12, 1, wxEXPAND, 5);
 
@@ -2254,7 +2255,7 @@ LogbookDialog::LogbookDialog(logbookkonni_pi* d, wxTimer* t, LogbookTimer* lt,
                                  wxEmptyString, wxITEM_NORMAL);
   m_menu71->Append(m_menuItem131);
 
-  bSizer122->Add(m_gridMaintanenceRepairs, 1, wxALIGN_CENTER_VERTICAL | wxALL,
+  bSizer122->Add(m_gridMaintanenceRepairs, 1, wxALL,
                  5);
 
   fgSizer1513->Add(bSizer122, 1, wxEXPAND, 5);
@@ -3188,6 +3189,12 @@ LogbookDialog::~LogbookDialog() {
   this->Disconnect(wxEVT_TIMER, wxTimerEventHandler(LogbookDialog::OnTimerGPS));
   delete GPSTimer;
   GPSTimer = NULL;
+
+  if(SailsTimer){
+    SailsTimer->Stop();
+    delete SailsTimer;
+    SailsTimer = NULL;
+  }
 
   if (logbookTimer->IsRunning()) logbookTimer->Stop();
 
@@ -8724,7 +8731,7 @@ void SelectLogbook::OnInit(wxInitDialogEvent& ev) {
 }
 
 //////////////////////////// myGridStringTable /////////
-#include <wx/arrimpl.cpp> 
+#include <wx/arrimpl.cpp>
 WX_DEFINE_OBJARRAY(myGridStringArray)
 
 myGridStringTable::myGridStringTable() : wxGridTableBase() {}

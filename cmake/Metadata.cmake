@@ -1,7 +1,16 @@
+# ~~~
+# Summary:      Set up variables for xml metadata and upload scripts
+# License:      GPLv3+
+# Copyright (c) 2021 Alec Leamas
 #
-# Set up variables for configuration of xml metadata and upload scripts, all of
-# which with a pkg_ prefix.
-#
+# Set up variables for configuration of xml metadata and upload scripts,
+# all of which with a pkg_ prefix.
+# ~~~
+
+# This program is free software; you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation; either version 3 of the License, or
+# (at your option) any later version.
 
 #cmake-format: off
 
@@ -23,7 +32,7 @@ execute_process(
 )
 
 execute_process(
-  COMMAND git tag --contains HEAD
+  COMMAND git tag --points-at HEAD
   WORKING_DIRECTORY ${CMAKE_SOURCE_DIR}
   OUTPUT_VARIABLE _git_tag
   RESULT_VARIABLE error_code
@@ -77,7 +86,7 @@ if ("${_git_tag}" STREQUAL "")
   endif ()
 else ()
   string(TOLOWER  ${_git_tag}  _lc_git_tag)
-  if (_lc_git_tag MATCHES "beta")
+  if (_lc_git_tag MATCHES "beta|rc")
     set(pkg_repo "$ENV{CLOUDSMITH_BETA_REPO}")
     if ("${pkg_repo}" STREQUAL "")
       set(pkg_repo ${OCPN_BETA_REPO})
@@ -100,32 +109,39 @@ set(_pre_rel ${PKG_PRERELEASE})
 if (NOT "${_pre_rel}" STREQUAL "" AND _pre_rel MATCHES "^[^-]")
   string(PREPEND _pre_rel "-")
 endif ()
-set(pkg_semver "${PROJECT_VERSION}${_pre_rel}+${_build_id}.${_gitversion}")
+if ("${_git_tag}" STREQUAL "")
+  set(pkg_semver "${PROJECT_VERSION}${_pre_rel}+${_build_id}.${_gitversion}")
+else ()
+  set(pkg_semver "${_git_tag}")
+endif ()
 
 # pkg_displayname: GUI name
 if (ARCH MATCHES "arm64|aarch64")
   set(_display_arch "-A64")
+elseif ("${_pkg_arch}" MATCHES "armhf")
+  set(_display_arch "-A32")
 endif()
+
+if (NOT "${OCPN_WX_ABI}" STREQUAL "")
+  set(_wx_abi ".${OCPN_WX_ABI}")
+endif ()
+
 if ("${_git_tag}" STREQUAL "")
   set(pkg_displayname "${PLUGIN_API_NAME}-${VERSION_MAJOR}.${VERSION_MINOR}")
 else ()
   set(pkg_displayname "${PLUGIN_API_NAME}-${_git_tag}")
 endif ()
 string(APPEND pkg_displayname
-  "-${plugin_target}${_display_arch}-${plugin_target_version}"
+  "-${plugin_target}${_wx_abi}${_display_arch}-${plugin_target_version}"
 )
 
 # pkg_xmlname: XML metadata basename
 set(pkg_xmlname ${pkg_displayname})
 
 # pkg_tarname: Tarball basename
-if ("${_git_tag}" STREQUAL "")
-  set(pkg_tarname "${PLUGIN_API_NAME}-${pkg_semver}")
-else ()
-  set(pkg_tarname "${PLUGIN_API_NAME}-${_git_tag}")
-endif ()
-string(APPEND pkg_tarname
-  "_${plugin_target}-${plugin_target_version}-${_pkg_arch}"
+string(CONCAT pkg_tarname
+  "${PLUGIN_API_NAME}-${pkg_semver}"
+  "_${plugin_target}${_wx_abi}-${plugin_target_version}-${_pkg_arch}"
 )
 
 # pkg_tarball_url: Tarball location at cloudsmith
@@ -149,6 +165,9 @@ endif ()
 # pkg_target_arch: os + optional -arch suffix. See: Opencpn bug #2003
 if ("${BUILD_TYPE}" STREQUAL "flatpak")
   set(pkg_target_arch "flatpak-${ARCH}")
+  if (NOT "${OCPN_WX_ABI}" STREQUAL "")
+    set(pkg_target_arch "${pkg_target_arch}-${OCPN_WX_ABI}")
+  endif ()
 elseif ("${plugin_target}" MATCHES "ubuntu|raspbian|debian|mingw")
   set(pkg_target_arch "${plugin_target}-${ARCH}")
 else ()

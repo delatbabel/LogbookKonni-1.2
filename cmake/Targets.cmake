@@ -1,8 +1,19 @@
+# ~~~
+# Summary:     Add primary build targets
+# License:     GPLv3+
+# Copyright (c) 2020-2021 Alec Leamas
 #
-# Add the primary build targets pkg, flatpak and tarball together
-# with helper targets.
+# Add the primary build targets android, flatpak and tarball together
+# with helper targets. Also sets up the default target.
+# ~~~
 
-#
+# This program is free software; you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation; either version 3 of the License, or
+# (at your option) any later version.
+
+
+
 
 if (TARGET tarball-build)
   return()
@@ -17,7 +28,7 @@ else ()
 endif ()
 
 if (WIN32)
-  if (${CMAKE_MAJOR_VERSION} LESS 3 OR ${CMAKE_MINOR_VERSION} LESS 16)
+  if (CMAKE_VERSION VERSION_LESS 3.16)
     message(WARNING "windows requires cmake version 3.16 or higher")
   endif ()
 endif ()
@@ -28,7 +39,7 @@ set(_build_cmd
 )
 
 # Set up _build_target_cmd and _install_cmd
-if (${CMAKE_MAJOR_VERSION} LESS 3 OR ${CMAKE_MINOR_VERSION} LESS 16)
+if (CMAKE_VERSION VERSION_LESS 3.16)
   set(_build_target_cmd make)
   set(_install_cmd make install)
 else ()
@@ -40,7 +51,7 @@ else ()
 endif ()
 
 # Command to remove directory
-if (${CMAKE_MAJOR_VERSION} LESS 3 OR ${CMAKE_MINOR_VERSION} LESS 17)
+if (CMAKE_VERSION VERSION_LESS 3.17)
   set(_rmdir_cmd "remove_directory")
 else ()
   set(_rmdir_cmd "rm -rf" )
@@ -69,7 +80,7 @@ function (create_finish_script)
     execute_process(
       COMMAND cmake -E ${_rmdir_cmd} app/${pkg_displayname}
     )
-     execute_process(
+    execute_process(
       COMMAND cmake -E rename app/files app/${pkg_displayname}
     )
     execute_process(
@@ -86,81 +97,60 @@ function (create_finish_script)
   file(WRITE "${CMAKE_BINARY_DIR}/finish_tarball.cmake" "${_finish_script}")
 endfunction ()
 
-function (android_aarch64_target)
-  add_custom_target(android-aarch64-conf)
+function (android_target)
+  if ("${ARM_ARCH}" STREQUAL "aarch64")
+    set(OCPN_TARGET_TUPLE "'android-arm64\;16\;arm64'")
+  else ()
+    set(OCPN_TARGET_TUPLE "'android-armhf\;16\;armhf'")
+  endif ()
   add_custom_command(
-    TARGET android-aarch64-conf
+    OUTPUT android-conf-stamp
+    COMMAND cmake -E touch android-conf-stamp
     COMMAND cmake
       -DCMAKE_INSTALL_PREFIX=${CMAKE_BINARY_DIR}/app/files
       -DBUILD_TYPE:STRING=tarball
-      -DOCPN_TARGET_TUPLE:STRING='android-arm64\;16\;arm64'
-       ..
+      -DOCPN_TARGET_TUPLE:STRING=${OCPN_TARGET_TUPLE}
+      $ENV{CMAKE_BUILD_OPTS}
+      ${CMAKE_BINARY_DIR}
   )
-  add_custom_target(android-aarch64-build)
-  add_custom_command(TARGET android-aarch64-build COMMAND ${_build_cmd})
-
-  add_custom_target(android-aarch64-install)
-  add_custom_command(TARGET android-aarch64-install COMMAND ${_install_cmd})
+  add_custom_target(android-build DEPENDS android-conf-stamp)
+  add_custom_command(
+    TARGET android-build COMMAND ${_build_target_cmd} ${PKG_NAME}
+  )
+  add_custom_target(android-install)
+  add_custom_command(TARGET android-install COMMAND ${_install_cmd})
 
   create_finish_script()
-  add_custom_target(android-aarch64-finish)
+  add_custom_target(android-finish)
   add_custom_command(
-    TARGET android-aarch64-finish      # Compute checksum
+    TARGET android-finish
     COMMAND cmake -P ${CMAKE_BINARY_DIR}/finish_tarball.cmake
     VERBATIM
   )
-
-  add_custom_target(android-aarch64)
-  add_dependencies(android-aarch64 android-aarch64-finish)
-  add_dependencies(android-aarch64-finish android-aarch64-install)
-  add_dependencies(android-aarch64-install android-aarch64-build)
-  add_dependencies(android-aarch64-build android-aarch64-conf)
-endfunction ()
-
-function (android_armhf_target)
-  add_custom_target(android-armhf-conf)
-  add_custom_command(
-    TARGET android-armhf-conf
-    COMMAND cmake
-      -DCMAKE_INSTALL_PREFIX=${CMAKE_BINARY_DIR}/app/files
-      -DBUILD_TYPE:STRING=tarball
-      -DOCPN_TARGET_TUPLE:STRING='android-armhf\;16\;armhf'
-       ..
-  )
-  add_custom_target(android-armhf-build)
-  add_custom_command(TARGET android-armhf-build COMMAND ${_build_cmd})
-
-  add_custom_target(android-armhf-install)
-  add_custom_command(TARGET android-armhf-install COMMAND ${_install_cmd})
-
-  create_finish_script()
-  add_custom_target(android-armhf-finish)
-  add_custom_command(
-    TARGET android-armhf-finish      # Compute checksum
-    COMMAND cmake -P ${CMAKE_BINARY_DIR}/finish_tarball.cmake
-    VERBATIM
-  )
-
-  add_custom_target(android-armhf)
-  add_dependencies(android-armhf android-armhf-finish)
-  add_dependencies(android-armhf-finish android-armhf-install)
-  add_dependencies(android-armhf-install android-armhf-build)
-  add_dependencies(android-armhf-build android-armhf-conf)
+  add_custom_target(android)
+  add_dependencies(android android-finish)
+  add_dependencies(android-finish android-install)
+  add_dependencies(android-install android-build)
 endfunction ()
 
 function (tarball_target)
 
   # tarball target setup
   #
-  add_custom_target(tarball-conf)
   add_custom_command(
-    TARGET tarball-conf
-    COMMAND cmake -DCMAKE_INSTALL_PREFIX=${CMAKE_BINARY_DIR}/app/files
-            -DBUILD_TYPE:STRING=tarball ${CMAKE_BINARY_DIR}
+    OUTPUT tarball-conf-stamp
+    COMMAND cmake -E touch tarball-conf-stamp
+    COMMAND cmake
+      -DCMAKE_INSTALL_PREFIX=${CMAKE_BINARY_DIR}/app/files
+      -DBUILD_TYPE:STRING=tarball
+      $ENV{CMAKE_BUILD_OPTS}
+      ${CMAKE_BINARY_DIR}
   )
 
-  add_custom_target(tarball-build)
-  add_custom_command(TARGET tarball-build COMMAND ${_build_cmd})
+  add_custom_target(tarball-build DEPENDS tarball-conf-stamp)
+  add_custom_command(
+    TARGET tarball-build COMMAND ${_build_target_cmd} ${PKG_NAME}
+  )
 
   add_custom_target(tarball-install)
   add_custom_command(TARGET tarball-install COMMAND ${_install_cmd})
@@ -172,7 +162,6 @@ function (tarball_target)
     COMMAND cmake -P ${CMAKE_BINARY_DIR}/finish_tarball.cmake
     VERBATIM
   )
-  add_dependencies(tarball-build tarball-conf)
   add_dependencies(tarball-install tarball-build)
   add_dependencies(tarball-finish tarball-install)
 
@@ -185,15 +174,38 @@ function (flatpak_target manifest)
   add_custom_target(flatpak-conf)
   add_custom_command(
     TARGET flatpak-conf
-    COMMAND
-      cmake -DBUILD_TYPE:STRING=flatpak -Uplugin_target ${CMAKE_BINARY_DIR}
+    COMMAND cmake
+      -DBUILD_TYPE:STRING=flatpak
+      -Uplugin_target
+      $ENV{CMAKE_BUILD_OPTS}
+      ${CMAKE_BINARY_DIR}
   )
+
+  # Script used to copy out files from the flatpak sandbox
+  file(WRITE ${CMAKE_BINARY_DIR}/copy_out [=[
+    appdir=$(find /run/build -maxdepth 3 -iname $1)
+    appdir=$(ls -t $appdir)       # Sort entries if there is more than one
+    appdir=${appdir%% *}          # Pick first entry
+    appdir=${appdir%%/lib*so}     # Drop filename, use remaining dir part
+    cp -ar $appdir/app $2
+  ]=])
+
   set(_fp_script "
     execute_process(
       COMMAND
-        flatpak-builder --force-clean ${CMAKE_CURRENT_BINARY_DIR}/app
-          ${manifest}
+        flatpak-builder --force-clean --keep-build-dirs
+          ${CMAKE_BINARY_DIR}/app ${manifest}
     )
+    # Copy the data out of the sandbox to installation directory
+    execute_process(
+      WORKING_DIRECTORY ${CMAKE_BINARY_DIR}
+      COMMAND
+        flatpak-builder --run app ${manifest}
+           bash copy_out lib${PACKAGE_NAME}.so ${CMAKE_BINARY_DIR}
+    )
+    if (NOT EXISTS app/files/lib/opencpn/lib${PACKAGE_NAME}.so)
+      message(FATAL_ERROR \"Cannot find generated file lib${PACKAGE_NAME}.so\")
+    endif ()
     execute_process(
       COMMAND bash -c \"sed -e '/@checksum@/d' \
           < ${pkg_xmlname}.xml.in > app/files/metadata.xml\"
@@ -223,44 +235,16 @@ function (flatpak_target manifest)
   file(WRITE "${CMAKE_BINARY_DIR}/build_flatpak.cmake" ${_fp_script})
   add_custom_target(flatpak)
   add_custom_command(
-    TARGET flatpak      # Compute checksum
+    TARGET flatpak
     COMMAND cmake -P ${CMAKE_BINARY_DIR}/build_flatpak.cmake
     VERBATIM
   )
   add_dependencies(flatpak flatpak-conf)
 endfunction ()
 
-function (help_target)
-
-  # Help message for plain 'make' without target
-  #
-  add_custom_target(make-warning)
-  add_custom_command(
-    TARGET make-warning
-    COMMAND cmake -E echo
-      "ERROR: plain make is not supported. Supported targets:"
-    COMMAND cmake -E echo
-      "   - tarball: Plugin installer tarball for regular builds."
-    COMMAND cmake -E echo
-      "   - flatpak: Plugin installer tarball for flatpak builds."
-    COMMAND cmake -E echo ""
-    COMMAND dont-use-plain-make   # will fail
-  )
-
-  if ("${BUILD_TYPE}" STREQUAL "" )
-    if ("${ARM_ARCH}" STREQUAL "aarch64")
-      add_dependencies(${PACKAGE_NAME} android-aarch64)
-    elseif ("${ARM_ARCH}" STREQUAL "armhf")
-      add_dependencies(${PACKAGE_NAME} android-armhf)
-    else ()
-      add_dependencies(${PACKAGE_NAME} tarball)
-    endif ()
-  endif ()
-endfunction ()
-
 function (create_targets manifest)
-  # Add the primary build targets pkg, flatpak and tarball together
-  # with helper targets. Parameters:
+  # Add the primary build targets android, flatpak and tarball together
+  # with support targets. Parameters:
   # - manifest: Flatpak build manifest
 
   if (BUILD_TYPE STREQUAL "pkg")
@@ -268,7 +252,11 @@ function (create_targets manifest)
   endif ()
   tarball_target()
   flatpak_target(${manifest})
-  android_aarch64_target()
-  android_armhf_target()
-  help_target()
+  android_target()
+  add_custom_target(default ALL)
+  if ("${ARM_ARCH}" STREQUAL "")
+    add_dependencies(default tarball)
+  else ()
+    add_dependencies(default android)
+  endif ()
 endfunction ()

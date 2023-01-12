@@ -2,6 +2,10 @@
 #
 # Push metadata to remote git clone of plugins project.
 #
+# Usage: git-push [builddir]
+#
+# 'builddir' is the directory with metadata file; defaults to 'build'.
+#
 # Environment variables:
 #   - GIT_REPO: ssh url to clone of plugins project e. g.,
 #     git@github.com:Rasbats/plugins.git
@@ -12,7 +16,14 @@
 #   Uses keys created by new credentials. These lives in build-deps/ with
 #   names like  build-deps/user.enc and build-deps/user.pub where 'user'
 #   is as present in GIT_REPO.
+#
+# Copyright (c) 2021 Alec Leamas
 
+
+# This program is free software; you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation; either version 3 of the License, or
+# (at your option) any later version.
 
 import base64
 import getpass
@@ -131,8 +142,8 @@ def get_subject(git, metadata_path):
 class Git:
     def __init__(self, branch):
         self.clone = [
-                'git', 'clone', os.environ.get('GIT_REPO'), '-b', branch,
-                '--depth', '2' ]
+                'git', 'clone', '-b', branch, '--depth', '2',
+                os.environ.get('GIT_REPO')]
         self.log = [
                 'git', '-C', '..', 'log', '-1', '--format=format:%h: @trg@: %s']
         self._rebase = ['git', 'rebase', 'origin/' + branch]
@@ -187,16 +198,19 @@ def main():
     """Indeed: main function."""
 
     # Set up (const) variables.
+    builddir = 'build' if len(sys.argv) == 1 else sys.argv[1]
     here = os.path.dirname(sys.argv[0])
     ci = os.path.abspath(os.path.join(here, '..', 'ci'))
+    cache = os.path.abspath(os.path.join(here, '..', 'cache'))
     build_deps = os.path.abspath(os.path.join(here, '..', 'build-deps'))
     top = os.path.abspath(os.path.join(here, '..'))
     user = get_user()
     password = get_password()
     branch = os.environ.get('GIT_BRANCH')
     branch = branch if branch else "auto"
-    print("Using repository (stripping git@github.com: prefix): " + 
-            os.environ.get("GIT_REPO").replace( 'git@github.com:',''))
+
+    print("Using repository: " + 
+         ''.join([c + ' ' for c in os.environ.get("GIT_REPO")]))
     print("Using branch: " + branch)
 
     git = Git(branch)
@@ -204,15 +218,22 @@ def main():
 
     private_key_setup(ci, build_deps, user, password)
 
+
     # Clone the repo if it does not exist.
-    if not os.path.exists(os.path.join(top, 'plugins')):
-        subprocess.check_call(git.clone, cwd=top)
-    os.chdir(os.path.join(top, 'plugins'))
+    if not os.path.exists(cache):
+        os.mkdir(cache)
+    clone_dir = 'plugins-' + builddir
+    clone_cmd = git.clone.copy()
+    clone_cmd.append(clone_dir)
+    if not os.path.exists(os.path.join(cache, clone_dir)):
+        subprocess.check_call(clone_cmd, cwd=cache)
+    os.chdir(os.path.join(cache, clone_dir))
 
     # Bring the new metadata file into repo.
-    metadata = glob(os.path.join(top, 'build', '*.xml'))
+    metadata = glob(os.path.join(os.path.join(top, builddir), '*.xml'))
     if len(metadata) != 1:
-        print("A single metadata file cannot be located, giving up")
+        print("A single metadata file %s cannot be located, giving up"
+                % ' '.join(metadata))
         sys.exit(1);
     copy(metadata[0], 'metadata')
 
