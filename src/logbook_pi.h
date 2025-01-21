@@ -57,7 +57,7 @@ class LogbookTimer;
 class LogbookOptions;
 class Options;
 
-class logbookkonni_pi  :  public opencpn_plugin_116
+class logbookkonni_pi  :  public opencpn_plugin_117
 {
 public:
     enum states {OFF,ONNOEVENTS,ONWITHEVENTS};
@@ -86,12 +86,16 @@ public:
     int Init( void );
     bool DeInit( void );
 
-    int GetAPIVersionMajor();
-    int GetAPIVersionMinor();
-    int GetPlugInVersionMajor();
-    int GetPlugInVersionMinor();
+    int GetAPIVersionMajor() override;
+    int GetAPIVersionMinor() override;
+    int GetPlugInVersionMajor() override;
+    int GetPlugInVersionMinor() override;
+    int GetPlugInVersionPatch() override;
+    int GetPlugInVersionPost() override;
+    const char* GetPlugInVersionPre() override;
+    const char* GetPlugInVersionBuild() override;
     wxBitmap *GetPlugInBitmap();
-    wxString GetCommonName();
+    wxString GetCommonName() override;
     wxString GetShortDescription();
     wxString GetLongDescription();
     void UpdateAuiStatus( void );

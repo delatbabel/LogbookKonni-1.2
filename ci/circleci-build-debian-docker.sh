@@ -46,7 +46,7 @@ function install_wx32() {
   chmod a+w /usr/local/pkg
   repo="https://dl.cloudsmith.io/public/alec-leamas/wxwidgets-32"
   head="deb/debian/pool/bullseye/main"
-  vers="3.2.2+dfsg-1~bpo11+1"
+  vers="3.2.4+dfsg-1~bpo11+1"
   pushd /usr/local/pkg
   wget -q $repo/$head/w/wx/wx-common_${vers}/wx-common_${vers}_arm64.deb
   wget -q $repo/$head/w/wx/wx3.2-i18n_${vers}/wx3.2-i18n_${vers}_all.deb
@@ -100,9 +100,11 @@ chown root:root /ci-source
 git config --global --add safe.directory /ci-source
 
 rm -rf build-debian; mkdir build-debian; cd build-debian
-cmake -DCMAKE_BUILD_TYPE=Release\
+cmake "-DCMAKE_BUILD_TYPE=${CMAKE_BUILD_TYPE:-Release}" \
    -DOCPN_TARGET_TUPLE="@TARGET_TUPLE@" \
     ..
+
+git config --global --add safe.directory /ci-source
 
 make -j $(nproc) VERBOSE=1 tarball
 ldd  app/*/lib/opencpn/*.so
@@ -111,23 +113,19 @@ cd /
 setfacl --restore=/ci-source.permissions
 EOF
 
-if [ -n "$BUILD_WX32" ]; then OCPN_WX_ABI_OPT="-DOCPN_WX_ABI=wx32"; fi
-
 sed -i "s/@TARGET_TUPLE@/$TARGET_TUPLE/" $ci_source/build.sh
 sed -i "s/@BUILD_WX32@/$BUILD_WX32/" $ci_source/build.sh
-#sed -i "s/@OCPN_WX_ABI_OPT@/$OCPN_WX_ABI_OPT/" $ci_source/build.sh
-
 
 # Run script in docker image
 #
 docker run \
-    -e "CLOUDSMITH_STABLE_REPO=$CLOUDSMITH_STABLE_REPO" \
-    -e "CLOUDSMITH_BETA_REPO=$OCPN_BETA_REPO" \
-    -e "CLOUDSMITH_UNSTABLE_REPO=$CLOUDSMITH_UNSTABLE_REPO" \
-    -e "CIRCLE_BUILD_NUM=$CIRCLE_BUILD_NUM" \
-    -e "TRAVIS_BUILD_NUMBER=$TRAVIS_BUILD_NUMBER" \
+    -e "CLOUDSMITH_STABLE_REPO" \
+    -e "CLOUDSMITH_BETA_REPO" \
+    -e "CLOUDSMITH_UNSTABLE_REPO" \
+    -e "CIRCLE_BUILD_NUM" \
+    -e "TRAVIS_BUILD_NUMBER" \
     -v "$ci_source:/ci-source:rw" \
-    debian:$OCPN_TARGET /bin/bash -xe /ci-source/build.sh    
+    debian:$OCPN_TARGET /bin/bash -xe /ci-source/build.sh
 rm -f $ci_source/build.sh
 
 

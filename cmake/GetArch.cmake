@@ -19,6 +19,9 @@ function (GetArch)
   if (NOT "${OCPN_TARGET_TUPLE}" STREQUAL "")
     # Return last element from tuple like "Android-armhf;16;armhf"
     list(GET OCPN_TARGET_TUPLE 2 ARCH)
+    if(ARCH STREQUAL "universal")
+      set(ARCH "x86_64;arm64")
+    endif()
   elseif (NOT WIN32)
     # default
     set(ARCH "x86_64")
@@ -45,9 +48,7 @@ function (GetArch)
       endif ()
     endif ()
   else (NOT WIN32)
-    # Should really be i386 since we are on win32. However, it's x86_64 for now,
-    # see #2027
-    set(ARCH "x86_64")
+    set(ARCH "x86")   # See #573
   endif ()
   set(ARCH ${ARCH} PARENT_SCOPE)
 endfunction (GetArch)

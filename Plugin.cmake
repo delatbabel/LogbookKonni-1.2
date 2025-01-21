@@ -32,10 +32,10 @@ option(PLUGIN_USE_SVG "Use SVG graphics" ON)
 #
 #
 # -------  Plugin setup --------
-#  Using Shipdriver version 3.0.2 beta1 from branch v3.0
+#  Using Shipdriver version 3.3.0 from branch v3.0
 
 set(PKG_NAME LogbookKonni_pi)
-set(PKG_VERSION  1.4.31.0)
+set(PKG_VERSION  1.4.37.0)
 set(PKG_PRERELEASE "")  # Empty, or a tag like 'beta'
 
 set(DISPLAY_NAME Logbook)    # Dialogs, installer artifacts, ...
@@ -77,11 +77,9 @@ SET(SRC
   src/OverView.cpp
   src/Export.h
   src/Export.cpp
-  src/TexFont.cpp
-  src/TexFont.h
 )
 
-set(PKG_API_LIB api-16)  #  A directory in libs/ e. g., api-17 or api-16
+set(PKG_API_LIB api-17)  #  A directory in libs/ e. g., api-17 or api-16
 
 macro(late_init)
   # Perform initialization after the PACKAGE_NAME library, compilers

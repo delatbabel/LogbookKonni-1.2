@@ -38,15 +38,15 @@ add_library(${CMAKE_PROJECT_NAME} SHARED EXCLUDE_FROM_ALL ${SRC})
 include_directories(BEFORE ${CMAKE_BINARY_DIR}/include)
 
 add_subdirectory("opencpn-libs/${PKG_API_LIB}")
-if (${PKG_NAME} MATCHES wx32)
-  target_link_libraries(${CMAKE_PROJECT_NAME} ocpn::api_wx32)
-else ()
-  target_link_libraries(${CMAKE_PROJECT_NAME} ocpn::api)
-endif ()
+target_link_libraries(${CMAKE_PROJECT_NAME} ocpn::api)
 
 set(VERSION_MAJOR ${PROJECT_VERSION_MAJOR})
 set(VERSION_MINOR ${PROJECT_VERSION_MINOR})
 set(VERSION_PATCH ${PROJECT_VERSION_PATCH})
+if (PROJECT_VERSION_TWEAK STREQUAL "")
+  set(PROJECT_VERSION_TWEAK 0)
+endif ()
+
 
 set(PACKAGE_NAME ${CMAKE_PROJECT_NAME})
 
@@ -100,7 +100,7 @@ if (NOT ${BUILD_TYPE} STREQUAL "flatpak")
 endif ()
 
 configure_file(
-  ${CMAKE_SOURCE_DIR}/config.h.in ${CMAKE_BINARY_DIR}/include//config.h
+  ${CMAKE_SOURCE_DIR}/config.h.in ${CMAKE_BINARY_DIR}/include/config.h
   @ONLY
 )
 

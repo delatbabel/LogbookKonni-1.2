@@ -2,12 +2,11 @@
 
 == Links
 
-* Source: https://github.com/ptulp/LogbookKonni_pi[Github Repository -
-Peter Tulp maintains the plugin]
+* Maintenance Source: https://github.com/rgleason/LogBookKonni_pi rgleason
 * Source: https://github.com/delatbabel/LogbookKonni-1.2[Github
 Repository - Delatbabel]
-* Alternative Maintenance Source: https://github.com/rgleason/LogBookKonni_pi
-* Releases: https://github.com/delatbabel/LogbookKonni-1.2/releases[Github Releases]
+* Old Source: https://github.com/ptulp/LogbookKonni_pi[Github Repository -
+Peter Tulp used to maintain the plugin]
 * Download: https://opencpn.org/OpenCPN/plugins/logbookkonni.html[Website Download]
 * Forum: https://github.com/delatbabel/LogbookKonni-1.2/[LogbookKonni CF
 Thread]
@@ -151,9 +150,10 @@ image:book5.jpeg[]
 For those who would like the Logbook Manual in a separate format from
 the plugin, here are two downloads:
 
-image::logbook1.2-help.pdf[]
-  Find the file
-image::logbook1.2-help.doc[]
-   Find the file
-image::logbook_help_conversion.docx[]
-   Find the file
+
+
+https://opencpn.org/wiki/dokuwiki/lib/exe/fetch.php?media=opencpn:files:logbook1.2-help.pdf[Logbook1.2-help.pdf]
+
+https://opencpn.org/wiki/dokuwiki/lib/exe/fetch.php?media=opencpn:files:logbook1.2-help.doc[Logbook1.2-help.doc]
+
+https://opencpn.org/wiki/dokuwiki/lib/exe/fetch.php?media=opencpn:files:logbook_help_conversion.docx[Logbook_help_conversion.docx]

@@ -45,7 +45,7 @@
 using namespace std;
 
 LogbookHTML::LogbookHTML(Logbook *l, LogbookDialog *d, wxString data,
-                         wxString layout) {
+                         wxString layout) : kmlFile(nullptr) {
   parent = d;
   logbook = l;
   data_locn = data;
@@ -1542,7 +1542,9 @@ void LogbookHTML::toKML(wxString path) {
 void LogbookHTML::writeTrackToKML(wxJSONValue data) {
   wxString trkLine = parent->kmlPathHeader;
   trkLine.Replace("#NAME#", "Trackline");
-
+  if (kmlFile == nullptr) {
+    return;
+  }
   *kmlFile << trkLine;
   for (int i = 0; i < data.Size(); i++)
     (*kmlFile) << wxString::Format("%.13f,%.13f\n", data[i][1].AsDouble(),
@@ -1555,6 +1557,9 @@ void LogbookHTML::writeRouteToKML(wxJSONValue data) {
   wxString routeLine = parent->kmlPathHeader;
   routeLine.Replace("#NAME#", "Routeline");
   routeLine.Replace("#LINE#", "#LineRoute");
+  if (kmlFile == nullptr) {
+    return;
+  }
   *kmlFile << routeLine;
 
   for (int i = 0; i < data.Size(); i++)

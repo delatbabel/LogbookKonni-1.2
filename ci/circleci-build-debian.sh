@@ -34,7 +34,7 @@ function install_wx32() {
   sudo chmod a+w /usr/local/pkg
   repo="https://dl.cloudsmith.io/public/alec-leamas/wxwidgets-32"
   head="deb/debian/pool/bullseye/main"
-  vers="3.2.2+dfsg-1~bpo11+1"
+  vers="3.2.4+dfsg-1~bpo11+1"
   pushd /usr/local/pkg
   wget -q $repo/$head/w/wx/wx-common_${vers}/wx-common_${vers}_amd64.deb
   wget -q $repo/$head/w/wx/wx3.2-i18n_${vers}/wx3.2-i18n_${vers}_all.deb
@@ -83,9 +83,8 @@ mk-build-deps --root-cmd=sudo -ir build-deps/control
 rm -f *changes  *buildinfo
 
 if [ -n "$BUILD_WX32" ]; then
-  remove_wx30;
-  install_wx32;
-  OCPN_WX_ABI_OPT="-DOCPN_WX_ABI=wx32"
+  remove_wx30
+  install_wx32
 fi
 
 if [ -n "$TARGET_TUPLE" ]; then
@@ -102,10 +101,10 @@ python3 -m pip install --user -q cloudsmith-cli cryptography cmake
 
 cd $builddir
 
-cmake -DCMAKE_BUILD_TYPE=RelWithDebInfo $OCPN_WX_ABI_OPT $TARGET_OPT ..
+cmake "-DCMAKE_BUILD_TYPE=${CMAKE_BUILD_TYPE:-RelWithDbgInfo}" $TARGET_OPT ..
 make VERBOSE=1 tarball
 ldd app/*/lib/opencpn/*.so
 if [ -d /ci-source ]; then
     sudo chown --reference=/ci-source -R . ../cache || :
 fi
-sudo chmod --reference=.. .
+if [ -z "$CI" ]; then sudo chmod --reference=.. .; fi

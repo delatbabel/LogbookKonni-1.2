@@ -68,21 +68,24 @@ extern "C" DECL_EXP void destroy_pi(opencpn_plugin* p) { delete p; }
 //          PlugIn initialization and de-init
 //
 //---------------------------------------------------------------------------------------------------------
-logbookkonni_pi::logbookkonni_pi(void* ppimgr) : opencpn_plugin_116(ppimgr) {
+logbookkonni_pi::logbookkonni_pi(void* ppimgr) : opencpn_plugin_117(ppimgr) {
   // Create the PlugIn icons
   initialize_images();
-  opt = new Options();
-  m_timer = NULL;
+  opt = nullptr;
+  m_timer = nullptr;
   state = 0;
 }
 
 logbookkonni_pi::~logbookkonni_pi() {
-  if (m_timer != NULL && m_timer->IsRunning()) {
-    m_timer->Stop();
+  if (m_timer != nullptr) {
+    if (m_timer->IsRunning()) m_timer->Stop();
     delete m_timer;
-    m_timer = NULL;
+    m_timer = nullptr;
   }
-  if (opt != NULL) delete opt;
+  if (opt != nullptr) {
+    delete opt;
+    opt = nullptr;
+  }
 }
 
 int logbookkonni_pi::Init(void) {
@@ -91,10 +94,13 @@ int logbookkonni_pi::Init(void) {
 
   AddLocaleCatalog("opencpn-logbookkonni_pi");
 
-  m_plogbook_window = NULL;
+  m_plogbook_window = nullptr;
   lastWaypointInRoute = "-1";
   eventsEnabled = true;
 
+  if (opt != nullptr) {
+    delete opt;
+  }
   opt = new Options();
   // Get a pointer to the opencpn display canvas, to use as a parent for windows
   // created
@@ -162,10 +168,10 @@ void logbookkonni_pi::shutdown(bool menu) {
     delete timer;
   }
 
-  timer = NULL;
-  m_timer = NULL;
+  timer = nullptr;
+  m_timer = nullptr;
 
-  if (m_plogbook_window != NULL) {
+  if (m_plogbook_window != nullptr) {
     if (m_plogbook_window->IsIconized()) m_plogbook_window->Iconize(false);
     m_plogbook_window->setIniValues();
 
@@ -181,7 +187,7 @@ void logbookkonni_pi::shutdown(bool menu) {
     m_plogbook_window->Close();
     //m_plogbook_window->Destroy();
     delete m_plogbook_window;
-    m_plogbook_window = NULL;
+    m_plogbook_window = nullptr;
     dlgShow = false;
     //	SetToolbarItemState( m_leftclick_tool_id, dlgShow );
   }
@@ -609,6 +615,14 @@ int logbookkonni_pi::GetPlugInVersionMajor() { return PLUGIN_VERSION_MAJOR; }
 
 int logbookkonni_pi::GetPlugInVersionMinor() { return PLUGIN_VERSION_MINOR; }
 
+int logbookkonni_pi::GetPlugInVersionPatch() { return PLUGIN_VERSION_PATCH; }
+
+int logbookkonni_pi::GetPlugInVersionPost() { return PLUGIN_VERSION_TWEAK; }
+
+const char* logbookkonni_pi::GetPlugInVersionPre() { return PKG_PRERELEASE; }
+
+const char* logbookkonni_pi::GetPlugInVersionBuild() { return PKG_BUILD_INFO; }
+
 wxString logbookkonni_pi::GetCommonName() { return _("Logbook"); }
 
 wxString logbookkonni_pi::GetShortDescription() {
@@ -754,9 +768,9 @@ void logbookkonni_pi::OnToolbarToolCallback(int id) {
 #endif
   dlgShow = !dlgShow;
   // show the Logbook dialog
-  if (NULL == m_plogbook_window) {
-    if (m_timer == NULL) {
-      if (timer == NULL) timer = new LogbookTimer(this);
+  if (nullptr == m_plogbook_window) {
+    if (m_timer == nullptr) {
+      if (timer == nullptr) timer = new LogbookTimer(this);
       m_timer = new wxTimer(timer, ID_LOGTIMER);
       timer->Connect(wxEVT_TIMER,
                      wxObjectEventFunction(&LogbookTimer::OnTimer));
